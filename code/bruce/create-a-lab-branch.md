@@ -64,7 +64,39 @@
     git checkout -b <new-branch-name>
     ```
     * Sample command and output:  
-    ```
+        ```
+        PS C:\Users\Bruce\Programming\class_name> git checkout -b bruce-lab00-getting-started
+        Switched to a new branch 'bruce-lab00-getting-started'
+        PS C:\Users\Bruce\Programming\class_name>
+        ```
 
+1. Push current branch `bruce-lab00-getting-started` to remote repository `origin`:  
     ```
+    git push origin bruce-lab00-getting-started
+    ```
+    * Sample command and output:  
+        ```
+        PS C:\Users\Bruce\Programming\class_name> git push origin bruce-lab00-getting-started
+        Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+        remote:
+        remote: Create a pull request for 'bruce-lab00-getting-started' on GitHub by visiting:
+        remote:      https://github.com/brucestull/class_name/pull/new/bruce-lab00-getting-started
+        remote:
+        To https://github.com/brucestull/class_name.git
+        * [new branch]      bruce-lab00-getting-started -> bruce-lab00-getting-started
+        PS C:\Users\Bruce\Programming\class_name>
+        ```
+
+1. Perform coding work on this branch. Verify current branch at any time by using:  
+    ```
+    git status
+    ```
+    * Sample command and output:  
+        ```
+        PS C:\Users\Bruce\Programming\class_name> git status
+        On branch bruce-lab00-getting-started
+        nothing to commit, working tree clean
+        PS C:\Users\Bruce\Programming\class_name>
+        ```
+
 
