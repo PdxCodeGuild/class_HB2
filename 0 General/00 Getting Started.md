@@ -21,7 +21,7 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 
-1. Once we are inside the repository (class_kiwi folder) we can go ahead and create a new branch to store all of our changes. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
+1. Once we are inside the repository (class_name folder) we can go ahead and create a new branch to store all of our changes. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
     * When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
         * Example (for [Lab 0: Getting Started](https://github.com/PdxCodeGuild/class_062722/blob/main/0%20General/00%20Getting%20Started)):
             * studentname: `bruce`
@@ -129,7 +129,7 @@
 
         ```
 
-1. Finally we can push our code to remote repository hosted on Github. This will allow the instructors to see and code changes and grade labs:  
+1. Finally we can push our code to remote repository hosted on Github. This will allow the instructor and TAs to see the code changes and grade the labs:  
     ```
     git push origin main
     ```
