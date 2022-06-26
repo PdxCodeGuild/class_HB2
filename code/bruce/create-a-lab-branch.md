@@ -1,7 +1,7 @@
 # Create A Lab Branch
 
 ## Notes and Assumptions
-* The author is using PowerShell for their CLI so thier interface may look different than the user's interface. But both the terminal commands (examples: `cd`, `ls`, `pwd`) and the git commands should work in most CLI interfaces.
+* The author is using PowerShell for their CLI so example interface may look different than the user's interface. But both the terminal commands (examples: `cd`, `ls`, `pwd`) and the git commands should work in most CLI interfaces.
 * When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
     * Branch name form (in all lower-case):  
         * `studentname-labnumber-lab-name`
@@ -9,7 +9,7 @@
         * studentname: `bruce`
         * labnumber: `lab00`
         * lab-name: `getting-started`
-        * The branch would be `bruce-lab00-getting-started`.
+        * The branch name would be `bruce-lab00-getting-started`.
 
 ## Objectives
 
