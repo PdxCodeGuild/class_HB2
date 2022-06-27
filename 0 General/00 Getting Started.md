@@ -221,7 +221,7 @@
         PS C:\Users\Bruce\Programming\class_name\code\bruce>
         ```
 
-1. We can now `commit` our changes to the branch (`bruce-lab00-getting-started`) git history.
+1. We can now `commit` our changes to the branch `<studentname-labnumber-lab-name>` git history.
     * The `<commit message>` below is used to describe the changes this commit includes.
     * The `<commit message>` may be something like "Added directory for storing labs and included personal README.md"
     * We will use the command `git commit -m "<commit message>"`:  
