@@ -15,7 +15,7 @@
 1. Verify the 'Comparing changes' is set to compare your lab branch with 'base: main':  
 ![04_verify_comparing_changes](https://user-images.githubusercontent.com/47562501/175929257-e582d9ba-61bc-4b02-aa93-eab9e8d1ead3.png)
 
-1. Click 'Create pull request':  
+1. Click 'Create pull request' button:  
 ![05_click_create_pull_request](https://user-images.githubusercontent.com/47562501/175929274-627d1818-fe98-4c56-8715-8f7407807f01.png)
 
 1. Examine, and edit if needed, the title and comments related to the pull request:  
@@ -27,7 +27,7 @@
 1. Select the TA's accounts':  
 ![08_select_ta_accounts](https://user-images.githubusercontent.com/47562501/175929330-97430e33-e909-4013-99a4-e398f1d50d27.png)
 
-1. Click 'Create pull request':  
+1. Click 'Create pull request' button:  
 ![09_click_create_pull_request_button](https://user-images.githubusercontent.com/47562501/175929349-01db59d2-7d13-47a3-810e-8e85642b879b.png)
 
 1. TAs will review pull request and evaluate the lab.
