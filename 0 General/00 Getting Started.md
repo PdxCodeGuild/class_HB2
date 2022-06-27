@@ -2,6 +2,8 @@
 
 ## Create Our Own Folder for Our Labs
 
+* The sample code output provided here is using PowerShell, your output may be slightly different.
+
 * For our very first lab we will be creating a folder to hold all of our labs. This will also be an exercise in utilizing git.
 
 * NOTE: When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
@@ -24,28 +26,48 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 
-1. Once we are inside the local repository (class_name folder) we can go ahead and create a new branch to store all of our changes. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
+1. Verify we are in a directory that is a git repository:  
+    ```
+    git status
+    ```
+    * Sample command and output:  
+        ```
+        PS C:\Users\Bruce\Programming\class_name> git status
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        nothing to commit, working tree clean
+        PS C:\Users\Bruce\Programming\class_name>
+        ```
+1. Once we are inside the local repository (class_name folder) we can go ahead and create a new branch to store all of our changes for the current lab. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
     * Example (for [Lab 0: Getting Started](https://github.com/PdxCodeGuild/class_062722/blob/main/0%20General/00%20Getting%20Started)):
         * studentname: `bruce`
         * labnumber: `lab00`
         * lab-name: `getting-started`
         * My name is 'Bruce' so my branch name would be `bruce-lab00-getting-started`.
-    * The command we will use (where <branch-name> is replaced by your branch name decided above):  
-        ```
-        git checkout -b <branch-name>
-        ```
-        * Sample command and output:  
+    * The command we will use (where `<branch-name>` is replaced by your branch name decided above):  
+        * This command creates a new branch named `<branch-name>` from the current state of the `main` branch.
             ```
-            git checkout -b bruce-lab00-getting-started
+            git checkout -b <branch-name>
             ```
+            * Sample command and output:  
+                ```
+                PS C:\Users\Bruce\Programming\class_name> git checkout -b bruce-lab00-getting-started
+                Switched to a new branch 'bruce-lab00-getting-started'
+                PS C:\Users\Bruce\Programming\class_name>
+                ```
 
 1. We can verify current git branch and list local branches using `git branch`:  
     ```
     git branch
     ```
+    * Current branch is indicated by the '*' in front of the branch name.
     * Sample command and output:  
         ```
-
+        PS C:\Users\Bruce\Programming\class_name> git branch
+        * bruce-lab00-getting-started
+          main
+        PS C:\Users\Bruce\Programming\class_name>
         ```
 
 1. Change directory (folder) into the `code` directory:  
