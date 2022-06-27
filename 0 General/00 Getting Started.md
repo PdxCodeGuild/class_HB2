@@ -40,7 +40,7 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 1. Once we are inside the local repository (class_name folder) we can go ahead and create a new branch to store all of our changes for the current lab. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
-    * Example (for [Lab 0: Getting Started](https://github.com/PdxCodeGuild/class_062722/blob/main/0%20General/00%20Getting%20Started)):
+    * Example for my name, this lab number, and lab name:
         * studentname: `bruce`
         * labnumber: `lab00`
         * lab-name: `getting-started`
@@ -199,11 +199,11 @@
     * We used `git add -A` above to add all changed files to git tracking but we can add specific files or directories to tracking by the following two examples:
         * To add specific files to git tracking:  
             ```
-            git add <filename>
+            git add <filepath>
             ```
         * To add specific directory to git tracking:  
             ```
-            git add <directoryname>
+            git add <directorypath>
             ```
 
 1. Let's use `git status` again to verify we are tracking the proper files:  
