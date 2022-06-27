@@ -4,6 +4,9 @@
 
 * For our very first lab we will be creating a folder to hold all of our labs. This will also be an exercise in utilizing git.
 
+* NOTE: When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
+
+
 1. Open CLI.
 
 1. Make sure we are in correct folder (directory). We should be inside <class_name> folder (directory). `pwd` shows the current 'working directory':  
@@ -21,14 +24,13 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 
-1. Once we are inside the repository (class_name folder) we can go ahead and create a new branch to store all of our changes. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
-    * When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
-        * Example (for [Lab 0: Getting Started](https://github.com/PdxCodeGuild/class_062722/blob/main/0%20General/00%20Getting%20Started)):
-            * studentname: `bruce`
-            * labnumber: `lab00`
-            * lab-name: `getting-started`
-        * My name is 'Bruce' so branch name will be `bruce-lab00-getting-started`.
-    * The command we will use:  
+1. Once we are inside the local repository (class_name folder) we can go ahead and create a new branch to store all of our changes. Let's create a branch with our name followed by lab00 followed by lab name (studentname-labnumber-lab-name).
+    * Example (for [Lab 0: Getting Started](https://github.com/PdxCodeGuild/class_062722/blob/main/0%20General/00%20Getting%20Started)):
+        * studentname: `bruce`
+        * labnumber: `lab00`
+        * lab-name: `getting-started`
+        * My name is 'Bruce' so my branch name would be `bruce-lab00-getting-started`.
+    * The command we will use (where <branch-name> is replaced by your branch name decided above):  
         ```
         git checkout -b <branch-name>
         ```
@@ -51,24 +53,36 @@
     cd code
     ```
     * Sample command and output:  
+        ```
+
+        ```
 
 1. Verify we are in `code` directory:  
     ```
     pwd
     ```
     * Sample command and output:  
+        ```
+
+        ```
 
 1. Create your directory inside the `code` directory. Use the lowercase version or your name. My name is 'Bruce' so my directory will be `bruce`:  
     ```
     mkdir bruce
     ```
     * Sample command and output:  
+        ```
+
+        ```
 
 1. Change directory into your personal directory:  
     ```
     cd bruce
     ```
     * Sample command and output:  
+        ```
+
+        ```
 
 1. Inside your newly created folder, create a `README.md` file. This is a markdown file and is generally used to provide context to folders within Github. This markdown file named `README.md` will hold your name, your directory name, and your GitHub username. You can also add any other information or links to the file later if you choose:  
     ```
@@ -94,7 +108,9 @@
     git status
     ```
     * Sample command and output:  
+        ```
 
+        ```
 
 1. Let's now add the files and directories we created to be tracked by git:  
     ```
@@ -133,5 +149,4 @@
     ```
     git push origin main
     ```
-
 
