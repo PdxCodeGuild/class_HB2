@@ -2,6 +2,9 @@
 
 ## The below is an example of workflow for creating branches for each new lab.
 
+* Replace the `<new-branch-name>` items below with your appropriate formed `<studentdirectoryname-labnumber-lab-name>` branch name.
+* An example `<new-branch-name>` would be `bruce-lab01-python-exercise`
+
 1. Checkout the `main` branch since we want to keep it syncronized with remote:  
     `git checkout main`
 1. Retrieve the remote changes to `main` branch and sync them to local repository:  
