@@ -80,6 +80,8 @@
     dir -Force
     ```
     * Sample command and output:  
+        * The `.git` directory contains git matadata for tracking changes.
+        * We do not manually change this directory or it's contents. Git will automatically edit it as needed.
         ```
         PS C:\Users\Bruce\Programming\class_name> dir -Force
 
