@@ -33,4 +33,4 @@
 1. TAs will review pull request and evaluate the lab.
 
 * Example pull request for `brucestull`:
-    * https://github.com/PdxCodeGuild/class_062722/pull/3
+    * [Example pull request](https://github.com/PdxCodeGuild/class_062722/pull/3)
