@@ -2,9 +2,9 @@
 
 ## The below is an example of workflow for creating branches for each new lab.
 
-1. Checkout the `main` branch since we want to keep is syncronized with remote:  
+1. Checkout the `main` branch since we want to keep it syncronized with remote:  
     `git checkout main`
-1. Retrieve the remote changes to `main` branch:  
+1. Retrieve the remote changes to `main` branch and sync them to local repository:  
     `git pull origin main`
 1. Create a new branch `<new-branch-name>` from current state of `main` branch:  
     `git checkout -b <new-branch-name>`
@@ -41,7 +41,7 @@
 1. Repeat process as needed.
 
 ## Use the following to delete branches for labs which have already been graded.
-* NOTE: We delete the branches after they have been merged into `main` since the work has been completed and all the changes have been recorded in the `commit`s.
+* NOTE: We delete the branches after they have been merged into `main` since the work has been completed and all the changes have been recorded in the `commit`s. We no longer need the branches.
 
 1. Sync our local record of remote branches. This will remove local references to branches which have been deleted on remote:  
     * `git remote update origin --prune`
