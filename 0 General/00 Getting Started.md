@@ -114,11 +114,12 @@
         PS C:\Users\Bruce\Programming\class_name\code>
         ```
 
-1. Create your directory inside the `code` directory. Use the lowercase version or your name. My name is 'Bruce' so my directory will be `bruce`:  
+1. Create your directory inside the `code` directory. Use the lowercase version or your name:  
     ```
-    mkdir bruce
+    mkdir <studentdirectoryname>
     ```
     * Sample command and output:  
+        * My name is 'Bruce' so my directory will be `bruce`:  
         ```
         PS C:\Users\Bruce\Programming\class_name\code> mkdir bruce
 
@@ -133,7 +134,7 @@
 
 1. Change directory into your personal directory:  
     ```
-    cd bruce
+    cd <studentdirectoryname>
     ```
     * Sample command and output:  
         ```
@@ -145,6 +146,7 @@
     * This is a markdown file and is generally used to provide context to folders within Github.
     * This markdown file named `README.md` will hold your name, your directory name, and your GitHub username.
     * You can also add any other information or links to the file later if you choose.
+    * The '#' below will make that line render as a heading in the markdown file.
     * We will use something like this, where `Firstname Lastname` is replaced by your first and last name:  
         ```
         echo "# Firstname Lastname" > README.md
