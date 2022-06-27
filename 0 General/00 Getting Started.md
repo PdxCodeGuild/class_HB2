@@ -243,7 +243,7 @@
     ```
     * Sample command and output:  
         ```
-        PS C:\Users\Bruce\Programming\class_name\code\test> git push origin bruce-lab00-getting-started
+        PS C:\Users\Bruce\Programming\class_name\code\bruce> git push origin bruce-lab00-getting-started
         Enumerating objects: 7, done.
         Counting objects: 100% (7/7), done.
         Delta compression using up to 8 threads
@@ -257,7 +257,8 @@
         remote:
         To https://github.com/PdxCodeGuild/class_062722.git
          * [new branch]      bruce-lab00-getting-started -> bruce-lab00-getting-started
-        PS C:\Users\Bruce\Programming\class_name\code\test>
+        PS C:\Users\Bruce\Programming\class_name\code\bruce>
         ```
 
-1. In future labs, you will create a pull request on GitHub after the previous steps.
+1. Create pull request on GitHub.
+   * [GitHub Pull Request]()
