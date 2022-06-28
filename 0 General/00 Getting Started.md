@@ -253,9 +253,9 @@
         remote: Resolving deltas: 100% (1/1), completed with 1 local object.
         remote:
         remote: Create a pull request for 'bruce-lab00-getting-started' on GitHub by visiting:
-        remote:      https://github.com/PdxCodeGuild/class_062722/pull/new/bruce-lab00-getting-started
+        remote:      https://github.com/PdxCodeGuild/class_HB2/pull/new/bruce-lab00-getting-started
         remote:
-        To https://github.com/PdxCodeGuild/class_062722.git
+        To https://github.com/PdxCodeGuild/class_HB2.git
          * [new branch]      bruce-lab00-getting-started -> bruce-lab00-getting-started
         PS C:\Users\Bruce\Programming\class_name\code\bruce>
         ```
