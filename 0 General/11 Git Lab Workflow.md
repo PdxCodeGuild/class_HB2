@@ -25,7 +25,7 @@
     `git commit -m <commit message>`
 1. Push local changes to branch `<new-branch-name>` to the remote repository `origin`:  
     `git push origin <new-branch-name>`
-1. When lab is completed, create pull request on GitHub.
+1. When lab is completed, [create pull request on GitHub](10%20GitHub%20Pull%20Request.md).
 1. Repeat process for new labs.
 
 ## Use the following to switch between multiple in-process lab branches.
@@ -33,7 +33,7 @@
 1. Git `add` and `commit` changes to current branch:  
     1. `git add -A`
     1. `git commit -m <commit message>`
-1. Checkout the branch we want to work on:  
+1. Checkout the different branch we want to work on:  
     * `git checkout <a-branch-name>`
 1. Do the code changes for this branch.
 1. Git `add` and `commit` changes to the new current branch `<a-branch-name>`:  
