@@ -186,6 +186,18 @@
         nothing added to commit but untracked files present (use "git add" to track)
         PS C:\Users\Bruce\Programming\class_name\code\bruce>
         ```
+    * Sample command and output:  
+        ```
+        PS C:\Users\Bruce\Programming\class_HB2\code\bruce> git status
+        On branch bruce-lab00-getting-started
+        Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+                modified:   README.md
+
+        no changes added to commit (use "git add" and/or "git commit -a")
+        PS C:\Users\Bruce\Programming\class_HB2\code\bruce>
+        ```
 
 1. Let's now add the files and directories we created to be tracked by git:  
     ```
