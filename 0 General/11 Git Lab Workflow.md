@@ -26,6 +26,10 @@
 1. Push local changes to branch `<new-branch-name>` to the remote repository `origin`:  
     `git push origin <new-branch-name>`
 1. When lab is completed, [create pull request on GitHub](10%20GitHub%20Pull%20Request.md).
+1. After lab has been graded and pull request approved, perform the following two commands to remove the reference to the remote branch, and then delete your local branch:  
+    1. `git remote update origin --prune`
+    1. `git branch -d <graded-and-merged-branch-name>`
+
 1. Repeat process for new labs.
 
 ## Use the following to switch between multiple in-process lab branches.
