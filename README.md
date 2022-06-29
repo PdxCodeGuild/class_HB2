@@ -1,6 +1,6 @@
 # class_HB2
-## 2022-06-22 Full-Stack Python/JavaScript Evening Class
 
+## 2022-06-22 Full-Stack Python/JavaScript Evening Class
 
 Repo for the PDX Code Guild Python Full Stack evening course starting 06/27/2022
 
@@ -15,7 +15,8 @@ M-F 6:00 pm – 9:36 pm pst
 ### Staff
 
 - Irron Williams, Instructor
-  - irron@pdxcodeguild.com 
+
+  - irron@pdxcodeguild.com
 
 - Dustin Olsen, TA
 - Bruce Stull, TA
@@ -23,26 +24,24 @@ M-F 6:00 pm – 9:36 pm pst
 ## Capstone Dates:
 
 Capstone proposal due: Oct 10th, 2022  
-Presentation Day: November 4th, 2022  
+Presentation Day: November 4th, 2022
 
 ## Python Labs Assigned:
 
-| Lab | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
-| --- | ---------------------- | ------------- | --------------------- | ------------- |
-| 01  | Lab Average Numbers    | 28 Jun        | 05 Jul                | 12 Jul        |
-| 02  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 03  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 04  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 05  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 06  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 07  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 08  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 09  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 12  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 14  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 15  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-
-
+| Lab | Name                                                      | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | --------------------------------------------------------- | ------------- | --------------------- | ------------- |
+| 01  | [Average Numbers](1%20Python/labs/00%20Average%20Numbers) | 28 Jun        | 05 Jul                | 12 Jul        |
+| 02  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 03  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 04  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 05  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 06  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 07  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 08  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 09  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 12  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 14  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
+| 15  | Lab                                                       | 00 Jun        | 00 Jun                | 00 Jun        |
 
 ## Getting Unstuck
 
