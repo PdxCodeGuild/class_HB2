@@ -13,8 +13,8 @@ while entering_numbers:
         entering_numbers = False
         
     else:
-        list.append(answer)
+        list.append(int(answer))
 
         
-print(f"\nYou entered nums {list} \n\nThe average of the numbers is {summ(list) / len(list)}")
+print(f"\nYou entered nums {list} \n\nThe average of the numbers is {sum(list) / len(list)}")
     
