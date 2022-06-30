@@ -25,4 +25,4 @@ conversion = {
 selectedunit = conversion[units]
 result = selectedunit * int(distance)
 
-print(result)
+print(f"\n{distance} ft is {result} m")
