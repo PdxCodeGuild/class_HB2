@@ -15,3 +15,10 @@ for x in range(len(nums)):
 
 avg = added / counted
 print(avg)
+
+
+
+
+
+
+
