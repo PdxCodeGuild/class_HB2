@@ -8,10 +8,15 @@
 
 * NOTE: When some text below is placed between `<` and `>`, that means the user should provide their own text in the command and the user should not include the `<` and `>`.
 
+* To follow the guide, keep the two points in mind:
+    * At each "**Execute the following commmand**" statement below, Type the command into your CLI and press enter.
+        * Replace any part of the command within the `<` and `>` with your specific text.
+    * The statement folling the "Sample command and output" statement is just an example of what the CLI might display on the line you execute the command and the following lines which display the reponse output of your command.
+
 
 1. Open CLI.
 
-1. Make sure we are in correct folder (directory). We should be inside <class_name> folder (directory). `pwd` shows the current 'working directory':  
+1. Make sure we are in correct folder (directory). We should be inside <class_name> folder (directory). `pwd` shows the current 'working directory'. **Execute the following commmand**:  
     ```
     pwd
     ```
@@ -26,7 +31,7 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 
-1. Verify we are in a directory that is a git repository:  
+1. Verify we are in a directory that is a git repository. **Execute the following commmand**:  
     ```
     git status
     ```
@@ -46,7 +51,7 @@
         * lab-name: `getting-started`
         * My name is 'Bruce' so my branch name would be `bruce-lab00-getting-started`.
     * The command we will use (where `<branch-name>` is replaced by your branch name decided above):  
-        * This command creates a new branch named `<branch-name>` from the current state of the `main` branch.
+        * This command creates a new branch named `<branch-name>` from the current state of the `main` branch. **Execute the following commmand**:
             ```
             git checkout -b <branch-name>
             ```
@@ -57,7 +62,7 @@
                 PS C:\Users\Bruce\Programming\class_name>
                 ```
 
-1. We can verify current git branch and list local branches using `git branch`:  
+1. We can verify current git branch and list local branches using `git branch`. **Execute the following commmand**:  
     ```
     git branch
     ```
@@ -70,7 +75,7 @@
         PS C:\Users\Bruce\Programming\class_name>
         ```
 
-1. Verify contents of current directory:  
+1. Verify contents of current directory. **Execute the following commmand**:  
     ```
     ls
     ```
@@ -89,7 +94,7 @@
 
         PS C:\Users\Bruce\Programming\class_name>
         ```
-1. Change directory (folder) into the `code` directory:  
+1. Change directory (folder) into the `code` directory. **Execute the following commmand**:  
     ```
     cd code
     ```
@@ -99,7 +104,7 @@
         PS C:\Users\Bruce\Programming\class_name\code>
         ```
 
-1. Verify we are in `code` directory:  
+1. Verify we are in `code` directory. **Execute the following commmand**:  
     ```
     pwd
     ```
@@ -114,7 +119,7 @@
         PS C:\Users\Bruce\Programming\class_name\code>
         ```
 
-1. Create your directory inside the `code` directory. Use the lowercase version or your name:  
+1. Create your directory inside the `code` directory. Use the lowercase version or your name. **Execute the following commmand**:  
     ```
     mkdir <studentdirectoryname>
     ```
@@ -132,7 +137,7 @@
         PS C:\Users\Bruce\Programming\class_name\code>
         ```
 
-1. Change directory into your personal directory:  
+1. Change directory into your personal directory. **Execute the following commmand**:  
     ```
     cd <studentdirectoryname>
     ```
@@ -147,7 +152,7 @@
     * This markdown file named `README.md` will hold your name, your directory name, and your GitHub username.
     * You can also add any other information or links to the file later if you choose.
     * The '#' below will make that line render as a heading in the markdown file.
-    * We will use something like this, where `Firstname Lastname` is replaced by your first and last name:  
+    * We will use something like this, where `Firstname Lastname` is replaced by your first and last name. **Execute the following commmand**:  
         ```
         echo "# Firstname Lastname" > README.md
         ```
@@ -171,7 +176,7 @@
         brucestull
         ```
 
-1. Use `git status` to get the status of our branch:  
+1. Use `git status` to get the status of our branch. **Execute the following commmand**:  
     ```
     git status
     ```
@@ -199,7 +204,7 @@
         PS C:\Users\Bruce\Programming\class_HB2\code\bruce>
         ```
 
-1. Let's now add the files and directories we created to be tracked by git:  
+1. Let's now add the files and directories we created to be tracked by git. **Execute the following commmand**:  
     ```
     git add -A
     ```
@@ -218,7 +223,7 @@
             git add <directorypath>
             ```
 
-1. Let's use `git status` again to verify we are tracking the proper files:  
+1. Let's use `git status` again to verify we are tracking the proper files. **Execute the following commmand**:  
     ```
     git status
     ```
@@ -236,7 +241,7 @@
 1. We can now `commit` our changes to the branch `<studentname-labnumber-lab-name>` git history.
     * The `<commit message>` below is used to describe the changes this commit includes.
     * The `<commit message>` may be something like "Added directory for storing labs and included personal README.md"
-    * We will use the command `git commit -m "<commit message>"`:  
+    * We will use the command `git commit -m "<commit message>"`. **Execute the following commmand**:  
         ```
         git commit -m "<commit message>"
         ```
@@ -249,7 +254,7 @@
             PS C:\Users\Bruce\Programming\class_name\code\bruce>
             ```
 
-1. Finally we can push our code to remote repository hosted on Github. This will allow the instructor and TAs to see the code changes and grade the labs:  
+1. Finally we can push our code to remote repository hosted on Github. This will allow the instructor and TAs to see the code changes and grade the labs. **Execute the following commmand**:  
     ```
     git push origin <branch-name>
     ```
