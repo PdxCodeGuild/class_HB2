@@ -1,5 +1,5 @@
 '''
-While loop
+While loop:
 
 while condition:
     statement(code)
