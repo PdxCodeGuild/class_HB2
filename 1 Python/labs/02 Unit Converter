@@ -46,9 +46,10 @@ Below is some sample input/output:
 > what are the input units? ft
 > what are the output units? mi
 > 100 ft is 0.0189394 mi
-> Turning in your lab
+
+<!-- > Turning in your lab
 > Make sure you are still on your lab branch with git status. This will also show you a list of files that have been modified.
 > Add any files you want git to keep track of using git add filename. Replace filename with the name of your file. You can also use git add . to add everything within the current folder.
 > Commit your work using git commit -m "Your commit message". Make sure your commit message is descriptive and describes what has been changed during this commit.
 > Finally we can run the command git push to send our files up to Github. This may throw an error, but worry not, there will be a suggested command to run, simply copy and paste that command and you should be good to go.
-> Don't forget to visit Github and create a pull request to submit your work for review.
+> Don't forget to visit Github and create a pull request to submit your work for review. -->
