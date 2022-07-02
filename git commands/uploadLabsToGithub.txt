@@ -1,0 +1,7 @@
+git status 
+git add .
+git commit 
+git commit -m "Lab1"
+git push 
+git push --set-upstream origin daniel-lab01-avgNums
+

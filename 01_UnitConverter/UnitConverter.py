@@ -10,6 +10,12 @@
 # > what is the distance in feet? 12
 # > 12 ft is 3.6576 m
 
+numberOfFeet = input("Enter the number of feet: ")
+feetToMeters = float(numberOfFeet) * 0.3048
+print(f"{numberOfFeet} feet is {feetToMeters} meters.")
+
+
+
 
 
 # ===========
