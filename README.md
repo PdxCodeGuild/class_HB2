@@ -30,7 +30,7 @@ Presentation Day: November 4th, 2022
 | Lab | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ---------------------- | ------------- | --------------------- | ------------- |
 | 01  | Lab Average Numbers    | 28 Jun        | 05 Jul                | 12 Jul        |
-| 02  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
+| 02  | Lab Unit Converter     | 30 Jun        | 08 Jul                | 14 Jul        |
 | 03  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
 | 04  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
 | 05  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
