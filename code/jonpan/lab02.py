@@ -11,18 +11,35 @@
 
 ## VERSION 2 AND 3 COMBINED BELOW
 
+# distance = input("\nWhat is the distance? ") 
+# units = input("\nWhat are the units? Your choices are feet, miles, meters, km, yard, or inch. ")
+# conversion = {
+#    'feet': 0.3048,
+#    'miles': 1609.34,
+#    'meters': 1,
+#    'km': 1000,
+#    'yard': 0.9144,
+#    'inch': 0.0254,
+# }
+# selectedunit = conversion[units]
+# result = selectedunit * int(distance)
+
+# print(f"\n{distance} ft is {result} m")
+
+## VERSION 4 BELOW
+
 distance = input("\nWhat is the distance? ") 
-units = input("\nWhat are the units? Your choices are feet, miles, meters, km, yard, or inch. ")
+input_units = input("\nWhat are the input units? Your choices are feet, miles, meters, or km. ")
+output_units = input("\nWhat are the output units? Your choices are feet, miles, meters, or km. ")
+
 conversion = {
     'feet': 0.3048,
     'miles': 1609.34,
     'meters': 1,
     'km': 1000,
-    'yard': 0.9144,
-    'inch': 0.0254,
 }
 
-selectedunit = conversion[units]
-result = selectedunit * int(distance)
+inputresults = conversion[input_units]
+result = (inputresults * int(distance)) / conversion[output_units]
 
-print(f"\n{distance} ft is {result} m")
+print(f"\n{distance} {input_units} is {result} {output_units}")
