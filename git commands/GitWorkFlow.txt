@@ -1,3 +1,20 @@
+git status
+cd Documents/pdx_code/
+cd class_HB2/
+cd 01_UnitConverter/
+git status 
+git branch 
+git checkout main 
+git pull origin main 
+git checkout -b daniel-lab02-UnitConverter
+git add -A
+git commit -m "Lab02 Work"
+git push origin daniel-lab02-UnitConverter 
+
+
+
+
+=============================
 Git Lab Workflow
 The below is an example of workflow for creating branches for each new lab.
 

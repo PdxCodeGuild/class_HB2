@@ -10,9 +10,10 @@
 # > what is the distance in feet? 12
 # > 12 ft is 3.6576 m
 
-numberOfFeet = input("Enter the number of feet: ")
-feetToMeters = float(numberOfFeet) * 0.3048
-print(f"{numberOfFeet} feet is {feetToMeters} meters.")
+
+# numberOfFeet = input("Enter the number of feet: ")
+# feetToMeters = float(numberOfFeet) * 0.3048
+# print(f"{numberOfFeet} feet is {feetToMeters} meters.")
 
 
 
@@ -32,6 +33,23 @@ print(f"{numberOfFeet} feet is {feetToMeters} meters.")
 # > what is the distance? 100
 # > what are the units? mi
 # > 100 mi is 160934 m
+
+
+# from math import dist
+# from turtle import distance
+
+
+ft = 0.3048
+mi = 1609.34
+m = 1
+km = 1000
+enterUnitType = input("Choose a unit measurement (ft, mi, m, or km): ")
+enterDistance = input("Choose a distance: ")
+distanceOutput = float(enterUnitType) * float(enterDistance)
+
+print(f"{enterDistance}{enterUnitType} equals {distanceOutput}.")
+
+
 
 
 # ===========
