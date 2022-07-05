@@ -39,15 +39,35 @@
 # from turtle import distance
 
 
-ft = 0.3048
-mi = 1609.34
-m = 1
-km = 1000
 enterUnitType = input("Choose a unit measurement (ft, mi, m, or km): ")
 enterDistance = input("Choose a distance: ")
-distanceOutput = float(enterUnitType) * float(enterDistance)
+ftToMeters = float(enterDistance) * 0.3048
+miToMeters = float(enterDistance) * 1609.34
+mToMeters = float(enterDistance) 
+kmToMeters = float(enterDistance) * 1000.00
+# distanceTypes = {
+#     "ft": 0.3048,
+#     "mi": 1609.34,
+#     "m":1,
+#     "km": 1000
+# }    
 
-print(f"{enterDistance}{enterUnitType} equals {distanceOutput}.")
+if enterUnitType == "ft":
+    print(f"{enterDistance} ft is {ftToMeters} meters.")
+elif enterUnitType == "mi":
+    print(f"{enterDistance} miles is {miToMeters} meters.")
+elif enterUnitType == "m":
+    print(f"{enterDistance} meters is {mToMeters} meters.")
+elif enterUnitType == "km":
+    print(f"{enterDistance} kilometers is {kmToMeters} meters.")
+else:
+    print("Not a valid option")
+
+
+
+# distanceOutput = float(enterUnitType) * float(enterDistance)
+
+# print(f"{enterDistance}{enterUnitType} is {distanceOutput}.")
 
 
 
