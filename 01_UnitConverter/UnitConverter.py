@@ -65,9 +65,7 @@ else:
 
 
 
-# distanceOutput = float(enterUnitType) * float(enterDistance)
 
-# print(f"{enterDistance}{enterUnitType} is {distanceOutput}.")
 
 
 
