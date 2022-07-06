@@ -145,18 +145,24 @@ def convert_number(number):
     # return number]
     if number < 20:
         return low_numbers[number]
+    
+    # elif number <  100:
+        
+    #     tens_digit = number//10
+    #     ones_digit = number%10
+    # return f"{ten[tens_digit]} - {low_numbers[ones_digit]}"   
+
 
     elif number < 999:
     
-        
         hundreds_digit = number//100 #floor divide regular division with no remainder
-        tens_digit = number%10 #d28333142973283e26cc1448b99af3ed82aa62b1.rtfd
+        tens_digit = number//10
         ones_digit = number%10
     
     
     return f"{hundreds[hundreds_digit]} - {ten[tens_digit]} - {low_numbers[ones_digit]}"
 
 
-print(convert_number(426))
+print(convert_number(100))
 
 
