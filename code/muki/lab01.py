@@ -6,6 +6,7 @@
     # i will try to define a function that will do this stuff and use that for version 2
 
 from importlib.abc import MetaPathFinder
+from string import ascii_letters
 
 '''
 numbahs = [5, 0, 8, 3, 4, 1, 6]
@@ -43,4 +44,16 @@ while True:
 print(numbaahs)
 '''
 
-    
+digits = []
+while True:
+    new_dig = input('please enter an integer or type "q" to quit:\t')
+    if new_dig == 'q':
+        break
+    new_dig = int(new_dig)
+    digits.append(new_dig)
+av = sum((digits))/len(digits)
+print(f'So, the values that you entered were calculated to have an average of: {av}')
+
+
+
+
