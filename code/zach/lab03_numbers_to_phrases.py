@@ -29,11 +29,46 @@ phrases = {
     90: 'ninety'
 }
 
-def version1():
-    num = int(input('Input an integer: '))
-    print(len(str(num)))
+def numbers_to_text(num):
+    output = ''
+    
+    if 0 < num < 20:
+        output = phrases[num]
+        
+    elif 20 < num < 100:
+        tens_digit = num // 10
+        ones_digit = num % 10
+        
+        if ones_digit != 0:
+            output = phrases[tens_digit * 10] + '-' + phrases[ones_digit]
+        else:
+            output = phrases[tens_digit * 10]
+            
+    elif 100 <= num < 1000:
+        hundreds_digit = num // 100
+        tens_digit = ((num - (hundreds_digit * 100)) // 10)
+        ones_digit = ((num - (hundreds_digit * 100)) % 10)
+        
+        if tens_digit != 0 and ones_digit != 0:
+            output = phrases[hundreds_digit] + '-hundred ' + phrases[tens_digit * 10] + '-' + phrases[ones_digit]
+        elif tens_digit != 0:
+            output = phrases[hundreds_digit] + '-hundred ' + phrases[tens_digit * 10]
+        elif ones_digit != 0: 
+            output = phrases[hundreds_digit] + '-hundred ' + phrases[ones_digit]
+        else: 
+            output = phrases[hundreds_digit] + '-hundred '
+    
+    return print(output)
     
 def main():
-    version1()
+    numbers_to_text(0)
+    numbers_to_text(1)
+    numbers_to_text(10)
+    numbers_to_text(19)
+    numbers_to_text(99)
+    numbers_to_text(100)
+    numbers_to_text(101)
+    numbers_to_text(110)
+    numbers_to_text(199)
     
 main()
