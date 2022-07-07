@@ -92,7 +92,7 @@
 
 
 # print(convert_number(67))
-from hashlib import new
+
 
 
 low_numbers = { 
@@ -162,22 +162,28 @@ def convert_number(number):
 
 
     elif number < 999:
-        
         hundreds_digit = number // 100 #floor divide regular division with no remainder
+        hundreds_word = hundreds[hundreds_digit]
+        last_two = int(str(number)[-2:]) #python get last two digits in number stack exchange
+        
+        if last_two <=19: #catching all the numbers below 20
+            return f'{hundreds_word + " " +low_numbers[last_two] }'  
+        print(last_two)
         tens_digit = number // 10 
         new_tens = tens_digit % 10
         ones_digit = number % 10
-        hundreds_word = hundreds[hundreds_digit]
         tens_word = ten[new_tens]
         ones_word = low_numbers[ones_digit]
-        return f'{hundreds_word + " " + tens_word + " " + ones_word}'    
+        return f'{hundreds_word + " " + tens_word + " " + ones_word}'   
+
+         
         # return hundreds_digit, tens_digit
     # return f"{hundreds[hundreds_digit]} - {ten[tens_digit]} - {low_numbers[ones_digit]}"
 
-print(convert_number(532))
+print(convert_number(109))
 
-print(convert_number(111))
-print(convert_number(813))
-print(convert_number(140))
+# print(convert_number(111))
+# print(convert_number(813))
+# print(convert_number(140))
 
 
