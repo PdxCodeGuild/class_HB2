@@ -22,8 +22,17 @@
 
 1. Do some code changes.
 
-1. Add all the changes made to git tracking (or add only `<filename>` or `<directoryname>` changes):  
+1. Use `git status` to view what files and directories have been changed:  
+    `git status`
+
+1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
+    `git add .`
+    `git add <filename>`
+    `git add <filename>`
     `git add -A`
+
+1. Use `git status` to view what files and directories will be added to the commit:  
+    `git status`
 
 1. Commit the changes made to the branch:  
     `git commit -m <commit message>`
@@ -33,8 +42,17 @@
 
 1. Do some more code changes.
 
-1. Add all the changes made to git tracking:  
+1. Use `git status` to view what files and directories have been changed:  
+    `git status`
+
+1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
+    `git add .`
+    `git add <filename>`
+    `git add <filename>`
     `git add -A`
+
+1. Use `git status` to view what files and directories will be added to the commit:  
+    `git status`
 
 1. Commit the changes made to the branch:  
     `git commit -m <commit message>`
