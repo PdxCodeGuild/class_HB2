@@ -11,7 +11,7 @@
 # print(increment(5, 13))
 
 
-#results in Typeerror
+# results in Typeerror
 # def multiply(*nums):
 #     total = 1
 #     for n in nums:
@@ -23,7 +23,7 @@
 
 # def repeat(quote, num):
 #     print(quote * num)
-    
+
 # print(repeat(f'\nLive your best life', 5))
 
 # def get_temp(temp):
@@ -37,11 +37,8 @@
 #         return 'Chilly'
 #     else:
 #         return 'Pack your parka'
-    
+
 # print(get_temp(40))
-
-
-from cmath import e
 
 
 number_words = {
@@ -73,8 +70,7 @@ number_words = {
     70: "seventy",
     80: "eighty",
     90: "ninety",
-    100: "hundred"
-    
+    100: "hundred",
 }
 
 try:
@@ -84,21 +80,19 @@ except:
     quit()
 
 
-
-
-tens_digit = number//10
-ones_digit = number%10
+tens_digit = number // 10
+ones_digit = number % 10
 ten_column = int(str(tens_digit) + "0")
 
 #       VERSION 2          #
-hundreds_digit = number//100
+hundreds_digit = number // 100
 hundreds_column = int(str(hundreds_digit) + "00")
-tens_column2 = int(str(tens_digit%10) + "0")
+tens_column2 = int(str(tens_digit % 10) + "0")
 tens_digit2 = tens_column2 + ones_digit
 
 if number == 0:
     print("zero")
-    
+
 elif hundreds_digit > 0:
     if ones_digit == 0 and tens_column2 == 0:
         print(number_words[hundreds_digit] + "-hundred")
@@ -106,11 +100,17 @@ elif hundreds_digit > 0:
         print(number_words[hundreds_digit] + "-hundred-" + number_words[tens_column2])
     elif tens_column2 < 10:
         print(number_words[hundreds_digit] + "-hundred-" + number_words[ones_digit])
-    elif tens_column2 <20:
+    elif tens_column2 < 20:
         print(number_words[hundreds_digit] + "-hundred-" + number_words[tens_digit2])
-    
+
     else:
-        print(number_words[hundreds_digit] + "-hundred-" + number_words[tens_column2] + "-" + number_words[ones_digit])
+        print(
+            number_words[hundreds_digit]
+            + "-hundred-"
+            + number_words[tens_column2]
+            + "-"
+            + number_words[ones_digit]
+        )
 elif ones_digit == 0:
     print(number_words[ten_column])
 elif number < 20:
