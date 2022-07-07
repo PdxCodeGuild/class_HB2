@@ -27,6 +27,8 @@ def bljk(cards):
         return f"{total} 'Hit!'"    
     elif total ==21:
         return f"{total} 'BLACKJACK!'"
+    elif total >21:
+        return f"{total} 'BUSTED!!!!'"
     elif total >=17:
         return f"{total} 'Stay'"
     
