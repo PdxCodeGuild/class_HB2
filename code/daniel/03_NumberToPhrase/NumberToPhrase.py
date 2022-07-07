@@ -21,8 +21,6 @@
 import numbers
 
 
-# tens_digit = x//10
-# ones_digit = x%10
 onesNumberList = {
     0: "zero",
     1: "one",
@@ -57,22 +55,31 @@ tensNumberList = {
 }
 
 pickANumber = input("Pick a number between 0 and 99: ")
-tens_digit = int(pickANumber)//10
-ones_digit = int(pickANumber)%10
+intNum = int(pickANumber)
+wordNum = ""
+tens_digit = intNum//10
+ones_digit = intNum%10
 actual_digit = (f"{tens_digit}{ones_digit}")
+
 # print(f"{tens_digit}{ones_digit}")
 # print(actual_digit)
 
-# if int(pickANumber) > 99:
-#         print(f"Number is too high")
-# elif int(pickANumber) < 0:
-#         print(f"Number is too low")
-for num in pickANumber:
-    if actual_digit[0] == 0:
-        print(f"{onesNumberList[1]}")
+while intNum > 99 or intNum < 0:
+        print(f"Number is out of range")
+        break
+
+while intNum != "":
+    if tens_digit == 0:
+        wordNum = ones_digit[intNum()]
+
+
+
+
+# for int in intNum:
+#     if actual_digit[0] == 0:
+#         print(f"{onesNumberList[1]}")
     
-    # else:
-    #     print(f"")
+
 
 
 
