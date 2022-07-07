@@ -17,4 +17,3 @@ while entering_numbers:
 
         
 print(f"\nYou entered nums {list} \n\nThe average of the numbers is {sum(list) / len(list)}")
-    
