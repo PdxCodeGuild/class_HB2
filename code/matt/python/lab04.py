@@ -46,24 +46,48 @@ cards = {
 
 
 while True:
-    card_one = input("What's your first card? ")
-    card_two = input("What's your second card? ")
-    card_three = input("What's your third card? ")
-    if card_one or card_two or card_three == 'done':
+    card_one = input("What's your first card?\nYour options are (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K)\nType 'done to exit")
+    if card_one == 'done':
         print("goodbye")
         break
-    value_of_card_one = cards[card_one]
-    value_of_card_two = cards(card_two)
-    value_of_card_three = cards(card_three)
-    value_of_cards = value_of_card_one + value_of_card_two + value_of_card_three
-    if value_of_cards < 17:
-        print(f"Your total is: {value_of_cards}. I'd advise that you hit")
-    elif value_of_cards >= 17:
-        print("stay")
-    elif value_of_cards == 21:
-        print("blackjack")
+
+    try:
+        value_of_card_one = cards[card_one]
+        print(value_of_card_one)
+    except:
+        print("That input did not follow the choices that were presented\nEnsure that you put the options that are presented")
+
+    if value_of_card_one != cards[card_one]:
+        
+
+    card_two = input("What's your second card?\nYour options are (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K)\nType 'done to exit")
+    if card_two == 'done':
+        print('goodbye')
+        break
+
+    value_of_card_two = cards[card_two]
+    print(value_of_card_two)
+
+    card_three = input("What's your third card?\nYour options are (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K)\nType 'done to exit")
+    if card_three == 'done':
+        print('Goodbye')
+        break
+    
+    value_of_card_three = cards[card_three]
+    print(value_of_card_three)
+
+    value_of_first_three_cards = value_of_card_one + value_of_card_two + value_of_card_three
+
+
+
+    if value_of_first_three_cards < 17:
+        print(f"Your total is: {value_of_first_three_cards}. I'd advise that you hit")
+    elif value_of_first_three_cards >= 17:
+        print(f"Your total is: {value_of_first_three_cards}. I'd adives that you stay")
+    elif value_of_first_three_cards == 21:
+        print(f"Your total is: {value_of_first_three_cards}!!! Nice, that's blackjack")
     else:
-        print("Already busted")
+        print(f"Your total is: {value_of_first_three_cards}... Sorry, you busted")
 
 # def players_cards():
 #     card_one = input("What's your first card?\n")
