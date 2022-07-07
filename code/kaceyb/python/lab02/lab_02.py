@@ -4,7 +4,7 @@
 #         VERSION 1           #
 
 
-from inspect import formatannotation
+
 
 
 conversion_list = {
