@@ -1,5 +1,5 @@
 # # Version 1
-nums = [5, 0, 8, 3, 4, 1, 6]
+# nums = [5, 0, 8, 3, 4, 1, 6]
 
 # total = 0
 
@@ -14,11 +14,34 @@ nums = [5, 0, 8, 3, 4, 1, 6]
 #      print(nums[i])
 
 # Version 2
-enter = input('Please enter or a number or enter done: ')
-
 nums = []
-while True:
-     n_entry = input("Please enter a number:\t")
-     nums.append(n_entry)
-     print(nums)
 
+
+
+Done = True
+while Done == True: 
+        user = input('Please enter or a number or enter "done" : ')
+
+        if user != Done:
+                nums.append(int(user))
+        
+        else:
+                Done = False
+
+        
+        
+        
+        
+        # if user != Done:
+        #         nums.append(int(user))
+        
+        # else:
+        #         Done = False 
+
+sum = 0 
+for num in nums:
+        sum += num
+
+print(f' you entered {nums}')
+print(f'the average is {sum/len(nums)}')
+                
