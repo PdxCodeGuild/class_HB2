@@ -57,12 +57,23 @@ tensNumberList = {
 }
 
 pickANumber = input("Pick a number between 0 and 99: ")
-writtenNum1 = pickANumber[0]
-writtenNum2 = pickANumber[1]
+tens_digit = int(pickANumber)//10
+ones_digit = int(pickANumber)%10
+actual_digit = (f"{tens_digit}{ones_digit}")
+# print(f"{tens_digit}{ones_digit}")
+# print(actual_digit)
 
-
+# if int(pickANumber) > 99:
+#         print(f"Number is too high")
+# elif int(pickANumber) < 0:
+#         print(f"Number is too low")
 for num in pickANumber:
-    print(f"{writtenNum1}{writtenNum2}")
+    if actual_digit[0] == 0:
+        print(f"{onesNumberList[1]}")
+    
+    # else:
+    #     print(f"")
+
 
 
 
