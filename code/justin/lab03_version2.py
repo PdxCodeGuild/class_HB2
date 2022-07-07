@@ -27,6 +27,8 @@ def n2p(number):
             number = str(number)
             second_digit = int(number[1])
             first_digit = int(number[2])
+            if first_digit ==0:
+                return f'{hundreds[1]} {tens[second_digit]}'    
             return f'{hundreds[1]} {tens[second_digit]} {ones[first_digit]}'
     elif number >= 20 <=99:
         a = number%10    
@@ -56,6 +58,6 @@ while True:
         break
     except:
         user_num =input(f'Not a valid entry')
-        continue
+        
         
 print(n2p(user_num))
