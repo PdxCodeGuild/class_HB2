@@ -26,10 +26,10 @@
     `git status`
 
 1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
-    `git add .`
-    `git add <filename>`
-    `git add <filename>`
-    `git add -A`
+    `git add .`  
+    `git add <filename>`  
+    `git add <filename>`  
+    `git add -A`  
 
 1. Use `git status` to view what files and directories will be added to the commit:  
     `git status`
@@ -46,10 +46,10 @@
     `git status`
 
 1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
-    `git add .`
-    `git add <filename>`
-    `git add <filename>`
-    `git add -A`
+    `git add .`  
+    `git add <filename>`  
+    `git add <filename>`  
+    `git add -A`  
 
 1. Use `git status` to view what files and directories will be added to the commit:  
     `git status`
