@@ -5,10 +5,6 @@
 
 
 
-<<<<<<< HEAD
-from ast import AsyncFunctionDef
-=======
->>>>>>> kacey-lab03-number-phrases
 
 
 conversion_list = {
