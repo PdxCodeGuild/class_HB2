@@ -47,7 +47,17 @@ tens = {
     80: 'eighty',
     90: 'ninety',}
 
-def number_phrase(num):
+def number_to_phrase(num):
+    number=num_to_word(num)
+    return number
+
+def num_to_word(num)
+    if num==0:
+        return 'zero'
+    elif num==1:
+        return 'one'
+    
+
     if num == 0:
         return 'zero'
     
