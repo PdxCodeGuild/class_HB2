@@ -1,47 +1,4 @@
-# def get_greeting(name):
-#     return f"Good evening {name}"
-# message = get_greeting('kathy')
-# file = open('get_greeting.txt', 'w')
-# file.write(message)
-# file.close
-
-# def increments(number, by):
-#     return number + by
-
-# result = increments(3, 1)
-# print(result)
-
-# def increments(number, by=1):
-#     return number + by
-# print(increments(2))
-
-# def increments(number, by=1):
-#     return number + by
-# print(increments(2, 13)) #overwrites the by=1
-
-# def increments(num1 =1, num2 =1 ):
-#     return num2 + num1
-# print(increments(num2= 5, num1 = 13)) 
-
-#tuple
-# def multiply(*nums):
-#     print(nums)
-# print(multiply(2, 4, 6, 8)) 
-
-# def multiply(*nums):
-#     for n in nums:
-#     print(n)
-
-# print(multiply(2, 4, 6, 8)) 
-
-
-# x = 67
-# test_digit = x / 10
-
-
-# # print(test_digit)
-# print(tens_digit)
-# print(ones_digit)
+#version 1
 
 # low_numbers = { 
 #     0: "zero",
@@ -93,8 +50,7 @@
 
 # print(convert_number(67))
 
-
-
+#version 2
 low_numbers = { 
     0: "zero",
     1: "one",
