@@ -20,6 +20,7 @@
 
 from ast import NotIn
 import numbers
+from xml.dom import WrongDocumentErr
 
 from cupshelpers import activateNewPrinter
 
@@ -59,7 +60,7 @@ tensNumberList = {
 
 pickANumber = input("Pick a number between 0 and 99: ")
 intNum = int(pickANumber)
-# wordNum = ""
+wordNum = ""
 tens_digit = intNum//10
 ones_digit = intNum%10
 actual_digit = (f"{tens_digit}{ones_digit}")
@@ -81,7 +82,8 @@ while True:
         print(str(tensNumberList[intNum]))
         break
     elif intNum not in onesNumberList and  intNum not in tensNumberList:
-        print(str(tensNumberList[intNum//10]) + str(onesNumberList[intNum%10]))
+        wordNum = (tensNumberList(tens_digit))
+        print(str(wordNum))
         break
     
 
