@@ -33,7 +33,7 @@ def lottery():
     times=0
     a = 0
     total_win = 0
-    while times<1000:
+    while times<100000:
         a = matching(winner,ticket())
         if a == 1:
             total_win+=4
