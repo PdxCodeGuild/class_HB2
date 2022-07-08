@@ -30,7 +30,7 @@ def bljk(cards):
                 b=dic[b.upper()]            
                 total_1+=b
                 total_2+=b
-    print(total_1, total_2)
+    # print(total_1, total_2)
     if total_1==total_2:  
         if total_1<17:
             return f"{total_1} 'Hit!'"    
@@ -42,13 +42,13 @@ def bljk(cards):
             return f"{total_1} 'Stay'"
     else:
         if total_2<17:
-            return f"{total_1} or {total_2} 'Hit!'"    
+            return f"{total_1} or {total_2}"    
         elif total_2 ==21:
-            return f"{total_1} or {total_2} 'BLACKJACK!'"
+            return f"{total_1} or {total_2}"
         elif total_2 >21:
-            return f"{total_1} or {total_2} 'BUSTED!!!!'"
+            return f"{total_1} or {total_2}"
         elif total_2 >=17:
-            return f"{total_1} or {total_2} 'Stay'"
+            return f"{total_1} or {total_2}"
     
 
 print(bljk(user_cards))
