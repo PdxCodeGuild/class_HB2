@@ -2,7 +2,11 @@
 
 ## Version 1
 
-- Convert a given number into its english representation. For example: 67 becomes 'sixty-seven'. Handle numbers from 0-99
+- Convert a given number into its english representation.
+
+### For example: 67 becomes 'sixty-seven'.
+
+- Handle numbers from 0-99
 
 ### Hint: you can use modulus to extract the ones and tens digit
 

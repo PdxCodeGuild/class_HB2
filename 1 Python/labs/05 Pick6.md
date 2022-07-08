@@ -30,4 +30,5 @@
 
 ## Version 2
 
-- The ROI (return on investment) is defined as (earnings - expenses)/expenses. Calculate your ROI, print it out along with your earnings and expenses.
+- The ROI (return on investment) is defined as `(earnings - expenses)/expenses`.
+- Calculate your ROI, print it out along with your earnings and expenses.
