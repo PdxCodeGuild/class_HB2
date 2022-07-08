@@ -18,7 +18,10 @@
 # Convert a time given in hours and minutes to a phrase.
 #===================================================================================
 
+from ast import NotIn
 import numbers
+
+from cupshelpers import activateNewPrinter
 
 
 onesNumberList = {
@@ -44,19 +47,19 @@ tensNumberList = {
     17: "seventeen",
     18: "eighteen",
     19: "ninteen",
-    2: "twenty",
-    3: "thirty",
-    4: "fory",
-    5: "fifty",
-    6: "sixty",
-    7: "seventy",
-    8: "eighty",
-    9: "ninty",
+    20: "twenty",
+    30: "thirty",
+    40: "fory",
+    50: "fifty",
+    60: "sixty",
+    70: "seventy",
+    80: "eighty",
+    90: "ninty",
 }
 
 pickANumber = input("Pick a number between 0 and 99: ")
 intNum = int(pickANumber)
-wordNum = ""
+# wordNum = ""
 tens_digit = intNum//10
 ones_digit = intNum%10
 actual_digit = (f"{tens_digit}{ones_digit}")
@@ -64,13 +67,47 @@ actual_digit = (f"{tens_digit}{ones_digit}")
 # print(f"{tens_digit}{ones_digit}")
 # print(actual_digit)
 
+#====================================
 while intNum > 99 or intNum < 0:
         print(f"Number is out of range")
         break
 
-while intNum != "":
-    if tens_digit == 0:
-        wordNum = ones_digit[intNum()]
+    # print(onesNumberList.get(int(6)))
+while True:
+    if intNum in onesNumberList:
+        print(str(onesNumberList[intNum]))
+        break
+    elif intNum in tensNumberList:
+        print(str(tensNumberList[intNum]))
+        break
+    elif intNum not in onesNumberList and  intNum not in tensNumberList:
+        print(str(tensNumberList[intNum//10]) + str(onesNumberList[intNum%10]))
+        break
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#====================================
+
+
+# while intNum > 99 or intNum < 0:
+#         print(f"Number is out of range")
+#         break
+
+# while intNum != "":
+#     if tens_digit == 0:
+#         wordNum = ones_digit[intNum]
 
 
 
