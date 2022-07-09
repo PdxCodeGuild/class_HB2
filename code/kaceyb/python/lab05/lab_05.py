@@ -96,7 +96,9 @@ def num_matches(winning, ticket):
             # print("YOU WIN!")
             matches += 1       
     return matches
+
 # Generate a list of 6 random numbers representing the winning tickets
+
 def pick6():
     ticket_numbers = [] 
     for x in range(6):
