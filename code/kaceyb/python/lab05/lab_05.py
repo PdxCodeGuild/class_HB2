@@ -144,6 +144,8 @@ print(payout)
 
 roi = (earnings - expenses)/expenses
 
+
+
 print(roi)
 
 
