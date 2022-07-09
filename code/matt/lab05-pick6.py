@@ -1,35 +1,12 @@
-'''Lab 5: Pick6
+#Matt Nichols
+#Lab05
 
-Have the computer play pick6 many times and determine net balance.
+#Version 1
 
-Initially the program will pick 6 random numbers as the 'winner'. Then try playing pick6 100,000 times, with the ticket cost and payoff below.
-
-A ticket contains 6 numbers, 1 to 99, and the number of matches between the ticket and the winning numbers determines the payoff. 
-Order matters, if the winning numbers are [5, 10] and your ticket numbers are [10, 5] you have 0 matches. 
-If the winning numbers are [5, 10, 2] and your ticket numbers are [10, 5, 2], you have 1 match. Calculate your net winnings (the sum of all expenses and earnings).
-
-    a ticket costs $2
-    if 1 number matches, you win $4
-    if 2 numbers match, you win $7
-    if 3 numbers match, you win $100
-    if 4 numbers match, you win $50,000
-    if 5 numbers match, you win $1,000,000
-    if 6 numbers match, you win $25,000,000
-
-One function you might write is pick6() which will generate a list of 6 random numbers, which can then be used for both the winning numbers and tickets. 
-Another function could be num_matches(winning, ticket) which returns the number of matches between the winning numbers and the ticket.
-Steps
-
-    Generate a list of 6 random numbers representing the winning tickets
-    Start your balance at 0
-    Loop 100,000 times, for each loop:
-    Generate a list of 6 random numbers representing the ticket
-    Subtract 2 from your balance (you bought a ticket)
-    Find how many numbers match
-    Add to your balance the winnings from your matches
-    After the loop, print the final balance'''
+#Importing random for future random.randint(1, 99)
 import random
 
+#The payoff of each ticket they've purchased
 payoff = {
     0: -2,
     1: 2,
@@ -40,27 +17,47 @@ payoff = {
     6: 24999998
 }
 
+#Function for 6 numbers(1, 99) to fall into a list for future computing/comparing
 def random_ticket():
     nums = []
     while len(nums) < 6:
         nums.append(random.randint(1, 99))
     return nums
 
+#Function for comparing the matches between two lists - player_ticket and winning_ticket
 def get_value(player_ticket, winning_ticket):
     matches = 0
     for index in range(0,6):
         if player_ticket[index] == winning_ticket[index]:
             matches += 1
-        return matches 
+    return matches 
 
+#Winning ticket so it prints once and we can compare the players tickets to it
 winning_ticket = random_ticket()
 
+#List for future computing and getting the total earnings
+ticket_list = []
+
+#Attempts starting at 0 so we can give are while loop a break point
 attempts = 0
-while attempts < 5:
+
+while attempts < 100000:
     attempts += 1
+
+    #Runs through player_ticket 100,000 times so we can start to compare the earnings (losses)
     player_ticket = random_ticket()
+
     value_of_ticket = get_value(player_ticket, winning_ticket)
+
+    #Implementing the matches from our get_value functions into keys of our dictionary(payoff) to pull numbers
     earnings_of_each_ticket = payoff[value_of_ticket]
+
+    #Pulling the list we created earlier and appending the earnings to it
+    ticket_list.append(earnings_of_each_ticket)
+
+#breaking from the loop and giving one earnings (losses) statement    
+total_earnings = (sum(ticket_list))
+print(f'Your total is: {total_earnings}')
 
     
 
