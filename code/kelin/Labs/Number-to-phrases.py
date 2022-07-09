@@ -45,10 +45,23 @@ ten = {
     '9':'ninety',
     }
 
+hundred = {
+    '10':'one hundred',
+    '20':'two hundred',
+    '30':'three hundred',
+    '40':'four hundred',
+    '50':'five hundred',
+    '60':'six hundred',
+    '70':'seven hundred',
+    '80':'eight hundred',
+    '90':'nine hundred'
+    }
+
 num = input("Enter a number between 0 and 99: ")
 ones = int(num)%10
 teens = int(num)
 tens = int(num)//10
+hundreds = int(num)*1
 user_num = int(num)
 
 if user_num == 0:
@@ -71,8 +84,19 @@ elif user_num in range (20, 100):
     num_phrase_ones = one[ones_phrase]
     print(num_phrase_tens,num_phrase_ones)
 
+elif user_num in range (100, 1000):
+    hundreds_phrase = str(hundreds)
+    num_phrase_hundreds = hundred[hundreds_phrase]
+    tens_phrase = str(tens)
+    num_phrase_tens = ten[tens_phrase]
+    ones_phrase = str(ones)
+    num_phrase_ones = one[ones_phrase]
+    print(num_phrase_hundreds,num_phrase_tens,num_phrase_ones)
+
 # Version 2
 # Handle numbers from 100-999.
+
+
 
 # Version 3 (optional)
 # Convert a number to roman numerals.
