@@ -29,31 +29,56 @@ Steps
     Add to your balance the winnings from your matches
     After the loop, print the final balance'''
 import random
-#print(random.randint(1,99)) - gives random number 1-99 as expected
-def winning_numbers():
-    nums = []
-    while len(nums) < 7:
-        nums.append(random.randint(1, 99))
-    return nums
-#print(winning_numbers()) = [54, 56, 20, 55, 81, 48, 23]
 
-def players_numbers():
+payoff = {
+    0: -2,
+    1: 2,
+    2: 5,
+    3: 98,
+    4: 49998,
+    5: 999998,
+    6: 24999998
+}
+
+def random_ticket():
     nums = []
-    while len(nums) < 7:
+    while len(nums) < 6:
         nums.append(random.randint(1, 99))
     return nums
+
+def get_value(player_ticket, winning_ticket):
+    matches = 0
+    for index in range(0,6):
+        if player_ticket[index] == winning_ticket[index]:
+            matches += 1
+        return matches 
+
+winning_ticket = random_ticket()
+
+attempts = 0
+while attempts < 5:
+    attempts += 1
+    player_ticket = random_ticket()
+    value_of_ticket = get_value(player_ticket, winning_ticket)
+    earnings_of_each_ticket = payoff[value_of_ticket]
+
+    
+
+
+
+    
 #print(players_numbers()) = [32, 40, 63, 83, 45, 71, 54]
 
-def get_index_and_nums():
-    for i, nums in enumerate(winning_numbers()):
-        print(i, nums)
-    for i, nums in enumerate(players_numbers()):
-        print(i, nums)
-    return get_index_and_nums()
+# def get_index_and_nums():
+#     for i, nums in enumerate(winning_numbers()):
+#         print(i, nums)
+#     for i, nums in enumerate(players_numbers()):
+#         print(i, nums)
+#     return get_index_and_nums()
 
         
 
-print(get_index_and_nums())
+# print(get_index_and_nums())
 
 
 #for i, value in enumerate(winning_numbers()):
