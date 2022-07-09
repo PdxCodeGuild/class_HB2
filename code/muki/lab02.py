@@ -51,13 +51,45 @@ Commit your work using git commit -m "Your commit message". Make sure your commi
 Finally we can run the command git push to send our files up to Github. This may throw an error, but worry not, there will be a suggested command to run, simply copy and paste that command and you should be good to go.
 Don't forget to visit Github and create a pull request to submit your work for review.
 '''
+# commented out version one for testing into version 2 
+"""
 
-units = {
-
-}
 # input with feet to meters version 1
 unit_in = input('\nEnter a the number of feet you would like to convert to meters:\n')
 ft_to_m = 0.3048
 # print(type(ft_to_m))
 meters_out = float(unit_in) * ft_to_m
 print(f'{unit_in} ft is equal to {meters_out} m')
+"""
+ft_m = 0.3048
+m_ft = 1/0.3048
+mi_m = 1609.34
+m_mi = 1/1609.34
+km_m = 1000
+m_km = 1/1000
+m_mm = 1000
+mm_m = 1/1000
+yd_m = 0.9144
+m_yd = 1/0.9144
+m_m = 1
+
+
+dist = input('\nEnter the length that you would like to convert to meters:\t')
+dist_unit = input('Enter the units: (km, mi, ft, in, mm, yd:\t')
+
+
+if dist_unit.lower() == 'km':
+    km = float(dist)*km_m
+    print(f'{dist}km is {km}m')
+if dist_unit.lower() == 'mi':
+    mi = float(dist)*mi_m
+    print(f'{dist}mi is {mi}m')
+if dist_unit.lower() == 'ft':
+    ft = float(dist)*ft_m
+    print(f'{dist}ft is {ft}m')
+if dist_unit.lower() == 'mm':
+    mm = float(dist)*mm_m
+    print(f'{dist}mm is {mm}m')
+if dist_unit.lower() == 'yd':
+    yd = float(dist)*yd_m
+    print(f'{dist}yd is {yd}m')
