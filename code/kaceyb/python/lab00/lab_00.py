@@ -1,5 +1,5 @@
 
-#            Lab 00: Average Numbers          #
+#            Lab 01: Average Numbers          #
 
 entering_numbers = True
 
