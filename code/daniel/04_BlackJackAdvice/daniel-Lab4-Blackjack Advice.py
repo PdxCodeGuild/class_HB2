@@ -49,19 +49,57 @@ Facecards = {
 Question1 = input("What's your first card?: ")
 Question2 = input("What's your second card?: ")
 Question3 = input("What's your third card?: ")
+cardTotal = 0
 
-total = int(Question1) + int(Question2) + int(Question3)
+while True:
+    if Question1 in Facecards:
+        cardTotal += int(Facecards[Question1])
+        print(f"Question1: {Question1}")
 
+        if Question2 in Facecards:
+            cardTotal += int(Facecards[Question2])
+            print(f"Question1: {Question2}")
 
-
-if total < 17:
-    print("Hit")
-elif total <= 17 and total < 21:
-    print("Stay")
-elif total == 21:
-    print("BlackJack!")
+            if Question3 in Facecards:
+                cardTotal += int(Facecards[Question3])
+                print(f"Question1: {Question3}")
+                break
+            else:
+                print("Not valid")
+                break
+        else:
+            print("Not valid")
+            break
+    else:
+        print("Not valid")
+        break
+if cardTotal < 17:
+    print(f"Hit {cardTotal}")
+elif 17 <= cardTotal < 21:
+    print(f"Stay {cardTotal}")
+elif cardTotal == 21:
+    print(f"Backjack! {cardTotal}")
+elif cardTotal > 21:
+    print(f"Already Busted {cardTotal}")
 else:
-    print("Busted")
+    print("Not Valid")
+
+
+
+# print(cardTotal)
+
+# total = int(Question1) + int(Question2) + int(Question3)
+
+
+
+# if total < 17:
+#     print("Hit")
+# elif total <= 17 and total < 21:
+#     print("Stay")
+# elif total == 21:
+#     print("BlackJack!")
+# else:
+#     print("Busted")
 
 
 
