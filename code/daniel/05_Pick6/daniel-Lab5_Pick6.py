@@ -35,34 +35,54 @@
 # ====================================================================================================================================================
 
 import random
-
-def pick6():
+#======================================================================
+#Version 1
+#======================================================================
+# Generate a list of 6 random numbers representing the winning tickets
+#======================================================================
+def pick6winner():
     numlist = []
     for r in range(6):
         x = random.randint(1,99)
         numlist.append(x)
     print(numlist)
+pick6winner()
+#=========================
+# Start your balance at 0
+#=========================
+balance = 0
 
-pick6()
-pick6()
+
+#======================================================================
+# Loop 100,000 times, for each loop:
+#======================================================================
+simulations = 100,000
+sim_compare = ""
+for n in range(0, 100,000):
+
+
+
+#======================================================================
+# Generate a list of 6 random numbers representing the ticket
+#======================================================================
+    def pick6ticket():
+        numlist = []
+        for r in range(6):
+            x = random.randint(1,99)
+            numlist.append(x)
+        print(numlist)
+pick6ticket()
+#======================================================================
+# Subtract 2 from your balance (you bought a ticket)
+#======================================================================
+
+#======================================================================
+# Find how many numbers match
+#======================================================================
+
 #==============================
 
-# simulations = 100,000
-# possible_values = list(range(0,6))
-# # print(possible_values)
 
-# outcomes = {i: 0 for i in possible_values}
-
-# for i in range(simulations):
-#     d1 = random.randint(0,99)
-#     d2 = random.randint(0,99)
-
-#     outcome = d1 + d2
-#     outcomes[outcome] += 1
-
-# print(outcomes)
-
-#=================================
 
 
 
