@@ -81,15 +81,15 @@ import numbers
 #         print(str(tensNumberList[intNum]))
 #         break
 #     elif intNum not in onesNumberList and intNum not in tensNumberList:
-#         # wordNum = tensNumberList[tens_digit*10] + onesNumberList[ones_digit*10]
-#         print(str(tensNumberList[tens_digit*10] + "-" + onesNumberList[ones_digit]))
+#         # wordNum = tensNumberList[tens_digit * 10] + onesNumberList[ones_digit * 10]
+#         print(str(tensNumberList[tens_digit * 10] + "-" + onesNumberList[ones_digit]))
 #         break
  
 #=======================================
 #Version2
 #=======================================
 
-NumberList = {
+number_list = {
     0: "zero",
     1: "one",
     2: "two",
@@ -134,32 +134,37 @@ intNum = int(pickANumber)
 #========
 #digits
 #========
-hundred_digit = intNum//100
-
+hundred_digit = intNum // 100
 if intNum > 99:
-    tens_digit = intNum//10
-    tens_digit_mod = tens_digit%10
+    tens_digit = intNum // 10
+    tens_digit_mod = tens_digit % 10
 else:
-    tens_digit = intNum//10
-
-ones_digit = intNum%10
+    tens_digit = intNum // 10
+    tens_digit_mod = 0
+ones_digit = intNum % 10
 #========
-print(hundred_digit)
-# print(tens_digit)
-print(tens_digit_mod)
-print(ones_digit)
+print(f"Hundred Digit: {hundred_digit}")
+print(f"Tens Digit: {tens_digit}")
+print(f"Tens Digit Mod: {tens_digit_mod}")
+print(f"Ones Digit: {ones_digit}")
 
 
 while intNum >= 1000 or intNum < 0:
         print(f"Number is out of range")
         exit()   
 while True:
-    if intNum in NumberList:
-        print(str(NumberList[intNum]))
+    if intNum in number_list:
+        print(str(number_list[intNum]))
         break
-    elif intNum not in NumberList and intNum < 99: 
-        print(str(NumberList[tens_digit*10] + "-" + NumberList[ones_digit]))
+    elif intNum not in number_list and intNum < 99: 
+        print(str(number_list[tens_digit * 10] + "-" + number_list[ones_digit]))
         break
+    # elif intNum not in number_list and 100 <= intNum < 120:
+    #     print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
+    #     break
+    # elif intNum not in number_list and 110 <= intNum < 120:
+    #     print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
+    #     break
     else:
-        print(str(NumberList[hundred_digit*100] + " " + (NumberList[tens_digit_mod*10] + "-" + NumberList[ones_digit])))
+        print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
         break
