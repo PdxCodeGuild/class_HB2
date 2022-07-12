@@ -22,12 +22,14 @@ def num_roman(user_num):
     value_n=[1,4,5,9,10,40,50,90,100,400,500,900,1000]
     i=12
     conv_num =''
+    if user_num == 0:
+        return 'zero'
     while user_num!=0:
         if value_n[i] <= user_num:
             conv_num+=value_r[i]
             user_num-=value_n[i]
         else:
-            i-=1      
+            i-=1
     return conv_num
     
 
