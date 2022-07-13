@@ -112,7 +112,7 @@ number_list = {
     19: "ninteen",
     20: "twenty",
     30: "thirty",
-    40: "fory",
+    40: "forty",
     50: "fifty",
     60: "sixty",
     70: "seventy",
@@ -136,10 +136,10 @@ intNum = int(pickANumber)
 #========
 hundred_digit = intNum // 100
 if intNum > 99:
-    tens_digit = intNum // 10
+    tens_digit = intNum % 100 // 10
     tens_digit_mod = tens_digit % 10
 else:
-    tens_digit = intNum // 10
+    tens_digit = intNum // 100
     tens_digit_mod = 0
 ones_digit = intNum % 10
 #========
@@ -159,13 +159,20 @@ while True:
     elif intNum not in number_list and intNum < 99: 
         print(str(number_list[tens_digit * 10] + "-" + number_list[ones_digit]))
         break
-    elif intNum not in number_list and 100 <= intNum < 120:
-        hundreds = str(number_list[hundred_digit * 100])
-        newIntNum = intNum - (hundred_digit *100)
-        tens_digit = NewIntNum // 10
-        # print(str(number_list[hundred_digit * 100] + " err " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
-        break
+    elif intNum not in number_list and 100 <= intNum < 1000:
+        tens_digit = intNum % 100 // 10
+        ones_digit = intNum % 10
+        print(str(number_list[hundred_digit * 100] + "-" (number_list[tens_digit])
+        
+        # break
     else:
         print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
         break
 
+
+
+
+ # hundreds = str(number_list[hundred_digit * 100])
+        # newIntNum = intNum - (hundred_digit *100)
+        # tens_digit = NewIntNum // 10
+        # print(str(number_list[hundred_digit * 100] + " err " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
