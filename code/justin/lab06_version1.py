@@ -41,7 +41,10 @@ def change_make(amount):
             amount = round(amount - p*change_a[0], 1)
     for x in answer:
         r += x
-        r += ' '
+        if x != answer[-1]:
+            r += ', '
+        else:
+            r += ''
     return r    
 
 while True:
