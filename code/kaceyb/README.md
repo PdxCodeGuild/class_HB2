@@ -1,5 +1,5 @@
 # Kacey Broetje
 
-## Directory name: Kacey
+## Directory name: kaceyb
 
 ## GitHub Username: Demolishen
