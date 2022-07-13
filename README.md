@@ -34,7 +34,7 @@ Presentation Day: November 4th, 2022
 | 03  | Lab Number To Phrase   | 01 Jul        | 09 Jul                | 15 Jul        |
 | 04  | Lab Black Jack Advice  | 06 Jul        | 13 Jul                | 20 Jul        |
 | 05  | Lab Pick6              | 07 Jul        | 14 Jul                | 21 Jul        |
-| 06  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
+| 06  | Lab Make Change        | 12 Jul        | Jul 19                | 26 Jul        |
 | 07  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
 | 08  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
 | 09  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
