@@ -35,43 +35,40 @@
 # ====================================================================================================================================================
 
 import random
-#======================================================================
-#Version 1
-#======================================================================
-# Generate a list of 6 random numbers representing the winning tickets
-#======================================================================
+
 def pick6winner():
-    numlist = []
+    numlist1 = []
     for r in range(6):
         x = random.randint(1,99)
-        numlist.append(x)
-    print(numlist)
-pick6winner()
-#=========================
-# Start your balance at 0
-#=========================
+        numlist1.append(x)
+    print(numlist1)
+# pick6winner()
+
+def pick6ticket():
+    numlist2 = []
+    for r in range(6):
+        y = random.randint(1,99)
+        numlist2.append(y)
+    print(numlist2)
+# pick6ticket()
+
+sim_compare = []
 balance = 0
-
-
-#======================================================================
-# Loop 100,000 times, for each loop:
-#======================================================================
 simulations = 100,000
-sim_compare = ""
-for n in range(0, 100,000):
+
+
+for r in range(1,100000):
+    if numlist1[x] == numlist2[y]:
+        sim_compare.append(x)
+
+# for n in range(0, 100,000):
 
 
 
 #======================================================================
 # Generate a list of 6 random numbers representing the ticket
 #======================================================================
-    def pick6ticket():
-        numlist = []
-        for r in range(6):
-            x = random.randint(1,99)
-            numlist.append(x)
-        print(numlist)
-pick6ticket()
+
 #======================================================================
 # Subtract 2 from your balance (you bought a ticket)
 #======================================================================
@@ -80,9 +77,8 @@ pick6ticket()
 # Find how many numbers match
 #======================================================================
 
+    
 #==============================
-
-
 
 
 
