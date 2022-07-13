@@ -16,7 +16,6 @@ M-F 6:00 pm – 9:36 pm PT
 
 - Irron Williams, Instructor
   - irron@pdxcodeguild.com
-- Dustin Olsen, TA
 - Bruce Stull, TA
 
 ## Capstone Dates
