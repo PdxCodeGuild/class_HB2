@@ -33,7 +33,7 @@ Presentation Day: November 4th, 2022
 | 03  | [Number To Phrase](1%20Python/labs/03%20Number%20To%20Phrases.md)  | 01 Jul        | 09 Jul                | 15 Jul        |
 | 04  | [Black Jack Advice](1%20Python/labs/04%20Black%20Jack%20Advice.md) | 06 Jul        | 13 Jul                | 20 Jul        |
 | 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 14 Jul                | 21 Jul        |
-| 06  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 06  | [Make Change](https://github.com/PdxCodeGuild/class_HB2/blob/main/1%20Python/labs/06%20Make%20Change)                                                              | 12 Jul        | 19 Jul                | 26 Jul        |
 | 07  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
 | 08  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
 | 09  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
