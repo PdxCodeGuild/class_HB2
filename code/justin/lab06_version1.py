@@ -55,7 +55,7 @@ while True:
         try:
             x = float(x)
         except:
-            x = input('enter amount again: ')
+            continue
         
         print(change_make(x))
      
