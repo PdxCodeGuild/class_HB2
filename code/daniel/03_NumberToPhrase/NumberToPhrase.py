@@ -159,12 +159,13 @@ while True:
     elif intNum not in number_list and intNum < 99: 
         print(str(number_list[tens_digit * 10] + "-" + number_list[ones_digit]))
         break
-    # elif intNum not in number_list and 100 <= intNum < 120:
-    #     print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
-    #     break
-    # elif intNum not in number_list and 110 <= intNum < 120:
-    #     print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
-    #     break
+    elif intNum not in number_list and 100 <= intNum < 120:
+        hundreds = str(number_list[hundred_digit * 100])
+        newIntNum = intNum - (hundred_digit *100)
+        tens_digit = NewIntNum // 10
+        # print(str(number_list[hundred_digit * 100] + " err " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
+        break
     else:
         print(str(number_list[hundred_digit * 100] + " " + (number_list[tens_digit_mod * 10] + "-" + number_list[ones_digit])))
         break
+
