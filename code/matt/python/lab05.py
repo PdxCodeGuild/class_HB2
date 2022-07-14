@@ -1,4 +1,4 @@
-Lab 5: Pick6
+'''Lab 5: Pick6
 
 Have the computer play pick6 many times and determine net balance.
 
@@ -27,8 +27,14 @@ Steps
     Subtract 2 from your balance (you bought a ticket)
     Find how many numbers match
     Add to your balance the winnings from your matches
-    After the loop, print the final balance
-
-Version 2
-
-The ROI (return on investment) is defined as (earnings - expenses)/expenses. Calculate your ROI, print it out along with your earnings and expenses.
+    After the loop, print the final balance'''
+import random
+#print(random.randint(1,99)) - gives random number 1-99 as expected
+def winning_numbers():
+    nums = []
+    while len(nums) < 7:
+        nums.append(random.randint(1, 99))
+    print(nums)
+lottery = []
+print(winning_numbers(lottery))
+    

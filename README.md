@@ -1,48 +1,44 @@
-# class_HB2
-## 2022-06-22 Full-Stack Python/JavaScript Evening Class
+# Class_HB2
 
+## 2022-06-22 Full-Stack Python/JavaScript Evening Class
 
 Repo for the PDX Code Guild Python Full Stack evening course starting 06/27/2022
 
-Class is held from **July 27th, 2022 to November 4th, 2022**
-M-F 6:00 pm – 9:36 pm pst
+Class is held from **June 27th, 2022 to November 4th, 2022**
+M-F 6:00 pm – 9:36 pm PT
 
 ### Holidays
 
-- July 4th 21st (Independence Day)
+- ~~July 4th 21st (Independence Day)~~
 - September 5th (Labor Day)
 
 ### Staff
 
 - Irron Williams, Instructor
-  - irron@pdxcodeguild.com 
-
-- Dustin Olsen, TA
+  - irron@pdxcodeguild.com
 - Bruce Stull, TA
 
-## Capstone Dates:
+## Capstone Dates
 
 Capstone proposal due: Oct 10th, 2022  
-Presentation Day: November 4th, 2022  
+Presentation Day: November 4th, 2022
 
 ## Python Labs Assigned:
 
-| Lab | Name                   | Date Assigned | Due By Start Of Class | Hard Due Date |
-| --- | ---------------------- | ------------- | --------------------- | ------------- |
-| 01  | Lab Average Numbers    | 28 Jun        | 05 Jul                | 12 Jul        |
-| 02  | Lab Unit Converter     | 30 Jun        | 08 Jul                | 14 Jul        |
-| 03  | Lab Number To Phrase   | 01 Jul        | 09 Jul                | 15 Jul        |
-| 04  | Lab Black Jack Advice  | 06 Jul        | 13 Jul                | 20 Jul        |
-| 05  | Lab Pick6              | 07 Jul        | 14 Jul                | 21 Jul        |
-| 06  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 07  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 08  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 09  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 12  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 14  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-| 15  | Lab                    | 00 Jun        | 00 Jun                | 00 Jun        |
-
-
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
+| 01  | [Average Numbers](1%20Python/labs/01%20Average%20Numbers.md)       | 28 Jun        | 05 Jul                | 12 Jul        |
+| 02  | [Unit Converter](1%20Python/labs/02%20Unit%20Converter.md)         | 30 Jun        | 08 Jul                | 14 Jul        |
+| 03  | [Number To Phrase](1%20Python/labs/03%20Number%20To%20Phrases.md)  | 01 Jul        | 09 Jul                | 15 Jul        |
+| 04  | [Black Jack Advice](1%20Python/labs/04%20Black%20Jack%20Advice.md) | 06 Jul        | 13 Jul                | 20 Jul        |
+| 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 14 Jul                | 21 Jul        |
+| 06  | [Make Change](1%20Python/labs/06%20Make%20Change)                                                              | 12 Jul        | 19 Jul                | 26 Jul        |
+| 07  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 08  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 09  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 12  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 14  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 15  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
 
 ## Getting Unstuck
 
