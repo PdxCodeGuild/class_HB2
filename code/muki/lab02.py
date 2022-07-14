@@ -94,3 +94,6 @@ if dist_unit.lower() == 'mm':
 if dist_unit.lower() == 'yd':
     yd = float(dist)*yd_m
     print(f'{dist}yd is {yd}m')
+if dist_unit.lower() == 'in':
+    inch = float(dist)*in_m
+    print(f'{dist}in is {inch}m')
