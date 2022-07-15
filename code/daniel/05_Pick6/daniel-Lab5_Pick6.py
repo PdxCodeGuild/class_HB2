@@ -36,49 +36,42 @@
 
 import random
 
-def pick6winner():
-    numlist1 = []
-    for r in range(6):
-        x = random.randint(1,99)
-        numlist1.append(x)
-    print(numlist1)
-# pick6winner()
-
-def pick6ticket():
-    numlist2 = []
-    for r in range(6):
-        y = random.randint(1,99)
-        numlist2.append(y)
-    print(numlist2)
-# pick6ticket()
-
-sim_compare = []
 balance = 0
 simulations = 100,000
 
 
-for r in range(1,100000):
-    if numlist1[x] == numlist2[y]:
-        sim_compare.append(x)
+
+
+def pick6():
+    winning_numbers = []
+    for r in range(6):
+        x = random.randint(1,99)
+        winning_numbers.append(x)
+    print(winning_numbers)
+    
+    ticket = []
+    for i in range(6):
+        y = random.randint(1,99)
+        ticket.append(y)
+    print(ticket)
+pick6()
+
+
+
+def num_matches(winning, ticket):
+
+
+# sim_compare = []
+
+
+
+
+# for r in range(1,100000):
+#     if numlist1[x] == numlist2[y]:
+#         sim_compare.append(x)
 
 # for n in range(0, 100,000):
 
-
-
-#======================================================================
-# Generate a list of 6 random numbers representing the ticket
-#======================================================================
-
-#======================================================================
-# Subtract 2 from your balance (you bought a ticket)
-#======================================================================
-
-#======================================================================
-# Find how many numbers match
-#======================================================================
-
-    
-#==============================
 
 
 
