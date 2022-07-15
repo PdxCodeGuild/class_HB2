@@ -4,7 +4,7 @@ def quarters(amount):
     It then returns the number of quarters and any remainder as a float.
     """
     quarters = amount // 25
-    quarters_remainder = amount - quarters * 25
+    quarters_remainder = amount % 25
     print(quarters_remainder)
     return quarters, quarters_remainder
 
@@ -42,14 +42,12 @@ def main():
 
     while answer != "no":
         amount = float(input("Enter a dollar amount: "))
-        print(amount)
-        amount = int(round(amount * 100))
-        print(amount)
+        amount = int(round(amount * 100)) # wrapped in an int because float * 100 was returning a long decimal making my math incorrect
 
         quarter, quarter_remainder = quarters(amount)
         dime, dime_remainder = dimes(quarter_remainder)
         nickel, nickel_remainder = nickels(dime_remainder)
-        penny = int(pennies(nickel_remainder))
+        penny = int(pennies(nickel_remainder)) # wrapped in an int to handle an instance where zero pennies displayed as 0.0 instead of 0
 
         print(f'{quarter} quarters, {dime} dimes, {nickel} nickels, and {penny} pennies')
         
