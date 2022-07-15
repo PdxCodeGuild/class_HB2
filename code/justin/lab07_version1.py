@@ -4,7 +4,6 @@ Lab 07
 Version1
 '''
 
-from lzma import CHECK_CRC32
 
 
 def cc_v(cc):
@@ -12,35 +11,26 @@ def cc_v(cc):
     for x in cc:
         x = int(x)
         cc_1.append(x)
-    print(cc_1)
+    # print(cc_1)
     check_d = cc_1.pop(-1)
     cc_1.reverse()
-    cc_2 = cc_1.copy()
-    cc_3 = []
-    for m in cc_2[::2]:
-        indx = cc_2.index(m)
-        print(indx)
-        m *= 2
-        cc_3[indx] = m
-    print(cc_3)
-    # cc_3 = cc_1.copy()
-    # for s in cc_3:
-    #     if s > 9:
-    #         idx = cc_3.index(s)
-    #         s -= 9
-    #         cc_1[idx] = s
+    # print(f'{cc_1} should be flipped')
+    for i, item in enumerate(cc_1):
+        if i % 2 == 0:
+            cc_1[i] = item * 2
     # print(cc_1)
-    # cc_4 = cc_1.copy()
-    # sum = 0
-    # for a in cc_4:
-    #     sum += a
-    # print(sum)
-    # if sum == check_d:
-    #     return f'Valid! {True}'
-    # else:
-    #     return f'Not Valid {False}'
-
-
+    for i, item in enumerate(cc_1):
+        if item > 9:
+            cc_1[i] = item - 9
+    # print(cc_1)
+    sum = 0
+    for c in cc_1:
+        sum += c
+    print(sum, check_d)
+    if str(sum)[1] == str(check_d):
+        return f'{True} Valid!'
+    else:
+        return f'{False} Not Valid'
 
 
 a = input('Enter cc number: ')
