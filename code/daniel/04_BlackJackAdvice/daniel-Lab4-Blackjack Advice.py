@@ -30,7 +30,7 @@
 
 import random
 
-Facecards = {
+face_cards = {
     "K": 10,
     "Q": 10,
     "J": 10,
@@ -46,23 +46,23 @@ Facecards = {
     "A": 1
 }
 
-Question1 = input("What's your first card?: ")
-Question2 = input("What's your second card?: ")
-Question3 = input("What's your third card?: ")
-cardTotal = 0
+question_1 = input("What's your first card?: ")
+question_2 = input("What's your second card?: ")
+question_3 = input("What's your third card?: ")
+card_total = 0
 
 while True:
-    if Question1 in Facecards:
-        cardTotal += int(Facecards[Question1])
-        print(f"Question1: {Question1}")
+    if question_1 in face_cards:
+        card_total += int(face_cards[question_1])
+        print(f"question_1: {question_1}")
 
-        if Question2 in Facecards:
-            cardTotal += int(Facecards[Question2])
-            print(f"Question1: {Question2}")
+        if question_2 in face_cards:
+            card_total += int(face_cards[question_2])
+            print(f"question_2: {question_2}")
 
-            if Question3 in Facecards:
-                cardTotal += int(Facecards[Question3])
-                print(f"Question1: {Question3}")
+            if question_3 in face_cards:
+                card_total += int(face_cards[question_3])
+                print(f"question_3: {question_3}")
                 break
             else:
                 print("Not valid")
@@ -73,33 +73,18 @@ while True:
     else:
         print("Not valid")
         break
-if cardTotal < 17:
-    print(f"Hit {cardTotal}")
-elif 17 <= cardTotal < 21:
-    print(f"Stay {cardTotal}")
-elif cardTotal == 21:
-    print(f"Backjack! {cardTotal}")
-elif cardTotal > 21:
-    print(f"Already Busted {cardTotal}")
+if card_total < 17:
+    print(f"Hit {card_total}")
+elif 17 <= card_total < 21:
+    print(f"Stay {card_total}")
+elif card_total == 21:
+    print(f"Backjack! {card_total}")
+elif card_total > 21:
+    print(f"Already Busted {card_total}")
 else:
     print("Not Valid")
 
 
-
-# print(cardTotal)
-
-# total = int(Question1) + int(Question2) + int(Question3)
-
-
-
-# if total < 17:
-#     print("Hit")
-# elif total <= 17 and total < 21:
-#     print("Stay")
-# elif total == 21:
-#     print("BlackJack!")
-# else:
-#     print("Busted")
 
 
 
