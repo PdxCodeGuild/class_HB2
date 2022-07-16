@@ -22,6 +22,7 @@
 
 #     Generate a list of 6 random numbers representing the winning tickets
 #     Start your balance at 0
+
 #     Loop 100,000 times, for each loop:
 #     Generate a list of 6 random numbers representing the ticket
 #     Subtract 2 from your balance (you bought a ticket)
@@ -39,6 +40,8 @@ import random
 balance = 0
 simulations = 100,000
 
+while 0 < simulations:
+    simulations -= 1
 
 
 
