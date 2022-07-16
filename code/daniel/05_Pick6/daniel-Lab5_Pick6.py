@@ -37,43 +37,80 @@
 
 import random
 
-balance = 0
-simulations = 100,000
-
-while 0 < simulations:
-    simulations -= 1
-
-
 
 def pick6():
-    winning_numbers = []
+    winning = []
+    ticket = []
+
     for r in range(6):
         x = random.randint(1,99)
-        winning_numbers.append(x)
-    print(winning_numbers)
-    
-    ticket = []
-    for i in range(6):
         y = random.randint(1,99)
+        winning.append(x)
         ticket.append(y)
+    print(winning)
     print(ticket)
+    return winning, ticket
 pick6()
 
 
-
 def num_matches(winning, ticket):
+    index = 0
+    matching_nums = 0
+
+    while index < 6:
+        if winning[index] == ticket[index]:
+            matching_nums += 1
+        index += 1
+    print(matching_nums)
+    return matching_nums
+# num_matches()
 
 
-# sim_compare = []
+#=====================
+
+
+balance = 0
+simulations = 0
+
+
+
+while simulations < 100000:
+    simulations += 1
+# print(simulations)
+    winning, ticket = pick6()
+    matching_nums = num_matches(winning, ticket)
+
+    if matching_nums == 0:
+        balance -= 2
+    if matching_nums == 1:
+        balance += 2
+    if matching_nums == 2:
+        balance += 5
+    if matching_nums == 3:
+        balance += 98
+    if matching_nums == 4:
+        balance += 48998
+    if matching_nums == 5:
+        balance += 999998
+    if matching_nums == 6:
+        balance += 24999998
+    
+    
+    print(balance)
+
+
+#     a ticket costs $2
+#     if 1 number matches, you win $4
+#     if 2 numbers match, you win $7
+#     if 3 numbers match, you win $100
+#     if 4 numbers match, you win $50,000
+#     if 5 numbers match, you win $1,000,000
+#     if 6 numbers match, you win $25,000,000
 
 
 
 
-# for r in range(1,100000):
-#     if numlist1[x] == numlist2[y]:
-#         sim_compare.append(x)
 
-# for n in range(0, 100,000):
 
 
 
