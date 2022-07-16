@@ -26,7 +26,7 @@ def cc_v(cc):
     sum = 0
     for c in cc_1:
         sum += c
-    print(sum, check_d)
+    # print(sum, check_d)
     if str(sum)[1] == str(check_d):
         return f'{True} Valid!'
     else:
