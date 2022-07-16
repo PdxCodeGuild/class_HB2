@@ -95,8 +95,8 @@ while simulations < 100000:
     if matching_nums == 6:
         balance += 24999998
     
-    
     print(balance)
+    
 
 
 #     a ticket costs $2
