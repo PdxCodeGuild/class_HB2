@@ -24,6 +24,6 @@ for j in js['results']:
         print(f'Thats all the jokes with {u_input}, thanks!')
         break
     a = input(f'\nLOL! Funny right? another joke? y/n: ')
-    if a == 'n':
+    if a.lower() == 'n':
         break
 
