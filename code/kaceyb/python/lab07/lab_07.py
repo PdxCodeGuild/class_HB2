@@ -35,13 +35,17 @@ def credit_card_validator(credit_card_number):
 
     # Double every other element in the reversed list (starting with the first number in the list).
 
-    doubled_list = input_list
+    doubled_list = []
+    
 
-    for i in range(len(doubled_list)):
+    for i in range(len(input_list)):
         if i % 2 == 0:
-            doubled_list[i] = (doubled_list[i]) * 2
+            # input_list[i] = (input_list[i]) * 2
+            doubled_list.append(input_list[i]*2)
         else:
-            doubled_list[i] = doubled_list[i]
+            # input_list[i] = input_list[i]
+            doubled_list.append(input_list[i])
+            
     print(doubled_list)
 
     # Subtract nine from numbers over nine.
