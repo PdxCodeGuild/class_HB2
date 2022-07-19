@@ -1,4 +1,7 @@
 #version 2 
+
+
+
 low_numbers = { 
     0: "zero",
     1: "one",
@@ -56,23 +59,38 @@ def convert_number(number):
     if number < 20:
         return low_numbers[number]
    
-    elif number <  100:
+    # elif number <  100:
         
-        tens_digit = number // 10
-        # print('10s digit: ', tens_digit)
-        ones_digit = number % 10 #takes whatever number and divides that by 10 and then gives the remainder
-        # print('1s digit: ', ones_digit)
-    # return f"{ten[tens_digit]} - {low_numbers[ones_digit]}" 
-        tens_word = ten[tens_digit]
-        ones_word = low_numbers[ones_digit]
-        return f'{tens_word + " " + ones_word}'
+    #     tens_digit = number // 10
+    #     # print('10s digit: ', tens_digit)
+    #     ones_digit = number % 10 #takes whatever number and divides that by 10 and then gives the remainder
+    #     # print('1s digit: ', ones_digit)
+    # # return f"{ten[tens_digit]} - {low_numbers[ones_digit]}" 
+    #     tens_word = ten[tens_digit]
+    #     ones_word = low_numbers[ones_digit]
+    #     # print('ones word: ', ones_word)
+    #     # print('type of ones word: ', type(ones_word))
 
+    #     # print(ones_word[0])
+    #     # print(ones_word[1])
+    #     # print(ones_word[2])
+    #     # print(ones_word[3])
+
+    #     return f'{tens_word + " " + low_numbers[ones_digit]}' 
+        
+    elif number <  100:
+        tens_digit = number//10
+        ones_digit = number%10
+        last_one = int(str(number)[-1:]) #calling the the last number that is being inputed
+        if last_one == 0: # its saying that its only calling the last number if it is 0 
+            return f'{ten[tens_digit]}'
 
     elif number < 999:
         hundreds_digit = number // 100 #floor divide regular division with no remainder
         hundreds_word = hundreds[hundreds_digit]
         last_two = int(str(number)[-2:]) #python get last two digits in number stack exchange
         last_one = int(str(number)[-1:])
+        
 
             
 
@@ -85,7 +103,7 @@ def convert_number(number):
         tens_word = ten[new_tens]
         ones_word = low_numbers[ones_digit]
         if last_one == 0:
-            return f'{hundreds_word + " " + tens_word}' #placing this here to be able to get the numbers with 0 at the end, from having it say number then adding zero also placement beacause it needs to run all of that to be able to distinguish when it needs to use it 
+            return f'{hundreds_word + " " + ten[new_tens]}' #placing this here to be able to get the numbers with 0 at the end, from having it say number then adding zero also placement beacause it needs to run all of that to be able to distinguish when it needs to use it 
             
         return f'{hundreds_word + " " + tens_word + " " + ones_word}'   
 
