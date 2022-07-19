@@ -36,9 +36,16 @@ while num < 99:
     num += 1
     num_pool.append(num)
     # print(num)
-print(num_pool)
+# print(num_pool)
 
 winning_ticket = []
-while len(winning_ticket) < 6:
-    winning_ticket = random.choice(num_pool)
-    print(winning_ticket)
+player_ticket = []
+for tic in range(6):
+    winning_ticket.append(random.choice(num_pool))
+winning_ticket.sort()
+print(f'The winning numbers are: {winning_ticket}.')
+    for tik in range(6):
+        player_ticket.append(random.choice(num_pool))
+    for i in player_ticket:
+        if i in winning_ticket:
+            print(i)
