@@ -27,53 +27,50 @@
 
 #============================================================================================================================================================
 
+more_change = "yes"
+while more_change == "yes":
+
+    print("Welcome to the Change Maker 5000 (tm)")
+    dollar_amount = float(input("Enter a dollar amount: "))
+    remaining_change = dollar_amount
+
+    make_half_dollar = remaining_change // 0.50
+    make_quarter = remaining_change // 0.25
+    make_dime = remaining_change // 0.10
+    make_nickel = remaining_change // 0.05
+    make_penny = remaining_change // 0.01
 
 
-
-print("Welcome to the Change Maker 5000 (tm)")
-dollar_amount = float(input("Enter a dollar amount: "))
-remaining_change = dollar_amount
-
-make_half_dollar = remaining_change // 0.50
-make_quarter = remaining_change // 0.25
-make_dime = remaining_change // 0.10
-make_nickel = remaining_change // 0.05
-make_penny = remaining_change // 0.01
+    change_amount = {
+    'half_dollar': 0,
+    'quarter': 0,
+    'dime': 0,
+    'nickel': 0,
+    'penny': 0
+    }
 
 
-change_amount = {
-'half_dollar': 0,
-'quarter': 0,
-'dime': 0,
-'nickel': 0,
-'penny': 0
-}
-
-
-while remaining_change > 0.00:
-    # print(change_amount)
-    # print(remaining_change)
-    if remaining_change >= 0.50:
-        remaining_change = remaining_change - 0.50
-        change_amount['half_dollar'] += 1
-    elif remaining_change >= 0.25:
-        remaining_change = remaining_change - 0.25
-        change_amount['quarter'] += 1
-    elif remaining_change >= 0.10:
-        remaining_change = remaining_change - 0.10
-        change_amount['dime'] += 1
-    elif remaining_change >= 0.05:
-        remaining_change = remaining_change - 0.05
-        change_amount['nickel'] += 1
-    elif remaining_change >= 0.01:
-        remaining_change = remaining_change - 0.01
-        change_amount['penny'] += 1
+    while remaining_change > 0.00:
+        # print(change_amount)
         # print(remaining_change)
+        if remaining_change >= 0.50:
+            remaining_change = remaining_change - 0.50
+            change_amount['half_dollar'] += 1
+        elif remaining_change >= 0.25:
+            remaining_change = remaining_change - 0.25
+            change_amount['quarter'] += 1
+        elif remaining_change >= 0.10:
+            remaining_change = remaining_change - 0.10
+            change_amount['dime'] += 1
+        elif remaining_change >= 0.05:
+            remaining_change = remaining_change - 0.05
+            change_amount['nickel'] += 1
+        elif remaining_change >= 0.01:
+            remaining_change = remaining_change - 0.01
+            change_amount['penny'] += 1
+            # print(remaining_change)
 
-    remaining_change = round(remaining_change, 2)
-print(change_amount)
-#===========================================================================
+        remaining_change = round(remaining_change, 2)
+    print(change_amount)
 
-
-
-
+    more_change = input("Would you like make more change?: ")
