@@ -104,7 +104,7 @@ number_list = {
 
 
 #===========================================
-pickANumber = input("Pick a number between 0 and 99: ")
+pickANumber = input("Pick a number between 0 and 999: ")
 intNum = int(pickANumber)
 
 tens_digit = intNum % 100 // 10
