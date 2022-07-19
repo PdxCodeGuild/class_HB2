@@ -64,7 +64,7 @@ def credit_card_validator(credit_card_number):
     print(sum_values)
 
     # Take the second digit of that sum.
-    second_digit = sum_values[1]
+    second_digit = int(sum_values[1])
     print(second_digit)
     # If that matches the check digit, the whole card number is valid.
     answer = second_digit == check_digit
