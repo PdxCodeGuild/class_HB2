@@ -1,0 +1,16 @@
+import requests
+import json
+
+def get_joke(search_parameter):
+    response = requests.get(f"https://icanhazdadjoke.com/search?term={search_parameter}", headers={
+        'Accept': 'application/json'
+    })
+    joke = print(response.json()["results"])
+    
+    return joke
+
+def main(): 
+    get_joke("Beer")
+
+
+main()
