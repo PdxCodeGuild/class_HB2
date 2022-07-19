@@ -9,12 +9,12 @@ response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_term}"
 # print(response)
 son = response.json()
 total = son["total_jokes"] #the amount of jokes they have for that term. why is the that it has to be total_jokes and not something else for this to work 
-# print(total)
+# print(total)   the reason for total jokes is because within their own system they basically made a variable called total_jokes and thats pretty much what you're calling from 
 
 for s in son['results']:
     total -= 1 #subtracting one to get to the end 
     time.sleep(2) #how long its going to take for the joke to populate 
-    print(s["joke"])#still dont get why it has to be but as joke and nothing else
+    print(s["joke"])# you have to pick joke because within their api thats how they search shit 
     print(f'there is {total} left')
     if total == 0: 
         print('Thats all the jokes for this term')
@@ -32,21 +32,3 @@ for s in son['results']:
 # import time
 
 
-u_input = input('enter a search term:  ')
-response = requests.get(f"https://icanhazdadjoke.com/search?term=${u_input}", headers={
-     'Accept': 'application/json'
- })
-
-js = response.json()
-total = js['total_jokes']
-for j in js['results']:
-     print(f'\nThere are {total} more jokes with the word {u_input}, get ready for the next one!!')
-     total -= 1
-     time.sleep(3)
-     print(j['joke'])
-     if total == 0:
-         print(f'Thats all the jokes with {u_input}, thanks!')
-         break
-     a = input(f'\nLOL! Funny right? another joke? y/n: ')
-     if a == 'n':
-         break
