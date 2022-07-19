@@ -5,12 +5,18 @@ def get_joke(search_parameter):
     response = requests.get(f"https://icanhazdadjoke.com/search?term={search_parameter}", headers={
         'Accept': 'application/json'
     })
-    joke = print(response.json()["results"])
-    
-    return joke
+    data = response.json()["results"]
+    jokes = []
+    for item in data:
+        jokes.append(item['joke'])
+    return print(jokes)
 
 def main(): 
-    get_joke("Beer")
+    
+    user_input = input("What term would you like a joke about? ")
+    
+    
+    get_joke(user_input)
 
 
 main()
