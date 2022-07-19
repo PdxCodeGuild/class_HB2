@@ -1,3 +1,5 @@
+
+
 def credit_card_validator(card):
     temp_list = []
     for i in card:
@@ -9,38 +11,26 @@ def credit_card_validator(card):
 
     check_digit = temp_list[:-1]#list comprehension cutting out last number 
     print(check_digit)
-    print(check_digit[:: -1]) #reversing numbers 
-    check_digit[::2]= [i *2 for i in check_digit[::2]]
+    check_digit = check_digit[:: -1]
+    print(check_digit) #reversing numbers 
+
+    check_digit[::2]= [i *2 for i in check_digit[::2]] #multiplying the second digit
     print(check_digit)
+    for i, item in enumerate(check_digit): #enumerate takes a tuple and helps you loop through them using check_digit since thats where my numbers left off on 
+        if item > 9:        #item is just what i put honestly dont fully understand the enumerate look into more
+            check_digit[i] = item - 9 #in the enumerate "i" is the index of the numbers and item is the whats in that space 
+    print(check_digit)
+    check_digit = sum(check_digit)
+    print(check_digit)
+    check_digit =  check_digit % 10
+    print(check_digit)
+    if check_digit == temp_list.pop(-1):
+         # also removes the number you want to take out but shows it aswell 
+        return f'{True}Valid!'
+    else:
+        return f'{False} Not Valid!'
 user = input('Enter credit card number: ')
 print(credit_card_validator(user))
 
 
-# def cc_v(cc):
-#     cc_1 = []
-#     for x in cc:
-#         x = int(x)
-#         cc_1.append(x)
-#     # print(cc_1)
-#     check_d = cc_1.pop(-1)
-#     cc_1.reverse()
-#     # print(f'{cc_1} should be flipped')
-#     for i, item in enumerate(cc_1):
-#         if i % 2 == 0:
-#             cc_1[i] = item * 2
-#     # print(cc_1)
-#     for i, item in enumerate(cc_1):
-#         if item > 9:
-#             cc_1[i] = item - 9
-#     # print(cc_1)
-#     sum = 0
-#     for c in cc_1:
-#          sum += c
-#     # print(sum, check_d)
-#     #  print(sum, check_d)
-#     if str(sum)[1] == str(check_d):
-#          return f'{True} Valid!'
-#     else:
-#                  return f'{False} Not Valid'
-# a = input('Enter cc number: ')
-# print(cc_v(a))
+#
