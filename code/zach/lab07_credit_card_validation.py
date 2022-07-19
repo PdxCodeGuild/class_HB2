@@ -1,7 +1,7 @@
 def credit_card_input():
     """Takes credit card number as user input and returns as a string."""
-    #user_input = input("Enter a valid 16 digit credit card number: ")
-    user_input = "4556737586899854"
+    user_input = input("Enter a valid 16 digit credit card number: ")
+
     return user_input
 
 def credit_card_input_validation(user_input):
@@ -55,40 +55,27 @@ def subtract_nine(doubled_list):
     return nine_diff_list
 
 def validate_check_digits(check_digit1, check_digit2):
-    """If the two inputs equal, returns True else returns False."""
+    """If the two inputs equal, returns Valid or Invalid"""
     if check_digit1 == check_digit2:
         return "Card Valid"
     else:
         return "Card Invalid"
 
-#def print_result(check_digit1, check_digit2):
-#    if evaluate_check_digit(check_digit1, check_digit2):
-#        print("Test1")
-#    else: 
-#        print("Test2")
-
 def main():
-    
+    """Main function to validate credit card numbers."""
     user_input = credit_card_input()
-    print(user_input)
     
     card_as_list = credit_card_input_validation(user_input)
-    print(card_as_list)
     
     check_digit1 = card_as_list.pop()
-    print(check_digit1)
     
     reversed_list = reverse_list(card_as_list)
-    print(reversed_list)
     
     doubled_list = double_every_other_number(reversed_list)
-    print(doubled_list)
     
     nine_diff_list = subtract_nine(doubled_list)
-    print(nine_diff_list)
     
     check_digit2 = int(str(sum(nine_diff_list))[-1])
-    print(check_digit2)
     
     test_var = validate_check_digits(check_digit1, check_digit2)
     print(test_var)
