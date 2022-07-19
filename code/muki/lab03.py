@@ -27,20 +27,21 @@ Convert a time given in hours and minutes to a phrase.
 This block was borrowed from class
 '''
 # imports just in case, I will remove these if I don't use them
-import numbers
-import math
-import random
-from telnetlib import STATUS
+
+
 
 #   Version 1:
 numbah = input('please enter a number between 0 and 99:\n')
 
 ones_place = int(numbah)%10
 tens_place = int(numbah)//10
+hundreds_place = int(numbah)//100
+
 
 print(f'You entered:{numbah}\t Thanks for your entry.')
 print(tens_place)
 print(ones_place)
+print(hundreds_place)
 
 
 single_digits = {
