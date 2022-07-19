@@ -31,17 +31,20 @@ This block was borrowed from class
 
 
 #   Version 1:
-numbah = input('please enter a number between 0 and 99:\n')
+numbah = input('please enter a number between 0 and 999:\n')
 
-ones_place = int(numbah)%10
-tens_place = int(numbah)//10
 hundreds_place = int(numbah)//100
+lose = int(numbah) - (hundreds_place * 100)
+ones_place = int(lose)%10
+tens_place = int(lose)//10
+
 
 
 print(f'You entered:{numbah}\t Thanks for your entry.')
-print(tens_place)
 print(ones_place)
+print(tens_place)
 print(hundreds_place)
+print(lose)
 
 
 single_digits = {
@@ -97,7 +100,10 @@ hundreds_digits = {
 }
 
 # if numbah:
-if tens_place != 1:
-    print(f'{numbah} is: {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
-if numbah in special_cases:
-    print(f'{numbah} is: {special_cases[numbah]}')
+if hundreds_place == 0: 
+    if tens_place != 1:
+        print(f'{numbah} is: {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
+    if numbah in special_cases:
+        print(f'{numbah} is: {special_cases[numbah]}')
+if hundreds_place > 0:
+    print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]}-{tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
