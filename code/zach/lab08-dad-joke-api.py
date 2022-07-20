@@ -25,9 +25,12 @@ def main():
         while index < len(jokes) and answer == 'yes':
             print(jokes[index])
             index += 1
+            
+            if index == len(jokes):
+                print("We are out of jokes.")
+                break
+            
             answer = input(f"Would you like to see another dad joke about '{user_input}'? Enter yes/no: ")
-        #else:
-        #    print("We have run out of jokes on this topic.")
 
     print("You're welcome. Byeeeee")
 
