@@ -19,7 +19,9 @@ for j in js['results']:
     print(f'\nThere are {total} more jokes with the word {u_input}, get ready for the next one!!')
     total -= 1
     time.sleep(3)
+    print('\n----------------------------------------------------------------------')
     print(j['joke'])
+    print('----------------------------------------------------------------------')
     if total == 0:
         print(f'Thats all the jokes with {u_input}, thanks!')
         break
