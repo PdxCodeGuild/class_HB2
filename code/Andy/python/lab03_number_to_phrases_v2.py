@@ -2,6 +2,9 @@
 
 
 
+from requests import request
+
+
 low_numbers = { 
     0: "zero",
     1: "one",
@@ -85,12 +88,13 @@ def convert_number(number):
         if last_one == 0: # its saying that its only calling the last number if it is 0 
             return f'{ten[tens_digit]}'
 
-    elif number < 999:
+    elif number <= 999:
         hundreds_digit = number // 100 #floor divide regular division with no remainder
         hundreds_word = hundreds[hundreds_digit]
         last_two = int(str(number)[-2:]) #python get last two digits in number stack exchange
         last_one = int(str(number)[-1:])
-        
+        if last_two == 0:
+            return f'{hundreds_word}'
 
             
 
@@ -109,7 +113,7 @@ def convert_number(number):
 
          
         # return hundreds_digit, tens_digit
-    # return f"{hundreds[hundreds_digit]} - {ten[tens_digit]} - {low_numbers[ones_digit]}"
+    # return f"{hundreds_word} - {ten[tens_digit]} - {low_numbers[ones_digit]}"
 
 print(convert_number(number))
 
