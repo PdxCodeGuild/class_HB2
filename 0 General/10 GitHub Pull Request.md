@@ -15,6 +15,9 @@
 1. Verify the 'Comparing changes' is set to compare your lab branch with 'base: main':  
 ![04_verify_comparing_changes](https://user-images.githubusercontent.com/47562501/175929257-e582d9ba-61bc-4b02-aa93-eab9e8d1ead3.png)
 
+1. Verify that the only file changes included in Pull Request are for the lab designated in branch name:  
+![04 5_verify_only_appropriate_labs_have_changed](https://user-images.githubusercontent.com/47562501/178146015-f3bb66b1-a19d-4fc8-b612-0054d408aa64.png)
+
 1. Click 'Create pull request' button:  
 ![05_click_create_pull_request](https://user-images.githubusercontent.com/47562501/175929274-627d1818-fe98-4c56-8715-8f7407807f01.png)
 
