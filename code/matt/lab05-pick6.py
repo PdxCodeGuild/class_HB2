@@ -71,11 +71,14 @@ total_earnings = (sum(ticket_list))
 print(f'Your total is: {total_earnings}')
 
 #giving roi
-deductions_statement = (sum(deductions))
-earnings_statement = (sum(earnings))
+expenses = (sum(deductions))
+earnings = (sum(earnings))
 
-print(f"Your total earnings are: {earnings_statement}")
-print(f'Your total deductions are: {deductions_statement}')
-roi = (total_earnings / deductions_statement) * 100
-roi = round(roi, 2)
-print(f"Your ROI is: {roi}%")
+
+print(f"Your total earnings are: {earnings}")
+print(f'Your total deductions are: {expenses}')
+roi = (earnings - expenses) / expenses
+roi = round(roi, 3)
+print(f"Your ROI is: {roi}")
+
+
