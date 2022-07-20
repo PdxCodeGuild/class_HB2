@@ -33,5 +33,10 @@ for x in range(loops):
         balance += 25000000
 
 payoff = balance + ticket_cost
+ROI = (payoff - ticket_cost) / payoff 
+# ROI_pct = "{. 0%}".format(ROI)
+# print(ROI_pct)
 
-print(payoff)
+print(f"\nPayoff: {payoff} ")
+print(f"\nExpenses: {ticket_cost} ")
+print(f"\nROI: {ROI:.0%} ")
