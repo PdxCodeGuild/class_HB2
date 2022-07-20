@@ -8,6 +8,7 @@ response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_term}"
 
 # print(response)
 son = response.json()
+# print(son) 
 total = son["total_jokes"] #the amount of jokes they have for that term. why is the that it has to be total_jokes and not something else for this to work 
 # print(total)   the reason for total jokes is because within their own system they basically made a variable called total_jokes and thats pretty much what you're calling from 
 
