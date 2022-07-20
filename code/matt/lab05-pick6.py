@@ -39,6 +39,7 @@ winning_ticket = random_ticket()
 #List for future computing and getting the total earnings
 ticket_list = []
 deductions = []
+earnings = []
 #Attempts starting at 0 so we can give are while loop a break point
 attempts = 0
 
@@ -56,8 +57,12 @@ while attempts < 100000:
     #Pulling the list we created earlier and appending the earnings to it
     ticket_list.append(earnings_of_each_ticket)
 
-    #ROI for version 2
+    ###Deductions for version 2
     deductions.append(ticket_price)
+
+    ###Earnings for version 2
+    earnings.append(payoff[value_of_ticket])
+
     
 #breaking from the loop and giving one earnings (losses) statement    
 total_earnings = (sum(ticket_list))
@@ -65,5 +70,8 @@ print(f'Your total is: {total_earnings}')
 
 #giving roi
 total_deductions = (sum(deductions))
+earnings_statement = (sum(earnings))
+print(f"Your total earnings are: {earnings_statement}")
+print(f'Your total deductions are: {total_deductions}')
 roi = total_earnings / total_deductions
 print(f"Your ROI is: {roi}")
