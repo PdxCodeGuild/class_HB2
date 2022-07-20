@@ -4,10 +4,12 @@
 #Version 1
 
 #Importing random for future random.randint(1, 99)
+from os import truncate
 import random
+import math
 
 #The payoff of each ticket they've purchased
-ticket_price = -2
+ticket_price = 2
 payoff = {
     0: 0,
     1: 4,
@@ -52,7 +54,7 @@ while attempts < 100000:
     value_of_ticket = get_value(player_ticket, winning_ticket)
 
     #Implementing the matches from our get_value functions into keys of our dictionary(payoff) to pull numbers
-    earnings_of_each_ticket = payoff[value_of_ticket] + ticket_price
+    earnings_of_each_ticket = payoff[value_of_ticket] - ticket_price
 
     #Pulling the list we created earlier and appending the earnings to it
     ticket_list.append(earnings_of_each_ticket)
@@ -69,9 +71,11 @@ total_earnings = (sum(ticket_list))
 print(f'Your total is: {total_earnings}')
 
 #giving roi
-total_deductions = (sum(deductions))
+deductions_statement = (sum(deductions))
 earnings_statement = (sum(earnings))
+
 print(f"Your total earnings are: {earnings_statement}")
-print(f'Your total deductions are: {total_deductions}')
-roi = total_earnings / total_deductions
-print(f"Your ROI is: {roi}")
+print(f'Your total deductions are: {deductions_statement}')
+roi = (total_earnings / deductions_statement) * 100
+roi = round(roi, 2)
+print(f"Your ROI is: {roi}%")
