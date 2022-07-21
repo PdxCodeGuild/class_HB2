@@ -17,3 +17,23 @@
 #     'Accept': 'application/json'
 # })
 # ======================================================================================================
+
+
+import requests
+
+response = requests.get("https://icanhazdadjoke.com", headers={'Accept': 'application/json'})
+joke = response.json()
+
+# print(response.url)
+print(response.text)
+print(response.json())
+print(joke)
+# print(response.status_code)
+# print(response.encoding)
+# print(response.headers)
+
+
+#========================================
+# response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_term}", headers={
+#     'Accept': 'application/json'
+# })
