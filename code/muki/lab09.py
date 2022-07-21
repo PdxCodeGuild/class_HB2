@@ -19,7 +19,7 @@ if question == "y":
     print(' ')
     quote = q['quote']
     print(f'\n\n\n\n\n\n"{quote["body"]}" \n\n\t\t')
-    time.sleep(1)
+    time.sleep(10)
     print(f'-- {quote["author"]}\n\n\n\n\n\n\n\n')
     time.sleep(2)
 elif question != "y":
