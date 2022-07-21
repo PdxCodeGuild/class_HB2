@@ -45,10 +45,26 @@ face_cards = {
     "2": 2,
     "A": 1
 }
+# #======================
+# # Input validation fix
+# #======================
+# while True:
+#     try:
+#         question_1 = int(input("What's your first card?: "))
+#         question_2 = int(input("What's your second card?: "))
+#         question_3 = int(input("What's your third card?: "))
+#     except ValueError:
+#         print("Invalid Value, try agian")
+#         continue
+#     except TypeError:
+#         print("Please enter a number")
+#         continue        
+#     # else:
+#     #     break
 
-question_1 = input("What's your first card?: ")
-question_2 = input("What's your second card?: ")
-question_3 = input("What's your third card?: ")
+
+
+
 card_total = 0
 
 while True:
