@@ -27,28 +27,34 @@ def num_matches(winning, ticket):
 def main():
     index = 0
     balance = 0
+    earnings = 0
+    expenses = 0
     
     while index < 100000:
         winning, ticket = pick6()
         matches = num_matches(winning, ticket)
         
         if matches == 0:
-            balance -= 2
+            earnings += 0
         elif matches == 1:
-            balance += 2
+            earnings += 4
         elif matches == 2:
-            balance += 5
+            earnings += 7
         elif matches == 3:
-            balance += 98
+            earnings += 100
         elif matches == 4:
-            balance += 49998
+            earnings += 50000
         elif matches == 5:
-            balance += 999998
+            earnings += 1000000
         elif matches == 6:
-            balance += 24999998
+            earnings += 25000000
         
+        expenses -= 2
         index += 1
-
-    return print(f'Final Balance: {balance}')
+        
+    balance = earnings + expenses
+    ROI = (earnings + expenses) / expenses
+    
+    return print(f'Final Balance: {balance}'), print(f'ROI: {ROI}')
 
 main()
