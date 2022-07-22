@@ -1,6 +1,6 @@
 # Git Lab Workflow
 
-## The below is an example of workflow for creating branches for each new lab.
+## Create a new branch for each new lab.
 
 * Replace the `<new-branch-name>` items below with your appropriate formed `<studentdirectoryname-labnumber-lab-name>` branch name.
 * An example `<new-branch-name>` would be `bruce-lab01-python-exercise`
@@ -22,8 +22,17 @@
 
 1. Do some code changes.
 
-1. Add all the changes made to git tracking (or add only `<filename>` or `<directoryname>` changes):  
-    `git add -A`
+1. Use `git status` to view what files and directories have been changed:  
+    `git status`
+
+1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
+    `git add .`  
+    `git add <filepath>`  
+    `git add <directorypath>`  
+    `git add -A`  
+
+1. Use `git status` to view what files and directories will be added to the commit:  
+    `git status`
 
 1. Commit the changes made to the branch:  
     `git commit -m <commit message>`
@@ -33,8 +42,17 @@
 
 1. Do some more code changes.
 
-1. Add all the changes made to git tracking:  
-    `git add -A`
+1. Use `git status` to view what files and directories have been changed:  
+    `git status`
+
+1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
+    `git add .`  
+    `git add <filepath>`  
+    `git add <directorypath>`  
+    `git add -A`  
+
+1. Use `git status` to view what files and directories will be added to the commit:  
+    `git status`
 
 1. Commit the changes made to the branch:  
     `git commit -m <commit message>`
@@ -50,7 +68,7 @@
 
 1. Repeat process for new labs.
 
-## Use the following to switch between multiple in-process lab branches.
+## Switch between in-progress branches.
 
 1. Git `add` and `commit` changes to current branch:  
     1. `git add -A`
@@ -70,7 +88,7 @@
 
 1. Repeat process as needed.
 
-## Use the following to delete branches for labs which have already been graded.
+## Delete branches for labs which have already been graded.
 * NOTE: We delete the branches after they have been merged into `main` since the work has been completed and all the changes have been recorded in the `commit`s. We no longer need the branches.
 
 1. Sync our local record of remote branches. This will remove local references to branches which have been deleted on remote:  

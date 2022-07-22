@@ -1,3 +1,5 @@
+# Muki Lab 2 unit converter
+'''
 Lab 02: Unit Converter
 This lab will involve writing a program that allows the user to convert a number between units.
 
@@ -15,8 +17,7 @@ Allow the user to also enter the units. Then depending on the units, convert the
 1 km is 1000 m
 Below is some sample input/output:
 
-> what is the distance? 100
-> what are the units? mi
+> what is the distance? 100> what are the units? mi
 > 100 mi is 160934 m
 Version 3
 Add support for yards, and inches.
@@ -49,3 +50,50 @@ Add any files you want git to keep track of using git add filename. Replace file
 Commit your work using git commit -m "Your commit message". Make sure your commit message is descriptive and describes what has been changed during this commit.
 Finally we can run the command git push to send our files up to Github. This may throw an error, but worry not, there will be a suggested command to run, simply copy and paste that command and you should be good to go.
 Don't forget to visit Github and create a pull request to submit your work for review.
+'''
+# commented out version one for testing into version 2 
+"""
+
+# input with feet to meters version 1
+unit_in = input('\nEnter a the number of feet you would like to convert to meters:\n')
+ft_to_m = 0.3048
+# print(type(ft_to_m))
+meters_out = float(unit_in) * ft_to_m
+print(f'{unit_in} ft is equal to {meters_out} m')
+"""
+ft_m = 0.3048
+m_ft = 1 / 0.3048
+mi_m = 1609.34
+m_mi = 1 / 1609.34
+km_m = 1000
+m_km = 1 / 1000
+m_mm = 1000
+mm_m = 1 / 1000
+yd_m = 0.9144
+m_yd = 1 / 0.9144
+m_m = 1
+in_m = 0.0254
+m_in = 1 / 0.0254
+
+dist = input('\nEnter the length that you would like to convert to meters:\t')
+dist_unit = input('Enter the units: (km, mi, ft, in, mm, yd:\t')
+
+
+if dist_unit.lower() == 'km':
+    km = float(dist)*km_m
+    print(f'{dist}km is {km}m')
+if dist_unit.lower() == 'mi':
+    mi = float(dist)*mi_m
+    print(f'{dist}mi is {mi}m')
+if dist_unit.lower() == 'ft':
+    ft = float(dist)*ft_m
+    print(f'{dist}ft is {ft}m')
+if dist_unit.lower() == 'mm':
+    mm = float(dist)*mm_m
+    print(f'{dist}mm is {mm}m')
+if dist_unit.lower() == 'yd':
+    yd = float(dist)*yd_m
+    print(f'{dist}yd is {yd}m')
+if dist_unit.lower() == 'in':
+    inch = float(dist)*in_m
+    print(f'{dist}in is {inch}m')
