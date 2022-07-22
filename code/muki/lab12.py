@@ -6,9 +6,12 @@
 # withdraw(amount) withdraws the amount from the account and returns it
 # calc_interest() returns the amount of interest calculated on the account
 
+from xmlrpc.server import list_public_methods
+
+
 balance = 0
 interest = .01
-
+txlist = []
 class ATM:
     def __init__(self, balance, interest):
         self.balance = balance
@@ -32,6 +35,14 @@ class ATM:
     def calc_interest(self):
         return self.balance * self.interest
 
+    def logg(self, list, tx):
+        list = list.append(tx)
+
+    def print_transactions(self, list):
+        for item in list:
+            print(item)
+        
+
     
 
 
@@ -44,18 +55,20 @@ class ATM:
 atm = ATM(balance, interest) # create an instance of our class
 print('Welcome to the ATM')
 while True:
-    command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\nhelp\nexit\n\n>')
+    command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
     if command == 'balance':
         balance = atm.check_balance() # call the check_balance() method
         print(f'Your balance is ${balance}')
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
         atm.deposit(amount) # call the deposit(amount) method
+        atm.logg(txlist, f'Deposited ${amount}')
         print(f'Deposited ${amount}')
     elif command == 'withdraw':
         amount = float(input('How much would you like to withdraw? '))
         if atm.check_withdrawl(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
+            atm.logg(txlist, f'Withdrew ${amount}')
             print(f'Withdrew ${amount}')
         else:
             print('Insufficient funds')
@@ -63,12 +76,15 @@ while True:
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
+    elif command == 'transaction log':
+        atm.print_transactions(txlist)
     elif command == 'help':
         print('Available commands:')
         print('balance  - get the current balance')
         print('deposit  - deposit money')
         print('withdraw - withdraw money')
         print('interest - accumulate interest')
+        print('transaction log - displays log of transactions')
         print('exit     - exit the program')
     elif command == 'exit':
         break
