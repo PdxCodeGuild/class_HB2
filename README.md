@@ -36,10 +36,10 @@ Presentation Day: November 4th, 2022
 | 06  | [Make Change](1%20Python/labs/06%20Make%20Change.md)               | 12 Jul        | 19 Jul                | 26 Jul        |
 | 07  | [Credit Card Validation](1%20Python/labs/07%20Credit%20Card%20Validation.md)| 14 Jul  | 21 Jul             | 28 Jul        |
 | 08  | [Dad API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
-| 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                | 19 Jul        | 28 Jul                | 04 Aug        |
-| 12  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
-| 14  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
-| 15  | Lab                                                                | 00 Jun        | 00 Jun                | 00 Jun        |
+| 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
+| 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
+| 14  | Lab                                                                | 00 Jul        | 00 Jun                | 00 Jun        |
+| 15  | Lab                                                                | 00 Jul        | 00 Jun                | 00 Jun        |
 
 ## Getting Unstuck
 
