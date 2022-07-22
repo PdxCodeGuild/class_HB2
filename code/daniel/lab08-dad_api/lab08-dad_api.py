@@ -18,22 +18,33 @@
 # })
 # ======================================================================================================
 
-
+import time
 import requests
 
 response = requests.get("https://icanhazdadjoke.com", headers={'Accept': 'application/json'})
 joke = response.json()
 
 # print(response.url)
-print(response.text)
-print(response.json())
-print(joke)
 # print(response.status_code)
 # print(response.encoding)
 # print(response.headers)
+# print(response.text)
+# print(response.json())
 
+print(joke)
+
+data = response.json()
+# print(data[0]['title'])
+for film in data:
+    print(film['title'])
+    print(film['release_date'])
+    print(film['description'])
+    print('-'*10)
 
 #========================================
-# response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_term}", headers={
-#     'Accept': 'application/json'
-# })
+
+# Add the ability to "search" for jokes using another endpoint. Create a REPL that allows one to enter a search term and go through jokes one at a time.
+
+
+# response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_term}", headers={'Accept': 'application/json', params=query)})
+
