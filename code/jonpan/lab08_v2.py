@@ -14,11 +14,19 @@ data = response.json()
 
 # pprint.pprint(data)
 
-x = random.choice(range(len(data)))
-joke = data['results'][x]['joke']
+# x = random.choice(range(len(data)))
+# joke = data['results'][x]['joke']
+# print(joke)
 
-print(joke)
-
+while True:
+    x = random.choice(range(len(data)))
+    joke = data['results'][x]['joke']
+    print(joke)
+    more = input("do you want another joke? yes or no. ")
+    if more == "no":
+        print("see you later")
+        break
+       
 
 # for i in range(len(data)):
 #     print(random.choice(data['results'][i]['joke']))
