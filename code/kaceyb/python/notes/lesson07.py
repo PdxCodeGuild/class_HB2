@@ -7,8 +7,8 @@
 #     write.writerow(['Lake Oswego', 'OR', '97032'])
     
 
-with open('location.csv') as file:
-    reader = csv.reader(file)
+# with open('location.csv') as file:
+#     reader = csv.reader(file)
     
 
 
@@ -53,20 +53,20 @@ with open('location.csv') as file:
 
 from datetime import datetime, timedelta
 
-# from django.forms import DateTimeInput
-# dt = datetime.strptime('2022/01/01', '%Y/%m/%d')
-# print(f'{dt.year}/{dt.month}')
+from django.forms import DateTimeInput
+dt = datetime.strptime('2022/01/01', '%Y/%m/%d')
+print(f'{dt.year}/{dt.month}')
 
-# dt = datetime.now()
-# print(dt.strftime('%Y/%m'))
+dt = datetime.now()
+print(dt.strftime('%Y/%m'))
 
-# dt_start = datetime(2022, 1, 1)
-# dt_end = datetime.now()
-# duration = dt_end - dt_start
-# print(duration)
-# print('days', duration.days)
-# print('seconds', duration.seconds)
-# print('total_seconds', duration.total_seconds())
+dt_start = datetime(2022, 1, 1)
+dt_end = datetime.now()
+duration = dt_end - dt_start
+print(duration)
+print('days', duration.days)
+print('seconds', duration.seconds)
+print('total_seconds', duration.total_seconds())
 
 
 
