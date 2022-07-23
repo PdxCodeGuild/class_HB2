@@ -1,5 +1,6 @@
-# Ignore any user's VSCode workspace file
+# Ignore any user's VSCode workspace file and vscode local settings
 *code-workspace
+.vscode
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,windows,macos
