@@ -19,10 +19,14 @@
 
 #================================================
 
+
+
+
 class ATM:
     def __init__(self, balance = 0, interest = .001):
         self.balance = balance
         self.interest = interest
+        self.transactions = []
 
     def check_balance(self):
         # returns the account balance
@@ -31,7 +35,10 @@ class ATM:
     def deposit(self, amount):
         #  deposits the given amount in the account
         self.balance += amount
+        deposit_str = f"user deposited ${amount}"
+        self.transactions.append(deposit_str)
         return self.balance
+        
         
     def check_withdraw(self, amount):
         # returns true if the withdrawn amount won't put the account in the negative
@@ -46,10 +53,14 @@ class ATM:
 
     def calc_interest(self):
         # returns the amount of interest calculated on the account
-        
+        interest = self.balance * .001
+        return round(interest, 2)
         
 
 
+#=========================================================
+    def print_transactions(self):
+        if
 
 
 
@@ -63,9 +74,9 @@ while True:
         balance = atm.check_balance() # call the check_balance() method
         print(f'Your balance is ${balance}')
     elif command == 'deposit':
-        cat = float(input('How much would you like to deposit? '))
-        atm.deposit(cat) # call the deposit(amount) method
-        print(f'Deposited ${cat}')
+        deposit = float(input('How much would you like to deposit? '))
+        atm.deposit(deposit) # call the deposit(amount) method
+        print(f'Deposited ${deposit}')
     elif command == 'withdraw':
         amount = float(input('How much would you like? '))
         if atm.check_withdraw(amount): # call the check_withdrawal(amount) method
