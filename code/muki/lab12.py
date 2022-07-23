@@ -53,29 +53,30 @@ class ATM:
 
 
 atm = ATM(balance, interest) # create an instance of our class
-print('Welcome to the ATM')
+print('\nWelcome to the ATM\n')
 while True:
     command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
     if command == 'balance':
         balance = atm.check_balance() # call the check_balance() method
-        print(f'Your balance is ${balance}')
+        print(f'\nYour balance is ${balance}\n')
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
         atm.deposit(amount) # call the deposit(amount) method
         atm.logg(txlist, f'Deposited ${amount}')
-        print(f'Deposited ${amount}')
+        print(f'\nDeposited ${amount}\n')
     elif command == 'withdraw':
         amount = float(input('How much would you like to withdraw? '))
         if atm.check_withdrawl(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
             atm.logg(txlist, f'Withdrew ${amount}')
-            print(f'Withdrew ${amount}')
+            print(f'\nWithdrew ${amount}\n')
         else:
             print('Insufficient funds')
     elif command == 'interest':
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
-        print(f'Accumulated ${amount} in interest')
+        atm.logg(txlist, f'Accumulated ${amount} in interest')
+        print(f'\nAccumulated ${amount} in interest\n')
     elif command == 'transaction log':
         atm.print_transactions(txlist)
     elif command == 'help':
@@ -84,8 +85,8 @@ while True:
         print('deposit  - deposit money')
         print('withdraw - withdraw money')
         print('interest - accumulate interest')
-        print('transaction log - displays log of transactions')
-        print('exit     - exit the program')
+        print('transaction log - displays log of transactions') # added for version 2
+        print('exit     - exit the program\n\n')
     elif command == 'exit':
         break
     else:
