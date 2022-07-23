@@ -60,9 +60,14 @@ class ATM:
 
 #=========================================================
     def print_transactions(self):
-        if
-
-
+        if command == 'deposit':
+            self.transactions += amount
+            # print(self.transactions)
+            return self.transactions
+        elif command == 'withdraw':
+            self.transactions += amount
+            # print(self.transactions)
+            return self.transactions
 
 
 #================================================
@@ -82,20 +87,21 @@ while True:
         if atm.check_withdraw(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
             print(f'Withdrew ${amount}')
+            # print(f{})
         else:
             print('Insufficient funds')
     elif command == 'interest':
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
-    # elif command == 'help':
-    #     print('Available commands:')
-    #     print('balance  - get the current balance')
-    #     print('deposit  - deposit money')
-    #     print('withdraw - withdraw money')
-    #     print('interest - accumulate interest')
-    #     print('exit     - exit the program')
-    # elif command == 'exit':
-    #     break
-    # else:
-    #     print('Command not recognized')
+    elif command == 'help':
+        print('Available commands:')
+        print('balance  - get the current balance')
+        print('deposit  - deposit money')
+        print('withdraw - withdraw money')
+        print('interest - accumulate interest')
+        print('exit     - exit the program')
+    elif command == 'exit':
+        break
+    else:
+        print('Command not recognized')
