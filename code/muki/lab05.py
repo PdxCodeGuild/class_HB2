@@ -43,9 +43,10 @@ player_ticket = []
 for tic in range(6):
     winning_ticket.append(random.choice(num_pool))
 winning_ticket.sort()
-print(f'The winning numbers are: {winning_ticket}.')
-    for tik in range(6):
-        player_ticket.append(random.choice(num_pool))
-    for i in player_ticket:
-        if i in winning_ticket:
-            print(i)
+print(f'The winning numbers are:\t{winning_ticket}.')
+for tik in range(6):
+    player_ticket.append(random.choice(num_pool))
+print(f'Your numbers are:\t\t{player_ticket}')
+for i in player_ticket:
+    if i in winning_ticket:
+        print(f'Your matches are: {i}')
