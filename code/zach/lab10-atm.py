@@ -10,26 +10,31 @@ class ATM:
     def check_balance(self):
         """Returns the account balance."""
         self.transactions.append({'Date': datetime.now().strftime(
-            "%Y-%m-%d %H:%M:%S"), 'transaction_type': 'Checked Balance', 'balance': self.balance})
+            "%Y-%m-%d %H:%M:%S"), 'transaction_type': 'checked balance', 'balance': self.balance})
         return self.balance
 
     def deposit(self, amount):
         """Deposits the given amount in the account."""
         previous_balance = self.balance
         self.balance += amount
-        self.transactions.append({'Date': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'transaction_type': 'Deposit',
+        self.transactions.append({'Date': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'transaction_type': 'deposit',
             'amount': amount, 'previous_balance': previous_balance, 'new_balance': self.balance})
         return self.balance
 
     def check_withdrawal(self, amount):
         """Returns true if the withdrawn amount won't put the account in the negative"""
-        return self.balance - amount >= 0
+        if self.balance - amount >= 0: 
+            return True
+        else:
+            self.transactions.append({'date': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'transaction_type': 'Withdrawal', 'result': 'insufficient funds',
+                'amount': amount, 'balance': self.balance})
+            return False
 
     def withdraw(self, amount):
         """Withdraws the amount from the account and returns it."""
         previous_balance = self.balance
         self.balance -= amount
-        self.transactions.append({'Date': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'transaction_type': 'Withdrawal',
+        self.transactions.append({'date': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 'transaction_type': 'Withdrawal',
             'amount': amount, 'previous_balance': previous_balance, 'new_balance': self.balance})
         return self.balance
 
