@@ -63,26 +63,20 @@ card_values = {
 card1 = input(f'What is your first card?\t')
 card2 = input('What is your second card?\t')
 total = int(card_values[card1]) + int(card_values[card2])
-if total < 17:
+while total < 17:
     print(f'{total} Hit!')
-    card3 = input('What is the next card?\t')
-    total2 =  total + int(card_values[card3])
-    if total2 >= 17 and total2 < 21:
-        print(f'{total2} Stay')
-    if total2 == 21:
-        print(f'{total2} Blackjack!')
-    if total2 > 21:
+    ncard = input('What is the next card?\t')
+    total =  total + int(card_values[ncard])
+    if total >= 17 and total < 21:
+        print(f'{total} Stay')
+    if total == 21:
+        print(f'{total} Blackjack!')
+    if total > 21:
         print(f'Bust! Loser...')
-    if total2 < 17:
-        print(f'{total2} Hit!')
+    while total < 17:
+        print(f'{total} Hit!')
         card4 = input('What is the next card?\t')
-        total3 =  total2 + int(card_values[card3])
-        if total2 >= 17 and total2 < 21:
-            print(f'{total2} Stay')
-        if total2 == 21:
-            print(f'{total2} Blackjack!')
-        if total2 > 21:
-            print(f'Bust! Loser...')
+        total =  total + int(card_values[ncard])
 if total >= 17 and total < 21:
     print(f'{total} Stay')
 if total == 21:
