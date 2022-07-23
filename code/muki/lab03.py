@@ -107,9 +107,9 @@ if hundreds_place == 0:
     if numbah in special_cases:
         print(f'{numbah} is: {special_cases[numbah]}')
 if hundreds_place > 1:
-    if lose in special_cases:
-        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]}-{special_cases[str(lose)]}')
+    if str(lose) in special_cases:
+        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {special_cases[str(lose)]}')
     if tens_place != 1:
         print(f'{numbah} is: {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
-    # if lose not in special_cases:
-    #     print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]}-{tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
+    if str(lose) not in special_cases:
+        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
