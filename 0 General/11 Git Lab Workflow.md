@@ -26,10 +26,10 @@
     `git status`
 
 1. Use whichever or these four options is appropriate to add the necessary files to git tracking:  
-    `git add .`  
-    `git add <filepath>`  
-    `git add <directorypath>`  
-    `git add -A`  
+    `git add .`  # Add file changes in current directory and below to staging.  
+    `git add <filepath>`  # Add a specific filepath to staging.  
+    `git add <directorypath>`  # Add a specific directory path to staging.  
+    `git add -A`  # Add all file changes in whole repository to staging.  
 
 1. Use `git status` to view what files and directories will be added to the commit:  
     `git status`
@@ -71,7 +71,11 @@
 ## Switch between in-progress branches.
 
 1. Git `add` and `commit` changes to current branch:  
-    1. `git add -A`
+    1. Use whichever `git add` option as appropriate:
+        * `git add .`  
+        * `git add <filepath>`  
+        * `git add <directorypath>`  
+        * `git add -A` 
     1. `git commit -m <commit message>`
 
 1. Checkout the different branch we want to work on:  
@@ -80,7 +84,11 @@
 1. Do the code changes for this branch.
 
 1. Git `add` and `commit` changes to the new current branch `<a-branch-name>`:  
-    1. `git add -A`
+    1. Use whichever `git add` option as appropriate:
+        * `git add .`  
+        * `git add <filepath>`  
+        * `git add <directorypath>`  
+        * `git add -A` 
     1. `git commit -m <commit message>`
 
 1. Checkout some other branch we want to work on:  
