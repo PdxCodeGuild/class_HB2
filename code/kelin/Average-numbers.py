@@ -1,6 +1,6 @@
 # kelin-lab00-average-numbers
 
-from ast import Break
+
 
 
 nums = [5, 0, 8, 3, 4, 1, 6]
