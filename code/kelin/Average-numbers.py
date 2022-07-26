@@ -1,6 +1,7 @@
 # kelin-lab00-average-numbers
 
-# Version 1
+
+
 
 nums = [5, 0, 8, 3, 4, 1, 6]
 x = sum(nums)
