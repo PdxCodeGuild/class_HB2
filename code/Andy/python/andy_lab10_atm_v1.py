@@ -1,28 +1,41 @@
-class Atm:
-    def __init__(self, balance, intrest_rate):
-        self.bal= 0
-        self.balance = balance 
-        self.intrest_rate= intrest_rate
+class ATM:
+    def __init__(self, balance_arg = 0, intrest_rate_arg = .001): #positional arguments. a method. a more flexable way to do it 
+        self.balance = balance_arg  #balance_arg are local varable 
+        self.intrest_rate = intrest_rate_arg 
 
-    def check_balance():
+    # def __init__(self): #positional arguments. a method
+    #     self.balance = 0 one way to do it 
+    #     self.intrest_rate = .001 
+
+    def check_balance(self): # going into self to retrieve balance from what you have 
+        return self.balance  #Returning is used to return a value from a function and exit the function. To return a value from a function, use the return keyword. and print means display a value dont think it'll exit the function 
+    
+    def deposit(self, amount):
+        self.balance += amount
 
 
 
+# atm = ATM(5, .001) #putting the values for the initializer.its an object
+# # print("atm bal: ", atm.balance) #just for testing but not done in real life
+# # print('atm rate: ', atm.intrest_rate)#just for testing but not done in real life
+
+# atm.check_balance() #atm is object and checkbalance is the method access the balance
+# # print('calling check_balance method: ', atm.check_balance())
+# the_balance = atm.check_balance()
 
 
 
-
-# atm = ATM() # create an instance of our class
-# print('Welcome to the ATM')
-# while True:
-#     command = input('Enter a command: ')
-#     if command == 'balance':
-#         balance = atm.check_balance() # call the check_balance() method
-#         print(f'Your balance is ${balance}')
-#     elif command == 'deposit':
-#         amount = float(input('How much would you like to deposit? '))
-#         atm.deposit(amount) # call the deposit(amount) method
-#         print(f'Deposited ${amount}')
+atm = ATM() # create an instance of our class case sensative make the same as the class being called
+print('Welcome to the ATM')
+while True:
+    command = input('Enter a command: ')
+    if command == 'balance':
+        balance = atm.check_balance() # call the check_balance() method
+        print(f'Your balance is ${balance}')
+    elif command == 'deposit':
+        amount = float(input('How much would you like to deposit? '))
+        atm.deposit(amount) # call the deposit(amount) method
+        print(f'Deposited ${amount}')
 #     elif command == 'withdraw':
 #         amount = float(input('How much would you like '))
 #         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
