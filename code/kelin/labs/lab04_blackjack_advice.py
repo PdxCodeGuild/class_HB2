@@ -6,6 +6,10 @@
 # Then, figure out the point value of each card individually. Number cards are worth their number, all face cards are worth 10. 
 # At this point, assume aces are worth 1. Use the following rules to determine the advice:
 """Add user input 3 cards, 1 deck, and Give advice based on those cards"""
+<<<<<<< HEAD
+=======
+
+>>>>>>> 95cb38435aca229552e3df8d2ce45fef033755ae
 
 print(f"Welcome to Blackjack Advice.")
 
