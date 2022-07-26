@@ -1,6 +1,6 @@
 # with open('example.txt', 'a') as file:
 #     text = file.write('\nMORE TEXT')
-# print(text)                       
+# print(text)
 
 # file = open('example2.txt', 'w')
 # text = file.write('Legacy Method')
@@ -9,17 +9,17 @@
 
 # with open('colors.txt') as file:
 #     colors = file.read()
-    
+
 #     colors = file.read().split()
 # print(colors)
-    
+
 # with open('colors.txt', 'w') as file:
 #     text = file.write()
 # print(text)
 
-# import datetime 
+# import datetime
 
-#read file
+# read file
 
 # start = datetime.datetime.now()
 # with open('phonebook.txt') as file:
@@ -34,27 +34,27 @@
 
 # with open('phonebook.txt') as file:
 #     phone_book = file.read()
-    
+
 #     phone_book = phone_book.split('\n')
 #     name = input('Lookup name: ')
-    
+
 #     found_entry = False
 #     for entry in phone_book:
 #         if name.lower() in entry.lower():
 #             print(entry)
 #             found_entry = True
-            
+
 #     if not found_entry:
 #         print('Contact not found')
 #         name = input('Enter new contact name: ')
 #         phone_number = input(f'Enter the number for :   {name}')
-        
+
 #         phone_book.append(name + " " + phone_number)
-        
+
 #         phone_book.sort()
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
-        
+
 
 # print(type(phone_book))
 # print(phone_book)
