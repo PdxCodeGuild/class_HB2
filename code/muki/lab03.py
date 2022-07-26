@@ -113,7 +113,7 @@ elif hundreds_place >= 1:
     if str(lose) in special_cases:
         print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {special_cases[str(lose)]}')
     elif tens_place == 0 and hundreds_place >= 1:
-        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]}')
+        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} and {single_digits[str(ones_place)]}')
     elif tens_place != 1:
         print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}') 
     elif str(lose) not in special_cases:
