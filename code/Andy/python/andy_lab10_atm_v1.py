@@ -12,7 +12,13 @@ class ATM:
     
     def deposit(self, amount):
         self.balance += amount
-
+    
+    def check_withdrawal(self, amount): #using self to get balance and amount since thats what we're checking 
+        if self.balance >= amount:
+            return True
+        else:
+            return False
+            
 
 
 # atm = ATM(5, .001) #putting the values for the initializer.its an object
@@ -36,13 +42,13 @@ while True:
         amount = float(input('How much would you like to deposit? '))
         atm.deposit(amount) # call the deposit(amount) method
         print(f'Deposited ${amount}')
-#     elif command == 'withdraw':
-#         amount = float(input('How much would you like '))
-#         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
-#             atm.withdraw(amount) # call the withdraw(amount) method
-#             print(f'Withdrew ${amount}')
-#         else:
-#             print('Insufficient funds')
+    elif command == 'withdraw':
+        amount = float(input('How much would you like '))
+        if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
+            atm.withdraw(amount) # call the withdraw(amount) method
+            print(f'Withdrew ${amount}')
+        else:
+            print('Insufficient funds')
 #     elif command == 'interest':
 #         amount = atm.calc_interest() # call the calc_interest() method
 #         atm.deposit(amount)
