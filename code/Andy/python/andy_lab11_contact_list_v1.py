@@ -3,10 +3,18 @@ with open('contacts.csv', 'r') as file:
     print(lines, 'lines')
 
 
-headers = lines[0].split(' , ') #getting the keys by themselves
+headers = lines[0].split(',') #getting the keys by themselves
 print('headers: ', headers)
 
-answer = lines[1:]
-print('answers: ', answer)
+rows = lines[1:] #values by themselves. need to find more of an explination of [1:] splicing methon\d
+
+
+# print('answers: ', answer)
 # list = {}
-# for line in lines:
+for row in rows:
+    column = row.split(',')
+    # print(column)
+    #HEADER:COLUMN  D = dict(zip(keys, values))
+    d = dict(zip(headers, column))
+    print(d)
+ 
