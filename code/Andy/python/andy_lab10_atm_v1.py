@@ -18,7 +18,9 @@ class ATM:
             return True
         else:
             return False
-            
+    def withdraw(self, amount):
+        self.balance -= amount
+        
 
 
 # atm = ATM(5, .001) #putting the values for the initializer.its an object
