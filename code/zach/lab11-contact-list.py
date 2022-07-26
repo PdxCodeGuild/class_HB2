@@ -1,7 +1,15 @@
 def version1():
-    with open('contacts.csv','r') as file:
+    with open('contacts.csv', 'r') as file:
         lines = file.read().split('\n')
-        print(lines)
+        #print(lines)
+    
+    index = 1
+    headers = lines[0].split(",")
+    
+    while index < len(lines):
+        contact = lines[index].split(",")
+        print(dict(zip(headers, contact)))
+        index += 1
 
 def version2():
     
