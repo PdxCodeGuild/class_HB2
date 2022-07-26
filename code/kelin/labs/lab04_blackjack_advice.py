@@ -4,6 +4,8 @@
 # First, ask the user for three playing cards (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K). 
 # Then, figure out the point value of each card individually. Number cards are worth their number, all face cards are worth 10. 
 # At this point, assume aces are worth 1. Use the following rules to determine the advice:
+"""Add user input 3 cards, 1 deck, and Give advice based on those cards"""
+
 
 deck_one = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K']
 deck_two = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K']
@@ -68,3 +70,4 @@ elif card_totals > 20:
 # Aces can be worth 11 if they won't put the total point value of both cards over 21. Remember that you can have multiple aces in a hand. 
 # Try generating a list of all possible hand values by doubling the number of values in the output whenever you encounter an ace. 
 # For one half, add 1, for the other, add 11. This ensures if you have multiple aces that you account for the full range of possible values.
+
