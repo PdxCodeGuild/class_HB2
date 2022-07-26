@@ -31,25 +31,25 @@ This block was borrowed from class
 
 
 #   Version 1:
-numbah = input('please enter a number between 0 and 999:\n')
+numbah = input('please enter a number between 0 and 999:\n> ')
 
 hundreds_place = int(numbah)//100
 lose = int(numbah) - (hundreds_place * 100)
 ones_place = int(lose)%10
 tens_place = int(lose)//10
-print(lose)
+# print(lose)
 
 
 
 print(f'You entered:{numbah}\t Thanks for your entry.')
-print(ones_place)
-print(tens_place)
-print(hundreds_place)
-print(lose)
+# print(ones_place)
+# print(tens_place)
+# print(hundreds_place)
+# print(lose)
 
 
 single_digits = {
-    '0':'zero',
+    '0':'',
     '1':'one',
     '2':'two',
     '3':'three',
@@ -84,6 +84,7 @@ special_cases = {
     '17':'seventeen',
     '18':'eighteen',
     '19':'nineteen',
+    
 }
 
 
@@ -101,15 +102,19 @@ hundreds_digits = {
 }
 
 # if numbah:
-if hundreds_place == 0: 
+if numbah == "0":
+    print(f'{numbah} is: zero')
+elif hundreds_place == 0: 
     if tens_place != 1:
         print(f'{numbah} is: {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
     if numbah in special_cases:
         print(f'{numbah} is: {special_cases[numbah]}')
-if hundreds_place > 1:
+elif hundreds_place >= 1:
     if str(lose) in special_cases:
         print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {special_cases[str(lose)]}')
-    if tens_place != 1:
-        print(f'{numbah} is: {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
-    if str(lose) not in special_cases:
+    elif tens_place == 0 and hundreds_place >= 1:
+        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]}')
+    elif tens_place != 1:
+        print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}') 
+    elif str(lose) not in special_cases:
         print(f'{numbah} is: {hundreds_digits[str(hundreds_place)]} {tens_digits[str(tens_place)]}{single_digits[str(ones_place)]}')
