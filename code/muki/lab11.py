@@ -26,6 +26,42 @@ When REPL loop finishes, write the updated contact info to the CSV file to be sa
 
 '''
 
+# class ContactList:
+#     def __init__(self, file) -> None:
+        
+contact_dict = {}
+keys = []
+
 with open('contacts.csv', 'r') as file:
     lines = file.read().split('\n')
-    print(lines)
+#     print(lines)
+
+# print(lines[0])
+keys.append(lines[0])
+# print(keys)
+# for key in contact_dict:
+for key in contact_dict:
+    contact_dict.append(keys)
+    print(contact_dict.keys())
+    print(key)
+
+
+'''
+class Contactlist:
+    def __init__(self, firstname, lastname, crew):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.crew = crew
+
+    def add_contact(self,) - add a contact 
+
+
+    make a function - remove a contact 
+
+
+    make a function - edit a contact
+
+
+
+'''
+
