@@ -43,7 +43,7 @@ for l in range(1, len(lines)):
         headers[2]: the_favorite_color
 
     }
-    print(contact_dict)
+    # print(contact_dict)
 
     contacts_list.append(contact_dict)
 pprint.pprint(contacts_list)
@@ -58,22 +58,24 @@ pprint.pprint(contacts_list)
 # Version2
 #==========================================================
 
-# def record():
-#     get_info = []
-#     get_name = input("Add a name to the contact list: ")
-#     get_fruit = input(f"What is {get_name}'s favorite fruit?: ")
-#     get_color = input(f"What is {get_name}'s favorite color?: ")
-#     get_info.append(get_name)
-#     get_info.append(get_fruit)
-#     get_info.append(get_color)
-#     # print(get_info)
+def record():
+    # get_info = []
+    get_name = input("Add a name to the contact list: ")
+    get_fruit = input(f"What is {get_name}'s favorite fruit?: ")
+    get_color = input(f"What is {get_name}'s favorite color?: ")
+    contact_list.append(get_name)
+    contact_list.append(get_fruit)
+    contact_list.append(get_color)
+    # print(get_info)
     
-# record()
+record()
 
-# with open('contact_list.csv', 'r') as file:
-#     lines = file.write(get_info)
+with open('contact_list.csv', 'r') as file:
+    lines = file.write(get_info)
 
 
 #==========================================================
 # Version3
 #==========================================================
+
+
