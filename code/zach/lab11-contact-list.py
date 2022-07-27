@@ -48,30 +48,20 @@ def version2_3():
                     if update_type == 'Name':
                         name_change = input('What should their name change to? ')
                         data = data.replace(contacts[index]['Name'], name_change)
-                        file.close()
-                        file = open('contacts.csv', 'wt')
-                        file.write(data)
-                        file.close()
                     elif update_type == 'Phone':
                         phone_change = input('What should their phone number be? ')
                         data = data.replace(contacts[index]['Phone'], phone_change)
-                        file.close()
-                        file = open('contacts.csv', 'wt')
-                        file.write(data)
-                        file.close()
                     elif update_type == 'Email':
                         email_change = input('What should their email be? ')
                         data = data.replace(contacts[index]['Email'], email_change)
-                        file.close()
-                        file = open('contacts.csv', 'wt')
-                        file.write(data)
-                        file.close()
                     else:
                         print('Not a valid selection.')
+                    file.close()
+                    file = open('contacts.csv', 'wt')
+                    file.write(data)
+                    file.close()
                     
             index += 1
-        else:
-            return print("User not found.")
         
     elif query_type == 'Delete':
         name = input("What is the contact's name you would like to delete? ")
