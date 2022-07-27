@@ -2,7 +2,9 @@ class ATM:
     def __init__(self, balance_arg = 0, intrest_rate_arg = .001): #positional arguments. a method. a more flexable way to do it 
         self.balance = balance_arg  #balance_arg are local varable 
         self.intrest_rate = intrest_rate_arg 
-
+        self.transactions = []
+        
+    
     # def __init__(self): #positional arguments. a method
     #     self.balance = 0 one way to do it 
     #     self.intrest_rate = .001 
@@ -12,15 +14,25 @@ class ATM:
     
     def deposit(self, amount):
         self.balance += amount
+        self.transactions.append(f'user deposited {amount}')
+       
     
     def check_withdrawal(self, amount): #using self to get balance and amount since thats what we're checking 
         if self.balance >= amount:
             return True
         else:
             return False
-    def withdraw(self, amount):
-        self.balance -= amount
         
+    def withdraw(self, amount):
+        self.balance -= amount 
+        self.transactions.append(f'user withdrew {amount}') 
+        
+    def calc_interest(self):
+        interest = self.balance * self.intrest_rate * .01
+        return interest
+    
+    def print_transactions(self):
+        print(self.transactions)
 
 
 # atm = ATM(5, .001) #putting the values for the initializer.its an object
@@ -51,18 +63,21 @@ while True:
             print(f'Withdrew ${amount}')
         else:
             print('Insufficient funds')
-#     elif command == 'interest':
-#         amount = atm.calc_interest() # call the calc_interest() method
-#         atm.deposit(amount)
-#         print(f'Accumulated ${amount} in interest')
-#     elif command == 'help':
-#         print('Available commands:')
-#         print('balance  - get the current balance')
-#         print('deposit  - deposit money')
-#         print('withdraw - withdraw money')
-#         print('interest - accumulate interest')
-#         print('exit     - exit the program')
-#     elif command == 'exit':
-#         break
-#     else:
-#         print('Command not recognized')
+    elif command == 'interest':
+        amount = atm.calc_interest() # call the calc_interest() method
+        atm.deposit(amount)
+        print(f'Accumulated ${amount} in interest')
+    elif command == "transactions":
+         atm.print_transactions()
+    elif command == 'help':
+        print('Available commands:')
+        print('balance  - get the current balance')
+        print('deposit  - deposit money')
+        print('withdraw - withdraw money')
+        print('interest - accumulate interest')
+        print('transactions - view transactions')
+        print('exit     - exit the program')
+    elif command == 'exit':
+        break
+    else:
+        print('Command not recognized')
