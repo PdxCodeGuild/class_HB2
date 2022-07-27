@@ -6,9 +6,13 @@
 # withdraw(amount) withdraws the amount from the account and returns it
 # calc_interest() returns the amount of interest calculated on the account
 
-from xmlrpc.server import list_public_methods
+from datetime import datetime
+dtg = datetime.now()
+dd = dtg.day
+mm = dtg.month
+yyyy = dtg.year
 
-
+#   Commented out for testing time. 
 balance = 0
 interest = .01
 txlist = []
@@ -58,14 +62,14 @@ while True:
     command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
     if command == 'balance':
         balance = atm.check_balance() # call the check_balance() method
-        print(f'\nYour balance is ${balance}\n')
+        print(f'\nYour balance is ${amount}\n')
     elif command == 'deposit':
-        amount = float(input('How much would you like to deposit? '))
+        amount = round(float(input('How much would you like to deposit? ')))
         atm.deposit(amount) # call the deposit(amount) method
         atm.logg(txlist, f'Deposited ${amount}')
         print(f'\nDeposited ${amount}\n')
     elif command == 'withdraw':
-        amount = float(input('How much would you like to withdraw? '))
+        amount = round(float(input('How much would you like to withdraw? ')))
         if atm.check_withdrawl(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
             atm.logg(txlist, f'Withdrew ${amount}')
@@ -76,20 +80,18 @@ while True:
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
         atm.logg(txlist, f'Accumulated ${amount} in interest')
-        print(f'\nAccumulated ${amount} in interest\n')
+        print(f'\nAccumulated ${round(amount)} in interest\n')
     elif command == 'transaction log':
         atm.print_transactions(txlist)
     elif command == 'help':
-        print('Available commands:')
-        print('balance  - get the current balance')
-        print('deposit  - deposit money')
-        print('withdraw - withdraw money')
-        print('interest - accumulate interest')
-        print('transaction log - displays log of transactions') # added for version 2
-        print('exit     - exit the program\n\n')
+        print('\nAvailable commands:')
+        print('\nbalance  - get the current balance')
+        print('\ndeposit  - deposit money')
+        print('\nwithdraw - withdraw money')
+        print('\ninterest - accumulate interest')
+        print('\ntransaction log - displays log of transactions') # added for version 2
+        print('\nexit     - exit the program\n\n')
     elif command == 'exit':
         break
     else:
-        print('Command not recognized, please try again.')
-
-
+        print('\nCommand not recognized, please try again.\n')
