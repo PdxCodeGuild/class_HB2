@@ -16,3 +16,4 @@ bod = get_quotes['body'] #when pulling from the dict look at the url and go to i
 auth = get_quotes['author']
 
 pprint.pprint(f'{bod}  by {auth}')
+print(f'{bod}  by {auth}')
