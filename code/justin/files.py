@@ -58,8 +58,11 @@ When finished, enter"done":''')
                     chg = input(f'What needs to change, name, phone, state or spirit animal? ')
                     if chg.lower() == 'name':
                         chg = input('Whats the new name? ')
-                        data.replace(lines[0],chg)
-                        lines[0] = chg
+                        data = data.replace(lines[0],chg)
+                        fin.close()
+                        fin = open('contacts.csv', 'wt')
+                        fin.write(data)
+                        fin.close()
                     elif chg.lower() == 'phone':
                         chg = input('Whats the new phone? ')
                         lines[1] = chg
