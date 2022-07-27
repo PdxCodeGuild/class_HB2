@@ -15,7 +15,7 @@ class ATM:
     def deposit(self, amount):
         self.balance += amount
         self.transactions.append(f'user deposited {amount}')
-       
+        return self.balance
     
     def check_withdrawal(self, amount): #using self to get balance and amount since thats what we're checking 
         if self.balance >= amount:
@@ -26,13 +26,16 @@ class ATM:
     def withdraw(self, amount):
         self.balance -= amount 
         self.transactions.append(f'user withdrew {amount}') 
-        
+        return self.balance
+
     def calc_interest(self):
         interest = self.balance * self.intrest_rate * .01
         return interest
     
     def print_transactions(self):
-        print(self.transactions)
+        for i in self.transactions:
+            print(i)
+            return self.transactions
 
 
 # atm = ATM(5, .001) #putting the values for the initializer.its an object
@@ -68,7 +71,8 @@ while True:
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
     elif command == "transactions":
-         atm.print_transactions()
+         transactions = atm.print_transactions()
+         print(f'your transaction history is {transactions}')
     elif command == 'help':
         print('Available commands:')
         print('balance  - get the current balance')
