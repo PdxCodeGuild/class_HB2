@@ -1,5 +1,7 @@
 # with open('example.txt', 'a') as file:
 #     text = file.write('\nMORE TEXT')
+
+# print(text)
 # print(text)                       
 
 # file = open('example2.txt', 'w')
@@ -9,6 +11,10 @@
 
 # with open('colors.txt') as file:
 #     colors = file.read()
+
+#     colors = file.read().split()
+# print(colors)
+
     
 #     colors = file.read().split()
 # print(colors)
@@ -17,6 +23,9 @@
 #     text = file.write()
 # print(text)
 
+# import datetime
+
+# read file
 # import datetime 
 
 #read file
@@ -34,6 +43,11 @@
 
 # with open('phonebook.txt') as file:
 #     phone_book = file.read()
+
+#     phone_book = phone_book.split('\n')
+#     name = input('Lookup name: ')
+
+
     
 #     phone_book = phone_book.split('\n')
 #     name = input('Lookup name: ')
@@ -43,11 +57,20 @@
 #         if name.lower() in entry.lower():
 #             print(entry)
 #             found_entry = True
-            
+
+
+
 #     if not found_entry:
 #         print('Contact not found')
 #         name = input('Enter new contact name: ')
 #         phone_number = input(f'Enter the number for :   {name}')
+
+#         phone_book.append(name + " " + phone_number)
+
+#         phone_book.sort()
+#         with open('phonebook2.txt', 'w') as file2:
+#             file2.write('\n'.join(phone_book))
+
         
 #         phone_book.append(name + " " + phone_number)
         
@@ -55,7 +78,6 @@
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
         
-
 # print(type(phone_book))
 # print(phone_book)
 # def Convert(lst):
@@ -66,4 +88,6 @@
 #     color = file.read()
 #     color = color.split('\n')
 #     color = Convert(color)
+#     print(color)
+
 #     print(color)

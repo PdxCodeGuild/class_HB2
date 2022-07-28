@@ -1,7 +1,5 @@
 #           PART 1            #
 
-
-from logging import exception
 import requests
 
 
@@ -41,6 +39,7 @@ response = requests.get(
 
 joke = response.json()
 jokes = joke["results"]
+
 try:
 
     for joke in jokes:
