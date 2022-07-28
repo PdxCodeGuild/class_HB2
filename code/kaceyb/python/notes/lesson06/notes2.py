@@ -27,8 +27,6 @@ import requests
 
 # for i in range(len(categories)):
 #     print(i, categories[i])
-
-
     
 # for i in range(len(categories)):
 #     print(i, categories[i])

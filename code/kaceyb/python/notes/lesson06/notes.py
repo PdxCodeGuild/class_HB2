@@ -1,6 +1,6 @@
 # with open('example.txt', 'a') as file:
 #     text = file.write('\nMORE TEXT')
-# print(text)
+# print(text)                       
 
 # file = open('example2.txt', 'w')
 # text = file.write('Legacy Method')
@@ -13,8 +13,6 @@
 #     colors = file.read().split()
 # print(colors)
 
-
-    
 #     colors = file.read().split()
 # print(colors)
     
@@ -55,7 +53,6 @@
 #             print(entry)
 #             found_entry = True
 
-          
 #     if not found_entry:
 #         print('Contact not found')
 #         name = input('Enter new contact name: ')
@@ -67,15 +64,12 @@
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
 
-
-        
 #         phone_book.append(name + " " + phone_number)
         
 #         phone_book.sort()
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
         
-
 # print(type(phone_book))
 # print(phone_book)
 # def Convert(lst):
@@ -88,6 +82,3 @@
 #     color = Convert(color)
 
 #     print(color)
-
-#     print(color)
-
