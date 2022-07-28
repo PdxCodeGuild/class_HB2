@@ -1,7 +1,5 @@
 # with open('example.txt', 'a') as file:
 #     text = file.write('\nMORE TEXT')
-
-# print(text)
 # print(text)                       
 
 # file = open('example2.txt', 'w')
@@ -15,7 +13,6 @@
 #     colors = file.read().split()
 # print(colors)
 
-    
 #     colors = file.read().split()
 # print(colors)
     
@@ -46,8 +43,6 @@
 
 #     phone_book = phone_book.split('\n')
 #     name = input('Lookup name: ')
-
-
     
 #     phone_book = phone_book.split('\n')
 #     name = input('Lookup name: ')
@@ -57,8 +52,6 @@
 #         if name.lower() in entry.lower():
 #             print(entry)
 #             found_entry = True
-
-
 
 #     if not found_entry:
 #         print('Contact not found')
@@ -71,7 +64,6 @@
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
 
-        
 #         phone_book.append(name + " " + phone_number)
         
 #         phone_book.sort()
@@ -88,6 +80,5 @@
 #     color = file.read()
 #     color = color.split('\n')
 #     color = Convert(color)
-#     print(color)
 
 #     print(color)

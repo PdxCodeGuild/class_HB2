@@ -13,8 +13,6 @@
 
 import math
 
-
-
 def distance(p1, p2):
     dx = p1["x"] - p2["x"]
     dy = p1["y"] - p2["y"]
@@ -65,6 +63,7 @@ p1 = Point(5, 2) # call the initializer, instantiate the class
 
 p1 = (5,2)
 p2 = Point(8,4)
+
 
 # print(p1.x)
 # print(p1.y)
