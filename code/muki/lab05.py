@@ -39,14 +39,51 @@ while num < 99:
 # print(num_pool)
 
 winning_ticket = []
-player_ticket = []
+player_ticket = [23, 9, 4, 18, 7, 69]
 for tic in range(6):
     winning_ticket.append(random.choice(num_pool))
-winning_ticket.sort()
+winning_ticket
 print(f'The winning numbers are:\t{winning_ticket}.')
-for tik in range(6):
-    player_ticket.append(random.choice(num_pool))
-print(f'Your numbers are:\t\t{player_ticket}')
-for i in player_ticket:
-    if i in winning_ticket:
-        print(f'Your matches are: {i}')
+
+# for i in player_ticket:
+#     if i in winning_ticket:
+#         print(f'Your matches are: {i}')
+a = 0
+while a < 100:
+    # for tik in range(6):
+    #     player_ticket.append(random.choice(num_pool))
+    #     # print(f'Your numbers are:\t\t{player_ticket}')
+    a += 1
+    while True:
+        if winning_ticket[0] == player_ticket[0]:
+            if winning_ticket[1] == player_ticket[1]:
+                if winning_ticket[2] == player_ticket[2]:
+                    if winning_ticket[3] == player_ticket[3]:
+                        if winning_ticket[4] == player_ticket[4]:
+                            if winning_ticket[5] == player_ticket[5]:
+                                print(f'Jackpot!!!')
+                                break
+                            else:
+                                print(f'Matched 5, win: ?')
+                                break
+                        else:
+                            print(f'Matched 4 win: ?')
+                            break
+                    else:
+                        print(f'Matched 3 win: ?')
+                        break
+                else:
+                        print(f'Matched 2 win: ?')
+                        break
+            else:
+                        print(f'Matched 1 win: ?')
+                        break
+        else:
+            print('No bones bro')
+            break
+    # for i in player_ticket:
+    #     if i in winning_ticket:
+    #         print(f'Your matches are: {i}')
+    player_ticket.clear()
+    
+        
