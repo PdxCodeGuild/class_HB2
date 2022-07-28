@@ -1,4 +1,3 @@
-from urllib import response
 import requests
 
 # response = requests.get('https://google.com')
@@ -29,6 +28,11 @@ import requests
 # for i in range(len(categories)):
 #     print(i, categories[i])
 
+
+    
+# for i in range(len(categories)):
+#     print(i, categories[i])
+    
 # choice = int(input('Select a category: '))
 
 # query = {
@@ -44,6 +48,8 @@ import requests
 import requests
 
 url = "https://ghibliapi.herokuapp.com/films"
+
+url = 'https://ghibliapi.herokuapp.com/films'
 response = requests.get(url)
 # print(response.text)
 data = response.json()
@@ -54,3 +60,10 @@ for film in data:
     print(film["description"])
 
     print("-" * 10)
+
+    print(film['title'])
+    print(film['release_date'])
+    print(film['description'])
+
+    
+    print('-'*10)

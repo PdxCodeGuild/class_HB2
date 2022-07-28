@@ -1,6 +1,5 @@
 #           PART 1            #
 
-
 import requests
 
 
@@ -30,7 +29,8 @@ search_term = input("Enter a search term: ")
 
 
 response = requests.get(
-    f"https://icanhazdadjoke.com/search?page=1", headers={"Accept": "application/json"}
+    f"https://icanhazdadjoke.com/search?term={search_term}",
+    headers={"Accept": "application/json"},
 )
 
 # print(response)
@@ -40,8 +40,13 @@ response = requests.get(
 joke = response.json()
 jokes = joke["results"]
 
-for joke in jokes:
-    print(joke["joke"])
-    another_joke = input("Want another joke? yes/no: ").lower()
-    if another_joke == "no":
-        break
+try:
+
+    for joke in jokes:
+        print(joke["joke"])
+        another_joke = input("Want another joke? yes/no: ").lower()
+        if another_joke == "no":
+            break
+
+except exception as e:
+    print(f"error {e}")
