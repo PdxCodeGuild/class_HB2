@@ -1,6 +1,8 @@
 # with open('example.txt', 'a') as file:
 #     text = file.write('\nMORE TEXT')
+
 # print(text)
+# print(text)                       
 
 # file = open('example2.txt', 'w')
 # text = file.write('Legacy Method')
@@ -13,6 +15,10 @@
 #     colors = file.read().split()
 # print(colors)
 
+    
+#     colors = file.read().split()
+# print(colors)
+    
 # with open('colors.txt', 'w') as file:
 #     text = file.write()
 # print(text)
@@ -20,6 +26,9 @@
 # import datetime
 
 # read file
+# import datetime 
+
+#read file
 
 # start = datetime.datetime.now()
 # with open('phonebook.txt') as file:
@@ -38,11 +47,18 @@
 #     phone_book = phone_book.split('\n')
 #     name = input('Lookup name: ')
 
+
+    
+#     phone_book = phone_book.split('\n')
+#     name = input('Lookup name: ')
+    
 #     found_entry = False
 #     for entry in phone_book:
 #         if name.lower() in entry.lower():
 #             print(entry)
 #             found_entry = True
+
+
 
 #     if not found_entry:
 #         print('Contact not found')
@@ -55,7 +71,13 @@
 #         with open('phonebook2.txt', 'w') as file2:
 #             file2.write('\n'.join(phone_book))
 
-
+        
+#         phone_book.append(name + " " + phone_number)
+        
+#         phone_book.sort()
+#         with open('phonebook2.txt', 'w') as file2:
+#             file2.write('\n'.join(phone_book))
+        
 # print(type(phone_book))
 # print(phone_book)
 # def Convert(lst):
@@ -66,4 +88,6 @@
 #     color = file.read()
 #     color = color.split('\n')
 #     color = Convert(color)
+#     print(color)
+
 #     print(color)

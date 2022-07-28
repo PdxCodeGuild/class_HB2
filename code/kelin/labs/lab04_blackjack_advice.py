@@ -1,25 +1,21 @@
+# Kelin Ray
 # Lab 4: Blackjack Advice
 
 # Let's write a python program to give basic blackjack playing advice during a game by asking the player for cards. 
 # First, ask the user for three playing cards (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K). 
 # Then, figure out the point value of each card individually. Number cards are worth their number, all face cards are worth 10. 
 # At this point, assume aces are worth 1. Use the following rules to determine the advice:
+"""Add user input 3 cards, 1 deck, and Give advice based on those cards"""
 
-deck_one = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K']
-deck_two = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K']
-deck_three = ['A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K','A','2','3','4','5','6','7','8','9','10','J','Q','K']
+print(f"Welcome to Blackjack Advice.")
 
-import random
+first_card = input("Enter first card (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K): ")
+second_card = input("Enter second card (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K): ")
+third_card = input("Enter third card (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, or K): ") 
 
-random.shuffle(deck_one)
-random.shuffle(deck_two)
-random.shuffle(deck_three)
+# Deleted the random cards and now take 3 inputs for cards from the user to give advice.
 
-first_card = random.choice(deck_one)
-second_card = random.choice(deck_two)
-third_card = random.choice(deck_three)
-
-print(f"Welcome to Blackjack.","Your cards are:",first_card,second_card,third_card)
+print(f"Your cards are:",first_card,second_card,third_card)
 
 if first_card == 'A':
     first_card = int('1')
@@ -68,3 +64,4 @@ elif card_totals > 20:
 # Aces can be worth 11 if they won't put the total point value of both cards over 21. Remember that you can have multiple aces in a hand. 
 # Try generating a list of all possible hand values by doubling the number of values in the output whenever you encounter an ace. 
 # For one half, add 1, for the other, add 11. This ensures if you have multiple aces that you account for the full range of possible values.
+
