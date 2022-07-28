@@ -1,4 +1,5 @@
 import emoji
+import word2emoji
 
 # https://pypi.org/project/emoji/ emoji 2.0.0
 # pip install emoji
@@ -33,8 +34,10 @@ print(emoji.emojize(f'Learning Python is :downcast_face_with_sweat: sometimes, a
 lessons = []
 while True:
 
-    fundamentals = input(emoji.demojize(f'Fundamentals enter an emoji code: \n✅\nor\n❌ '))
-    exceptions = input(emoji.demojize(f'Exceptions + Testing enter an emoji code: \n✅\nor\n❌ '))
+    fundamentals = input(f'Enter a word to describe Fundamentals: ')
+    fundamentals = word2emoji(fundamentals)
+
+    # exceptions = input(emoji.demojize(f'Exceptions + Testing enter an emoji code: \n✅\nor\n❌ '))
     
     # demojize takes the emoji and displays the code for it
 
