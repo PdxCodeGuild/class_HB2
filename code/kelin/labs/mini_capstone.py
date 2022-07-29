@@ -1,4 +1,5 @@
 import emoji
+from regex import F
 import word2emoji
 
 # https://pypi.org/project/emoji/ emoji 2.0.0
@@ -26,26 +27,41 @@ import word2emoji
 # Sets
 # Virtual Environments
 
-print(emoji.emojize(f'Learning Python is :downcast_face_with_sweat: sometimes, and it can even make my head :exploding_head: !!!'))
+print(emoji.emojize(f'Learning Python is :downcast_face_with_sweat: sometimes, and it can even make me feel like :exploding_head: !!!'))
 
 # emojize takes the code and displays the emoji
 
 
-lessons = []
+learning = []
 while True:
 
-    fundamentals = input(f'Enter a word to describe Fundamentals: ')
-    fundamentals = word2emoji(fundamentals)
+    word = input(f'Enter a word to describe learning Python: ')
+    wordemoji = word2emoji(word)
+    wordtwo = input(f'Enter another word: ')
+    wordtwoemoji = word2emoji(wordtwo)
+
+
 
     # exceptions = input(emoji.demojize(f'Exceptions + Testing enter an emoji code: \n✅\nor\n❌ '))
     
     # demojize takes the emoji and displays the code for it
 
-    lessons.append ({
-        'Fundamentals': fundamentals
+    learning.append ({
+        'Learning Python is' : wordemoji,
+        'sometimes, and it can even make me feel like' : wordtwoemoji
         })
-    
-    print(emoji.emojize(str(lessons)))
+
+    # The user inputed word is turned into an emoji
+
+    emojicode = emoji.demojize(wordemoji)
+    emojicodetwo= emoji.demojize(wordtwoemoji)
+
+    # The emojis are turned into codes
+
+    print(learning, 'Your emoji codes are ',emojicode, 'and ', emojicodetwo)
+
+
+    # print(emoji.demojize(wordemoji, wordtwoemoji))
 
     # if fundamentals == (':check_mark_button:'):
     #     lessons.append ({
