@@ -46,7 +46,11 @@ while True:
 
     print(learningprint, 'Your emoji codes are ',emojicode, 'and ',emojicodetwo)
 
+    useremoji = emoji.emojize(emojicode)
+    useremojitwo = emoji.emojize(emojicodetwo)
+
+    print('Learning Python is', useremoji, 'sometimes it can me me feel like', useremojitwo)
+
     
     # Add support for entering own emoji codes
 
-    
