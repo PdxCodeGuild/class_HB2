@@ -15,14 +15,19 @@ print(emoji.emojize(f'Learning Python is :downcast_face_with_sweat: sometimes it
 
 # emojize takes the code and displays the emoji
 
+def user_prompt_get_emoji(phrase):
+    word = input(phrase)
+    wordemoji = word2emoji(word)
+    return wordemoji
 
+    # deployed a function to take the user input for the emoji
 learning = []
 while True:
+    wordemoji = user_prompt_get_emoji('Enter a word to describe learning Python: ')
 
-    word = input(f'Enter a word to describe learning Python: ')
-    wordemoji = word2emoji(word)
-    wordtwo = input(f'Enter another word: ')
-    wordtwoemoji = word2emoji(wordtwo)
+    # word = input(f'Enter a word to describe learning Python: ')
+    # wordemoji = word2emoji(word)
+    wordtwoemoji = user_prompt_get_emoji('Enter another word: ')
 
     # word2emoji takes a word and turns it into an emoji
 
