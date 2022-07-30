@@ -1,4 +1,4 @@
-# This combines version 2 and 3
+# Lab 11, this combines version 2 and 3
 
 class ContactList:
 
@@ -6,8 +6,8 @@ class ContactList:
 
     def __init__(self):
       
-        with open('contacts2.csv', 'r') as file: # open the file
-            lines = file.read().split('\n') #when encounter a new line character, store into lines variable
+        with open('contacts2.csv', 'r') as file: 
+            lines = file.read().split('\n') 
 
         header = lines[0].split(',')
 

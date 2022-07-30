@@ -1,3 +1,5 @@
+# Lab11 v1
+
 with open('contacts.csv', 'r') as file: # open the file
     lines = file.read().split('\n') # when encounter a new line character, store into lines variable
 
