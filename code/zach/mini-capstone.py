@@ -52,7 +52,7 @@ def main():
         int(time.time()),
         "C:/Users/zacha/OneDrive/Coding/Keys/Home_Dashboard/WeatherKit/AuthKey_74B4NT7KNA.p8"
         )
-
+    print(web_token)
     current_condition, current_temp = get_weather('en', 38.933868, -77.177261, web_token, 'America/New_York')
     temp_fahrenheit = temp_converter(current_temp)
     
