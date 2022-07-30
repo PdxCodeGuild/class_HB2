@@ -1,3 +1,5 @@
+# mini-python capstone
+
 from random import randint
 from asciimatics.screen import Screen
 
