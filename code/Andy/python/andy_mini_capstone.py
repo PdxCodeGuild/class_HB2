@@ -35,7 +35,7 @@ url = '\n'.join(email_msg)# entire list and joining them in new lines in one str
 send_mail(
 email_sender = 'robleroandy99@gmail.com',
 email_receiver = 'aroblero@myyahoo.com',
-message = f'{url}', #gets rid of brackets
+message = f'{url}', 
 password = google_p['password'],
 subject = 'notification Mail'
  ) 
