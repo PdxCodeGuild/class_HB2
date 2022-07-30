@@ -27,6 +27,7 @@ while True:
 
     # word = input(f'Enter a word to describe learning Python: ')
     # wordemoji = word2emoji(word)
+
     wordtwoemoji = user_prompt_get_emoji('Enter another word: ')
 
     # word2emoji takes a word and turns it into an emoji
@@ -45,10 +46,18 @@ while True:
 
     # The emojis are turned into a message and the codes are displayed to user
 
-    print(learning, 'Your emoji codes are ',emojicode, 'and ',emojicodetwo)
-
+    print(learning, 'The text consists of 2 emoji codes and their translations.', emojicode, 'and', emojicodetwo, emoji.emojize(emojicode), emoji.emojize(emojicodetwo))
+    
+    with open('emojicodes.csv', 'w') as emojicodefile:
+        emojicodefile.write(emojicode)
+        emojicodefile.write(emojicodetwo)
+        
+    # write the user emoji codes to a csv file
     
     # Add support for entering own emoji codes to display
 
     # Add support for all emoji codes
+
+
+    # find support for AI generated content
 
