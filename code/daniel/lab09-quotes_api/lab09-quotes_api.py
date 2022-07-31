@@ -1,26 +1,19 @@
 # https://favqs.com/api/qotd
 
-
+import requests
 #================================
 #Version1
 #================================
 
-import requests
 
+# response = requests.get(f"https://favqs.com/api/qotd", headers={'Accept': 'application/json'})
+# # print(response.json())
 
+# random_quote = response.json()['quote']['body']
+# print(random_quote)
 
-response = requests.get(f"https://favqs.com/api/qotd", headers={'Accept': 'application/json'})
-# print(response)
-
-
-random_joke = response.json()
-# print(random_joke)
-
-
-joke_dict = []
-joke_dict.append(random_joke['quote'])
-print("joke_dict", joke_dict)
-print("author", joke_dict[2])
+# random_quote_author = response.json()['quote']['author']
+# print(' ~',random_quote_author)
 
 
 #================================
@@ -28,17 +21,21 @@ print("author", joke_dict[2])
 #================================
 
 
-# get_quote = input("Enter a search term to get a random quote: ")
-# print(get_quote)
+response = requests.get(f"https://favqs.com/api/quotes?page=<page>&filter=<keyword>", headers = {'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
+print(response.json())
+
+page = 1
+
+
+while True:
+    get_keyword = input("Enter a search term to get a related quote: ")
+    # print(get_keyword)
+    keyword_quote = response.json['quotes']['index']
 
 
 
-# # print(response.text)
-# print("=====================")
-# data = response.json()
-# print("=====================")
-# print(data)
-# print("=====================")
+
+# ======================================================================
 
 
 
