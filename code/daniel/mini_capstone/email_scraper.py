@@ -1,30 +1,70 @@
-import re # for regular expression matching operations
-# import requests # for sending HTTP requests
-# from urllib.parse import urlsplit # for breaking URLs down into component parts
-# from collections import deque # is a list-like container with fast appends and pops on either end
-# from bs4 import BeautifulSoup # for pulling data out of HTML files of websites
+#===================================================================
+#Install Libraries
+#===================================================================
+
+import re
+import requests
+from bs4 import BeautifulSoup
+import pprint
+from requests import get
 
 
 
-# target_webpage = input("Enter a target url to have the emails scraped: ")
-# unscraped_url = deque(target_webpage)
-# scraped_url = set()
-# scraped_email = set()
+# https://www.redhat.com/en/contact #email page to scrape
+
+#===================================================================
+#Collect HTML w/ Beautiful Soup
+#===================================================================
+target_webpage = input("Type a target url to scrape the emails from that page: ")
+# # print(target_webpage)
+
+target_html = requests.get(target_webpage).text
+# print(target_html)
+
+target_html_parsed = BeautifulSoup(target_html, "lxml")
+a_tags = target_html_parsed.find_all(['a'])
+# print(target_html_parsed)
+# print(a_tags)
+
+# print(type(a_tags))
+
+
+# pprint.pprint((target_html_parsed.prettify()))
+# print(target_html_parsed.title.text)
+# print(target_html_parsed.get_text())
+
+
+#===================================================================
+#
+#===================================================================
+
+regex_pattern = '\S+@\S+'
+
+
+for tag in a_tags:
+    a_tag_text = tag.get_text()
+    # print(type(a_tag_text))
+    # print("a_tag_text: ", a_tag_text)
+    email = re.findall(regex_pattern, a_tag_text)
+    print(email)
+
 
 
 #===================================================================
 #Regex Examples
 #===================================================================
 
-email = input("Type email: ")
+# email = input("Type email: ")
 
-regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+# regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
 
-def isValid(email):
-    if re.fullmatch(regex, email):
-        print("Valid email")
-    else:
-        print("Invalid email")
+# def isValid(email):
+#     if re.fullmatch(regex, email):
+#         print("Valid email")
+#     else:
+#         print("Invalid email")
 
-isValid(email)
+# isValid(email)
+
+# (separator=" ")
