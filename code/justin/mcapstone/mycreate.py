@@ -26,7 +26,6 @@ me = pygame.transform.scale(me, (90, 60))
 clock = pygame.time.Clock()
 pewpew = pygame.mixer.Sound('images/pew.wav')
 
-tile_size = 100
 
 bground_image = pygame.image.load('images/brk_bg.png')
 bg_logo = pygame.image.load('images/pdx_logo.png')
