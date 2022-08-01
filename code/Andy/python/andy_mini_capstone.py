@@ -23,13 +23,10 @@ for i in range(len(json_response)):
    
 email_msg = []
 for i in range(len(url)):
-    email_msg.append(f"{title_list[i]}\n{url[i]}\n")# combining both list
+    email_msg.append(f"{title_list[i]}\n{url[i]}\n")                                                                # combining both list
  
-url = '\n'.join(email_msg)# entire list and joining them in new lines in one string
+url = '\n'.join(email_msg)                                                                                            # entire list and joining them in new lines in one string
 
-# message = 
-# for i in range(len(title_list)):
-# print(url)
 
 
 send_mail(
@@ -84,4 +81,7 @@ subject = 'notification Mail'
 # json_response_dict = json_response[0]
 # print('first response : ',  json_response_dict)
 # title = json_response_dict['title']
+# message = 
+# for i in range(len(title_list)):
+# print(url)
 # print('title: ', title)
