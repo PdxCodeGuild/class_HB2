@@ -1,20 +1,43 @@
 with open('contacts.csv', 'r') as file:
     lines = file.read().split('\n')
-    print(lines, 'lines')
+    # print(lines, 'lines')
 
 
 headers = lines[0].split(',') #getting the keys by themselves
-print('headers: ', headers)
+# print('headers: ', headers)
 
-rows = lines[1:] #values by themselves. need to find more of an explination of [1:] splicing methon\d
+rows = lines[1:] #values by themselves. [1:] splicing methon\d
 
+contact_list = []
 
-# print('answers: ', answer)
-# list = {}
 for row in rows:
-    column = row.split(',')
+    column = row.split(',') #the .split('.') is getting what was in rows and spliting them with commas 
     # print(column)
     #HEADER:COLUMN  D = dict(zip(keys, values))
-    d = dict(zip(headers, column))
-    print(d)
- 
+    contact_list.append(dict(zip(headers, column)))
+    
+# print(contact_list) 
+
+def create_new():
+    new_user = {
+
+    }
+    for header in headers:
+        new_user[header]=input(f'please enter your {header}: ')
+    # print(new_user)
+    return new_user #it saves it and returns that data 
+print(contact_list)
+contact_list.append(create_new())
+print(contact_list)
+# print(test)#just outputs the data and doesnt save it 
+# def retrieve():
+
+# def update():
+
+# def delete():
+
+
+
+
+
+#for  i in range(1,len(lines)) the one in front would start shit after the 0 indicie
