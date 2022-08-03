@@ -17,7 +17,7 @@ M-F 6:00 pm – 9:36 pm PT
 - Irron Williams, Instructor
   - irron@pdxcodeguild.com
 - Bruce Stull, TA
-- Nathan Bonilla, TA
+- Grant Glover, TA
 
 ## Capstone Dates
 
