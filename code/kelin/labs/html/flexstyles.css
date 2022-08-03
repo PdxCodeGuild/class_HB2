@@ -1,0 +1,12 @@
+.wrapper {
+    color: orange;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.navigation {
+    color: blue;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
