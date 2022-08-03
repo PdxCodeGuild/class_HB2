@@ -45,6 +45,8 @@ Presentation Day: November 4th, 2022
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
 | 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | Aug 01 | Aug 08 | Aug 15 |
+| -or- | | | | |
+| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | Aug 01 | Aug 08 | Aug 15 |
 
 ## Getting Unstuck
 
