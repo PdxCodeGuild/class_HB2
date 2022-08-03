@@ -1,0 +1,18 @@
+
+body {
+    background-color: darkolivegreen; 
+    text-align: center; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/10/Supermoon_Nov-14-2016-minneapolis.jpg);
+    padding-top: 0; padding-left: 1in;padding-right: 1in; padding-bottom: 1in;
+ 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+h1 {
+    color: mediumaquamarine;
+}
+p {color: palegreen;}
+ul {color: cornflowerblue;}
