@@ -14,10 +14,10 @@ M-F 6:00 pm – 9:36 pm PT
 
 ### Staff
 
-- Irron Williams, Instructor
-  - irron@pdxcodeguild.com
-- Bruce Stull, TA
+- Ronnie Mosley, Instructor
+  - ronnie@pdxcodeguild.com
 - Grant Glover, TA
+- Bruce Stull, TA
 
 ## Capstone Dates
 
