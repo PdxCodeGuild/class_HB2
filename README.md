@@ -39,6 +39,7 @@ Presentation Day: November 4th, 2022
 | 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
 | 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
 | 11  | [Contacts List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
+| mini-capstone | [Python mini-capstone](https://github.com/PdxCodeGuild/class_HB2/blob/main/1%20Python/labs/MiniCapstone.md) | | | 03 Aug |
 
 ## Flask - HTML - CSS:
 
