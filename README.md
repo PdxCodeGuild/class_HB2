@@ -45,9 +45,12 @@ Presentation Day: November 4th, 2022
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | Aug 01 | Aug 08 | Aug 15 |
+| 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | 01 Aug | 08 Aug | 15 Aug |
 | -or- | | | | |
-| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | Aug 01 | Aug 08 | Aug 15 |
+| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 08 Aug | 15 Aug |
+| 02 | [Blog](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md) | 02 Aug | 09 Aug | 16 Aug |
+| 03 | [Company Home](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug | 10 Aug | 17 Aug |
+| 04 | [Personal Portfolio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 03 Aug | 10 Aug | 17 Aug |
 
 ## Getting Unstuck
 
