@@ -39,14 +39,18 @@ Presentation Day: November 4th, 2022
 | 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
 | 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
 | 11  | [Contacts List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
+| mini-capstone | [Python mini-capstone](https://github.com/PdxCodeGuild/class_HB2/blob/main/1%20Python/labs/MiniCapstone.md) | | | 03 Aug |
 
 ## Flask - HTML - CSS:
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | Aug 01 | Aug 08 | Aug 15 |
+| 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | 01 Aug | 08 Aug | 15 Aug |
 | -or- | | | | |
-| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | Aug 01 | Aug 08 | Aug 15 |
+| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 08 Aug | 15 Aug |
+| 02 | [Blog](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md) | 02 Aug | 09 Aug | 16 Aug |
+| 03 | [Company Home](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug | 10 Aug | 17 Aug |
+| 04 | [Personal Portfolio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | 03 Aug | 10 Aug | 17 Aug |
 
 ## Getting Unstuck
 
