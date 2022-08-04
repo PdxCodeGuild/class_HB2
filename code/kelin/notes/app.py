@@ -7,5 +7,3 @@ def index(username):
   temperature = 67
   nums = [1, 2, 3]  
   return render_template('index.html', name=name, temperature=temperature, nums=nums)
-
-app.run(debug=True)
