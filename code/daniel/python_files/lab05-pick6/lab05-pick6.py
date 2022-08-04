@@ -37,28 +37,31 @@
 
 import random
 
+ticket = []
+
 
 def pick6():
-    winning = []
-    
+    # ticket = []
     for r in range(6):
         y = random.randint(1,99)
-        winning.append(y)
-    print(winning)
-    return winning
-pick6()
+        ticket.append(y)
+    # print(ticket)
+    return ticket
+
+winning_ticket = pick6()    
+print(f"winning ticket: {winning_ticket}")
 
 
 def num_matches():
     index = 0
     matching_nums = 0
     while index < 6:
-        if winning[index] == new_ticket[index]:
+        if ticket[index] == winning_ticket[index]:
             matching_nums += 1
         index += 1
     print(matching_nums)
     return matching_nums
-# num_matches()
+num_matches()
 
 
 # #=====================
@@ -66,31 +69,29 @@ def num_matches():
 
 balance = 0
 simulations = 0
-# winning = new_ticket
 
 
 
 while simulations < 100000:
-    simulations += 1
     new_ticket = pick6()
-# print(simulations)
-    matching_nums = num_matches(winning, new_ticket)
+    # print(simulations)
+    total_matches = num_matches()
 
-    if matching_nums == 0:
+    if total_matches == 0:
         balance -= 2
-    if matching_nums == 1:
+    if total_matches == 1:
         balance += 2
-    if matching_nums == 2:
+    if total_matches == 2:
         balance += 5
-    if matching_nums == 3:
+    if total_matches == 3:
         balance += 98
-    if matching_nums == 4:
+    if total_matches == 4:
         balance += 48998
-    if matching_nums == 5:
+    if total_matches == 5:
         balance += 999998
-    if matching_nums == 6:
+    if total_matches == 6:
         balance += 24999998
-    
+    simulations += 1
     print(balance)
     # print(simulations)
     
