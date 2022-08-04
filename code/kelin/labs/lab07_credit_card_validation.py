@@ -12,6 +12,8 @@ import math
 cardnum = int(input('Enter a credit card number: '))
 numlist = [int(index) for index in str(cardnum)] # Input string converted to list of integers
 
+print(cardnum)
+
 # 2. Slice off the last digit.  That is the **check digit**.
 
 numlist.pop() # Getting check digit
@@ -50,7 +52,7 @@ print(sumnums)
 # 7. Take the second digit of that sum.
 
 validnumber = sumnums
-sumnums = [int(index) for index in str(sumnums)] # Gets validating number
+validnumber = [int(index) for index in str(validnumber)] # Gets validating number
 
 validated = numlist.pop() # Pulling the check digit
 validated = int(validated)
@@ -64,13 +66,10 @@ else:
 
 # Here is a valid credit card number to test with: 4556737586899855
 
-# For example, the worked out steps would be:
-
-# 1. `4  5  5  6  7  3  7  5  8  6  8  9  9  8  5  5`
-# 2. `4  5  5  6  7  3  7  5  8  6  8  9  9  8  5`
-# 3. `5  8  9  9  8  6  8  5  7  3  7  6  5  5  4`
-# 4. `10 8  18 9  16 6  16 5  14 3  14 6  10 5  8`
-# 5. `1  8  9  9  7  6  7  5  5  3  5  6  1  5  8`
-# 6. 85
-# 7. 5
-# 8. `True` Valid!
+# 4556737586899855
+# [4, 5, 5, 6, 7, 3, 7, 5, 8, 6, 8, 9, 9, 8, 5]
+# [5, 8, 9, 9, 8, 6, 8, 5, 7, 3, 7, 6, 5, 5, 4]
+# [10, 8, 18, 9, 16, 6, 16, 5, 14, 3, 14, 6, 10, 5, 8]
+# [1, 8, 9, 9, 7, 6, 7, 5, 5, 3, 5, 6, 1, 5, 8]
+# 85
+# Valid credit card
