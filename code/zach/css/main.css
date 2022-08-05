@@ -1,0 +1,31 @@
+header,
+main,
+address { 
+    display: flex;
+}
+
+main {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mission-vision {
+    flex: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+figure {
+    align-self: right;
+    flex: 1
+}
+
+.character {
+    height: 25vh;
+    width: 25vw;
+}
+
+figcaption {
+    text-align: center;
+}
+
