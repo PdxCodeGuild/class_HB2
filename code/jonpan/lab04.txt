@@ -1,0 +1,9 @@
+Personal portfolio created on separate repository as instructed
+URL: https://notvert.github.io/
+
+Includes:
+-Name
+-Profile image
+-Short bio
+-Skills
+-Work history
