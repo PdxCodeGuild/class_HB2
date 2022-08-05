@@ -23,15 +23,48 @@ footer {
     min-height: 10vh;
 }
 
-address {
-    width: 100%;
+header,
+main,
+address { 
+    display: flex;
 }
 
-.footer-icon-container {
-    height: 4vh;
-    width: 4vw; 
+main {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mission-vision {
+    flex: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+figure {
+    align-self: right;
+    flex: 1
+}
+
+.character {
+    height: 25vh;
+    width: 25vw;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 85vw;
+}
+
+address {
+    width: 20vw;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-between;
 }
 
 .footer-icons {
