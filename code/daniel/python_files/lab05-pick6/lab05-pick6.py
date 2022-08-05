@@ -52,47 +52,47 @@ winning_ticket = pick6()
 print(f"winning ticket: {winning_ticket}")
 
 
-def num_matches():
+def num_matches(winner, ticket):
     index = 0
     matching_nums = 0
     while index < 6:
-        if ticket[index] == winning_ticket[index]:
+        if ticket[index] == winner[index]:
             matching_nums += 1
         index += 1
     print(matching_nums)
     return matching_nums
-num_matches()
+num_matches(winning_ticket, ticket)
 
 
 # #=====================
 
-
-balance = 0
+expenses = 0
+earnings = 0
 simulations = 0
 
-
+cost_of_ticket = 2
 
 while simulations < 100000:
     new_ticket = pick6()
     # print(simulations)
-    total_matches = num_matches()
+    total_matches = num_matches(winning_ticket, new_ticket)
 
-    if total_matches == 0:
-        balance -= 2
+    expenses += cost_of_ticket
+
     if total_matches == 1:
-        balance += 2
-    if total_matches == 2:
-        balance += 5
-    if total_matches == 3:
-        balance += 98
-    if total_matches == 4:
-        balance += 48998
-    if total_matches == 5:
-        balance += 999998
-    if total_matches == 6:
-        balance += 24999998
+        earnings += 4
+    elif total_matches == 2:
+        earnings += 7
+    elif total_matches == 3:
+        earnings += 100
+    elif total_matches == 4:
+        earnings += 50000
+    elif total_matches == 5:
+        earnings += 1000000
+    elif total_matches == 6:
+        earnings += 25000000
     simulations += 1
-    print(balance)
+    print(earnings)
     # print(simulations)
     
 # #================================================================
