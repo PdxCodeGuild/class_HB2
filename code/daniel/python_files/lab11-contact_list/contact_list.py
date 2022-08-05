@@ -38,7 +38,8 @@ for l in range(1, len(lines)):
         continue
     the_name, the_favorite_fruit, the_favorite_color = lines[l].split(",")
 
-    # print(name, favorite_fruit, favorite_color)
+
+    print(the_name, the_favorite_fruit, the_favorite_color)
     
     contact_dict = {
         headers[0]: the_name,
@@ -61,7 +62,9 @@ pprint.pprint(contacts_list)
 # Version2
 #==========================================================
 
-def record():
+
+
+def create():
     get_name = input("Add a name to the contact list: ")
     get_fruit = input(f"What is {get_name}'s favorite fruit?: ")
     get_color = input(f"What is {get_name}'s favorite color?: ")
@@ -72,37 +75,8 @@ def record():
     })
     # write()
 
-def write():
-    with open('contact_list.csv', 'w') as file:
-        file.write(f'{headers[0]}, {headers[1]}, {headers[2]}\n')
-        for contact in contacts_list:
-            file.write(f'{contact[headers[0]]}, {contact[headers[1]]}, {contact[headers[2]]}\n')
-
-   
-# record()
+# create()
 # print(contacts_list)
-
-
-
-def retrieve():
-    lookup_name = input("Enter a username: ")
-    for contact in contacts_list:
-        if lookup_name == contact[headers[0]]:
-            print(contact)
-            break
-# retrieve()
-
-
-def delete():
-    delete_user = input("What contact do you want to delete?: ")
-    contacts_list_copy = contacts_list.copy()
-    for i in range(len(contacts_list_copy)):
-        if delete_user == contacts_list_copy[i][headers[0]]:
-            del contacts_list[i]
-            break
-    # write()
-# delete()
- 
 
 
 def update():
@@ -112,26 +86,71 @@ def update():
             update_info = input("What would you like to update? name, color, or fruit?")
             if update_info == 'name':
                 contacts_list[index]['name'] = input("Enter a name: ")
-    return contacts_list
-                # write()
+            elif update_info == 'fruit':
+                contacts_list[index]['fruit'] = input("Enter a fruit: ")
+            elif update_info == 'color':
+                contacts_list[index]['color'] = input("Enter a color: ")
+            return contacts_list
+            # write()
+
+
+
+def retrieve():
+    lookup_name = input("Enter a username: ")
+    for contact in contacts_list:
+        if lookup_name == contact[headers[0]]:
+            return contact
+    # retrieve()
+
+
+
+def delete():
+    delete_user = input("What contact do you want to delete?: ")
+    contacts_list_copy = contacts_list.copy()
+    for i in range(len(contacts_list_copy)):
+        if delete_user == contacts_list_copy[i][headers[0]]:
+            del contacts_list[i]
+        return contacts_list 
+    # write()
+# delete()
+
+
+
+def write():
+    with open('contact_list.csv', 'w') as file:
+        file.write(f'{headers[0]},{headers[1]},{headers[2]}\n')
+        for contact in contacts_list:
+            file.write(f'{contact[headers[0]]},{contact[headers[1]]},{contact[headers[2]]}\n')
+
+   
+
+
 while True:
     print("""
     -Type 1 to create
     -Type 2 to retrieve
     -Type 3 to update
     -Type 4 to delete
+    -Type 5 to quit
     """)
     user = input()
 
     if user == "1":
-        pass
-        # create()
-    if user == "2":
-        # retrieve()
-        pass
-    if user == "3":
         print(contacts_list)
-        print(retrieve(update_info))
+        print(create())
+    elif user == "2":
+        print(contacts_list)
+        print(retrieve())
+    elif user == "3":
+        print(contacts_list)
+        print(update())
+    elif user == "4":
+        print(contacts_list)
+        print(delete())
+    elif user == "5":
+        print("bye")
+        write()
+        break
     # for contact in contacts_list:
     # if pick_contact == contact['name']:
     #     update_info = input("What would you like to update? name, color, or fruit?")
