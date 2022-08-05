@@ -16,3 +16,6 @@ body {
 ol > li {
     color: black;
 }
+
+h1 { font-size: 28px; }
+p { font-size: 12px; }
