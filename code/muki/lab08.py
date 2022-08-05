@@ -17,5 +17,29 @@
 import requests
 dadjokes = "https://icanhazdadjoke.com/"
 response = requests.get(dadjokes)
+response = requests.get("https://icanhazdadjoke.com", headers={
+    'Accept': 'application/json'
+})
 
-print(dadjokes)
+# print(dadjokes)
+# print(response)
+# print(response.json())
+
+dad_joke_dic = response.json()
+joke = dad_joke_dic['joke']
+
+print(f'\n{joke}\n-pulled from icanhazdadjoke.com')
+
+search_word = input("What kind of dad joke would you like?\t>")
+response = requests.get(f"https://icanhazdadjoke.com/search?term=${search_word}", headers={
+    'Accept': 'application/json'
+})
+
+dad_joke_sjson = response.json()
+result = dad_joke_sjson['results']
+# print(result)
+# joke2 = dad_joke_searched['joke']
+# print(joke2)
+for value in result:
+    print(value['joke'])
+    print('\n')
