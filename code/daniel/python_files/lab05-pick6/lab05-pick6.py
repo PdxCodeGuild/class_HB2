@@ -37,18 +37,18 @@
 
 import random
 
-ticket = []
+
 
 
 def pick6():
-    # ticket = []
+    ticket = []
     for r in range(6):
         y = random.randint(1,99)
         ticket.append(y)
     # print(ticket)
     return ticket
 
-winning_ticket = pick6()    
+winning_ticket = pick6()
 print(f"winning ticket: {winning_ticket}")
 
 
@@ -59,9 +59,8 @@ def num_matches(winner, ticket):
         if ticket[index] == winner[index]:
             matching_nums += 1
         index += 1
-    print(matching_nums)
     return matching_nums
-num_matches(winning_ticket, ticket)
+# num_matches(winning_ticket, user_ticket)
 
 
 # #=====================
@@ -92,7 +91,7 @@ while simulations < 100000:
     elif total_matches == 6:
         earnings += 25000000
     simulations += 1
-    print(earnings)
+    # print(earnings)
     # print(simulations)
     
 # #================================================================
@@ -100,12 +99,12 @@ while simulations < 100000:
 # #================================================================
 #     expenses = simulations * 2
 #     # print(expenses)
-#     # ROI = (earnings - expenses) / expenses
-#     ROI = (balance - expenses) / expenses
+ROI = (earnings - expenses) / expenses
 
-#     print(f"earnings:{balance}")
-#     print(f"expenses:{expenses}")
-#     print(f"ROI:{round(ROI, 2)}")
+
+print(f"earnings:{earnings}")
+print(f"expenses:{expenses}")
+print(f"ROI:{round(ROI, 2)}")
 
 
 
