@@ -24,9 +24,11 @@
 
 import pprint
 
-with open('contact_list.csv', 'r') as file:
+
+
+with open('./contact_list.csv', 'r') as file:
     lines = file.read().split('\n')
-    # print('lines: ', lines)
+    print('lines: ', lines)
 
 contacts_list = []
 
@@ -110,7 +112,7 @@ def delete():
     for i in range(len(contacts_list_copy)):
         if delete_user == contacts_list_copy[i][headers[0]]:
             del contacts_list[i]
-        return contacts_list 
+            return contacts_list 
     # write()
 # delete()
 
