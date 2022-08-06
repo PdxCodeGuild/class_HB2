@@ -7,7 +7,7 @@ with open('contacts.csv', 'r') as file:
 headers = lines[0].split(',') 
 
 
-rows = lines[1:] 
+rows = lines[1:] #skips first number in zero spot
 
 contact_list = []
 
