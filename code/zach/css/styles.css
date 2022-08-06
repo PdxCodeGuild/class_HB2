@@ -25,13 +25,17 @@ body {
 
 header, 
 footer {
-    min-height: 10vh;
+    height: 10vh;
 }
 
 header,
 main,
 address { 
     display: flex;
+}
+
+main {
+    height: 80vh;
 }
 
 header {
@@ -41,7 +45,7 @@ header {
 
 h1 {
     font-family: PlayfairDisplay;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 footer {

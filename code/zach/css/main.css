@@ -2,30 +2,22 @@ header,
 main,
 address { 
     display: flex;
+    flex-direction: row;
 }
 
-main {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.mission-vision {
+.main-text {
     flex: 2;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-figure {
-    align-self: right;
-    flex: 1
+.character-container {
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .character {
     height: 25vh;
     width: 25vw;
 }
-
-figcaption {
-    text-align: center;
-}
-
