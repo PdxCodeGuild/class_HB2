@@ -1,18 +1,27 @@
 
 body {
-    background-color: darkolivegreen; 
-    text-align: center; 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/10/Supermoon_Nov-14-2016-minneapolis.jpg);
-    padding-top: 0; padding-left: 1in;padding-right: 1in; padding-bottom: 1in;
-    margin-top: .3in;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    padding: 60px;
+    margin: 10% 10% 10% 10%;
 }
-a {color: brown;}
-h1 {
-    color: mediumaquamarine;
+
+body{
+    background-color: black;
+    background-image:url("https://qph.cf2.quoracdn.net/main-qimg-0dfc828e885c0b52aa7978e51ed65ed2-lq");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+  
+
+
 }
-p {color: palegreen;}
-ul {color: cornflowerblue;}
+a {color: blue;
+    font-family: cursive, 'Lucida Sans', arial;
+}
+
+img{border: 3px solid purple ;
+    border-radius: 20px;
+
+}
+
+ul {list-style-type:square;}
