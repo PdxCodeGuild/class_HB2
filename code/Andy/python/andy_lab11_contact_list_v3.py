@@ -3,18 +3,18 @@ with open('contacts.csv', 'r') as file:
     lines = file.read().split('\n')
   
 
+contact_list = []
 
 headers = lines[0].split(',') 
+print('headers here',headers)
 
-
-rows = lines[1:] #skips first number in zero spot
-
-contact_list = []
+rows = lines[1:] #skips first row in zero spot
+print('rows here:', rows)
 
 for row in rows:
     column = row.split(',') 
     contact_list.append(dict(zip(headers, column)))
-    
+print('contactlist here:', contact_list) 
 
 def create_new(contacts):
     new_user = {
@@ -24,8 +24,9 @@ def create_new(contacts):
         new_user[header]=input(f'please enter your {header}: ')
     
     contacts.append(new_user)
+    print('create new here:', contact_list)
     return contacts 
-
+    
 
 
 def retrieve(contacts):
