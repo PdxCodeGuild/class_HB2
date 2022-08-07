@@ -53,7 +53,7 @@ class ATM:
 
 
 
-
+amount = balance
 
 
 atm = ATM(balance, interest) # create an instance of our class
