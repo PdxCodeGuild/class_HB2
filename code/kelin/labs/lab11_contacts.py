@@ -7,25 +7,25 @@
 
 # Headers might consist of `name`, `favorite fruit`, `favorite color`. Open the CSV, convert the lines of text into a **list of dictionaries**, one dictionary for each user. 
 
-# with open('contacts.csv', 'r') as file:
-#     csv_list = file.read().split('\n') # Reads csv file by line
+with open('contacts.csv', 'r') as file:
+    csv_list = file.read().split('\n') # Reads csv file by line
 
-# header = csv_list[0].split(',') # Seperates each line by a comma
+header = csv_list[0].split(',') # Seperates each line by a comma
 
-# contacts_list = [] # Creates contacts list
+contacts_list = [] # Creates contacts list
 
-# for line in csv_list: 
-#     contacts_dict = {} # Creates contacts dictionary
-#     elements = line.split(',') # Seperates each element by a comma
-#     for i in range(len(header)):
-#         contacts_dict.update({header[i]: elements[i]}) # Converts the lines of text into a list of dictionaries
+for line in csv_list: 
+    contacts_dict = {} # Creates contacts dictionary
+    elements = line.split(',') # Seperates each element by a comma
+    for i in range(len(header)):
+        contacts_dict.update({header[i]: elements[i]}) # Converts the lines of text into a list of dictionaries
     
-#     contacts_list.append(contacts_dict) # Adds contacts list to the list of dictionaries
+    contacts_list.append(contacts_dict) # Adds contacts list to the list of dictionaries
 
-# contacts_list.pop(0) # Deletes the header from the dictionaries
+contacts_list.pop(0) # Deletes the header from the dictionaries
 
-# for lines in contacts_list:
-#     print(lines) # Output:
+for lines in contacts_list:
+    print(lines) # Output:
 
 # {'Name': 'Dad', ' Phone': ' 703-8287', ' City': ' Kelso', ' Color': ' Gold', ' Fruit': ' Apple'}
 # {'Name': 'Mom', ' Phone': ' 431-1010', ' City': ' Kalama', ' Color': ' Pink', ' Fruit': ' Banana'}
@@ -65,11 +65,33 @@ with open('contacts2.csv') as file:
         phone_book.append(name + " " + phone_number)
 
         phone_book.sort()
-        with open('contacts.csv', 'w') as file2:  # "phonebook": update
+        with open('contacts2.csv', 'w') as file2:  # "phonebook": update
             file2.write('\n'.join(phone_book))
 
-# - **R**etrieve a record: ask the user for the contact's name, find the user with the given name, and display their information
-# - **U**pdate a record: ask the user for the contact's name, then for which attribute of the user they'd like to update and the value of the attribute they'd like to set.
+        
+        name = input("Enter a name to update: ")
+
+
+        with open('contacts2.csv', 'rt') as file:
+            data = file.read()
+            update_type = input('What would you like to update?: ') # Asks the user for the contact's name, then for which attribute of the user they'd like to update and the value.
+                    
+            if update_type == 'name':
+                name_change = input('Enter a new name: ')
+                data = data.replace(contacts[index]['Name'], name_change)
+            elif update_type == 'phone':
+                phone_change = input('Enter a new number: ')
+                data = data.replace(contacts[index]['Phone'], phone_change)
+            elif update_type == 'city':
+                email_change = input('Enter the new city: ')
+                data = data.replace(contacts[index]['Email'], email_change)
+            else:
+                print('Not a valid selection.')
+                file.close()
+                file = open('contacts2.csv', 'wt')
+                file.write(data)
+                file.close()
+
 # - **D**elete a record: ask the user for the contact's name, remove the contact with the given name from the contact list.
 
 # ## Version 3
