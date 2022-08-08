@@ -1,4 +1,39 @@
 body{text-align: center;
 
+    background-color:rgb(123, 121, 121);
+    
+    
+}
+.Top-navbar{
+    background-color:rgb(170, 169, 169);
+    box-shadow: 0px 0px 10px;
+    margin: 0;
+    padding: 1rem 0 ;
+    display: flex;  /*originally if i leave it like this it'll just be layed out horizontally unless i change it */
+    justify-content: flex-end;
+    align-items: center;
+    cursor: crosshair;
+}
+.nav-item:first-child{
+    margin-right: auto;
+    margin-left: 2rem;
+
+}
+.nav-item:nth-child(2){
+    margin-right: auto;
+}
+
+.nav-item{
+    list-style: none;
+    margin-right: 2rem;/* this adds breathing room to items since by default it puts the close together*/
+}
+
+.nav-item a:hover{
+    color:var(--clear-primary-light)
+}
+
+.nav-item{
+    text-decoration: none;
+    
 }
 
