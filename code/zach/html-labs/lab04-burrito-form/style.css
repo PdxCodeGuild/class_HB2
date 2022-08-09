@@ -1,0 +1,69 @@
+/* Global Settings */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Desktop View */
+body {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: darkred;
+    min-height: 10rem;
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 102.4rem;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1 {
+    font-size: 8rem;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burrito-img {
+    margin-top: 2rem;
+    flex: 1;
+    width: 35rem;
+}
+
+
+
+/*Tablet View*/
+@media screen and (max-width: 800px){
+    
+    
+    .burrito-img {
+        margin-top: 2rem;
+        flex: 1;
+        width: 25rem;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 400px) {
+
+}
