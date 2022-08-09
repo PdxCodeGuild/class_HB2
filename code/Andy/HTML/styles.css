@@ -24,4 +24,5 @@ img{border: 3px solid purple ;
 
 }
 
-ul {list-style-type:square;}
+ul {list-style-image:url('img.svg');}
+
