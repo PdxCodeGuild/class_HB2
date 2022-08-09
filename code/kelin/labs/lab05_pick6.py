@@ -36,7 +36,7 @@ def num_matches(ticket, winning): # Second function returns the number of matche
     return matches 
 
 earnings = [] # To add the amount of winnings
-balance = [] # To show the amount of winnings
+balance = [0] # To show the amount of winnings
 
 winning = pick6() # Winning numbers
 ticketprice = 2 # Ticket cost
