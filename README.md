@@ -35,7 +35,7 @@ Presentation Day: November 4th, 2022
 | 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 14 Jul                | 21 Jul        |
 | 06  | [Make Change](1%20Python/labs/06%20Make%20Change.md)               | 12 Jul        | 19 Jul                | 26 Jul        |
 | 07  | [Credit Card Validation](1%20Python/labs/07%20Credit%20Card%20Validation.md)| 14 Jul  | 21 Jul             | 28 Jul        |
-| 08  | [Dad API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
+| 08  | [Dad Joke API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
 | 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
 | 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
 | 11  | [Contacts List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
