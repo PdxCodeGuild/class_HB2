@@ -14,6 +14,7 @@ html {
 /* Desktop View */
 body {
     box-sizing: border-box;
+    font-size: 1.6rem;
 }
 
 header {
@@ -50,20 +51,19 @@ main {
     width: 35rem;
 }
 
-
-
-/*Tablet View*/
-@media screen and (max-width: 800px){
-    
-    
-    .burrito-img {
-        margin-top: 2rem;
-        flex: 1;
-        width: 25rem;
-    }
+.form-container {
+    flex: 2;
+    margin: 2rem 2rem 0 2rem;
 }
 
-/* Mobile View */
-@media screen and (max-width: 400px) {
+.radio-button-with-labels {
+    padding-top: 1.5rem;
+}
 
+.checkbox {
+    padding-top: 1.5rem;
+}
+
+.instructions {
+    padding-top: 1.5rem;
 }
