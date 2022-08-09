@@ -1,0 +1,26 @@
+.blog-posts-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .blog-posts-container {
+        flex-direction: column;
+    }
+}
+
+.blog-post1 {
+    flex: 1;
+    padding: 1rem;
+}
+
+.blog-post2 {
+    flex: 1;
+    padding: 1rem;
+}
+
+.blog-post3 {
+    flex: 1;
+    padding: 1rem;
+}
