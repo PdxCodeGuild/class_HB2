@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" style="min-height: 100%;">
+    <style>
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Burrito Page</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    </head>
+    <body style="background-image: linear-gradient(yellow, red);height: 100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
+        <h1>
+            <div class="container-fluid">
+                <div class="row" style="background-color:brown; border: 10px; border-color: orangered; border-style: dashed;">
+                    <div class="mx-auto" style="width: 500px; color:yellow; font-family: 'Times New Roman', Times, serif;">
+                        Cheetoo's Burrito's
+                    </div>
+                </div>
+            </div>
+        </h1>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <img src="burrito.jpg" class="img-fluid" alt="juicy burrito">
+              </div>
+                <div class="col-6">
+                    <h2 class="mx-auto" style="width:500px; color:brown">Customize Your Burrito</h2>
+                    <div class="container-fluid">
+                        <form action="https://webhook.site/75399caf-29f6-4022-849f-2b3729c49e37" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <p>
+                                        <h3 style="color:brown;">Tortilla?</h3>
+                                    </p>
+                                    <div>                                   
+                                        <input type="radio" id="white" name="tortilla" value="White">
+                                        <label for="white">White Flour</label><br>                    
+                                        <input type="radio" id="wheat" name="tortilla" value="Wheat">
+                                        <label for="wheat">Wheat Flour</label><br>
+                                        <input type="radio" id="spinach" name="tortilla" value="Spinach">
+                                        <label for="spinach">Spinach</label><br>
+                                        <input type="radio" id="corn" name="tortilla" value="Corn">
+                                        <label for="corn">Corn (Gluten-Free)</label> 
+                                    </div> 
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <h3 style="color:brown;">Rice?</h3>
+                                    </p>
+                                    <div> 
+                                        <input type="radio" id="wrice" name="rice" value="W_Rice">
+                                        <label for="wrice">White Rice</label><br>                    
+                                        <input type="radio" id="brice" name="rice" value="B_Rice">
+                                        <label for="brice">Brown Rice</label><br>                    
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <h3 style="color:brown;">Beans?</h3>
+                                    </p>
+                                    <div>
+                                        <input type="radio" id="bbeans" name="beans" value="B_Beans">
+                                        <label for="bbeans">Black Beans</label><br>                    
+                                        <input type="radio" id="pinto" name="beans" value="Pinto">
+                                        <label for="pinto">Pinto Beans</label><br>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        <h3 style="color:brown;">Protein?</h3>
+                                    </p>
+                                    <div>
+                                        <input type="radio" id="carnitas" name="protein" value="Carnitas">
+                                        <label for="carnitas">Carnitas</label><br>                    
+                                        <input type="radio" id="chicken" name="protein" value="Chicken">
+                                        <label for="chicken">Chicken</label><br>
+                                        <input type="radio" id="sofritas" name="protein" value="Sofritas">
+                                        <label for="sofritas">Sofritas</label><br>              
+                                        <input type="radio" id="none" name="protein" value="None">
+                                        <label for="none">None</label><br>                 
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="col">
+                                        <p>
+                                            <h3 style="color:brown;">Spicy Extras?</h3>
+                                        </p>
+                                        <div>
+                                            <input type="checkbox" id="cheese" name="cheese" value="Cheese">
+                                            <label for="cheese">Cheese</label><br>                    
+                                            <input type="checkbox" id="salsa" name="salsa" value="Salsa">
+                                            <label for="salsa">Salsa</label><br>
+                                            <input type="checkbox" id="sour_cream" name="sour_cream" value="Sour_cream">
+                                            <label for="sour_cream">Sour Cream</label><br>            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding: 50px;">
+                                    <div>
+                                        <input class="row" type="submit" value="Submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              <div class="col" style="background-image: url(logo.jpg);background-size:cover;opacity: 0.5;">
+                <p>
+                    <h3 style="color:brown;">Your Burrito</h3>
+                <!-- <form>
+                    <input type="radio" id="white" name="tortilla" value="White">
+                    <label for="white">White Flour</label><br>                    
+                    <input type="radio" id="wheat" name="tortilla" value="Wheat">
+                    <label for="wheat">Wheat Flour</label><br>
+                    <input type="radio" id="spinach" name="tortilla" value="Spinach">
+                    <label for="spinach">Spinach</label><br>
+                    <input type="radio" id="corn" name="tortilla" value="Corn">
+                    <label for="corn">Corn (Gluten-Free)</label>                        
+                    <input class="row" type="submit" value="Submit">
+                </form>  -->
+              </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </body>
+</html>
