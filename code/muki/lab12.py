@@ -60,6 +60,7 @@ atm = ATM(balance, interest) # create an instance of our class
 print('\nWelcome to the ATM\n')
 while True:
     command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
+    
     if command == 'balance':
         balance = atm.check_balance() # call the check_balance() method
         print(f'\nYour balance is ${amount}\n')
