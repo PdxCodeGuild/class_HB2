@@ -34,7 +34,7 @@ def retrieve(contacts):
     
     print('search name:', search_name)
     for contact in contacts:   
-        if search_name == contact["Name"]:
+        if search_name == contact["name"]:
            return contact
         else:
             print('search name is not contact')
@@ -51,18 +51,20 @@ def update(contacts):
 
 def delete(contacts):
     contact_delete = retrieve(contacts)
-    confirm = input('are you sure yes or no: ')
-    if confirm == 'yes'.lower():
+    confirm = input('are you sure yes or no: ').lower()
+    if confirm == 'yes':
         contacts.remove(contact_delete)
         return contacts
-    elif confirm == "no".lower():
+    elif confirm == "no":
         return contacts
 
 
 def convert_to_csv(contacts):  #.join
     csv_output = []
+    csv_output.append(headers)
     for contact in contacts:
         csv_output.append(list(contact.values())) #list creates a list object. .Values() eturns a view object. The view object contains the values of the dictionary, as a list
+    print('csv output', csv_output)
     csv_output = [",".join(line) for line in csv_output]
     csv_output = "\n".join(csv_output)
     with open('contacts.csv', 'w') as f:
