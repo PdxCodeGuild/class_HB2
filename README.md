@@ -51,7 +51,7 @@ Presentation Day: November 4th, 2022
 | 02 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        | 02 Aug        | 09 Aug                | 16 Aug        |
 | 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 10 Aug                | 17 Aug        |
 | 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 15 Aug | 22 Aug     |
-| 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md) |  |             |               |
+| 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 16 Aug | 23 Aug     |
 | 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) |            |                       |               |
 
 ## Getting Unstuck
