@@ -35,22 +35,24 @@ Presentation Day: November 4th, 2022
 | 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 14 Jul                | 21 Jul        |
 | 06  | [Make Change](1%20Python/labs/06%20Make%20Change.md)               | 12 Jul        | 19 Jul                | 26 Jul        |
 | 07  | [Credit Card Validation](1%20Python/labs/07%20Credit%20Card%20Validation.md)| 14 Jul  | 21 Jul             | 28 Jul        |
-| 08  | [Dad API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
+| 08  | [Dad Joke API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
 | 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
 | 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
-| 11  | [Contacts List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
+| 11  | [Contact List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
 | mini-capstone | [Python mini-capstone](https://github.com/PdxCodeGuild/class_HB2/blob/main/1%20Python/labs/MiniCapstone.md) | | | 03 Aug |
 
 ## Flask - HTML - CSS:
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Bio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md) | 01 Aug | 08 Aug | 15 Aug |
+| 01  | [Bio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)         | 01 Aug        | 08 Aug                | 15 Aug        |
 | -or- | | | | |
-| mob 01 | [Class Animal](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 08 Aug | 15 Aug |
-| 02 | [Blog](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md) | 02 Aug | 09 Aug | 16 Aug |
-| 03 | [Company Home](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug | 10 Aug | 17 Aug |
-| 04 | [Personal Portfolio](https://github.com/PdxCodeGuild/class_HB2/blob/main/2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Personal%20Portfolio.md) | | | |
+| mob 01 | [Class Animal](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 08 Aug         | 15 Aug        |
+| 02 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        | 02 Aug        | 09 Aug                | 16 Aug        |
+| 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 10 Aug                | 17 Aug        |
+| 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 15 Aug | 22 Aug     |
+| 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 16 Aug | 23 Aug     |
+| 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) |            |                       |               |
 
 ## Getting Unstuck
 

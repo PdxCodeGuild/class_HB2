@@ -1,5 +1,5 @@
 
-# Intro to Flask
+# Lab 06: Flask Redo
 
 Implement one of the following Python labs in a Flask app:
 
