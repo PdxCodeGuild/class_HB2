@@ -1,21 +1,45 @@
-body {
-    background-color: aquamarine;
+ol > li {
+    color: aquamarine;
+}
 
+h1 { font-size: 28px; }
+p { font-size: 12px; }
+header {
+    margin: auto;
+}
+  
+
+img {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    /* padding: 20px; */
+    width: 550px;
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+body {
+    background-image: url("https://www.musictruth.com/wp-content/uploads/2018/05/Screen-Shot-2018-04-28-at-7.46.41-PM.jpg");
+    color: aquamarine;
+    color-scheme: light;
+    
+   }
+ul li {
+    list-style-type: upper-roman;
 }
 
 .content {
+    font-family: serif;
+    font: 25px Arial;   
     font-size: 0.5cm;
     margin: 20px;
     padding: 40px;
 }
 
 #title {
-    color: black;
+    color: aquamarine;
+    text-align: center;
 }
 
-ol > li {
-    color: black;
-}
 
-h1 { font-size: 28px; }
-p { font-size: 12px; }
