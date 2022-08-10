@@ -68,6 +68,7 @@ print(f'You have won {total_winnings}')
 # 8. After the loop, print the final balance
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 def pick6(): # First function generates a list of 6 random numbers
     nums = []
@@ -111,6 +112,8 @@ total_winnings = (sum(earnings))
 print(f'You have won {total_winnings}')
 
 >>>>>>> parent of 54cec64 (Looking at lab 5)
+=======
+>>>>>>> 8714c660c0f4ea7887fb4c4ab5463b8c9f7411b2
 # Initially the program will pick 6 random numbers as the 'winner'. Then try playing pick6 100,000 times, with the ticket cost and payoff below.
 
 # A ticket contains 6 numbers, 1 to 99, and the number of matches between the ticket and the winning numbers determines the payoff. Order matters, if the winning numbers are `[5, 10]` and your ticket numbers are `[10, 5]` you have **0** matches. If the winning numbers are `[5, 10, 2]` and your ticket numbers are `[10, 5, 2]`, you have **1** match. Calculate your net winnings (the sum of all expenses and earnings).
