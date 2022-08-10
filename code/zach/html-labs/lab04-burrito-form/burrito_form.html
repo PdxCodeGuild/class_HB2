@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Burritopia</title>
+    <meta name="description" content="Order Burrito Online">
+    <meta name="keywords" content="Mexican Food, Burrito, Order Online" />
+
+    <link rel="icon" type="image/png" href="icons8-burrito-64.png" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <h1>Burritopia</h1>
+            </div>
+        </header>
+        <main>
+            <img src="burrito.jpg" alt="Scrumptious looking chicken burrito on a table." class="burrito-img" />
+            <div class="form-container">
+                <form action="https://webhook.site/a8171fe1-d03d-4153-88b5-e28effda357a" method="post" class="form">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" />
+
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" />
+
+                    <div class="radio-button-with-labels">
+                        <label>Tortilla:</label>
+                        <input type="radio" name="tortilla" id="white-flour" />
+                        <label for="white">White Flour</label>
+                        <input type="radio" name="tortilla" id="wheat-flour" />
+                        <label for="wheat">Wheat Flour</label>
+                        <input type="radio" name="tortilla" id="spinach" />
+                        <label for="spinach">Spinach</label>
+                        <input type="radio" name="tortilla" id="corn" />
+                        <label for="corn">Corn</label>
+                    </div>
+
+                    <div class="radio-button-with-labels">
+                        <label>Rice:</label>
+                        <input type="radio" name="rice" id="white-rice" />
+                        <label for="white-rice">White Rice</label>
+                        <input type="radio" name="rice" id="brown-rice" />
+                        <label for="brown-rice">Brown Rice</label>
+                    </div>
+                    <div class="radio-button-with-labels">
+                        <label>Beans:</label>
+                        <input type="radio" name="beans" id="black-beans" />
+                        <label for="black-beans">Black Beans</label>
+                        <input type="radio" name="beans" id="pinto-beans" />
+                        <label for="pinto-beans">Pinto Beans</label>
+                    </div>
+                    <div class="radio-button-with-labels">
+                        <label>Protein:</label>
+                        <input type="radio" name="protein" id="carnitas" />
+                        <label for="carnitas">Carnitas</label>
+                        <input type="radio" name="protein" id="chicken" />
+                        <label for="chicken">Chicken</label>
+                        <input type="radio" name="protein" id="sofritas" />
+                        <label for="sofritas">Sofritas</label>
+                        <input type="radio" name="protein" id="none" />
+                        <label for="none">None</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>Additional Ingredients:</label>
+                        <input type="checkbox" name="additional ingredients" id="additional-ingredients" />
+                        <label for="additional-ingredients">Cheese</label>
+                        <input type="checkbox" name="additional ingredients" id="additional-ingredients" />
+                        <label for="additional-ingredients">Sour Cream</label>
+                    </div>
+
+                    <div class="instructions">
+                        <label for="instructions">Instructions:</label>
+                        <textarea id="instructions"></textarea>>
+                    </div>
+
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </main>
+        <footer>
+            <address>
+
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>
