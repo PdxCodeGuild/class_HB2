@@ -11,13 +11,13 @@ import math
 #The payoff of each ticket they've purchased
 ticket_price = 2
 payoff = {
-    0: 0,
-    1: 4,
-    2: 7,
-    3: 100,
-    4: 50000,
-    5: 1000000,
-    6: 25000000
+    '0': 0,
+    '1': 4,
+    '2': 7,
+    '3': 100,
+    '4': 50000,
+    '5': 1000000,
+    '6': 25000000
 }
 
 #Function for 6 numbers(1, 99) to fall into a list for future computing/comparing
@@ -25,12 +25,13 @@ def random_ticket():
     nums = []
     while len(nums) < 6:
         nums.append(random.randint(1, 99))
+
     return nums
 
 #Function for comparing the matches between two lists - player_ticket and winning_ticket
 def get_value(player_ticket, winning_ticket):
     matches = 0
-    for index in range(0,6):
+    for index in range(0, 6):
         if player_ticket[index] == winning_ticket[index]:
             matches += 1
     return matches 

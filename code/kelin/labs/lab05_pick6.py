@@ -9,7 +9,52 @@ import random
 # Write the following functions and use them in the code:
 
 # - `pick6()`: Generate a list of 6 random numbers, which can then be used for both the winning numbers and tickets. Return the list
+
+def pick6(): # First function generates a list of 6 random numbers
+    nums = [] # Winning numbers
+    for i in range(0,6):
+        x = random.randint(1, 99)
+        nums.append(x)
+    return(nums)
+
+winning = pick6() # Winning numbers
+ticket = pick6() # Player numbers
+
 # - `num_matches(winning, ticket)`: Return the number of matches between the winning numbers and the ticket.
+
+def num_matches(winning, ticket): # Second function returns the number of matches
+    matches = 0
+    for index in range(0, 6): # Looking for 6 matches
+        if winning[index] == ticket[index]:
+            matches += 1
+    return matches
+
+balance = 0
+ticketprice = 2
+# times_played = 100000
+earnings = []
+plays = 0
+winningmatches = { # Winning amounts
+    '0': 0,
+    '1': 4,
+    '2': 7,
+    '3': 100,
+    '4': 50000,
+    '5': 1000000,
+    '6': 25000000
+}
+while plays < 100000:
+    plays += 1 # Creates loop for 100,0000 plays
+
+    winningmatches = num_matches(ticket, winning) # Gets the number of winning matches and number values
+
+    # winningticket = winningmatches[num_matches] - ticketprice # Subtracts ticket price from winnings
+
+    earnings.append(winningmatches) # Adding earnings
+  
+total_winnings = (sum(earnings))
+print(f'You had {winningmatches} matches')
+print(f'You have won {total_winnings}')
 
 # ## Steps
 
@@ -21,47 +66,6 @@ import random
 # 6. Find how many numbers match
 # 7. Add to your balance the winnings from your matches
 # 8. After the loop, print the final balance
-
-def pick6(): # First function generates a list of 6 random numbers
-    nums = []
-    while len(nums) < 6:
-        nums.append(random.randint(1, 99))
-    return nums
-
-def num_matches(ticket, winning): # Second function returns the number of matches
-    matches = 0
-    for index in range(0,6):
-        if ticket[index] == winning[index]:
-            matches += 1
-    return matches 
-
-earnings = [] # To add the amount of winnings
-balance = [0] # To show the amount of winnings
-
-winning = pick6() # Winning numbers
-ticketprice = 2 # Ticket cost
-plays = 0 # Number of plays
-winningmatches = { # Winning amounts
-    0: 0,
-    1: 4,
-    2: 7,
-    3: 100,
-    4: 50000,
-    5: 1000000,
-    6: 25000000
-}
-while plays < 100000:
-    plays += 1 # Creates loop for 100,0000 plays
-    ticket = pick6() # Calls first function
-
-    winningmatches = num_matches(ticket, winning) # Gets the number of winning matches and number values
-
-    # winningticket = winningmatches[num_matches] - ticketprice # Subtracts ticket price from winnings
-
-    earnings.append(winningmatches) # Adding earnings
-  
-total_winnings = (sum(earnings))
-print(f'You have won {total_winnings}')
 
 # Initially the program will pick 6 random numbers as the 'winner'. Then try playing pick6 100,000 times, with the ticket cost and payoff below.
 
