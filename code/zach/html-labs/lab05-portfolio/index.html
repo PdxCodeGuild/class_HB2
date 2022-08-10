@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>8-bit Rainbow Consulting, LLC</title>
+  <meta name="description" content="8-bit Rainbow Consulting, LLC Landing Page; Web Development Company">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Python, Django, Web Development, Services" />
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+</head>
+
+<body>
+  <div class="header-container">
+    <header class="header">
+      <picture class="logo-container">
+        <source srcset="images/logo.svg" media="(min-width: 767px)" />
+        <img src="images/logo-with-character.svg" alt="8-bit Rainbow Consulting, LLC Company Logo" class="logo" />
+      </picture>
+    </header>
+  </div>
+
+  <main>
+    <div class="main-text-and-character-container">
+      <div class="main-text">
+        <h1>Web Design & Development</h1>
+        <p>8-bit Rainbow Consulting, LLC is a Veteran and LGBT owned small business. I started this company to make
+          web
+          design/development accessible and affordable for everyone.</p>
+        <p>Contact me through any of the methods at the bottom of the page.</p>
+      </div>
+      <div class="character-container hide-mobile hide-tablet">
+        <img src="images/character.svg" alt="8-bit character" class="character" />
+      </div>
+    </div>
+    <h2 class="portfolio-header">Portfolio</h2>
+    <div class="portfolio-container">
+      <img src="images/headshot.jpg" alt="Template page design" class="portfolio-img" />
+      <p class="template-description">Hi, I'm Zach. This is my simple portfolio site that I will iteratively 
+        update as I have more projects to share. This site is just HTML and CSS currently so the buttons do not work.
+        In the meantime, feel free to contact me using the links below.
+      </p>
+      <button class="btn btn-left"><img src="images/left-arrow.svg" alt="8-bit left arrow icon for portfolio carousel"
+          class="left-arrow" /></button>
+      <button class="btn btn-right"><img src="images/right-arrow.svg" alt="8-bit left arrow icon for portfolio carousel"
+          class="right-arrow" /></button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </main>
+  <div class="footer-container">
+    <footer>
+      <address>
+        <a href="mailto:zachary.christman@8brconsulting.dev" class="footer-icon-container"><img
+            src="images/email_icon.svg" alt="Email" class="footer-icons" /></a>
+        <a href="https://www.fiverr.com/x8bitreignbeaux" target="_blank" class="footer-icon-container"><img
+            src="images/fiverr.svg" alt="Fiverr" class="footer-icons" /></a>
+        <a href="https://github.com/x8bitReignbeaux" target="_blank" class="footer-icon-container"><img
+            src="images/github.svg" alt="Github" class="footer-icons" /></a>
+        <a href="https://www.linkedin.com/in/zachary-christman/" target="_blank" class="footer-icon-container"><img
+            src="images/linkedin.svg" alt="LinkedIn" class="footer-icons" /></a>
+      </address>
+    </footer>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBHUzv-2EStuya_R0XqgN6Myslr5FmEQds",
+      authDomain: "eight-bit-rainbow-consulting.firebaseapp.com",
+      projectId: "eight-bit-rainbow-consulting",
+      storageBucket: "eight-bit-rainbow-consulting.appspot.com",
+      messagingSenderId: "434231335077",
+      appId: "1:434231335077:web:c5709b9a2c79f98348554c",
+      measurementId: "G-BLHXLF9S5J"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+</body>
+
+</html>
