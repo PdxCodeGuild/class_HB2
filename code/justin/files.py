@@ -53,7 +53,7 @@ When finished, enter"done":''')
                 if n.lower() in lines.lower():
                     lines = lines.split(',')
                     # lines = ','.join(lines)
-                    print(lines)
+                    # print(lines)
                     chg = input(f'What needs to change, name, phone, state or spirit animal? ')
                     if chg.lower() == 'name':
                         chg = input('Whats the new name? ')
@@ -94,12 +94,19 @@ When finished, enter"done":''')
         if n.lower() in data.lower():
             print(f'User {n.title()} found')
             for num, lines in enumerate(data.split('\n')):
-                print(num, lines)
+                # print(num, lines)
                 if n.lower() in lines.lower():
                     lines = lines.split(',')
                     # lines = ','.join(lines)
-                    print(lines)
+                    # print(lines)
                     chg = input(f'Is this the entry you wish to delete?(y/n) ')
+                    if chg == 'y':
+                        # data = data.replace(lines[3], chg)
+                        # fin.close()
+                        # fin = open('contacts.csv', 'wt')
+                        # fin.write(data)
+                        # fin.close()
+
 
 
 
@@ -124,6 +131,6 @@ with open('contacts.csv', 'r') as file:
         p+=1
         ncontacts.append(a)    
         
-print(contacts)
-print(ncontacts) 
+# print(contacts)
+# print(ncontacts) 
 
