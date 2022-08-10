@@ -1,0 +1,28 @@
+
+body {
+    padding: 60px;
+    margin: 10% 10% 10% 10%;
+}
+
+body{
+    background-color: black;
+    background-image:url("https://qph.cf2.quoracdn.net/main-qimg-0dfc828e885c0b52aa7978e51ed65ed2-lq");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+  
+
+
+}
+a {color: blue;
+    font-family: cursive, 'Lucida Sans', arial;
+}
+
+img{border: 3px solid purple ;
+    border-radius: 20px;
+
+}
+
+ul {list-style-image:url('img.svg');}
+

@@ -1,0 +1,69 @@
+/* Global Settings */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Desktop View */
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+header {
+    background-color: darkred;
+    min-height: 10rem;
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 102.4rem;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1 {
+    font-size: 8rem;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burrito-img {
+    margin-top: 2rem;
+    flex: 1;
+    width: 35rem;
+}
+
+.form-container {
+    flex: 2;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.radio-button-with-labels {
+    padding-top: 1.5rem;
+}
+
+.checkbox {
+    padding-top: 1.5rem;
+}
+
+.instructions {
+    padding-top: 1.5rem;
+}
