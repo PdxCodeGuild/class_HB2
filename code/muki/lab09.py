@@ -29,12 +29,15 @@ elif question != "y":
 # time.sleep(1)    
 #added a delay and onto version 2
 
-q2 = input('Enter a keyword to search for a quotes:\n\t>')
-response = requests.get('https://favqs.com/api/qotd')
+keyword = input('Enter a keyword to search for a quotes:\n\t>')
+page = (1,26)
+pk = (page, keyword)
+response = requests.get('https://favqs.com/api/quotes?page=<page>&filter=<keyword>', params= pk)
 # print(response)
 q = response.text
 # print(q)
 q = response.json()
+print(q)
 print(' ')
 quote = q['quote']
 print(f'\n\n\n\n\n\n"{quote["body"]}" \n\n\t\t')
