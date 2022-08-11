@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+}
+
+/*--blog--*/
+#blog{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: gray;
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span {
+    color: blue;
+    
+}
+
+.blog-heading h3 {
+    font-size: 2.4rem;
+    color: black;
+    font-family: 600;
+}
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.blog-box {
+    width: 350px;
+    background-color: royalblue;
+    margin: 20px;
+    
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-img img{
+    width: 350px;
+    height: 300px;
+    object-fit:cover;
+    object-position: center;
+    
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+    font-size: 1,2rem;
+    font-weight: 500;
+    color: black;
+}
+
+.blog-text .blog-title:hover {
+    color: white;
+    text-decoration: underline;
+    transition: all ease 0.3;
+}
+
+.blog-text p {
+    color: black;
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-text a {
+    color: black;
+}
+
+.blog-text a:hover {
+    color: rgb(221, 221, 227);
+    text-decoration: underline;
+    transition: all ease 0.3;
+}
+
+.footer {
+    display: flex;
+    width: auto;
+    height: 120px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    align-items: center;
+    font-size: xx-large;
+    
+}
+
