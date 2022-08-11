@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrito Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Buritto Order Form</header>
+    <div id="main">
+    <form action="https://webhook.site/1c8f03f7-444b-4196-8735-576998e03d4d" id="usrform" method="post"> <!-- Created temporary endpoint -->
+      <article>
+            <!-- Add radio inputs for tortilla type, beans, rice, protein -->
+            <li>Tortilla type:</li>
+            <label for="white">White Flour</label>
+            <input type="radio" id="white" name="white"><br>
+            <label for="wheat">Wheat Flour</label>
+            <input type="radio" id="wheat" name="wheat"><br>
+            <label for="spinach">Spinach</label>
+            <input type="radio" id="spinach" name="spinach"><br>
+            <label for="white">Corn</label>
+            <input type="radio" id="corn" name="corn"><br>
+    
+            <!-- Add radio inputs for rice -->
+    
+            <li>Rice:</li>
+            <label for="white">White</label>
+            <input type="radio" id="white" name="white"><br>
+            <label for="brown">Brown</label>
+            <input type="radio" id="brown" name="brown"><br>
+    
+            <!-- Add radio inputs for beans -->
+    
+            <li>Beans:</li>
+            <label for="white">Black</label>
+            <input type="radio" id="black" name="black"><br>
+            <label for="brown">Pinto</label>
+            <input type="radio" id="pinto" name="pinto"><br>
+    
+            <!-- Add radio inputs for protien -->
+    
+            <li>Protein:</li>
+            <label for="carnitas">Carnitas</label>
+            <input type="radio" id="carnitas" name="carnitas"><br>
+            <label for="chicken">Chicken</label>
+            <input type="radio" id="chicken" name="chicken"><br>
+            <label for="sofritas">Sofritas</label>
+            <input type="radio" id="sofritas" name="sofritas"><br>
+            <label for="none">None</label>
+            <input type="radio" id="none" name="none"><br>
+      </article>
+      <!-- Added additional ingredients and delivery instructions -->
+      <nav>            
+        <li>Additional ingredients:</li>
+        <label for="cheese">Cheese</label>
+        <input type="checkbox" id="cheese" name="cheese"><br>
+        <label for="cream">Sour Cream</label>
+        <input type="checkbox" id="cream" name="cream"><br>
+
+        <li>Delivery Instructions:</li>
+        <textarea name="comment" form="usrform">Enter delivery instructions: </textarea><br>
+        <input type="submit" value="Submit">
+      </nav>
+      <aside>  <!-- Add text inputs for name and password -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password"></form>
+      </aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
