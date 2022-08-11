@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+aside {
+    width: 40%;
+    padding-left: 15px;
+    margin-left: 15px;
+    font-style: arial;
+    font-size: 2em;
+    background-color: lightblue;
+    }
+
+nav {
+    border: 1px;
+    background-color: lightblue;
+    color: green;
+    padding: 6px;
+}
+
+#middle {
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    gap: 10px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+    background: darkslateblue;
+};
+  
+
