@@ -1,36 +1,20 @@
-* {
-    box-sizing: border-box; 
-  }
-  body {
+.container { 
     display: flex;
-    min-height: 100vh;
-    flex-direction: row wrap;
-    margin: 0;
-  }
-  #main {
+    }
+  .red {
+    background: orangered;
     display: flex;
-    flex: 1;
+    flex-direction: column;
   }
-  #main > article {
-    flex: 1;
-    order: 1;
-  }
-  #main > nav, 
-  #main > aside {
-    flex: 0 0 20vw;
-  }
-  #main > nav {
-    background: #D7E8D4;
-    order: 3;
-  }
-  #main > aside {
-    background: beige;
-    order: 2;
-  }
-  header, footer {
+  .green {
     background: yellowgreen;
-    height: 20vh;
   }
-  header, footer, article, nav, aside {
-    padding: 1em;
+  .blue {
+    background: steelblue;
+  }
+  .container div {
+    font-size: 1vw;
+    padding: .5em;
+    color: white;
+    flex: 1;
   }
