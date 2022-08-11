@@ -1,11 +1,13 @@
+
+
 body{text-align: center;
 
-    background-color:rgb(123, 121, 121);
-    
-    
+    /* background-color:rgb(123, 121, 121); */
+    background-color: rgb(255, 228, 181);    
 }
 .Top-navbar{
-    background-color:rgb(170, 169, 169);
+    /* background-color:rgb(170, 169, 169); */
+    background-color: rgb(255, 239, 213);
     box-shadow: 0px 0px 10px;
     margin: 0;
     padding: 1rem 0 ;
@@ -13,7 +15,41 @@ body{text-align: center;
     justify-content: flex-end;
     align-items: center;
     cursor: crosshair;
+    
 }
+
+
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 25%;
+  left: 0;
+  background-color:grey ;
+  overflow-x: hidden;
+  padding-top: 0%;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  
+/* .sidebar{
+    flex-direction:  row;
+    
+    position:absolute;
+    background-color: white;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 5px;
+    margin: 5px top;
+} */
 .nav-item:first-child{
     margin-right: auto;
     margin-left: 2rem;
@@ -35,5 +71,15 @@ body{text-align: center;
 .nav-item{
     text-decoration: none;
     
+}
+
+h1{
+    color: rgb(105, 105, 105);
+    height: 38px;
+    margin: 15px;
+    border: .3px solid grey;
+    display: flex;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
 }
 
