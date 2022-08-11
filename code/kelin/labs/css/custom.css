@@ -1,4 +1,5 @@
-body {background-color: #cccccc}
+body {background-color: #cccccc;
+    margin-top: 5px;}
 
 .div1{width:200px;background:#ddd;height:200px;display:inline-block}
 .div2{width:200px;background:red;height:200px;display:inline-block}
