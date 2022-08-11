@@ -12,6 +12,7 @@
   <div class="red">Burrito Order Form
     <div class="green"> <!-- Add radio inputs for tortilla type -->
         <li>Tortilla type:</li>
+        <form action="https://webhook.site/1c8f03f7-444b-4196-8735-576998e03d4d" id="usrform" method="post">
         <label for="white">White Flour</label>
         <input type="radio" id="white" name="white"><br>
         <label for="wheat">Wheat Flour</label>
@@ -39,41 +40,8 @@
         <input type="radio" id="pinto" name="pinto"><br>
     </div>
   </div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
-</div>
-            <!-- Add radio inputs for tortilla type, beans, rice, protein -->
-            <li>Tortilla type:</li>
-            <label for="white">White Flour</label>
-            <input type="radio" id="white" name="white"><br>
-            <label for="wheat">Wheat Flour</label>
-            <input type="radio" id="wheat" name="wheat"><br>
-            <label for="spinach">Spinach</label>
-            <input type="radio" id="spinach" name="spinach"><br>
-            <label for="white">Corn</label>
-            <input type="radio" id="corn" name="corn"><br>
-            </article>
-    
-            <!-- Add radio inputs for rice -->
-            <article>
-            <li>Rice:</li>
-            <label for="white">White</label>
-            <input type="radio" id="white" name="white"><br>
-            <label for="brown">Brown</label>
-            <input type="radio" id="brown" name="brown"><br>
-            </article>
-    
-            <!-- Add radio inputs for beans -->
-    
-            <li>Beans:</li>
-            <label for="white">Black</label>
-            <input type="radio" id="black" name="black"><br>
-            <label for="brown">Pinto</label>
-            <input type="radio" id="pinto" name="pinto"><br>
-    
-            <!-- Add radio inputs for protien -->
-    
-            <li>Protein:</li>
+  <div class="green">
+    <li>Protein:</li>
             <label for="carnitas">Carnitas</label>
             <input type="radio" id="carnitas" name="carnitas"><br>
             <label for="chicken">Chicken</label>
@@ -90,19 +58,17 @@
         <input type="checkbox" id="cheese" name="cheese"><br>
         <label for="cream">Sour Cream</label>
         <input type="checkbox" id="cream" name="cream"><br>
-
-        <li>Delivery Instructions:</li>
-        <textarea name="comment" form="usrform">Enter delivery instructions: </textarea><br>
-        <input type="submit" value="Submit">
-      </nav>
-      <aside>  <!-- Add text inputs for name and password -->
-      </aside>
-    </div>
-    <footer>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password"></form>
-    </footer>
+  </div>
+  <div class="blue"> 
+    <li>Delivery Instructions:</li>
+    <textarea name="comment" form="usrform">Enter delivery instructions: </textarea><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password">
+    <input type="submit" value="Submit">
+    <img src="burrito-vector.png">
+</form>
+</div>
 </body>
 </html>
