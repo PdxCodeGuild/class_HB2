@@ -12,12 +12,12 @@ dd = dtg.day
 mm = dtg.month
 yyyy = dtg.year
 
-#   Commented out for testing time. 
-balance = 0
-interest = .01
+# #   Commented out for testing time. 
+# balance = 0
+# interest = .01
 txlist = []
 class ATM:
-    def __init__(self, balance, interest):
+    def __init__(self, balance=0, interest=0.001):
         self.balance = balance
         self.interest = interest
 
@@ -57,7 +57,7 @@ class ATM:
 
 
 
-atm = ATM(balance, interest) # create an instance of our class
+atm = ATM() # create an instance of our class
 print('\nWelcome to the ATM\n')
 while True:
     command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
