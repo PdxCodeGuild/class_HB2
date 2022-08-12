@@ -35,7 +35,8 @@ class ATM:
     
     def withdraw(self, amount):
         self.balance = self.balance - amount
-
+        return self.balance
+    
     def calc_interest(self):
         return self.balance * self.interest
 
@@ -43,8 +44,7 @@ class ATM:
         list = list.append(tx)
 
     def print_transactions(self, list):
-        for item in list:
-            print(item)
+        print(list)
         
 
     
@@ -53,16 +53,18 @@ class ATM:
 
 
 
-amount = balance
+
+
 
 
 atm = ATM(balance, interest) # create an instance of our class
 print('\nWelcome to the ATM\n')
 while True:
     command = input('Enter a command:\nbalance\ndeposit\nwithdraw\ninterest\ntransaction log\nhelp\nexit\n\n>')
+    
     if command == 'balance':
         balance = atm.check_balance() # call the check_balance() method
-        print(f'\nYour balance is ${amount}\n')
+        print(f'\nYour balance is ${balance}\n')
     elif command == 'deposit':
         amount = round(float(input('How much would you like to deposit? ')))
         atm.deposit(amount) # call the deposit(amount) method
@@ -82,7 +84,7 @@ while True:
         atm.logg(txlist, f'Accumulated ${amount} in interest')
         print(f'\nAccumulated ${round(amount)} in interest\n')
     elif command == 'transaction log':
-        atm.print_transactions(txlist)
+        atm.print_transactions(f'{txlist}\n')
     elif command == 'help':
         print('\nAvailable commands:')
         print('\nbalance  - get the current balance')
