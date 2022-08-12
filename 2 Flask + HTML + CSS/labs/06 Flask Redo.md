@@ -1,8 +1,8 @@
 
 # Lab 06: Flask Redo
 
-Implement one of the following Python labs in a Flask app:
-
+Implement one of the Python labs in a Flask app:
+Here are a few examples:
 - [Rot Cipher](https://github.com/PdxCodeGuild/class_kiwi/blob/main/1%20Python/labs/07%20ROT13.md)
   - Simple version: the user could just input the word to encode.
   - Complex version: the user could also input the amount to rotate by.
