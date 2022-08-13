@@ -6,69 +6,53 @@
 
 import math
 
-penny = 1 # Values for coins
-nickel = 5
-dime = 10
-quarter = 25
+### Helped by T/A Grant
+
+coins = {
+    'penny': 1,
+    'nickel': 5,
+    'dime': 10,
+    'quarter': 25
+}
 
 print("Welcome to the Change Maker 5000 (tm)") # Welcome message
 
-i = input("Enter a dollar amount: ") # User enters a dollar amount
+total_amount = float(input("Enter a dollar amount: ")) # User enters a dollar amount
 
-i = int(i) # User input becomes an integer
+total = total_amount * 100 # dollars input converter to pennies
 
-if i >= quarter:
-    quarter_n = i // quarter # Gets amount of quarters from dollar amount
-    i = i - quarter * quarter_n
-    if i >= dime:
-        dime_n = i // dime # Gets amount of dimes
-        i = i - dime * dime_n
-        if i >= nickel:
-            nickel_n = i // nickel # Gets amount of nickels
-            i = i - nickel * nickel_n
-            if i >= penny:
-                penny_n = i // penny # Gets amount of pennies
-                print (quarter_n,"quarters,",dime_n,"dimes",nickel_n,"nickels",penny_n,"pennies")
-        else:
-            if i >= penny:
-                penny_n = i // penny
-                print (quarter_n,"quarters,",dime_n,"dimes",penny_n,"pennies")
-    else:
-        if i >= nickel:
-            nickel_n = i // nickel
-            i = i - nickel * nickel_n
-            if i >= penny:
-                penny_n = i // penny
-                print (quarter_n,"quarters,",nickel_n,"nickels",penny_n,"pennies")
-        else:
-            if i >= penny:
-                penny_n = i // penny
-                print (quarter_n,"quarters,",penny_n,"pennies")
-else:
-    if i >= dime:
-        dime_n = i // dime
-        i = i - dime * dime_n
-        if i >= nickel:
-            nickel_n = i // nickel
-            i = i - nickel * nickel_n
-            if i >= penny:
-                penny_n = i // penny
-                print (dime_n,"dimes",nickel_n,"nickels",penny_n,"pennies")
-        else:
-            if i >= penny:
-                penny_n = i // penny
-                print (dime_n,"dimes",penny_n,"pennies")
-    else:
-        if i >= nickel:
-            nickel_n = i // nickel
-            i = i - nickel * nickel_n
-            if i >= penny:
-                penny_n = i // penny
-                print (nickel_n,"nickels",penny_n,"pennies")
-        else:
-            if i >= penny:
-                penny_n = i // penny
-                print (penny_n,"pennies")
+
+quarters_n = total // coins['quarter'] # gets number of quarters
+
+leftover_1 = total % coins['quarter'] 
+
+
+dimes_n = total // coins['dime'] # gets number of quarters
+
+leftover_2 = leftover_1 % coins['dime'] 
+
+
+nickels_n = leftover_2 // coins['nickel'] # gets number of quarters
+
+leftover_3 = leftover_2 % coins['nickel'] 
+
+
+pennies_n = leftover_3 // coins['penny']
+
+quarters = int(quarters_n)
+dimes = int(dimes_n)
+nickels = int(nickels_n)
+pennies = int(pennies_n)
+
+
+print(leftover_1, leftover_2, leftover_3, quarters, dimes, nickels, pennies)
+
+
+
+
+
+#  = int(i) # User input becomes an integer
+
 
 
 # Always break the total into the highest coin value first, resulting in the fewest amount of coins. For this, you'll have to use floor division //, 
