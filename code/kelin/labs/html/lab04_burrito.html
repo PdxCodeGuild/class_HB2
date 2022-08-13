@@ -9,65 +9,65 @@
 </head>
 <body>
     <div class="container">
-  <div class="red">Burrito Order Form
+  <div class="red"><h3>Burrito Order Form</h3>
     <div class="green"> <!-- Add radio inputs for tortilla type -->
         <li>Tortilla type:</li>
         <form action="https://webhook.site/1c8f03f7-444b-4196-8735-576998e03d4d" id="usrform" method="post">
         <label for="white">White Flour</label>
-        <input type="radio" id="white" name="white"><br>
+        <input type="radio" id="white" name="tortilla" value="white"><br> <!-- Fixed radio buttons by using the same name 'tortilla' to pick only one -->
         <label for="wheat">Wheat Flour</label>
-        <input type="radio" id="wheat" name="wheat"><br>
+        <input type="radio" id="wheat" name="tortilla" value="wheat"><br>
         <label for="spinach">Spinach</label>
-        <input type="radio" id="spinach" name="spinach"><br>
-        <label for="white">Corn</label>
-        <input type="radio" id="corn" name="corn"><br>
+        <input type="radio" id="spinach" name="tortilla" value="spinach"><br>
+        <label for="corn">Corn</label>
+        <input type="radio" id="corn" name="tortilla" value="corn"><br> <!-- Added values for tortilla types to form -->
     </div>
     <div class="blue"><!-- Add radio inputs for rice -->
         <article>
         <li>Rice:</li>
         <label for="white">White</label>
-        <input type="radio" id="white" name="white"><br>
+        <input type="radio" id="white" name="rice" value="white"><br>
         <label for="brown">Brown</label>
-        <input type="radio" id="brown" name="brown"><br>
+        <input type="radio" id="brown" name="rice" value="brown"><br> <!-- Added values for rice type to form -->
         </article>
 
         <!-- Add radio inputs for beans -->
 
         <li>Beans:</li>
         <label for="white">Black</label>
-        <input type="radio" id="black" name="black"><br>
-        <label for="brown">Pinto</label>
-        <input type="radio" id="pinto" name="pinto"><br>
+        <input type="radio" id="black" name="beans" value="black"><br>
+        <label for="pinto">Pinto</label>
+        <input type="radio" id="pinto" name="beans" value="pinto"><br> <!-- Added values for beans to form -->
     </div>
   </div>
   <div class="green">
     <li>Protein:</li>
             <label for="carnitas">Carnitas</label>
-            <input type="radio" id="carnitas" name="carnitas"><br>
+            <input type="radio" id="carnitas" name="protein" value="carnitas"><br>
             <label for="chicken">Chicken</label>
-            <input type="radio" id="chicken" name="chicken"><br>
+            <input type="radio" id="chicken" name="protein" value="chicken"><br>
             <label for="sofritas">Sofritas</label>
-            <input type="radio" id="sofritas" name="sofritas"><br>
+            <input type="radio" id="sofritas" name="protein" value="sofritas"><br>
             <label for="none">None</label>
-            <input type="radio" id="none" name="none"><br>
+            <input type="radio" id="none" name="protein" value="none"><br> <!-- Added values for protein to form -->
       </article>
       <!-- Added additional ingredients and delivery instructions -->
       <nav>            
         <li>Additional ingredients:</li>
         <label for="cheese">Cheese</label>
-        <input type="checkbox" id="cheese" name="cheese"><br>
+        <input type="checkbox" id="cheese" name="additional" value="cheese"><br>
         <label for="cream">Sour Cream</label>
-        <input type="checkbox" id="cream" name="cream"><br>
+        <input type="checkbox" id="cream" name="additional" value="cream"><br> <!-- Added values for additional ingredients to form -->
+        <img src="burrito-vector.png">
   </div>
   <div class="blue"> 
     <li>Delivery Instructions:</li>
-    <textarea name="comment" form="usrform">Enter delivery instructions: </textarea><br>
+    <textarea name="comment" form="usrform" width= >Enter delivery instructions: </textarea><br>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
     <label for="password">Password:</label>
-    <input type="text" id="password" name="password">
+    <input type="password" id="password" name="password"> <!-- Changed type to password to hide text -->
     <input type="submit" value="Submit">
-    <img src="burrito-vector.png">
 </form>
 </div>
 </body>
