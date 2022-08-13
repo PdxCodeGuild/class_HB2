@@ -41,34 +41,49 @@ check_digit = card_as_list.pop(-1)
 # print(card_as_list)
 card_as_list.reverse()
 # print(card_as_list)
-card_as_list[0] = card_as_list[0] * 2
-card_as_list[2] = card_as_list[2] * 2
-card_as_list[4] = card_as_list[4] * 2
-card_as_list[6] = card_as_list[6] * 2
-card_as_list[8] = card_as_list[8] * 2
-card_as_list[10] = card_as_list[10] * 2
-card_as_list[12] = card_as_list[12] * 2
-card_as_list[14] = card_as_list[14] * 2
+
+# for num in card_as_list:
+#     print(num, '-this is the index')
+    
+for i in range(0,len(card_as_list),2):
+    print(i, card_as_list[i])
+    card_as_list[i] = card_as_list[i] * 2
 # print(card_as_list)
-if card_as_list[0] > 9:
-    card_as_list[0] = card_as_list[0] - 9
-if card_as_list[2] > 9:
-    card_as_list[2] = card_as_list[2] - 9
-if card_as_list[4] > 9:
-    card_as_list[4] = card_as_list[4] - 9
-if card_as_list[6] > 9:
-    card_as_list[6] = card_as_list[6] - 9
-if card_as_list[8] > 9:
-    card_as_list[8] = card_as_list[8] - 9
-if card_as_list[10] > 9:
-    card_as_list[10] = card_as_list[10] - 9
-if card_as_list[12] > 9:
-    card_as_list[12] = card_as_list[12] - 9
-if card_as_list[14] > 9:
-    card_as_list[14] = card_as_list[14] - 9
+
+# card_as_list[0] = card_as_list[0] * 2
+# card_as_list[2] = card_as_list[2] * 2
+# card_as_list[4] = card_as_list[4] * 2
+# card_as_list[6] = card_as_list[6] * 2
+# card_as_list[8] = card_as_list[8] * 2
+# card_as_list[10] = card_as_list[10] * 2
+# card_as_list[12] = card_as_list[12] * 2
+# card_as_list[14] = card_as_list[14] * 2
 # print(card_as_list)
+
+for i in range(0,len(card_as_list)):
+    # print(i, card_as_list[i])
+    if card_as_list[i] > 9:
+        card_as_list[i] = card_as_list[i] - 9
+    
+    
+# if card_as_list[0] > 9:
+#     card_as_list[0] = card_as_list[0] - 9
+# if card_as_list[2] > 9:
+#     card_as_list[2] = card_as_list[2] - 9
+# if card_as_list[4] > 9:
+#     card_as_list[4] = card_as_list[4] - 9
+# if card_as_list[6] > 9:
+#     card_as_list[6] = card_as_list[6] - 9
+# if card_as_list[8] > 9:
+#     card_as_list[8] = card_as_list[8] - 9
+# if card_as_list[10] > 9:
+#     card_as_list[10] = card_as_list[10] - 9
+# if card_as_list[12] > 9:
+#     card_as_list[12] = card_as_list[12] - 9
+# if card_as_list[14] > 9:
+#     card_as_list[14] = card_as_list[14] - 9
+print(card_as_list)
 card_sum = sum(card_as_list)
-# print(card_sum)
 if card_sum >= 10:
     rem = card_sum // 10
     remo = card_sum - rem *10
