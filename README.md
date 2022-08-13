@@ -54,6 +54,15 @@ Presentation Day: November 4th, 2022
 | 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 16 Aug | 23 Aug     |
 | 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) | 11 Aug    |  18 Aug               | 25 Aug |
 
+
+## Django:
+
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
+| 01  | [Django Redo](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)         |         |                 |         |
+| 02 | [Todo](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) |  |          |          |
+| 03 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        |         |                 |         |
+
 ## Getting Unstuck
 
 - Write pseudocode in English
