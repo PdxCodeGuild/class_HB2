@@ -59,9 +59,9 @@ Presentation Day: November 4th, 2022
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Django Redo](3%20Django/labs/01%20Django%20Redo.md)         |         |                 |         |
-| 02 | [Todo](3%20Django/labs/02%20Todo.md) |  |          |          |
-| 03 | [Blog](3%20Django/labs/03%20Blog.md)        |         |                 |         |
+| 01  | [Django Redo](3%20Django/labs/01%20Django%20Redo.md)         |tbd|                 |         |
+| 02 | [Todo](3%20Django/labs/02%20Todo.md) |tbd  |          |          |
+| 03 | [Blog](3%20Django/labs/03%20Blog.md)        |tbd         |                 |         |
 
 ## Getting Unstuck
 
