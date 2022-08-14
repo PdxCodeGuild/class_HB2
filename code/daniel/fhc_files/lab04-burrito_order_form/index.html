@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Burrito Grande Order Form!</h1>
+      </header>
+
+        <main>
+          <p>Build your order below</p>
+        </main>
+    
+      <section>
+        <form action="https://webhook.site/4c0b9162-980b-4cb2-a582-76338ffe49ce" method="post">
+            <p>Tortilla:</p>
+                <input type="radio" name="Tortilla" value="White Flour" checked> White Flour
+                <input type="radio" name="Tortilla" value="Wheat Flour"> Wheat Flour
+                <input type="radio" name="Tortilla" value="Spinach"> Spinach
+                <input type="radio" name="Tortilla" value="Corn"> Corn <br>
+            <p>Protein:</p>
+                <input type="checkbox" name="Meat" value="Carnitas"> Carnitas
+                <input type="checkbox" name="Meat" value="Chicken"> Chicken        
+                <input type="checkbox" name="Meat" value="Sofritas"> Sofritas
+                <br>
+            <p>Beans:</p>
+                <input type="checkbox" name="Beans" value="Beans"> Black<br>
+                <input type="checkbox" name="Beans" value="Beans"> Pinto<br>
+            <p>Rice:</p>
+              <input type="checkbox" name="Cheese" value="Cheese"> White<br>
+              <input type="checkbox" name="Cheese" value="Cheese"> Brown<br>
+            <p>Additional:</p>
+              <input type="checkbox" name="Cheese" value="Cheese"> Cheese<br>
+              <input type="checkbox" name="Salsa" value="Salsa"> Salsa<br>
+              <input type="checkbox" name="Sour Cream" value="Sour Cream"> Sour Cream
+            <br>
+        </form>
+      </section>
+
+
+        <aside>
+          <figure>
+            <img src="burrito.jpeg" alt="" width="450" height="310">
+            <figcaption>MmMmMm</figcaption>
+          </figure>        
+        </aside>
+
+      
+      <footer>
+        <form>
+
+          <textarea>Enter any additional food requests here
+          </textarea>
+          <br>
+
+            <p>First Name:</p>    
+            <input type="text" name="myname"/>
+            <p>Last Name:</p> 
+            <input type="text" name="myname"/>
+            <p>Email:</p>    
+            <input type="text" name="myname"/>
+            <p>Password:</p>
+            <label for="pass"></label>
+            <input type="password" id="pass" name="password"
+                   minlength="8" required>            
+            <br>
+            <button type="submit">submit</button>
+
+        </form>
+      </footer>
+
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+  </body>
+</html>
