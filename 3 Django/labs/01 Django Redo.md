@@ -2,7 +2,7 @@
 
 # Django Redo
 
-Implement one of the following Python labs in a Flask app:
+Implement one of the following Python labs in a Django app:
 
 - [Rock, Paper, Scissors](../../1%20Python/labs/05%20Rock%20Paper%20Scissors.md)
   - Have the user choose rock, paper, or scissors, and show the user who won.
