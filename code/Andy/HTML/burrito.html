@@ -1,0 +1,148 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style_burrito.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<title>Burrito Form</title>
+</head>
+
+<body style="background-image: linear-gradient(to right, green,white,red);">
+    <!--top -->
+    <header class=" bg-gradient text-dark text-center text-sm-start">
+        <div class="container">
+            <div class="d-xlg-flex text-center pt-5 pb-5">
+                <h1>Burrito Order Form</h1>
+            </div>
+        </div>
+    </header>
+    <!-- Boxes -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md">
+                    <div class="card " style="width:25% 18rem;">
+                        <img src="https://assets3.thrillist.com/v1/image/3083378/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg"
+                            alt="" class="card-img-top img.fluid ">
+                        <div class="card-body bg-dark">
+                            <p class="card-text text-light">
+                                Would you like to make it a Cali Burrito?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <form action="https://webhook.site/fe5b0152-e35b-41a3-95ba-41e1e08a7537" method="post">
+                        <h2 class="text-center "> Create Your Burrito</h2>
+                        <h3 class="text-center">Tortilla</h3>
+                        <div class="row g-4">
+                            <div class="col">
+                                <div class="form-check pb-3">
+                                    <input type="radio" class="form-check-input" id="Corn Tortilla" Name="Tortilla"
+                                        value="Corn">
+                                    <label for="Corn" class="form-check-label"> Corn </label><br>
+                                    <input type="radio" class="form-check-input" id="Flour Tortilla" value="flour"
+                                        name="Tortilla">
+                                    <label for="flour" class="form-check-label"> Flour </label>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-center">Beans</h3>
+                        <div class="row g-4">
+                            <div class="col">
+                                <div class="form-check pb-3">
+                                    <input type="radio" class="form-check-input" id="refired" name="Beans"
+                                        value="refired">
+                                    <label for="refried" class="form-check-label"> Refried Beans </label><br>
+                                    <input type="radio" class="form-check-input" id="black" name="Beans"
+                                        value="Black">
+                                    <label for="Black" class="form-check-label"> Black Beans </label><br>
+                                    <input type="radio" class="form-check-input" id="Pinto" name="Beans"
+                                        value="Pinto">
+                                    <label for="Pinto" class="form-check-label"> Pinto Beans </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h3 class="text-center">Rice</h3>
+                        <div class="row g-4">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" Name="Rice" id="rice" value="Red">
+                                    <label for="Red" class="form-check-label"> Red Rice </label><br>
+                                    <input type="radio" class="form-check-input" Name="Rice" id="Tortilla" value="Lime">
+                                    <label for="Lime" class="form-check-label"> Lime Rice </label><br>
+                                    <input type="radio" class="form-check-input" Name="Rice" id="Tortilla"
+                                        value="Brown">
+                                    <label for="Brown" class="form-check-label"> Brown Rice </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h3 class="text-center">Protein</h3>
+                        <div class="row g-4">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="Protein" id="Protein"
+                                        value="Carne">
+                                    <label for="Carne" class="form-check-label"> Carne Asada </label><br>
+                                    <input type="radio" class="form-check-input" name="Protein" id="Protein"
+                                        value="Carnita">
+                                    <label for="Carnita" class="form-check-label"> Carnintas </label><br>
+                                    <input type="radio" class="form-check-input" name="Protein" id="Protein" value="AL">
+                                    <label for="AL" class="form-check-label"> Al pastor </label><br>
+                                    <input type="radio" class="form-check-input" name="Protein" id="Protein"
+                                        value="none">
+                                    <label for="none" class="form-check-label"> None </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h2 class="text-center">Additional Items</h2>
+                        <div class="row g-4">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="pico">
+                                    <label for="pico" Name="form-check-label"> Pico de Gallo </label><br>
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="corn">
+                                    <label for="corn" Name="form-check-label"> Corn </label><br>
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="queso">
+                                    <label for="queso" Name="form-check-label"> Queso Fresco </label><br>
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="Crema">
+                                    <label for="Crema" Name="form-check-label"> Crema </label><br>
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="Guac">
+                                    <label for="Guac" Name="form-check-label"> Guac </label><br>
+                                    <input type="checkbox" Name="Additional" id="Additional Item" value="Fries">
+                                    <label for="Fries" Name="form-check-label"> Fries </label><br>
+
+                                </div>
+                                <div style="padding: 75px;">
+                                    <div>
+                                        <input class="row" type="submit" value="Submit">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md border text-center">
+                    <h2>Order </h2>
+
+                </div>
+            </div>
+
+
+    </section>
+
+</body>
+
+</html>
+
+
+<!-- Notes
+    .<br> breaks the line and starts a new one
+    .fn name in the input for radio has to be the same or else it will not switch whichever is highlighted and it'll just be all of them
+    .also Make sure you retuen wherever the div or whatever is going to within it cause 
+-->
