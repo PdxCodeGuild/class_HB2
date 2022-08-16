@@ -1,6 +1,6 @@
 
 
-# Django Redo
+# Lab 03: Django Redo
 
 Implement one of the following Python labs in a Django app:
 
