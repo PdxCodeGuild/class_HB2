@@ -1,6 +1,6 @@
 
 
-# Blog
+# Lab 05: Blog
 
 Let's create a blog with a user system.
 
