@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Todo app</title>
+    </head>
+    <body>
+        <p>List of todo items</p>
+        <ul>
+            {% for myinstance in myinstances %}
+            <li>{{ myinstance.myfield }}</li>
+            {% endfor %}
+        </ul>
+        <br><br>
+        <p>Save todo item</p>
+        <form action="{% url 'myapp:mycreate' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="myfield"/>
+            <button type="submit">submit</button>
+        </form>
+
+    </body>
+</html>
