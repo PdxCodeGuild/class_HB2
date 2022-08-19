@@ -1,21 +1,4 @@
-Write up a short bio webpage for someone or something. It can be about a celebrity, a fictionary character, a place, a species, etc. Check out the examples
 
-Part 1
-A written introduction
-A link to a Wikipedia article
-A picture of them
-A list of places where they've lived
-A quote from them
-Part 2
-Center the entire content of the body
-Modify the padding and margins on your paragraphs to look better
-Use a custom font
-Add a background image
-Part 3
-Pick a color scheme and modify the background, body text, and link text color.
-Change the typeface of the quote.
-Add a rounded border to the picture.
-Change the bullet points on the list of places.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,14 +9,44 @@ Change the bullet points on the list of places.
     <title>Monkey D. Luffy</title>
 </head>
 <style>
-    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(https://wallpaperaccess.com/full/2222765.jpg);
+    }
+    ul {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: normal;
+    }
+    li {
+        list-style-image: url(https://ih1.redbubble.net/image.1683185818.3315/flat,128x,075,f-pad,128x128,f8f8f8.u2.jpg);
+        
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
 </style>
 <body>
     <h1>Monkey D Luffy - Captain of the Straw-Hat Pirates</h1>
     <img src="https://i0.wp.com/blog.indiegala.com/wp-content/uploads/2021/09/cover-4.jpg?fit=1200%2C900&ssl=1" height="400">
     
     <h2>Places Monkey D. Luffy has Been</h2>
-    <p>Luffy is from Windmill Village in Goa Kingdom. He has been in the East Blue, Red Line, Calm Belt, Alabasta, Water 7, Fish-Man Island, Amazon Lily, and the New World.</p>
+    <p>
+        <ul>
+            <li>Windmill Village</li> 
+            <li>East Blue</li>
+            <li>Red Line</li>
+            <li>Calm Belt</li> 
+            <li>Alabasta</li> 
+            <li>Water 7</li>
+            <li>Fish-Man Island</li> 
+            <li>Amazon Lily</li> 
+            <li>New World</li>
+        </ul>
+    </p>
     <h2>My Favorite Quote:</h2>
     <p>"I'm gonna kick your ass!"  - Monkey D. Luffy</p>
     <h2>Wikipedia link: </h2>
