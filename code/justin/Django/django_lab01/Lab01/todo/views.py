@@ -1,7 +1,7 @@
-from audioop import reverse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import TodoItem, Priority
+from django.urls import reverse
 
 # Create your views here.
 def index(request):
@@ -14,10 +14,10 @@ def index(request):
     return render(request, 'todo/index.html', context)
 
 def add(request):
-    prio_items = Priority.objects.all()
+    prio_items = Priority.objects.values('id', 'name')
     todo = request.POST['todo']
     priority = request.POST['priority']
-    # prio = Priority(name=priority)
+    priority = Priority.objects.get(name=priority)
     for items in prio_items:
         print(items) 
     todolist = TodoItem(text=todo, priority = priority)
