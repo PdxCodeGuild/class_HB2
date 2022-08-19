@@ -23,6 +23,6 @@ def unit_converter():
     
     converter = units_dict[units_of_measurement]
     calculator = converter * float(distance) / units_dict[calculation]
-    return (f'{distance} {units_of_measurement} = {calculator} in meters')
+    return (f'{distance} {units_of_measurement} = {calculator} {calculation}')
 
 app.run(debug=True)
