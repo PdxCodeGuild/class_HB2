@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{% url 'todo:add' %}" method="post">
+        {% csrf_token %}
+        <label for="todo">What To Do?</label><br/>
+        <input type="text" id="todo" name="todo"/><br/>
+        <label for="priority">How important is this?</label>
+        <select id="priority" name="priority">
+            <option value='high'>High</option>
+            <option value='medium'>Medium</option>
+            <option value='low'>Low</option>
+        </select><br/>
+        <button type="submit">submit</button>
+    </form>
+    <ul>
+      {% for items in todo_items %}
+      <li>{{ items }}</li>
+      {% endfor %}
+      {% for items in prio_items %}
+      <li>{{ items }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
