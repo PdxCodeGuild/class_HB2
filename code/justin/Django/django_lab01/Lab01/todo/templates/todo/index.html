@@ -15,8 +15,15 @@
             <option value='medium'>Medium</option>
             <option value='low'>Low</option>
         </select><br/>
+        <!-- <label for="date_created">Date Created</label><br/>
+        <input type="text" id="date_created" name="date_created"> -->
         <button type="submit">submit</button>
     </form>
+    <!-- <form method="post">
+      <table>
+        {{ form }}
+      </table>      
+    </form> -->
     <ul>
       {% for items in todo_items %}
       <li>{{ items }}</li>
