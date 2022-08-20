@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-flow: row wrap; /* we'll wrap */
+}
+
+.header, .blog, .sidebar, .footer {
+    flex: 1 100%;
+}
+
+.header {
+    background: #c6d3f8;
+    text-align: center;
+}
+
+.sidebar {
+    background: #209999;
+    padding: 10px;
+}
+
+.footer {
+    background: #6651c0;
+    padding: 10px;
+    text-align: center;
+}
+
+.blog {
+    background: #b4b8be;
+    padding: 10px;
+}
+
+.about {
+    background: gray
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+  }
+
+/* medium screen */
+@media all and (min-width: 600px) {
+    /* if screen > 600px sidebar appears alongside blog getting 1/3rd of space */
+  .blog { flex: 2 0px; }
+  .about { flex: 2 0px; }
+  .sidebar { flex: 1 0px; }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* On bigger screens, sidebar now only gets 1/4 of space */
+  .blog { flex: 3 0px; }
+  .about { flex: 3 0px; }
+  .sidebar { flex: 1 0px; }
+}

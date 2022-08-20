@@ -52,7 +52,20 @@ Presentation Day: November 4th, 2022
 | 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 10 Aug                | 17 Aug        |
 | 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 15 Aug | 22 Aug     |
 | 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 16 Aug | 23 Aug     |
-| 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) |            |                       |               |
+| 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) | 11 Aug    |  18 Aug               | 25 Aug |
+
+
+## Django:
+
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
+| 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | Assigned Labs To Be Determined | | |
+| 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | Assigned Labs To Be Determined | | |
+| 03  | [Django Redo](3%20Django/labs/03%20Django%20Redo.md)     | Assigned Labs To Be Determined | | |
+| 04  | [Chirp](3%20Django/labs/04%20Chirp.md)                   | Assigned Labs To Be Determined | | |
+| 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | Assigned Labs To Be Determined | | |
+| 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | Assigned Labs To Be Determined | | |
+
 
 ## Getting Unstuck
 

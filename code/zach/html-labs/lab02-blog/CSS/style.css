@@ -1,0 +1,104 @@
+/* Global Settings */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(../fonts/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(../fonts/Merriweather-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+/* Desktop View */
+body {
+    background-color: rgb(0, 0, 20);
+    font-family: Merriweather;
+    line-height: 2.5rem;
+    color: rgb(235, 235, 235);
+    margin: 0 3rem;
+
+    box-sizing: border-box;
+}
+
+.header-container {
+    min-height: 10%;
+    margin: 2rem 0;
+}
+
+header {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    /*height: 15rem;*/
+    width: 28rem;
+}
+
+main {
+    max-width: 102.4rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: PlayfairDisplay;
+    font-size: 4.8rem;
+    line-height: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-family: PlayfairDisplay;
+    font-size: 3.6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+
+.footer-container {
+    min-height: 10%;
+    margin: 2rem 0;
+}
+
+footer {
+    max-width: 102.4rem;
+    margin: 0 auto;
+}
+
+address {
+    max-width: 51.2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-icons {
+    height: 5rem;
+}
+

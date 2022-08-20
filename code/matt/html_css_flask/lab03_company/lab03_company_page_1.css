@@ -1,0 +1,241 @@
+body {
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    width: auto;
+    height: 100px;
+    font-family: sans-serif;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+   
+    color: white;
+    padding-top: 0px;
+    font-size: 80px;
+}
+.headerlinks1 {
+    color: white;
+    font-size: 40px;
+}
+.headerlinks2 {
+    color: white;
+    font-size: 40px;
+
+}
+.headerlinks1 a{
+    color: white;
+    margin: 30px;
+    text-decoration: none;
+}
+.headerlinks2 a {
+    color: white;
+    margin: 30px;
+    text-decoration: none;
+}
+.headerlinks1 a:hover{
+    color: rgb(220, 148, 41);
+    text-decoration: underline;
+}
+.headerlinks2 a:hover{
+    color: rgb(220, 148, 41);
+    text-decoration: underline;
+}
+.mainimg{
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    background-color: rgb(124, 118, 87);
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    
+}
+.images img{
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+   width: 550px;
+   height: 400px;
+   margin: 30px;
+}
+.mainbody {
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    background-color: rgb(78, 78, 98);
+    flex-direction: column;
+    width: auto;
+    height: 950px;
+    text-align: center;
+}
+
+.mainbody h2 {
+    font-weight: 900;
+    font-size: xx-large;
+    color: rgb(220, 148, 41);
+}
+.mainbody p{
+    font-size: x-large;
+    font-weight: 900;
+    color: rgb(220, 148, 41);
+}
+
+.address p{
+    font-family: fantasy;
+    font-weight: 500;
+    line-height: 8px;
+}
+
+.hours{
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    background-color: rgb(78, 78, 98);
+    flex-direction: column;
+    width: auto;
+    height: 950px;
+    text-align: center;
+}
+.hours p{
+    margin-top: 50px;
+    font-weight: 900;
+    line-height: 8px;
+}
+.hours li{
+    color: rgb(220, 148, 41);
+    font-size: x-large;
+    font-weight: 700;
+    list-style: none;
+}
+.hours span{
+    font-weight: 900;
+    font-size: xx-large;
+    color: goldenrod
+}
+.hours span:hover {
+    text-decoration: underline;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    background-color: black;
+    width: auto;
+    height: 100px;
+    font-family: sans-serif;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerlinks1 a{
+    color: white;
+    margin: 30px;
+    text-decoration: none;
+
+}
+.footerlinks1 a:hover{
+    color: gold;
+    text-decoration: underline;
+}
+.aboutimg {
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    background-color: rgb(124, 118, 87);
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around
+}
+.aboutimages {
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    background-color: rgb(124, 118, 87);
+    flex-direction: row;
+    width: auto;
+    justify-content: space-around
+}
+.aboutimages img {
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    padding: 100px;
+
+}
+.aboutimages p{
+    font-size: xx-large;
+    font-weight: 700;
+    padding: 100px;
+}
+.help {border: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    background-color: rgb(78, 78, 98);
+    flex-direction: column;
+    width: auto;
+    height: 950px;
+    text-align: center;
+
+}
+
+.mainbodyprogram {
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    background-color: rgb(78, 78, 98);
+    flex-direction: column;
+    width: auto;
+    height: 1300px;
+    text-align: center;
+}
+.mainbodyprogram h2 {
+    font-size: xx-large;
+    font-family: sans-serif;
+    color: rgb(215, 143, 28);
+}
+.mainbodyprogram h4 {
+    font-size: xx-large;
+    font-family: sans-serif;
+    color: rgb(215, 143, 28);
+    text-align: left;
+    padding-left: 10px;
+    line-height: 0px;
+    margin: 20px;
+}
+.mainbodyprogram p {
+    font-size: xx-large;
+    font-family: sans-serif;
+    color: rgb(215, 143, 28);
+    text-align: left;
+    padding-left: 10px;
+}
+.mainbodyprogram p span {
+    font-weight: 700;
+}
+.mainbodyprogram li{
+    list-style: none;
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    color: rgb(215, 143, 28);
+}
+.mainbodyprogram li span {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
