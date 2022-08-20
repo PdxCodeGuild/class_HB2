@@ -15,41 +15,54 @@
             font-size: 02vh;
             font-weight: bold;
             color: yellow;
-            border: 10px;
-            border-style: groove;
-            border-radius: 15px;
+            
         }
         p {
             font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: x-large;
         }
         body {
-            background-image: url(https://www.bushbeans.com/-/jssmedia/BushsBeans/Recipe_Detail-100-173_1920x1280/115_bushs-easy-chick-bean-burrito_1920x1280_02.jpg?h=1280&iar=0&w=1920&hash=116FEE8AD6C00B8C2BACE1D072F1EA39);
+            background-color: black;
+            /* background-image: url(https://www.bushbeans.com/-/jssmedia/BushsBeans/Recipe_Detail-100-173_1920x1280/115_bushs-easy-chick-bean-burrito_1920x1280_02.jpg?h=1280&iar=0&w=1920&hash=116FEE8AD6C00B8C2BACE1D072F1EA39); */
         }
         image {
             border: 3px;
             border-radius: 6px;
             border-style: groove;
             justify-content: center;
+            padding: 10% 10%;
+            align-items: center;
+            
+        }
+        .picture {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
     
     <section class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+            <div class="col-12">
+                <!-- <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
                     <label for="username">First name:</label><br>
                     <input type="text" id="username" name= "username" value=""><br><br>
                     <label for="password">Password:</label><br>
                     <input type="text" id="password" name= "password" value=""><br><br>
                     <input type="submit" value="Login">
-                  </form> 
+                  </form>  -->
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <image href="https://img.freepik.com/premium-vector/cute-burrito-with-hat-maracas-cartoon-illustration_510308-50.jpg?w=2000" height="px" ></image>
-            </div>
+            <!-- <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <image class="picture" src="https://img.freepik.com/premium-vector/cute-burrito-with-hat-maracas-cartoon-illustration_510308-50.jpg?w=2000" height="px" ></image>
+            </div> -->
             
-            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3">
                 <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+                    <label for="username">First name:</label><br>
+                    <input type="text" id="username" name= "username" value=""><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="text" id="password" name= "password" value=""><br><br>
+                    
+                    
                     <p> Please Select a Tortilla</p>
                     <input type="radio" id="white_flour" name="tortilla" value="White Flour">
                     <label for="white_flour">White Flour</label><br>
@@ -59,8 +72,8 @@
                     <label for="spinach">Spinach</label><br>
                     <input type="radio" id="corn" name="tortilla" value="Corn">
                     <label for="corn">Corn</label><br>
-                </form>
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+         
+
                     <p> Please Select a Protein</p>
                     <input type="radio" id="carnitas" name="protein" value="Carnitas">
                     <label for="carnitas">Carnitas</label><br>
@@ -70,52 +83,40 @@
                     <label for="sofritas">Sofritas</label><br>
                     <input type="radio" id="none" name="protein" value="None">
                     <label for="none">None</label><br>
-                </form>
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+               
+
                     <p> Please Select a Rice</p>
                     <input type="radio" id="white_rice" name="rice" value="White Rice">
                     <label for="white_rice">White Rice</label><br>
                     <input type="radio" id="brown_rice" name="rice" value="Brown Rice">
                     <label for="brown_rice">Brown Rice</label><br>
-                </form>
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+               
+
                     <p> Please Select Additional Ingredients</p>
                     <input type="radio" id="cheese" name="additional" value="Cheese">
                     <label for="cheese">Cheese</label><br>
                     <input type="radio" id="sour_cream" name="additional" value="Sour Cream">
                     <label for="sour_cream">Sour Cream</label><br>
                     
-                </form> 
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
+               
                     <p> Please Select Beans</p>
                     <input type="radio" id="black_beans" name="beans" value="Black Beans">
                     <label for="black_beans">Black Beans</label><br>
                     <input type="radio" id="pinto_beans" name="beans" value="Pinto Beans">
                     <label for="pinto_beans">Pinto Beans</label><br>
-                    <input type="submit" value="Get A Rito">
-                </form> 
-                <form action="https://webhook.site/84f57543-5f0b-4541-a7d9-2c8c695cf752" method="post">
-                    <p> Please Select Additional Ingredients</p>
-                    <input type="radio" id="cheese" name="additional" value="Cheese">
-                    <label for="cheese">Cheese</label><br>
-                    <input type="radio" id="sour_cream" name="additional" value="Sour Cream">
-                    <label for="sour_cream">Sour Cream</label><br>
                     
-                </form>   
-            </div>
-            <div class="col-sm-0 col-md-3 col-lg-4">
                 
+                    <label for="username">Special Instructions:</label><br>
+                    <input type="text" id="username" name= "username" value=""><br><br> 
+                    <input type="submit" value="Get A Rito"> 
+                </form> 
             </div>
-            <div class="col-sm-4 col-md-3 col-lg-4">
-                
+            <div class="col-sm-4 col-md-6 col-lg-8 col-xl-9">
+                <image class="picture" src="C:\Users\wills\Downloads\cute-burrito-with-hat-maracas-cartoon-illustration_510308-50.webp" >mmmmmmm</image>
             </div>
-            <div class="col-sm-2 col-md-3 col-lg-4">
-                
-            </div>
+            
         </div>
-        <div class="row">
-
-        </div>    
+          
         
     </section>
      
