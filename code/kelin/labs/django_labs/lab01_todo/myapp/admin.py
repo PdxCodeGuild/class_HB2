@@ -3,6 +3,7 @@
 # Register your models here.
 
 from django.contrib import admin
-from .models import MyModel
+from .models import Priority, ToDoItem
 
-admin.site.register(MyModel)
+admin.site.register(Priority)
+admin.site.register(ToDoItem) # Registered Priority and ToDoItem models

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:add' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="todo"/>
+            <input type="text" name="priority"/>
+            <button type="submit">submit</button>
+        </form>
+
+        <!-- Make dropdown menu for priority in template -->
+
+        <ul>
+            {% for todo in todos %}
+            <li>{{ todo.text }}</li>
+            <li>{{ todo.priority }}</li>
+            <li>{{ todo.created_date.year }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
