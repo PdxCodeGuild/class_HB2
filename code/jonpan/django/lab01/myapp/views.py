@@ -1,16 +1,38 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import MyModel, MyModel2
+# from django.shortcuts import HttpResponse
+from django.shortcuts import render, reverse
+from django.http import HttpResponse, HttpResponseRedirect
+from .models import TodoItem, Priority
+
+# def myview(request):
+#     return HttpResponse('hello world!')
 
 def myview(request):
-    myinstances = MyModel.objects.all()
+    todo_items = TodoItem.objects.all()
+    priorities = Priority.objects.all()
     context = {
-        'myinstances': myinstances
+        'todo_items': todo_items,
+        'priorities': priorities
     }
     return render(request, 'myapp/mytemplate.html', context)
 
-def mycreate(request):
-    print(request.POST)
-    return HttpResponse('form received')
+def save_todo_items(request):
+    todo_items = TodoItem.objects.all()
+    priorities = Priority.objects.all()
+    context = {
+        'todo_items': todo_items,
+        'priorities': priorities
+    }
+    form = request.POST
+    print(form)
 
-# Create your views here.
+    for key in form:
+        if key.startswith('item'):
+            whatever = form.get(key)
+            TodoItem.objects.create(item=whatever)
+    for key in form:
+        if key.startswith('name'):
+            whatever = form.get(key)
+            Priority.objects.create(name=whatever)
+
+    # return render(request, 'myapp/mytemplate.html', context)
+    return HttpResponseRedirect(reverse('myapp:myview'))
