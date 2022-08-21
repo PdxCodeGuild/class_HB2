@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import TodoItem, Priority
 from django.urls import reverse
-from .forms import PriorityForm, TodoForm, td_form
+from .forms import PriorityForm, TodoForm
 from django.forms import modelform_factory
 
 # Create your views here.
@@ -26,12 +26,19 @@ def add(request):
     todolist.save()
     return HttpResponseRedirect(reverse('todo:index'))
     
-# def todoform(request):
-#     if request.method == 'POST':
-#         form = td_form(request.POST)
-#         if form.is_valid():
-#             form.save()
-#     else:
-#         form = td_form
-#     return render(request, 'todo/index.html', {'form':form})     
+def todoform(request):
+    context = {}
+    form = TodoForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+
+    context['form']= form
+    return render(request, 'todo/index.html', context)
+    # if request.method == 'post':
+    #     form = TodoForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    # else:
+    #     form = TodoForm()
+    # return render(request, 'todo/index.html', {'form':form})     
 

@@ -5,19 +5,19 @@ from django.forms import modelform_factory
 
 from .models import TodoItem, Priority
 
-# class TodoForm(ModelForm):
-#     class Meta:
-#         model = TodoItem
-#         fields = '__all__'
+class TodoForm(forms.ModelForm):
+    class Meta:
+        model = TodoItem
+        fields = '__all__'
 
-TodoForm = modelform_factory(TodoItem, fields='__all__')
+# TodoForm = modelform_factory(TodoItem, fields='__all__')
 
 class PriorityForm():
     class Meta:
         model = Priority
         fields = '__all__'
 
-td_form = TodoForm()
+
 
 
 

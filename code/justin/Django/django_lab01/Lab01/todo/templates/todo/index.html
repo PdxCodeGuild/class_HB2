@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <form action="{% url 'todo:add' %}" method="post">
+    <!-- <form action="{% url 'todo:add' %}" method="post">
         {% csrf_token %}
         <label for="todo">What To Do?</label><br/>
         <input type="text" id="todo" name="todo"/><br/>
@@ -15,22 +15,23 @@
             <option value='medium'>Medium</option>
             <option value='low'>Low</option>
         </select><br/>
-        <!-- <label for="date_created">Date Created</label><br/>
-        <input type="text" id="date_created" name="date_created"> -->
+        <label for="date_created">Date Created</label><br/>
+        <input type="text" id="date_created" name="date_created">
         <button type="submit">submit</button>
-    </form>
-    <!-- <form method="post">
-      <table>
-        {{ form }}
-      </table>      
     </form> -->
+    <form method="post">
+      {% csrf_token %}
+      <table>
+        {{ context }}
+      </table>      
+    </form>
     <ul>
       {% for items in todo_items %}
       <li>{{ items }}</li>
       {% endfor %}
-      {% for items in prio_items %}
+      <!-- {% for items in prio_items %}
       <li>{{ items }}</li>
-      {% endfor %}
+      {% endfor %} -->
     </ul>
   </body>
 </html>
