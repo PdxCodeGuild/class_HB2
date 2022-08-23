@@ -59,7 +59,7 @@ Presentation Day: November 4th, 2022
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | Assigned Labs To Be Determined | | |
+| 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 24 Aug | 31 Aug |
 | 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | Assigned Labs To Be Determined | | |
 | 03  | [Django Redo](3%20Django/labs/03%20Django%20Redo.md)     | Assigned Labs To Be Determined | | |
 | 04  | [Chirp](3%20Django/labs/04%20Chirp.md)                   | Assigned Labs To Be Determined | | |
