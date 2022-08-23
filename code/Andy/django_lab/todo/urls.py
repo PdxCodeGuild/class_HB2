@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'todo'
 urlpatterns = [
-    path('myview/' , views.myview, name='myview')
+    path('myview/' , views.index, name='index')
 ]

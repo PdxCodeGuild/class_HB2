@@ -18,6 +18,8 @@ class Todoitem(models.Model):
     priority = models.ForeignKey(Priority, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True) #populates it right at the time added 
 
+    def __str__(self) -> str:
+        return f'{self.text} created at {self.created_date}'
     
 
 
