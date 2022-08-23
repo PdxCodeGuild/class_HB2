@@ -1,5 +1,0 @@
-- create a folder named static
-- set static directory in settings.py
-- {% load static %} in template
-- Add pipenv portion to quickstart guide
-- Add static files to quickstart guide
