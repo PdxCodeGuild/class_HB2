@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'labapp'
 urlpatterns = [
-    path('todo/', views.todo, name='todo')
+    path('todo/', views.todo, name='todo'),
+    path('close/', views.close, name='close' )
 ]

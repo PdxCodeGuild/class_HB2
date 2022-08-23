@@ -4,16 +4,30 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
-    <form action="{% url 'labapp:todo' %}" method="post">
+  <body style="background-color: black">
+    <form action="{% url 'labapp:todo' %}" method="post" style="color: blue;">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit" />
     </form>
-    <ul>
-      {%  for work in todos %}
-      <li>{{ work }}</li>
-      {% endfor %}
-    </ul>
+    <div class="flex-container" style="display: flex;">   
+      <ul style="color: blue;">
+        <h2>ITEMS LEFT TODO</h2>
+        {%  for work in todos %}
+        <form action="{% url 'labapp:close' %}" method="post">
+          {% csrf_token %}
+          
+          <li style="color: blue;display: flex;">{{ work }}</li><button type="submit">Complete</button>
+          
+        </form>
+        {% endfor %}
+      </ul>  
+      <ul style="color:blue; text-decoration: line-through;">
+        <h2>ITEMS COMPLETED</h2>
+        {% for done in todone %}
+        <li>{{ done }}</li>
+        {% endfor %}
+      </ul>      
+    </div>
   </body>
 </html>
