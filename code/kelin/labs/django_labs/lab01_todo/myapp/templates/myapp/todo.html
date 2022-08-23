@@ -4,18 +4,23 @@
         <meta charset="utf-8">
         <title></title>
     </head>
-    <body>
+    <body><h4>Add Item</h4>
         <form action="{% url 'myapp:add' %}" method="post">
             {% csrf_token %}
-            <input type="text" name="todo"/>
-            <input type="text" name="priority"/>
-            <button type="submit">submit</button>
+            <label for="text">To Do:</label>
+            <input id="todo" type="text" name="todo"/><br>
+            <!-- Make dropdown menu for priority in template -->
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            </select>
+            <button type="submit">Add</button>
         </form>
-
-        <!-- Make dropdown menu for priority in template -->
-
-        <ul>
-            {% for todo in todos %}
+{{ todos_template }}
+        <ul><h3>To Do List</h3>
+            {% for todo in todos_template %}
             <li>{{ todo.text }}</li>
             <li>{{ todo.priority }}</li>
             <li>{{ todo.created_date.year }}</li>

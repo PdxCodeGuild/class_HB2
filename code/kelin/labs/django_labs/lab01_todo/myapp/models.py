@@ -21,7 +21,7 @@ class ToDoItem(models.Model):
     """
     text = models.CharField(max_length=200) # ToDoItem text
     priority = models.ForeignKey(Priority, on_delete=models.CASCADE) # Foriegn Key to Priority
-    created_date = models.DateTimeField(null=True) # New ToDoItem null completed date
+    created_date = models.DateTimeField(auto_now_add=True) # Created date
 
     def __str__(self):
         return self.text
