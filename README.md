@@ -60,9 +60,9 @@ Presentation Day: November 4th, 2022
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
 | 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 24 Aug | 31 Aug |
-| 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | Assigned Labs To Be Determined | | |
+| 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | To Be Determined | | |
 | 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 30 Aug | 6 Aug |
-| 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | Assigned Labs To Be Determined | | |
+| 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | To Be Determined | | |
 
 
 ## Getting Unstuck
