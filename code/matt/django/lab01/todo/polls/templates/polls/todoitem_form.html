@@ -1,0 +1,21 @@
+<h1>Add Item</h1>
+
+<style>
+  label {
+    font-size: x-large;
+  }
+</style>
+
+<form action="/polls/save_todo_item/" method="post">
+  {% csrf_token %}
+  <label for="tditem">Todo Item:</label><br />
+  <input type="text" id="tditem" name="tditem" /><br />
+  <input type="radio" id="high" name="priority" value="1" />
+  <label for="high">High</label><br />
+  <input type="radio" id="medium" name="priority" value="2" />
+  <label for="meduim">Medium</label><br />
+  <input type="radio" id="low" name="priority" value="3" />
+  <label for="low">Low</label><br />
+  <input type="submit" value="Submit" />
+  <input type="reset" />
+</form>
