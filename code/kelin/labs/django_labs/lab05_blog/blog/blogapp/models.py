@@ -1,3 +1,4 @@
+from xmlrpc.client import Boolean
 from django.db import models
 
 # Create your models here.
@@ -11,3 +12,12 @@ from django.db import models
 # public (BooleanField)
 # date_created (DateTimeField with auto_now_add=True)
 # date_edited (DateTimeField with auto_now=True)
+
+class BlogPost(models.Model):
+    title =
+    body =
+    user = ForeignKey
+    public = BooleanField
+    date_created = DateTimeField, auto_now_add=True
+    date_edited = DateTimeField, auto_now=True
+    
