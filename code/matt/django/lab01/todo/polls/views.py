@@ -4,13 +4,15 @@ from .models import TodoItem, Priority
 from django.views.decorators.csrf import csrf_protect
 
 def index(request):
-    uncompleted_todoitem = TodoItem.objects.order_by('priority')[:5]
-    context = {'uncompleted_todoitem': uncompleted_todoitem}
+    uncompleted_todoitems = TodoItem.objects.order_by('priority')
+    context = {'uncompleted_todoitem': uncompleted_todoitems}
     return render(request, 'polls/index.html', context)
 
 @csrf_protect
 def todoitem_form(request):
-    return render(request, 'polls/todoitem_form.html')
+    priorities = Priority.objects.all()
+    context = {'priorities': priorities}
+    return render(request, 'polls/todoitem_form.html', context)
 
 def save_todo_item(request):
     todo = request.POST.get("tditem")
