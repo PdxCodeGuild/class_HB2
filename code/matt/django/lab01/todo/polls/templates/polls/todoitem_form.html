@@ -11,24 +11,14 @@
   <label for="tditem">Todo Item:</label><br />
   <input type="text" id="tditem" name="tditem" /><br />
 
-  {% for p in priorities %} {{ p }}
-
-  <input
-    type="radio"
-    id="{{ p.id }}{{ p.text }}"
-    name="priority"
-    value="{{ p.id }}"
-  />
-  <label for="{{ p.id }}{{ p.text }}">{{ p.text }}</label><br />
-
-  {% endfor %} {% comment %}
-  <input type="radio" id="high" name="priority" value="1" />
+  <input type="radio" id="imp" name="priority" value="MOST IMPORTANT" />
+  <label for="imp">MOST IMPORTANT</label><br />
+  <input type="radio" id="high" name="priority" value="High" />
   <label for="high">High</label><br />
-  <input type="radio" id="medium" name="priority" value="2" />
+  <input type="radio" id="med" name="priority" value="Medium" />
   <label for="meduim">Medium</label><br />
-  <input type="radio" id="low" name="priority" value="3" />
+  <input type="radio" id="low" name="priority" value="Low" />
   <label for="low">Low</label><br />
-  {% endcomment %}
 
   <input type="submit" value="Submit" />
   <input type="reset" />
