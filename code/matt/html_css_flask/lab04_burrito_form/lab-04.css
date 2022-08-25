@@ -1,0 +1,60 @@
+body {
+   background-color: rgb(15, 16, 15);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(236, 84, 14);
+    width: auto;
+    height: 100px;
+    font-family: sans-serif;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(236, 230, 230);
+    padding-top: 0px;
+    font-size: 30px;
+}
+.info { 
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(114, 113, 111); 
+    width: auto;
+    height: 200px;
+}
+.name {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.name input{
+   font-size: x-large;
+}
+
+.name span{
+ font-size: 30px;
+}
+.poc {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.poc span {
+    font-size: 30px;
+}
+.poc input{
+    font-size: x-large;
+ }
+.menu {
+    color: white;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: xx-large;
+}
+.table {
+    text-align: center;
+}
