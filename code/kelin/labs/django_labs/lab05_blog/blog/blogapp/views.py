@@ -34,3 +34,6 @@ def loginUser(request):
         return HTTPResponse("Logged in")
     else:
         return HTTPResponse(user)
+
+def profile(request):
+    
