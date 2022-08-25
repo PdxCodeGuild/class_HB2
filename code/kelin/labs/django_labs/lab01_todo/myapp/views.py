@@ -10,8 +10,6 @@ from django.urls import reverse
 
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-
-from code.kelin.labs.django_labs.lab01_todo import myapp
 from .models import Priority, ToDoItem
 
 # from django.http import HttpResponse
@@ -22,7 +20,7 @@ from .models import Priority, ToDoItem
 
 def todo(request):
     todo_items = ToDoItem.objects.all()
-    print("To do list", todo_items)
+    # print("To do list", todo_items)
     context = {
         'todos_template': todo_items
     }
@@ -39,4 +37,4 @@ def add(request):
     todo = ToDoItem(text=todo, priority=priority)
     # print("Todo entry", todo)
     todo.save()
-    return HttpResponseRedirect('myapp:add/todo')
+    return HttpResponseRedirect(reverse('myapp:todo'))

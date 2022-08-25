@@ -18,12 +18,12 @@
             </select>
             <button type="submit">Add</button>
         </form>
-{{ todos_template }}
+<!-- {{ todos_template }} -->
         <ul><h3>To Do List</h3>
             {% for todo in todos_template %}
             <li>{{ todo.text }}</li>
-            <li>{{ todo.priority }}</li>
-            <li>{{ todo.created_date.year }}</li>
+            <li>Priority: {{ todo.priority }}</li>
+            <li>Created: {{ todo.created_date }}</li>
             {% endfor %}
         </ul>
     </body>
