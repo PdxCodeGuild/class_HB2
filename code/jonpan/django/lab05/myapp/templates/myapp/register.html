@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+    <body>
+        <p>Please register a new account</p>
+        <form action="{% url 'myapp:register' %}" method="POST">
+            {% csrf_token %}
+            <p>Enter your user name:</p>
+            <input type="text" name="username" id="username">
+            <p>Enter your password:</p>
+            <input type="text" name="password" id="password">
+            <br><br>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
