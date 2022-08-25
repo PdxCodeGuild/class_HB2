@@ -15,10 +15,8 @@
         <h2>ITEMS LEFT TODO</h2>
         {%  for work in todos %}
         <form action="{% url 'labapp:close' %}" method="post">
-          {% csrf_token %}
-          
-          <li style="color: blue;display: flex;">{{ work }}</li><button type="submit">Complete</button>
-          
+          {% csrf_token %}          
+          <li style="color: blue;display: flex;">{{ work }}<button type="submit" name="item">Submit</button></li>      
         </form>
         {% endfor %}
       </ul>  

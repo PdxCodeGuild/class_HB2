@@ -11,3 +11,8 @@ class TodoForm(ModelForm):
 
         model = Todo
         fields = '__all__'
+
+class CloseForm(ModelForm):
+    class Meta:
+        model = Todo
+        fields = ('item', 'completed_date')
