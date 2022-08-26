@@ -6,7 +6,7 @@
   </head>
   <body>
     <p>Please login here</p>
-    <form action="{% url 'myapp:login_user' %}" method="POST">
+    <form action="{% url 'myapp:sign_in' %}" method="POST">
         {% csrf_token %}
         <p>Enter your user name:</p>
         <input type="text" name="username" id="username">

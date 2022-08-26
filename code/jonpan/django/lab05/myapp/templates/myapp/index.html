@@ -5,7 +5,14 @@
     <title>Homepage</title>
   </head>
   <body>
-    <h1>{{ message }}</h1>
-
+    <div>
+    {% if user.is_authenticated %}
+    <a href="#">My profile</a>
+    <a href="{% url 'myapp:sign_out' %}">Logout</a>
+    {% else %}
+    <a href="(% url 'myapp:sign_in' %}">Sign In</a>
+    <a href="(% url 'myapp:register' %}">Sign Up</a>
+    {% endif %}
+  </div>
   </body>
 </html>

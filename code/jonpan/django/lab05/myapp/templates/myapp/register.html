@@ -9,11 +9,13 @@
         <form action="{% url 'myapp:register' %}" method="POST">
             {% csrf_token %}
             <p>Enter your user name:</p>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" placeholder="username">
             <p>Enter your password:</p>
-            <input type="text" name="password" id="password">
+            <input type="text" name="password" placeholder="password">
+            <p>Confirm your password:</p>
+            <input type="text" name="confirm_password" placeholder="confirm password">
             <br><br>
-            <button type="submit">submit</button>
+            <button type="submit">Register</button>
         </form>
     </body>
 </html>
