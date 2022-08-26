@@ -1,5 +1,6 @@
 from django.forms import ModelForm
 from .models import Priority, Todo
+from django import forms
 
 class PriorityForm(ModelForm):
     class Meta:
@@ -8,9 +9,12 @@ class PriorityForm(ModelForm):
 
 class TodoForm(ModelForm):
     class Meta:
-
         model = Todo
-        fields = '__all__'
+        fields = (
+            'item',
+            'importance',        
+        )
+        widgets = {'importance': forms.HiddenInput()}
 
 class CloseForm(ModelForm):
     class Meta:

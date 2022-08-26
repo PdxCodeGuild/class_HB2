@@ -7,16 +7,29 @@ from .forms import PriorityForm, TodoForm, CloseForm
 def todo(request):
     todos = Todo.objects.all().values_list('item',flat=True)
     todone = Todo.objects.all().values_list('completed_date',flat=True)
+    # prios = Priority.objects.get('priority')
     if request.method == 'POST':
         form = TodoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            form = TodoForm()
-            return HttpResponseRedirect(reverse('labapp:todo'))
+        prio = PriorityForm(request.POST)
+        if prio.is_valid():
+            prio.save()
+            if form.is_valid():
+                form.fields['importance'] = prio                                      
+                form.save()
+                form = TodoForm()
+                return HttpResponseRedirect(reverse('labapp:todo'))
+                
+        
+        # if form.is_valid():            
+        #     form.save()
+        #     form = TodoForm()
+        #     return HttpResponseRedirect(reverse('labapp:todo'))
     else:
         form = TodoForm()
+        prio = PriorityForm()
     context = {
         'form':form,
+        'prio':prio,
         'todos':todos,
         'todone':todone,
     }

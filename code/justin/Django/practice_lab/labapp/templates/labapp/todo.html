@@ -7,7 +7,8 @@
   <body style="background-color: black">
     <form action="{% url 'labapp:todo' %}" method="post" style="color: blue;">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
+        {{ prio.as_p }}
         <input type="submit" value="Submit" />
     </form>
     <div class="flex-container" style="display: flex;">   
