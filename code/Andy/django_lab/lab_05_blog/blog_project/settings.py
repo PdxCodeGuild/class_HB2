@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'blog_app.apps.BlogAppConfig',
     'django.contrib.admindocs',
-    'django.contrib.auth.models.User',
+    
 ]
 
 MIDDLEWARE = [
