@@ -5,5 +5,5 @@ from django.urls import include, path
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html', name='index.html'))
+    path('', TemplateView.as_view(template_name='index.html'), name='index.html')
 ]
