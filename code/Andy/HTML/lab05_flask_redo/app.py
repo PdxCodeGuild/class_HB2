@@ -16,9 +16,7 @@ def converter():
     if request.method == 'POST':
         distance = request.form['unit_distance']
         in_units = request.form['input_units']
-        out_units = request.form['output_units']
-
-
+        
         measurments = {
             'ft': 0.3048,
             'mi': 1609.34,
@@ -30,5 +28,7 @@ def converter():
         }
 
         in_results = measurments[in_units]
-        results = 
+        results = in_results * distance
+        return(f"{distance} {in_units} is {results} Meters")
 
+app.run(debug=True)

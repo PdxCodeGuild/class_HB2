@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>The result is {{ html_value }}</h1>
-    
+    <form action="/recieve_form/" method="post"></form>
+    <br> Please input a distance.
+    <input type="text" id="distance" name="distance" placeholder="provid a distance"><br>
+    <br>Please enter your units (ft, mi, m, km, yd, in)
+    <input type="text" id="in_units" name="in_units" placeholder="provid a unit"><br>
+    <button type="submit">submit</button>
 </body>
 </html>
