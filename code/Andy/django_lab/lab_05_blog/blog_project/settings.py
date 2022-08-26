@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'blog_app.apps.BlogAppConfig',
     'django.contrib.admindocs',
+    'django.contrib.auth.models.User',
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
