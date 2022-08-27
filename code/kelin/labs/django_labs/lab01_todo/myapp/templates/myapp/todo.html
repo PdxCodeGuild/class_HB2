@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body><h4>Add Item</h4>
+        <form action="{% url 'myapp:add' %}" method="post">
+            {% csrf_token %}
+            <label for="text">To Do:</label>
+            <input id="todo" type="text" name="todo"/><br>
+            <!-- Make dropdown menu for priority in template -->
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            </select>
+            <button type="submit">Add</button>
+        </form>
+<!-- {{ todos_template }} -->
+        <ul><h3>To Do List</h3>
+            {% for todo in todos_template %}
+            <li>{{ todo.text }}</li>
+            <li>Priority: {{ todo.priority }}</li>
+            <li>Created: {{ todo.created_date }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
