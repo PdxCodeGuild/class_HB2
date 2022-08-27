@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% block title %}Sign In{% endblock %} {% if errors %}
+{% for error in errors %}
+<div>{{ error }}</div>
+{% endfor %} {% endif %} {% block content %}
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password" />
+  <button>Login</button>
+</form>
+{% endblock %}
