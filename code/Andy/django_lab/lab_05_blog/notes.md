@@ -9,6 +9,7 @@
 1. `python3 manage.py migrate`
 1. `pipenv install docutils==0.19`
 1. `pipenv shell`
+1. python3 manage.py createsuperuser
 
 print(request.POST)  
 
