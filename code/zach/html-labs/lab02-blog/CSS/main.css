@@ -1,0 +1,149 @@
+/* Desktop View */
+.main-text-and-character-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-text {
+    flex: 2;
+}
+
+.character-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.character {
+    height: 25rem;
+    width: auto;
+}
+
+/*.portfolio-header {
+    
+}*/
+
+.portfolio-container {
+    background-color: #fff;
+    padding: 2rem;
+    padding-left: 13rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    margin: 8rem auto;
+    position: relative;
+}
+
+.portfolio-img {
+    border-radius: 0.8rem;
+    transform: scale(1.5);
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.25)
+}
+
+.template-description {
+    color: #000020;
+    padding: 1rem;
+}
+
+.btn {
+    height: 6rem;
+    width: 6rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center; 
+    justify-content: right;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.25)
+}
+
+.left-arrow, 
+.right-arrow {
+    height: 5rem;
+    width: 5rem;
+}
+
+.btn-left {
+    left: 0;
+    transform: translate(-50%, 0);
+    padding-right: 1rem;
+}
+
+.btn-right {
+    right: 0;
+    transform: translate(50%, 0)
+}
+
+.dots {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 4rem);
+    display: flex;
+    gap: 1rem;
+}
+
+.dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot--fill {
+    background: #000020;
+}
+
+/*Tablet View*/
+@media screen and (max-width: 800px){
+    .hide-tablet {
+        display: none;
+    }
+
+    h1,
+    h2,
+    p {
+        text-align: center;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .portfolio-img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 400px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .portfolio-img {
+        height: 175px;
+        width: 175px;
+    }
+
+    .btn {
+        height: 5rem;
+        width: 5rem;
+    }
+    
+    .left-arrow, 
+    .right-arrow {
+        height: 3rem;
+        width: 3rem;
+        padding-right: 1rem;
+    }
+}

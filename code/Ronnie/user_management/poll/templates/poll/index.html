@@ -1,0 +1,32 @@
+<h3>Login</h3>
+<form action="loginUser" method="post">
+  {% csrf_token %}
+  <label>Username</label>
+  <input type="text" name="username" />
+  <label>Password</label>
+  <input type="password" name="password" />
+  <input type="submit" value="submit" />
+</form>
+<a href="/logoutUser">logout</a>
+
+<h3>Register</h3>
+<form action="register" method="post">
+  {% csrf_token %}
+  <label>Username</label>
+  <input type="text" name="username" />
+  <label>Password</label>
+  <input type="password" name="password" />
+  <label>discord</label>
+  <input type="text" name="discord" />
+  <input type="submit" value="submit" />
+</form>
+
+{% if latest_question_list %}
+<ul>
+  {% for question in latest_question_list %}
+  <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}

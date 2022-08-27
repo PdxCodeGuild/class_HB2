@@ -1,0 +1,31 @@
+.container { 
+    display: flex;
+    }
+  .red {
+    background: orangered;
+    display: flex;
+    flex-direction: column;
+  }
+  .green {
+    background: yellowgreen;
+  }
+  .blue {
+    background: steelblue;
+  }
+  .container div {
+    font-size: 1vw;
+    padding: .5em;
+    color: white;
+    flex: 1;
+  }
+
+  img { width: 400px;  
+  height: auto; 
+  padding: 15px;
+  }
+
+  textarea {
+    width: 300px;
+    height: 150px;
+  }
+  /* Added width and height to textarea box */
