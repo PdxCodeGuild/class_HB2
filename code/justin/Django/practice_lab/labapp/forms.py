@@ -14,7 +14,7 @@ class TodoForm(ModelForm):
             'item',
             'importance',        
         )
-        widgets = {'importance': forms.HiddenInput()}
+        
 
 class CloseForm(ModelForm):
     class Meta:
