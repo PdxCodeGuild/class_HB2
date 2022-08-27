@@ -1,21 +1,21 @@
 import datetime
-
 from django.db import models
 from django.utils import timezone
 
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    def __str__(self):
-        return self.question_text
-    def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+# Create the following model:
+
+# BlogPost
+# title (CharField)
+# body (TextField)
+# user (ForeignKey to django.contrib.auth.models.User)
+# public (BooleanField)
+# date_created (DateTimeField with auto_now_add=True)
+# date_edited (DateTimeField with auto_now=True)
 
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-    def __str__(self):
-        return self.choice_text
-    
+class BlogPost:
+    title = models.CharField(max_length=200)
+    body = models.TextField
+    user = models.ForeignKey
+    public = models.BooleanField
+    date_created = models.DateTimeField(auto_now=True)
