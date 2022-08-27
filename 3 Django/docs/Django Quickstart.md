@@ -3,11 +3,12 @@
 
 ## 1) Project Setup
 
-1. Create a project: `django-admin startproject myproject`, if you get 'command not found', try `python -m django startproject myproject`
-2. Move into the project folder: `cd myproject`
-3. Create the database with built-in models: `python manage.py migrate`
-4. Create a superuser: `python manage.py createsuperuser`
-5. Set the timezone in your `myproject/settings.py`: (e.g. `TIME_ZONE = 'America/Los_Angeles'`) [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+1. Create a lab folder and change directory into it.
+1. Create a project: `django-admin startproject myproject .`, if you get 'command not found', try `python -m django startproject myproject .`
+    * **The period at the end of this command is important!** It says ignore creating a new folder and put the contents of our new project in the current directory. 
+1. Create the database with built-in models: `python manage.py migrate`
+1. Create a superuser: `python manage.py createsuperuser`
+1. Set the timezone in your `myproject/settings.py`: (e.g. `TIME_ZONE = 'America/Los_Angeles'`) [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 ## 2) App Setup
 

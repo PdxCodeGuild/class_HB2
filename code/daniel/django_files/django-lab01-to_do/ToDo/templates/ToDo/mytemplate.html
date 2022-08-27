@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'todo:mycreate' %}" method="post">
+            {% csrf_token %}
+
+            <input type="radio" id="low" name="priority" value="Low" checked required>Low</input>
+            <input type="radio" id="Med" name="priority" value="Med" checked required>Med</input>
+            <input type="radio" id="High" name="priority" value="High" checked required>High</input>
+            <input type="radio" id="Super High" name="priority" value="Super High" checked required>Super High</input>
+
+            <input type="text" name='user_input'/>
+            
+            <button type="submit">submit</button>
+        </form>
+        <ul>
+            {% for to_do in myinstances_template %}
+            <li>ID # {{ to_do.id }}</li>
+            <li>To Do: {{ to_do.text }}</li>
+            
+            <li>Priotity Level: {{ to_do.priority }}</li>
+            <li>Date Completed: {{ to_do.created_date }}</li><br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

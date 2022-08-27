@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <h1>Password Generator</h1>
+        <form action="/generator">
+            <label for="upper">How many uppercase letters (min of 2)</label><br />
+            <input type="number" id="upper" name="upper" min="2" required>
+            <br />
+            <label for="lower">How many lowercase letters (min of 4)</label><br />
+            <input type="number" id="lower" name="lower" min="4" required>
+            <br />
+            <label for="numbers">How many numbers (min of 4)</label><br />
+            <input type="number" id="numbers" name="numbers" min="4" required>
+            <br />
+            <label for="special">How many special characters (min of 2)</label><br />
+            <input type="number" id="special" name="special" min="2" required>
+            <br />
+            <input type="submit" value="Generate" />
+        </form>    
+    </body>
+</html>
