@@ -1,7 +1,8 @@
 from urllib import request
+from django.contrib.auth.models import User
 from django.shortcuts import  render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, authenticate, logout, get_user
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from .models import BlogPost
@@ -61,18 +62,22 @@ def logout_view(request):
     return redirect('blog:login')
 
 def create(request):
-    if request.method == 'POST':
-        form = BlogForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('blog:profile')
+    if User.is_authenticated:
+        if request.method == 'POST':
+            form = BlogForm(request.POST, request.FILES)            
+            if form.is_valid():
+                form.save()
+                return redirect('blog:profile')
+            else:
+                pass
         else:
-            pass
-    else:
-        pass
-    form = BlogForm()
+            person = get_user(request)
+            print('getting user')
+            form = BlogForm(initial={'user':person})        
 
-    context = {
-        'form':form
-    }
-    return render(request, 'blog/create.html', context)
+        context = {
+            'form':form
+        }
+        return render(request, 'blog/create.html', context)
+    else:
+        return redirect('blog:login')

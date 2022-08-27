@@ -16,7 +16,8 @@
         <input type="submit" value="submit">
     </form>
     {% else %}
-    <a href="blog/login.html">login</a>.
+    <h2>You are not logged in</h2>
+    <a href='{% url "blog:login" %}'>login</a>.
     {% endif %}    
 </body>
 </html>

@@ -13,3 +13,4 @@ class BlogForm(ModelForm):
     class Meta:
         model = BlogPost
         fields = '__all__'
+        widgets = {'user': forms.HiddenInput()}
