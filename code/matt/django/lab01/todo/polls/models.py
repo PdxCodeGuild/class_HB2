@@ -5,7 +5,7 @@ class Priority(models.Model):
         ('low', 'Low'),
         ('med', 'Medium'),
         ('high', 'High'),
-        ('imp', 'MOST IMPORTANT')
+        ('imp', 'MOST IMPORTANT'),
     ]
     name = models.CharField(max_length=200, choices=PRIORITY_NUMS, default="low", null=True)
     
@@ -16,7 +16,7 @@ class Priority(models.Model):
 class TodoItem(models.Model):
     text = models.CharField(max_length=200, null=True)
     priority = models.ForeignKey(Priority, on_delete=models.CASCADE, null=True)
-    created_date = models.DateTimeField(auto_now=True, null=True)
+    created_date = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
         return self.text

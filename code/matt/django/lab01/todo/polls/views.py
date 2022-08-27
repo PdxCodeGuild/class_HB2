@@ -15,11 +15,21 @@ def todoitem_form(request):
     return render(request, 'polls/todoitem_form.html', context)
 
 def save_todo_item(request):
-    todo = request.POST.get("tditem")#
-    priority_id = request.POST.get('priority')
+    todo = request.POST.get("tditem")#This is a string
+#    print(todo)
+    priority_id = request.POST.get('priority')#This is a string
+    #print(priority_id)
 
-    TodoItem.objects.create(text=todo)
-    Priority.objects.create(name=priority_id)
+    #print(request)
+    # print(request.POST)
+    # print(request.POST.keys())
+    # print(dir(request.POST))
+    print(type(request))
+
+    p = Priority.objects.create(name=priority_id)
+
+    # print(type(p))
+    t = TodoItem.objects.create(text=todo, priority=p)
     return HttpResponseRedirect('/polls/')
 
 
