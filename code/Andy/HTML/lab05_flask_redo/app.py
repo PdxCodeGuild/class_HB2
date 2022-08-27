@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request
 from requests import post
 
-app = Flask(__name__, template_folder='template')
+# app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # print('type of object: ', type(app))
 # type of object:  <class 'flask.app.Flask'>
 
 @app.route('/')
 def index():
-
-    return render_template('index.html')
+    return "hey we're here"
+    # return render_template('index.html')
 
 @app.route('/recieve_form/', methods=['GET','POST'])
 def converter():
