@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Profile Page</title>
+  </head>
+  <body>
+    {% comment %} <h1>{{ posts }}</h1> {% endcomment %}
+    <ul>
+        {% for post in posts %}
+        <li>{{ post.body }}</li>
+        {% endfor %}
+    </ul>
+  </body>
+</html>
