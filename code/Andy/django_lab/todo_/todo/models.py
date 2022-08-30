@@ -22,7 +22,7 @@ class Todoitem(models.Model):
     created_date = models.DateTimeField(auto_now_add=True, null=True) #populates it right at the time added 
 
     def __str__(self) -> str:
-        return f'{self.text} created at {self.created_date}'
+        return f'{self.text} created at {self.created_date}' 
     
 
 

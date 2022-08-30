@@ -11,8 +11,8 @@ from django.urls import reverse
 def index(request):
     todo_items = Todoitem.objects.all()
     # pri_item = Priority.objects.all()
-    print('todo item', todo_items )
-    print('type todo item', type(todo_items))
+    # print('todo item', todo_items )
+    # print('type todo item', type(todo_items))
 
     context = {
         'todo_item': todo_items,
