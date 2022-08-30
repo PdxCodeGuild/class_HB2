@@ -13,4 +13,13 @@
 # ]
 
 
+from . import views
+from django.conf.urls import url, include
+from django.urls import path
 
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('register/', views.register, name='register'),
+    path('profile/', views.profile, name='profile'),
+    path('newpost/', views.newpost, name='newpost')
+]
