@@ -7,3 +7,6 @@ class CreateBlogPost(models.Model):
     
     def __str__(self):
         return self.body
+
+# class register(models.Model):
+#     user = 
