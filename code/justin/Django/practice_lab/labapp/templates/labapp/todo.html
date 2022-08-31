@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color: black">
+    <form action="{% url 'labapp:todo' %}" method="post" style="color: blue;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ prio.as_p }}
+        <input type="submit" value="Submit" />
+    </form>
+    <div class="flex-container" style="display: flex;">   
+      <ul style="color: blue;">
+        <h2>ITEMS LEFT TODO</h2>
+        {%  for work in todos %}
+        <form action="{% url 'labapp:close' %}" method="post">
+          {% csrf_token %}          
+          <li style="color: blue;display: flex;">{{ work }}<button type="submit" name="item">Submit</button></li>      
+        </form>
+        {% endfor %}
+      </ul>  
+      <ul style="color:blue; text-decoration: line-through;">
+        <h2>ITEMS COMPLETED</h2>
+        {% for done in todone %}
+        <li>{{ done }}</li>
+        {% endfor %}
+      </ul>      
+    </div>
+  </body>
+</html>
