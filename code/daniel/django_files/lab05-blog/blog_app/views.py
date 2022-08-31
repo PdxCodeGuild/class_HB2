@@ -26,6 +26,10 @@ def register_view(request):
     return HttpResponse('register')
 
 
+def login_view(request):
+    return HttpResponse('login')
+
+
 
 
 
