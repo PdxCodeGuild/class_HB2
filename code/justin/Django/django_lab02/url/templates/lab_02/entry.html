@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Copy Paste Your Data Below</h1><br>
+    <form method="POST">
+        {% csrf_token %}
+        <p>{{ form }}<br>
+            <input type="submit" value="submit">
+        </p>
+    </form>
+ 
+  </body>
+</html>
