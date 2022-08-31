@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>User Website</title>
+    <title>Jon Pan's Blog</title>
   </head>
   <body>
-    <div>
-      {% if user.is_authenticated %}
-      <p>Logged in as: <span>{{ user.username }}</span></p>
-      <a href="{% url 'myapp:user_profile' %}">My Profile</a><br><br>
-      <a href="{% url 'myapp:sign_out' %}">Logout</a><br><br>
-      {% else %}
-      <a href="{% url 'myapp:sign_in' %}">Sign In</a><br><br>
-      <a href="{% url 'myapp:register' %}">Sign Up</a><br><br>
-      {% endif %}
-    </div>
+
+    {% extends 'base.html' %}
+    {% block title %}Jon Pan's Blog{% endblock %}
+    {% block content %}
+    
+
+    {% endblock %}
+
+
   </body>
 </html>
 
