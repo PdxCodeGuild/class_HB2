@@ -11,11 +11,12 @@ def short_url(size=6, chars=string.ascii_uppercase + string.digits):
 
 def shortening(request):    
     if request.method == 'POST':        
-        form = ShortenForm(request.POST)
+        form = ShortenForm(request.POST, request.FILES)
         if form.is_valid():
             url = form['webpage'].value()
-            print(form)
             form.save() 
+            return render(request, 'lab_02/result.html', {'form':form})
+
     else:
         shorty = short_url()
         form = ShortenForm(initial={'shorty':shorty})       
@@ -25,3 +26,4 @@ def shortening(request):
     }
 
     return render(request, 'lab_02/entry.html', context)
+
