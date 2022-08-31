@@ -17,7 +17,7 @@ def todoitem_form(request):
 def save_todo_item(request):
     todo = request.POST.get("tditem")#This is a string
 #    print(todo)
-    priority_id = request.POST.get('priority')#This is a string
+    priority_level = request.POST.get('priority')#This is a string
     #print(priority_id)
 
     #print(request)
@@ -26,7 +26,7 @@ def save_todo_item(request):
     # print(dir(request.POST))
     print(type(request))
 
-    p = Priority.objects.create(name=priority_id)
+    p = Priority.objects.create(name=priority_level)
 
     # print(type(p))
     t = TodoItem.objects.create(text=todo, priority=p)
