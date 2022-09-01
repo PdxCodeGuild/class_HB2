@@ -8,8 +8,8 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-    <p>welcome {{user.username}}</p>
-    <p><a href='{% url "blog:logout" %}'>logout</a></p>
+    <p>Welcome {{user.username}}</p>
+    <p><a href='{% url "blogapp:logout" %}'>Logout</a></p>
     <form method="POST" action="">
         {% csrf_token %}
         {{form.as_ul}}
@@ -17,7 +17,7 @@
     </form>
     {% else %}
     <h2>You are not logged in</h2>
-    <a href='{% url "blog:login" %}'>login</a>.
+    <a href='{% url "blogapp:login" %}'>Login</a>.
     {% endif %}    
 </body>
 </html>

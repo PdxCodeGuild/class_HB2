@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 <body>
     <div>{{message}}</div>
@@ -16,13 +16,13 @@
     </ul>
     {% if user.is_authenticated %}
     <div> Hello {{user.username}}</div>
-    <p><a href="{% url 'blog:logout' %}">Logout</a></p>
+    <p><a href="{% url 'blogapp:logout' %}">Logout</a></p>
     {% else %}
     <div>You are not logged in</div>
-    <p><a href="{% url 'blog:login' %}">Login</a></p>
+    <p><a href="{% url 'blogapp:login' %}">Login</a></p>
     {% endif %}
     <div>{{form}}</div>
-    <p><a href="{% url 'blog:create' %}">Create New Blog?</a></p>
+    <p><a href="{% url 'blogapp:create' %}">Create New Blog</a></p>
     
 </body>
 </html>
