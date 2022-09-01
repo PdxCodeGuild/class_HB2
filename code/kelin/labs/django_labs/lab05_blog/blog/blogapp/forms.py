@@ -7,7 +7,13 @@ from django.contrib.auth.models import User
 class NewUser(UserCreationForm):
     class Meta:
         model = User
-        login = ('username','password','reenter')
+        fields = ('username','password1','password2')
+
+    # def save(self, commit=True):
+    #     user = super(NewUser, self).save(commit-False)
+    #     if commit():
+    #         user.save
+    #     return user
 
 class BlogPost(ModelForm):
     class Meta:

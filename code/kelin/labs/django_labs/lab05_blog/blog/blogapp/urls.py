@@ -13,13 +13,14 @@
 # ]
 
 
-from . import views
-from django.conf.urls import url, include
 from django.urls import path
+from . import views
 
-urlpatterns = [
-    path('', views.index, name='index'),
+app_name = 'blog'
+urlpatterns = [    
     path('register/', views.register, name='register'),
     path('profile/', views.profile, name='profile'),
-    path('newpost/', views.newpost, name='newpost')
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('create/', views.create, name='create'),
 ]
