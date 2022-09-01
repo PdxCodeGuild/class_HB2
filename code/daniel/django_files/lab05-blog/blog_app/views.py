@@ -30,6 +30,10 @@ def login_view(request):
     return HttpResponse('login')
 
 
+def create_view(request):
+    return HttpResponse('create')
+
+
 
 
 
