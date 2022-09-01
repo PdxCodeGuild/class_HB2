@@ -23,11 +23,11 @@ def profile_view(request):
 def register_view(request):
 
     # user = User.objects.create_user(username, email=None, password=None)
-    return HttpResponse('register')
+    return render(request, 'blog_app/register.html')
 
 
 def login_view(request):
-    return HttpResponse('login')
+    return render(request, 'blog_app/login.html')
 
 
 def create_view(request):

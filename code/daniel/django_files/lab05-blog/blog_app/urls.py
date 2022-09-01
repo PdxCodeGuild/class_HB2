@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import register_view, profile_view, login_view
+from .views import register_view, profile_view, login_view, create_view
 
 app_name = 'blog_app'
 urlpatterns = [

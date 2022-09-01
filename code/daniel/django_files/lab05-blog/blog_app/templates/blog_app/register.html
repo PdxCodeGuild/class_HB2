@@ -9,16 +9,17 @@
 
     {% block content %}
 
-    <h3>Login</h3>
-    <form action="loginUser" method="post">
+    <h3>Register</h3>
+    <form action="register" method="post">
       {% csrf_token %}
       <label>Username</label>
-      <input type="text" name="username" />
+      <input type="text" name="username" /><br>
       <label>Password</label>
-      <input type="password" name="password" />
+      <input type="password" name="password" /><br>
+      <label>discord</label>
+      <input type="text" name="discord" /><br>
       <input type="submit" value="submit" />
     </form>
-    <a href="/logoutUser">logout</a>
 
     {% endblock %}
 
