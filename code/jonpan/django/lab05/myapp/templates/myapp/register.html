@@ -1,0 +1,11 @@
+
+<p>Please register an account</p>
+
+<form method="post">
+    {% csrf_token %}
+    <p>Enter your username: <input type="text" name="username" placeholder="Username"></p>
+    <p>Enter your email: <input type="email" name="email" placeholder="E-Mail"></p>
+    <p>Enter your password: <input type="password" name="password" placeholder="Password"></p>
+    <p>Confirm your password: <input type="password" name="password_confirm" placeholder="Confirm Password"></p>
+    <button>Register</button>   
+</form>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+{% block content %}
+
+<h1>Welcome to your profile, {{request.user.username}}</h1>
+{% for post in posts %}
+<div class='blog_post'>
+    {{post.title}}
+
+    <a href="{% url 'myapp:view_blog' post.id %}">View Blog</a>
+    <p class='updated'>Last Updated: {{post.date_edited}}</p>
+</div>
+{% endfor %}
+
+<a href=" {% url 'myapp:create' %}" >New Post</a>
+
+
+{% endblock content %}
