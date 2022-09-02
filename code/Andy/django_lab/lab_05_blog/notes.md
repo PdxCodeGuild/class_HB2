@@ -4,6 +4,7 @@
 1. 	http://localhost:8000/blog/register/
 1. 	http://localhost:8000/blog/profile/
 1. http://localhost:8000/blog/signup/
+1. http://localhost:8000/blog/show-login-form/
 1. `python3 manage.py makemigrations `
 1. `python3 manage.py makemigrations` blog_app when adding something new to models
 1. `python3 manage.py migrate`

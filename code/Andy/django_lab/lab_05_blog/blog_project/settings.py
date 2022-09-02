@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'blog_app.apps.BlogAppConfig',
     'django.contrib.admindocs',
+    'users.apps.UsersConfig',
     
 ]
 

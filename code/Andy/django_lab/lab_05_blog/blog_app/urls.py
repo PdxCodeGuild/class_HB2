@@ -4,7 +4,9 @@ from . import views
 
 app_name = 'blog_app'
 urlpatterns = [
-    path('profile/', views.profile, name='profile'),
-    path('signup/', views.signup, name='signup'),
-    path('register/', views.register, name='register'),
+
+    path('index/', views.index, name='index'),
+    
+    
+
 ]
