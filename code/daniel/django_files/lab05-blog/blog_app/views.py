@@ -32,6 +32,9 @@ def register_view(request):
         username = request.POST['username']
         password = request.POST['password']
         discord = request.POST['discord']
+        new_user = User.objects.create_user(username, password)
+        return HttpResponse("You have registered")
+        print("new_user:", new_user)
         return render(request, 'blog_app/register.html')
     else:
         return render(request, 'blog_app/register.html')
