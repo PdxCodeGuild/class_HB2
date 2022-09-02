@@ -1,0 +1,41 @@
+<html>
+  <head></head>
+  <body
+    style="
+      text-align: center;
+      font-size: larger;
+      font-weight: 700;
+      font-family: sans-serif;
+      color: white;
+      background-color: black;
+    "
+  >
+    <form action="/calculate/" method="post">
+      <br />What is the length of the measurement? Ensure you input an
+      integer(1, 12, 123, etc...)
+      <input
+        type="text"
+        id="distance"
+        name="distance"
+        placeholder="For example: '1'"
+      /><br />
+      <br />Now enter your unit of measurment. Ensure you enter 'ft', 'mi', 'm',
+      'km', 'yard', or 'inch'.
+      <input
+        type="text"
+        id="units_of_measurement"
+        name="units_of_measurement"
+        placeholder="For example: 'ft'"
+      /><br />
+      <br />Now enter your output units. Ensure you enter 'ft', 'mi', 'm', 'km',
+      'yard', or 'inch'.
+      <input
+        type="text"
+        id="calculation"
+        name="calculation"
+        placeholder="For example: 'm'"
+      /><br />
+      <br /><button type="submit">submit</button>
+    </form>
+  </body>
+</html>

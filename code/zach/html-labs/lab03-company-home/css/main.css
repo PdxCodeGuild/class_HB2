@@ -1,0 +1,23 @@
+header,
+main,
+address { 
+    display: flex;
+    flex-direction: row;
+}
+
+.main-text {
+    flex: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.character-container {
+    flex: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.character {
+    height: 25vh;
+    width: 25vw;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>{{message}}</div>
+    
+    <ul>
+        {% for blogs in blog %}
+        <li>{{ blogs.title }}</li>
+        {% endfor %}
+    </ul>
+    {% if user.is_authenticated %}
+    <div> Hello {{user.username}}</div>
+    <p><a href="{% url 'blog:logout' %}">Logout</a></p>
+    {% else %}
+    <div>You are not logged in</div>
+    <p><a href="{% url 'blog:login' %}">Login</a></p>
+    {% endif %}
+    <div>{{form}}</div>
+    <p><a href="{% url 'blog:create' %}">Create New Blog?</a></p>
+    
+</body>
+</html>
