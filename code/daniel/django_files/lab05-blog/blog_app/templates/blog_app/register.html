@@ -10,7 +10,7 @@
     {% block content %}
 
     <h3>Register</h3>
-    <form action="register" method="post">
+    <form action={% url 'blog_app:register' %} method="post">
       {% csrf_token %}
       <label>Username</label>
       <input type="text" name="username" /><br>
