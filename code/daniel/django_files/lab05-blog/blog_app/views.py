@@ -11,13 +11,13 @@ from django.contrib.auth import authenticate, login
 
 
 
-def profile_view(request):
+def index_view(request):
     the_query_set = CreateBlogPost.objects.all()
     context = {
         'posts': the_query_set
     }
     
-    return render(request, 'blog_app/profile_template.html', context)
+    return render(request, 'blog_app/index_template.html', context)
 
 
 def register_view(request):

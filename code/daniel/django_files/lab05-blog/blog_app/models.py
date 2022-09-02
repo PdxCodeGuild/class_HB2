@@ -12,7 +12,7 @@ class CreateBlogPost(models.Model):
     date_edited = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.Title + ' ' + self.body + ' ' + self.user + ' ' + self.date_created + ' ' + date_edited
+        return self.title + ' ' + self.body + ' ' + self.user.username + ' ' + str(self.date_created) + ' ' + str(self.date_edited)
 
 
 
