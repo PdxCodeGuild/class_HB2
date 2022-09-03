@@ -57,6 +57,7 @@ def loginto(request):
 # just show a welcome message for now
 
 def profile(request):
+    """Profile /profile/ a protected page only logged in users can see"""
     blog = BlogPost.objects.filter(user=request.user).all()
     context = {
         'message': 'Profile page',
