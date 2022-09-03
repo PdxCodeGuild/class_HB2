@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import CreateBlogPost
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
@@ -16,8 +16,7 @@ def index_view(request):
     context = {
         'posts': the_query_set
     }
-    
-    return render(request, 'blog_app/index_template.html', context)
+    return render(request, 'blog_app/index.html', context)
 
 
 def register_view(request):
@@ -31,8 +30,8 @@ def register_view(request):
         # dict_keys(['csrfmiddlewaretoken', 'username', 'password', 'discord'])
         username = request.POST['username']
         password = request.POST['password']
-        discord = request.POST['discord']
-        new_user = User.objects.create_user(username, password)
+        email = request.POST['email']
+        new_user = User.objects.create_user(username, password, email)
         return HttpResponse("You have registered")
         print("new_user:", new_user)
         return render(request, 'blog_app/register.html')
@@ -52,9 +51,16 @@ def login_view(request):
 
 
 def create_view(request):
-    return HttpResponse('create')
+    if request.method == "POST":
+        post_title = request.POST['title']
+        post_body = request.POST['body']
+        print("request.POST.keys",request.POST.keys())
+        new_post = CreateBlogPost(title=post_title, body=post_body)
+        new_post.save()
+    # return render(request, 'blog_app/create.html')
+    
 
-
+    return redirect("/")
 
 
 

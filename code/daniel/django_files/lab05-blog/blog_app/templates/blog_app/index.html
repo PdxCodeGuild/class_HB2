@@ -10,6 +10,15 @@
         {% for post in posts %}
         <li>{{ post.body }}</li>
         {% endfor %}
+
+        <form action="{% url 'blog_app:create' %}" method="POST">
+          {% csrf_token %}
+          <input type="text" name="title">Blog Title<br>
+          <input type="text" name="body">Blog Post<br>
+          
+          <button type="submit">Submit Post</button>
+        </form>
+
     </ul>
   </body>
 </html>
