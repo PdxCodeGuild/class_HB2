@@ -1,28 +1,36 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .models import CreateBlogPost
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-
-# def profile_view(request):
-#     the_query_set = 'Goodbuy, World! Enjoy the sale!'
-#     return HttpResponse(the_query_set)
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 
 
-
+@login_required
 def index_view(request):
     the_query_set = CreateBlogPost.objects.all()
     context = {
-        'posts': the_query_set
+        'posts': the_query_set,
+        'user': request.user
     }
+
     return render(request, 'blog_app/index.html', context)
 
 
+def logout_view(request):
+    logout(request)
+    return redirect('blog_app:login_view')
+
+
+
+
+
+
 def register_view(request):
-    request_method = request.method
-    print("request_method", request_method)
-    if request_method == "POST":
+    # request_method = request.method
+    # print("request_method", request_method)
+    if request.method == "POST":
         print("POST REQUEST")
         print("request.POST.keys",request.POST.keys)
         # <built-in method keys of QueryDict object at 0x7f2d674c23b0>
@@ -31,10 +39,10 @@ def register_view(request):
         username = request.POST['username']
         password = request.POST['password']
         email = request.POST['email']
-        new_user = User.objects.create_user(username, password, email)
-        return HttpResponse("You have registered")
+        new_user = User.objects.create_user(username=username, password=password, email=email)
+        login(request, new_user)
+        return render(request, 'blog_app/index.html')
         print("new_user:", new_user)
-        return render(request, 'blog_app/register.html')
     else:
         return render(request, 'blog_app/register.html')
     
@@ -47,7 +55,22 @@ def register_view(request):
 # http://127.0.0.1:8000/blog-app/register-page/blog-app/register
 
 def login_view(request):
-    return render(request, 'blog_app/login.html')
+    # request_method = request.method
+    # print("request_method", request_method)
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        if user is not None:
+            login(request, user)
+            return redirect("/")
+        else:
+            return render(request, 'blog_app/login.html')
+        #    return HttpResponse(user)
+           
+    else:
+        # return HttpResponse(request.user)
+        return render(request, 'blog_app/login.html')
 
 
 def create_view(request):
@@ -56,7 +79,7 @@ def create_view(request):
         post_body = request.POST['body']
         print("request.POST.keys",request.POST.keys())
         new_post = CreateBlogPost(title=post_title, body=post_body)
-        new_post.save()
+        # new_post.save()
     # return render(request, 'blog_app/create.html')
     
 

@@ -10,7 +10,7 @@
     {% block content %}
 
     <h3>Login</h3>
-    <form action="loginUser" method="post">
+    <form action="{% url 'blog_app:login_view' %}" method="POST">
       {% csrf_token %}
       <label>Username</label>
       <input type="text" name="username" />
@@ -18,7 +18,7 @@
       <input type="password" name="password" />
       <input type="submit" value="submit" />
     </form>
-    <a href="/logoutUser">logout</a>
+    <a href="{% url 'blog_app:logout_view' %}">logout</a>
 
     {% endblock %}
 
