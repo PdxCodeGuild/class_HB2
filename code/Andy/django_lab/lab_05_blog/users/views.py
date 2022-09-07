@@ -1,4 +1,5 @@
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import logout, authenticate
+from django.contrib.auth import login as grits_gravy
 from django.contrib.auth.decorators import login_required 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import User
@@ -24,23 +25,29 @@ def login(request):
         the_username = request_dict['username']
         the_password = request_dict['password']
         authenticated_user = authenticate(request, username=the_username, password=the_password)
+        grits_gravy(request, authenticated_user)
         # print('authenticated user', authenticated_user) 
         # print('authenticated user type', type(authenticated_user))
         # print("user:", the_username)
-        return redirect(reverse('blog_app:index'))
+        return redirect(reverse('users:profile',args=[the_username]))
 
 
 @login_required
 def profile(request, username):
+    print(username)
+    print(type(username))
     user = get_object_or_404(User,username=username)
+    print('user :',user)
+    print('user :',type(user))
 
     blog_posts = BlogPost.objects.filter(user=user)
+    print('blog post: ', blog_posts)
     # blog_posts = 'post from database'
     context ={
         'posts': blog_posts,
     }
 
-    return render(request, 'blog_app/profile.html', context )
+    return render(request, 'blog_app/profile.html', context ) #get keyword arg from view
 
 def logout_user(request):
      logout(request)
@@ -72,7 +79,7 @@ def register(request):
         user = User.objects.create_user(username=the_username,password=the_password)
         
         if user is not None:
-            login(request, user)
+            grits_gravy(request, user)
         # test_user = User(username='bunbun')
         # test_user.save()
         return redirect(reverse('users:profile', kwargs={'username':request.user.username}))
