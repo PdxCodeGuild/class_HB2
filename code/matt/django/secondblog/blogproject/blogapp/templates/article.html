@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+  {% block title %}
+    {{blogpost.title}}
+  {% endblock %}
+
+  {% block content %}
+
+    <h1>{{blogpost.title}}</h1>
+    <small>By: {{blogpost.user}}</small>
+    </br>
+    <small>Published: {{blogpost.date_created}}</small>
+    </br>
+    <hr>
+    </br>
+    {{blogpost.body}}
+    </br>
+    <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
+    <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small>
+    </br>
+    </br>
+    <a href="{% url 'profile' %}" class="btn btn-dark">Profile</a>
+
+  {% endblock %}

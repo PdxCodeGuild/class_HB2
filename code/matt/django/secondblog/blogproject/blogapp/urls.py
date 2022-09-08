@@ -1,6 +1,12 @@
 from django.urls import path
-from . import views
+from .views import ProfileView, ArticleView, CreatePostView, UpdatePostView, DeletePostView
+
+#Creating ProfileView, ArticleView, CreatePostView, etc... for the ease of a view
 
 urlpatterns = [
-    path('', views.profile, name='profile' )
+    path('', ProfileView.as_view(), name='profile'),
+    path('article/<int:pk>', ArticleView.as_view(), name='article'),
+    path('create/', CreatePostView.as_view(), name='create'),
+    path('article/edit/<int:pk>', UpdatePostView.as_view(), name='update'),
+    path('article/<int:pk>/delete', DeletePostView.as_view(), name='delete'),
 ]

@@ -1,1 +1,24 @@
-<h1>hello</h1>
+{% extends 'base.html' %}
+{% comment %} Used Extends to reach my base.html and pull from it {% endcomment %}
+   
+  {% comment %} registers or loads tag {% endcomment %}
+  {% block content %}
+
+    <h1>Blog</h1>
+
+    <ul>  
+    {% comment %} for loop to run thru and pull objects created in BlogPost {% endcomment %}
+    {% for blogpost in object_list %}
+
+        <li>
+          Title: <a href="{% url 'article' blogpost.pk %}">{{blogpost.title}}</a></br>
+          By: {{blogpost.user}}</br>
+          Body: {{blogpost.body}}</br>
+          <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
+          <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small></br>
+        </li>
+  
+    {% endfor %}
+    </ul>
+
+  {% endblock %}
