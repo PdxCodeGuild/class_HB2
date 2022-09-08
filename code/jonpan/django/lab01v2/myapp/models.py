@@ -17,9 +17,11 @@ class Priority(models.Model):
     def __str__(self):
         return self.name
 
+# null=True
+
 class TodoItem(models.Model):
     item = models.CharField(max_length=200, null=True)
-    priority = models.ForeignKey(Priority, on_delete=models.CASCADE, related_name="Priority", null=True)
+    priority = models.ForeignKey(Priority, on_delete=models.CASCADE, related_name="Priority")
     created_date = models.DateTimeField(auto_now_add=True, null=True)
     
     def __str__(self):

@@ -12,22 +12,29 @@ def myview(request):
     return render(request, 'myapp/mytemplate.html', context)
 
 def save_todo_items(request):
-    todo_items = TodoItem.objects.all()
-    priorities = Priority.objects.all()
-    context = {
-        'todo_items': todo_items,
-        'priorities': priorities
-    }
+    # todo_items = TodoItem.objects.all()
+    # priorities = Priority.objects.all()
+    # context = {
+    #     'todo_items': todo_items,
+    #     'priorities': priorities
+    # }
     form = request.POST
-    print(form)
+    # print(form.keys())
 
-    for key in form:
-        if key.startswith('item'):
-            whatever = form.get(key)
-            TodoItem.objects.create(item=whatever)
-    for key in form:
-        if key.startswith('name'):
-            whatever = form.get(key)
-            Priority.objects.create(name=whatever)
+    priority_value = form['name']
+    todoitem_text = form['item']
+
+    priority_object = Priority.objects.create(name=priority_value)
+    TodoItem.objects.create(item=todoitem_text, priority=priority_object)
+
+    # for key in form:
+    #     if key.startswith('name'):
+    #         priority_word = form.get(key)
+    #         Priority.objects.create(name=priority_word)
+
+    # for key in form:
+    #     if key.startswith('item'):
+    #         todoitem_text = form.get(key)
+    #         TodoItem.objects.create(item=todoitem_text)
 
     return HttpResponseRedirect(reverse('myapp:myview'))
