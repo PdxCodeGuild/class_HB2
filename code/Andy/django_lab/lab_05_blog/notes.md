@@ -7,6 +7,7 @@
 1. 	http://localhost:8000/users/logout-user/
 1. 	http://localhost:8000/users/profile/roblero/
 1. 	http://localhost:8000/users/profile/andy/
+1. 	http://localhost:8000/blog/create/
 1.
 1. https://docs.djangoproject.com/en/4.1/topics/auth/default/#authenticating-users
 

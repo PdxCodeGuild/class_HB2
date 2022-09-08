@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    
+    <h3>Create Post</h3>
+    <form action="{% url 'blog_app:create' %}" method="post">
+        {% csrf_token %}
+        {{ form_template.as_p }}
+        <input type="submit" value="Submit" />
+
+    </form>
+
+</body>
+</html>
+
+
+<!-- line 13 for= and line 14 id link together to be able to click on username
+as_p or ul is for sytling 
+
+-->
