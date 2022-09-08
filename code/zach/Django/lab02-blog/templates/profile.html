@@ -7,8 +7,17 @@
     <p>User: {{ user.username }}</p>
     <h3>Blog Posts</h3>
     <ul>
-        {% for post in BlogPost %}
-        <li>{{ post.title }}</li>
+        {% for blog in blogs %}
+        <li>{{ blog.title }}</li>
         {% endfor %}
     </ul>
+    <h2>Create Post</h2>
+    <form action="{% url 'blog_app:create_post' %}" method="POST">
+        {% csrf_token %}
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title"/>
+        <label for="body">Blog Post</label>
+        <input type="textarea" name="body" id="body"/>
+        <button type="submit">Create Post</button>
+    </form>
 {% endblock %}
