@@ -1,0 +1,14 @@
+<form action="upload_picture" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="picture" accept="image/*" required>
+    <input type="text" name="title" required>
+    <button type="submit">submit</button>
+</form>
+
+<div>
+    <ul>
+        {% for picture in imgs %}
+        <li><img src="{{ picture.img.url }}" height='100px'> </li>
+        {% endfor %}
+    </ul>
+</div>
