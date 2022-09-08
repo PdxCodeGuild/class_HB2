@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.shortcuts import  render, redirect
+from django.shortcuts import  render, redirect, get_object_or_404
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout, get_user
 from django.contrib.auth.forms import AuthenticationForm
@@ -89,5 +89,33 @@ def create(request):
             'form':form
         }
         return render(request, 'blog/create.html', context)
+    else:
+        return redirect('blogapp:login')
+
+# Allow users to edit their BlogPosts by creating an edit page. 
+# Make sure you prevent users from editing eachother's blog posts (make sure the id for the blog post passed in via the path corresponds to a BlogPost for the logged-in User).
+# Edit Post /edit/<int:blogpost_id>/
+# form for editing an existing post
+
+def edit(request, pk):
+    template = 'blog/editpost.html'
+    post = get_object_or_404(BlogPost, pk=pk)
+    if User.is_authenticated:
+        if request.method == 'POST':
+            form = BlogForm(request.POST, instance=post)
+       
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Blog Post Updated')
+            else:
+                pass
+        else:
+            form = BlogForm(instance=post)      
+
+        context = {
+            'form': form,
+            'post': post,
+        }
+        return render(request, template, context)
     else:
         return redirect('blogapp:login')
