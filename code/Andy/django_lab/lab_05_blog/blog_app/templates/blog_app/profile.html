@@ -12,6 +12,8 @@
     <div class="container">
 
         <ul>
+            <p><a href="{% url 'blog_app:create' %}">Create New Blog?</a></p>
+
             {% for post in posts %}
         
 
@@ -27,6 +29,7 @@
                 </div>
             </div>
             {% endfor %}
+            <p><a href="{% url 'blog_app:create' %}">Create New Blog?</a></p>
         </ul>
     </div>
 
