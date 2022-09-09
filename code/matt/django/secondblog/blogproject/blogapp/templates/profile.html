@@ -13,11 +13,16 @@
         <li>
           Title: <a href="{% url 'article' blogpost.pk %}">{{blogpost.title}}</a></br>
           By: {{blogpost.user}}</br>
-          Body: {{blogpost.body}}</br>
-          <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
-          <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small></br>
-        </li>
-  
+          Body: {{blogpost.body|truncatechars:100}}</br>
+
+          {% if user.is_authenticated %}
+            {% if user.id == blogpost.user.id %}
+              <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
+              <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small></br>
+            {% endif %}
+          {% endif %}
+          </li>
+          
     {% endfor %}
     </ul>
 

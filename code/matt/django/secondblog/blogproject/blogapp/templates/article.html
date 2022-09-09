@@ -4,7 +4,7 @@
   {% endblock %}
 
   {% block content %}
-
+    
     <h1>{{blogpost.title}}</h1>
     <small>By: {{blogpost.user}}</small>
     </br>
@@ -13,9 +13,13 @@
     <hr>
     </br>
     {{blogpost.body}}
-    </br>
-    <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
-    <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small>
+    {% if user.is_authenticated %}
+      {% if user.id == blogpost.user.id %}
+        </br>
+        <small><a href="{% url 'update' blogpost.pk %}">Edit |</a></small>
+        <small><a href="{% url 'delete' blogpost.pk %}">Delete</a></small>
+      {% endif %}
+    {% endif %}
     </br>
     </br>
     <a href="{% url 'profile' %}" class="btn btn-dark">Profile</a>

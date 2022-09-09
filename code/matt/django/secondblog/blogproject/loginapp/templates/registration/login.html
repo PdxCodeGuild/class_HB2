@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
   {% block title %}
-    Add New Blog 
+    Login 
   {% endblock %}
   {% block content %}
 
-  {% if user.is_authenticated %}
-    <h1>Add Blog</h1>
+    <h1>Login</h1>
     </br>
     </br>
     <div class="form-group">
@@ -15,18 +14,6 @@
       {% csrf_token %}
       {% comment %} as_p means every field will be wrapped in a p-tag {% endcomment %}
       {{form.as_p}}
-      <button class="btn btn-dark">Post</button>
+      <button class="btn btn-dark">Login</button>
     </div>
-
-    <script>
-      var name ='{{ user.id }}';
-      document.getElementById("user").value
-      = name; 
-    </script>
-
-  {% else %}
-  Something went wrong... Ensure that you're logged in
-  {% endif %}
-  
-
   {% endblock %}

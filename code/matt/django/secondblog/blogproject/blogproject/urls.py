@@ -19,4 +19,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blogapp.urls')),
+    #django authentication system. Has a package inside of it that will take care of all our urls for us
+    #Simply put, beacuse of this, we do not need a login page, logout page, registration page, etc... it will handle those urls for us for the most part
+    path('loginapp/', include('django.contrib.auth.urls')),
+    #Why two urls that point to the same place? First: The order of operations is important, so we need this one listed first
+    #because django will try to use these authentication urls that come with this package and if it see something else it needs to 
+    #know where to go, and in that case we have it pointed at our loginapp.urls
+    path('loginapp/', include('loginapp.urls')),
 ]

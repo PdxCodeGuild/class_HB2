@@ -4,17 +4,26 @@
     Update Blog Post 
   {% endblock %}
   {% block content %}
+  
+  {% if user.is_authenticated %}
+    {% if user.id == blogpost.user.id %}
+      <h1>Edit Post</h1>
+      </br>
+      </br>
+      {% comment %} the form-group is for a forms.py so we can edit it how ever we want {% endcomment %}
+      <div class="form-group">
+      <form method="POST">
+        {% comment %} Needed for security reasons {% endcomment %}
+        {% csrf_token %}
+        {% comment %} as_p means every field will be wrapped in a p-tag {% endcomment %}
+        {{form.as_p}}
+        <button class="btn btn-dark">Update</button>
+      </div>
+      {% else %}
+      Not the signed into the right user
+      {% endif %}
+  {% else %}
+  Something went wrong... Ensure that you're logged in
+  {% endif %}
 
-    <h1>Edit Post</h1>
-    </br>
-    </br>
-    {% comment %} the form-group is for a forms.py so we can edit it how ever we want {% endcomment %}
-    <div class="form-group">
-    <form method="POST">
-      {% comment %} Needed for security reasons {% endcomment %}
-      {% csrf_token %}
-      {% comment %} as_p means every field will be wrapped in a p-tag {% endcomment %}
-      {{form.as_p}}
-      <button class="btn btn-dark">Update</button>
-    </div>
   {% endblock %}

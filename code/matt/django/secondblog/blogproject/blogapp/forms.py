@@ -19,7 +19,7 @@ class BlogForm(forms.ModelForm):
        widgets = {
         'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
         'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Body'}),
-        'user': forms.Select(attrs={'class': 'form-control'}),
+        'user': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'user', 'type': 'hidden'}),
         'public': forms.CheckboxInput(attrs={'class': 'form-control'}),
        }
 
