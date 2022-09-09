@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
-from .models import Priority, Todo
+from .models import Todo
 
 # from .todo_app import TodoApp
 
