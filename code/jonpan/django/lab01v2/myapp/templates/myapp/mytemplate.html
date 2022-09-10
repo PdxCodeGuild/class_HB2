@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <style>
+            td {
+                padding: 15px;
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>Todo List</title>
+    </head>
+    <body>
+        <form action="{% url 'myapp:save_todo_items' %}" method="POST">
+            {% csrf_token %}
+            input todo item --> <input type="text" name="item" id="item">
+            <br>
+            choose a priority -->
+            <input type="radio" name="name" id="low" value="LOW">low
+            <input type="radio" name="name" id="medium" value="MEDIUM">medium
+            <input type="radio" name="name" id="high" value="HIGH">high
+            <button type="submit" id="submit">submit</button>
+        </form><br><br>
+        <table>
+            <tr style="outline: thin solid">
+                <td style="outline: thin solid">
+                    <p>Todo Items</p>
+                </td>
+                <td style="outline: thin solid">
+                    <p>Priority</p>
+                </td>
+                <td style="outline: thin solid">
+                    <p>Created Date</p>
+                </td>
+            </tr>
+            <tr style="outline: thin solid">
+                <td style="outline: thin solid">
+                    <ul>
+                        {% for x in todo_items %}
+                        <li>{{ x.item }} </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td style="outline: thin solid">
+                    <ul>
+                        {% for x in priorities %}
+                        <li>{{ x.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td style="outline: thin solid">
+                    <ul>
+                        {% for x in todo_items %}
+                        <li> {{ x.created_date }} </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
