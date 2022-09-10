@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+  {% block title %}
+    Register 
+  {% endblock %}
+  {% block content %}
+
+    <h1>Register</h1>
+    </br>
+    </br>
+    <div class="form-group">
+    <form method="POST">
+      {% comment %} Needed for security reasons {% endcomment %}
+      {% csrf_token %}
+      {% comment %} as_p means every field will be wrapped in a p-tag {% endcomment %}
+      {{form.as_p}}
+      <button class="btn btn-dark">Register</button>
+    </div>
+  {% endblock %}
