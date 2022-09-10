@@ -23,5 +23,5 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-class User(AbstractUser):
-    discord = models.CharField(max_length=200, null=True)
+# class User(AbstractUser):
+#     discord = models.CharField(max_length=200, null=True)
