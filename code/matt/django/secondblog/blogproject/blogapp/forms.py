@@ -1,5 +1,3 @@
-from msilib.schema import CheckBox
-from socket import fromshare
 from django import forms
 from .models import BlogPost
 
