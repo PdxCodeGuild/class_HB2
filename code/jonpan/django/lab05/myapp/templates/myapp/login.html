@@ -1,0 +1,11 @@
+{% if errors %}
+    {% for error in errors %}
+        <div>{{ error }}</div>
+    {% endfor %}
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    Enter your username: <input type="text" name="username" placeholder="Username"><br><br>
+    Enter your password: <input type="password" name="password" placeholder="Password"><br><br>
+    <button>Login</button>   
+</form>

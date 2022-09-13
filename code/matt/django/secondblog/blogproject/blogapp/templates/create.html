@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+  {% block title %}
+    Add New Blog 
+  {% endblock %}
+  {% block content %}
+
+  {% if user.is_authenticated %}
+    <h1>Add Blog</h1>
+    </br>
+    </br>
+    <div class="form-group">
+    <form method="POST">
+      {% comment %} Needed for security reasons {% endcomment %}
+      {% csrf_token %}
+      {% comment %} as_p means every field will be wrapped in a p-tag {% endcomment %}
+      {{form.as_p}}
+      <button class="btn btn-dark">Post</button>
+    </div>
+
+    <script>
+      var name ='{{ user.id }}';
+      document.getElementById("user").value
+      = name; 
+    </script>
+
+  {% else %}
+  Something went wrong... Ensure that you're logged in
+  {% endif %}
+  
+
+  {% endblock %}

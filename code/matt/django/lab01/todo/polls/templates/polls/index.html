@@ -1,0 +1,42 @@
+<!-- {% if uncompleted_todoitem %}
+<ul>
+  {% for todoitem in uncompleted_todoitem %}
+  <li>
+    <li><a href="/polls/{{ todoitem.id }}/">{{ todoitem.text }}</a></li>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available</p>
+{% endif %} -->
+
+<h1 style="margin-left: 35px">Todo Items</h1>
+{% if uncompleted_todoitem %}
+<ul>
+  {% for todoitem in uncompleted_todoitem %}
+  <li
+    style="
+      text-align: left;
+      list-style: none;
+      font-size: x-large;
+      line-height: 40px;
+    "
+  >
+    Priority level: {{ todoitem.priority }} | Task: {{todoitem.text}} | Date
+    created: {{ todoitem.created_date }} |
+  </li>
+  {% endfor %}
+</ul>
+<button style="margin-left: 35px; margin-top: 10px">
+  <a style="font-size: medium; color: black" href="todoitem_form/"
+    >Add another item? Click here</a
+  >
+</button>
+{% else %}
+<p>No current todo items</p>
+<button style="margin-left: 35px; margin-top: 10px">
+  <a style="font-size: medium; color: black" href="todoitem_form/"
+    >Add another item? Click here</a
+  >
+</button>
+{% endif %}

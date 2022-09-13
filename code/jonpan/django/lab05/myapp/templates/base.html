@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>JP's Blog</title>
+    </head>
+    <body>
+        <header>
+            <h1>{% block title %}{% endblock %}</h1>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <div>
+                {% if user.is_authenticated %}
+                <p>Logged in as: <span>{{ user.username }}</span></p>
+                <a href="{% url 'myapp:user_profile' %}">My Profile</a><br><br>
+                <a href="{% url 'myapp:sign_out' %}">Logout</a><br><br>
+                {% else %}
+                <a href="{% url 'myapp:sign_in' %}">Sign In</a><br><br>
+                <a href="{% url 'myapp:register' %}">Sign Up</a><br><br>
+                {% endif %}
+              </div>
+        </footer>
+    </body>
+</html>

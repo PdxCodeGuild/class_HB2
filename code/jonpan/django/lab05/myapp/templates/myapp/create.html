@@ -1,0 +1,7 @@
+
+<form action="{% url 'myapp:create' %}" method="post">
+    {% csrf_token %}
+    <p>Enter the title of your blog post: <input type="text" name="title" placeholder="Title"></p>
+    <p>Enter the body of your blog post: <input type="text" name="body" placeholder="Body"></p>
+    <button type="submit">submit</button>
+</form>
