@@ -10,11 +10,11 @@
     <div>
         {% if user.is_authenticated %}
         <span>{{ user.username }}</span>
-        <a href="{% url 'users:profile' %}">My Profile</a>
-        <a href="{% url 'users:logout' %}">Logout</a>
+        <a href="{% url 'accounts:profile' %}">My Profile</a>
+        <a href="{% url 'accounts:logout' %}">Logout</a>
         {% else %}
-        <a href="{% url 'users:login' %}">Sign-In</a>
-        <a href="{% url 'users:register' %}">Sign-Up</a>
+        <a href="{% url 'accounts:login' %}">Sign-In</a>
+        <a href="{% url 'accounts:register' %}">Sign-Up</a>
         {% endif %}
       </div>
     <ul>
