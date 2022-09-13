@@ -1,11 +1,6 @@
 from rest_framework import serializers
 from pokemon.models import Pokemon, PokemonType
 
-class NestedPokemonSerializer(serializers.ModelSerializer):
-    class Meta:
-        fields = ('name',)
-        model = Pokemon
-
 class NestedTypeSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('name',)
