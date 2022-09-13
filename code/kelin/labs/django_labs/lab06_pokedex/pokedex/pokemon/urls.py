@@ -1,13 +1,8 @@
-from rest_framework.routers import DefaultRouter
-from .views import PokemonViewSet, TypeViewSet
+from django.urls import path
+from .views import pokemonProfile
 
-router = DefaultRouter()
+app_name = 'pokemon'
 
-router.register('pokemon', PokemonViewSet, basename='pokemon')
-router.register('types', TypeViewSet, basename='types')
-
-urlpatterns = router.urls + [
-    
+urlpatterns = [
+    path('<int:number>/', pokemonProfile, name='pokemon_profile')
 ]
-
-
