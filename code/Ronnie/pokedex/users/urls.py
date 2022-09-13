@@ -2,7 +2,7 @@ from django.urls import path, include
 from .views import profile, register
 
 
-app_name = "users"
+app_name = "accounts"
 
 urlpatterns = [
     path('profile/', profile, name="profile"),
