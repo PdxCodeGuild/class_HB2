@@ -19,7 +19,4 @@ class CreateBlogPost(models.Model):
 
 
 
-#  + self.user.username +
-
-
 

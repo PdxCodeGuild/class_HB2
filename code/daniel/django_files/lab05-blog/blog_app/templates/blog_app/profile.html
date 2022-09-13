@@ -5,8 +5,8 @@
     <title> Profile Page </title>
   </head>
   <body>
-    <h3> Welcome {{ user.user }} </h3>
-  
+    <h3> Welcome {{ user }} to your profile </h3>
+
     <form action="{% url 'blog_app:create_view' %}" method="POST">
         {% csrf_token %}
   
@@ -15,31 +15,19 @@
         Blog Post<br>
         <input type="text" name="body"><br>
   
-  
-        
         <button type="submit">Submit Post</button><br>
-      </form>
+    </form>
         <a href="{% url 'blog_app:logout_view' %}"><button type="submit">Logout</button></a>
 
-    <ol>
 
         {% for post in posts %}
-        <li>{{ post.title }}</li>
-        <li>{{ post.body }}</li>
-        <li>{{ post.user }}</li>
+        <h3>{{ post.title }}</h3>
+        <li>{{ post.body }}</li><br>
+        <!-- <li>{{ post.user }}</li>
         <li>{{ post.date_created }}</li>
         <li>{{ post.date_edited }}</li>
-        <li>{{ post.public }}</li><br>
+        <li>{{ post.public }}</li><br> -->
         {% endfor %}
-
-    </ol>
-
-
-
-
-        
-
-
 
     
   </body>

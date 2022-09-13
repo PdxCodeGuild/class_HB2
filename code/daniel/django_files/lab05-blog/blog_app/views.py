@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import CreateBlogPost
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -19,14 +19,14 @@ def index_view(request):
 
 @login_required
 def profile_view(request, username):
-    user = request.user
-    the_query_set = CreateBlogPost.objects.filter(user = user)
+    the_user = get_object_or_404(User, username=username)
+    print(type(the_user))
+    the_query_set = CreateBlogPost.objects.filter(user=the_user)
     context = {
         'posts': the_query_set,
-        'user': request.user
-    }
+        }
 
-    return render(request, 'blog_app/index.html', context)
+    return render(request, 'blog_app/profile.html', context)
 
 
 
@@ -77,7 +77,14 @@ def login_view(request):
         if user is not None:
             login(request, user)
             # return redirect("/")
-            return redirect(reverse('blog_app:profile_view', kwargs={ 'username': user.username})) 
+            print (user.username)
+            print (reverse('blog_app:profile_view', kwargs={'username': user.username}))
+            # print (redirect('blog_app:profile_view', username=user.username))
+            # print (reverse('blog_app:profile_view', {'username': user.username}))
+            return HttpResponseRedirect(
+                reverse('blog_app:profile_view', kwargs={'username': user.username})
+                )
+           
         else:
             return render(request, 'blog_app/login.html')
         #    return HttpResponse(user)
@@ -88,18 +95,18 @@ def login_view(request):
 
 
 def create_view(request):
-    if request.method == "POST":
-        post_title = request.POST['title']
-        post_body = request.POST['body']
-        post_user = request.user
-        # print('title: post_title, )
-        print("request.POST.keys",request.POST.keys())
-        CreateBlogPost.objects.create(title=post_title, body=post_body, user=post_user)
-        
-    # return render(request, 'blog_app/create.html')
+    print(request.POST)
+    post_title = request.POST['title']
+    post_body = request.POST['body']
+    post_user = request.user
+    # print('title: post_title, )
+    print("request.POST.keys",request.POST.keys())
+    new_post = CreateBlogPost.objects.create(title=post_title, body=post_body, user=post_user)
+    print(new_post, new_post.id)
+            
+    return redirect("/")
     
 
-    return redirect("/")
 
 
 
