@@ -11,4 +11,4 @@ def create_post(request):
     body = request.POST['body']
     user = get_user(request)
     BlogPost.objects.create(user=user, title=title, body=body)
-    return HttpResponseRedirect(reverse('users:profile'))
+    return HttpResponseRedirect(reverse('accounts:profile'))
