@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Main Blog Page </title>
+  </head>
+  <body>
+    <h3> Welcome {{user}} to the main blog page </h3>
+    
+    <form action="{% url 'blog_app:create_view' %}" method="POST">
+      {% csrf_token %}
+
+      Blog Title<br>
+      <input type="text" name="title"><br>
+      Blog Post<br>
+      <input type="text" name="body"><br>
+
+
+      
+      <button type="submit">Submit Post</button><br>
+    </form>
+      <a href="{% url 'blog_app:logout_view' %}"><button type="submit">Logout</button></a>
+
+    <ol>
+
+        {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <li>{{ post.body }}</li>
+        <li>{{ post.user }}</li>
+        <li>{{ post.date_created }}</li>
+        <li>{{ post.date_edited }}</li>
+        <li>{{ post.public }}</li><br>
+        {% endfor %}
+
+    </ol>
+
+
+        
+  </body>
+</html>
