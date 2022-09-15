@@ -4,7 +4,7 @@
 // #Version 1
 
 //Default list that was given
-let nums = [5, 0, 8, 3, 4, 1, 6]
+let nums = [5, 110, 8, 3, 4, 1, 6]
 let total = 0
 
 //For loop for running through the list and getting a 'running sum'
@@ -13,16 +13,26 @@ for (let num=0; num<nums.length; num++) {
 }
 //Finding the mean  
 let avg = total / nums.length
-alert(avg)
+// alert(avg)
 
 // #Version 2
 
-function sum(nums) {
-    let total = 0
-    for (let num=0; num<nums.length; num++) {
-        total += nums[num];
-        return total
-}
+
+
+
+
+
+
+
+
+
+
+// function sum(nums) {
+//     let total = 0
+//     for (let num=0; num<nums.length; num++) {
+//         total += nums[num];
+//         return total
+// }
 
 // #Def function for summing numbers in a list
 // def sum(nums):
@@ -33,11 +43,31 @@ function sum(nums) {
 //     return total
 
 function userInput() {
-    let user = prompt("Enter a number (Make sure there are no spaces)\nType 'done' to exit\n")
-    return user
+    let number = prompt("Enter a number (Make sure there are no spaces)\nType 'done' to exit\n")
+    return number
 }
 
-let empty_list = []
+function getNums() {
+    let array_of_nums = []
+    let i=0
+    while (i<5) {
+        let user_input = userInput()
+        array_of_nums.push(user_input)
+        i++
+        if (user_input == 'done') {
+            alert("Thank you for your time")
+            break
+        }
+       let added = 
+    }
+}
+
+
+
+
+
+
+// alert(userInput())
 
 
 // // #Def function for user input
