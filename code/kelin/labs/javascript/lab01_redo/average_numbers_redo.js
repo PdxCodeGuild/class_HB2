@@ -35,7 +35,6 @@ var average = sum / numslen;
 
 // alert(average)
 
-
 /* Version 2 Python
 
 user_nums = []
@@ -72,7 +71,7 @@ function num_prompt() {
 
     // Prompts for a number 5 times
           
-    document.write('Your average : ' + sum / i);
+    document.write('Average: ' + sum / i);
     }
     num_prompt();
 
