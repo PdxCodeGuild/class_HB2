@@ -6,7 +6,10 @@ let measurements = {
 }
 
 function convert(){
+    event.preventDefault();
     let meters = document.getElementById('meters').value;
     let units = document.getElementById('unit').value;
-    alert(meters + ' ' + units);
-}
+    let algo = meters * measurements[units];
+    const para = document.createElement('p');
+    para.innerText = meters + ' ' + units + ' ' + 'equals' + ' ' + algo + ' ' + 'meters';
+    document.body.appendChild(para);}

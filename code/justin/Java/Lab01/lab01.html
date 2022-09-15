@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab01</title>
 </head>
-<body>
+<body style="background-color: black;color: white;">
     <h1>UNIT CONVERTER</h1>
     <script src="lab01.js">          
     </script>
-    <form onsubmit="convert()">
-        <label for="unit">Enter Unit('ft','mi','m','km'):</label>
-        <input type="text" id="unit" name="unit"><br><br>
+    <form onsubmit="convert()" method="POST">
+        <label for="unit">Enter Units:</label>
+        <select name="unit" id="unit">
+            <option value="ft">Feet</option>
+            <option value="mi">Miles</option>
+            <option value="m">Meters</option>
+            <option value="km">Kilometers</option>
+        </select><br><br>
+        <!-- <input type="text" id="unit" name="unit"><br><br> -->
         <label for="meters">Enter Length:</label>
         <input type="text" id="meters" name="meters"><br><br>
         <input type="submit" value="Submit">
     </form>
-      <div>Hello There</div>
+
+    
+    <!-- <div>Hello There</div> -->
 </body>
 </html>
