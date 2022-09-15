@@ -2,7 +2,7 @@
 
 ## Version 1
 
-Pick a Python lab and re-do it in JavaScript. You should first try to write them using JavaScript's `prompt` and `alert` in place of Python's `input` and `print`.
+Pick a Python lab and re-do it in JavaScript. You should first try to write them using JavaScript's `prompt`, `console.log` and `alert` in place of Python's `input` and `print`.
 
 ### Possible lab choices, among others
 - [Lab 01: Average Numbers](../../1%20Python/labs/01%20Average%20Numbers.md)
