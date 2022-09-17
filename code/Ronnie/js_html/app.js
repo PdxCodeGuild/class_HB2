@@ -56,11 +56,11 @@
 // let drop = document.querySelector('#ddl')
 // console.log(ddl[2].value)
 
-let container_div = document.querySelector('#container_div')
-let myApp = document.querySelector('#myApp')
-btn.style.backgroundColor = "lightblue"
-btn.style.border = "1px white solid"
-btn.innerText = 'click me'
-btn.style.marginTop = '20px'
+// let container_div = document.querySelector('#container_div')
+// let myApp = document.querySelector('#myApp')
+// btn.style.backgroundColor = "lightblue"
+// btn.style.border = "1px white solid"
+// btn.innerText = 'click me'
+// btn.style.marginTop = '20px'
 
-container_div.appendChild(btn)
+// container_div.appendChild(btn)
