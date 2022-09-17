@@ -2,7 +2,7 @@
 
 # Weather API
 
-Let's use the [OpenWeatherMap API](https://openweathermap.org/api/one-call-api) to display a weather forecast.
+Let's use the [OpenWeatherMap API]((https://openweathermap.org/current)) to display a weather forecast.
 
 ## Part 1: Setup
 
