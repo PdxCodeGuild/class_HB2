@@ -70,7 +70,7 @@ Presentation Day: November 4th, 2022
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- |
 | 01  | [JS Redo](4%20JavaScript/labs/01%20JavaScript%20Redo.md)                     | 13 Sep | 27 Sep | 31 Aug |
 | 02  | [Weather Api](4%20JavaScript/labs/Weather%20API.md) | 15 Sep | 29 Sep |
-|   |                     |  |  |
+| 03  |  [Calculator Lab](4%20JavaScript/labs/Calculator_Lab.md)                   | 16 Sep  | 30 Aug |
 |   |               |  | |
 
 
