@@ -26,39 +26,39 @@ Presentation Day: November 4th, 2022
 
 ## Python Labs Assigned:
 
-| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
-| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Average Numbers](1%20Python/labs/01%20Average%20Numbers.md)       | 28 Jun        | 05 Jul                | 12 Jul        |
-| 02  | [Unit Converter](1%20Python/labs/02%20Unit%20Converter.md)         | 30 Jun        | 08 Jul                | 14 Jul        |
-| 03  | [Number To Phrase](1%20Python/labs/03%20Number%20To%20Phrases.md)  | 01 Jul        | 09 Jul                | 15 Jul        |
-| 04  | [Black Jack Advice](1%20Python/labs/04%20Black%20Jack%20Advice.md) | 06 Jul        | 13 Jul                | 20 Jul        |
-| 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 14 Jul                | 21 Jul        |
-| 06  | [Make Change](1%20Python/labs/06%20Make%20Change.md)               | 12 Jul        | 19 Jul                | 26 Jul        |
-| 07  | [Credit Card Validation](1%20Python/labs/07%20Credit%20Card%20Validation.md)| 14 Jul  | 21 Jul             | 28 Jul        |
-| 08  | [Dad Joke API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 22 Jul                | 29 Jul        |
-| 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 26 Jul                | 02 Aug        |
-| 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 28 Jul                | 04 Aug        |
-| 11  | [Contact List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 01 Aug                | 08 Aug        |
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class |
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- |
+| 01  | [Average Numbers](1%20Python/labs/01%20Average%20Numbers.md)       | 28 Jun        | 12 Jul                |
+| 02  | [Unit Converter](1%20Python/labs/02%20Unit%20Converter.md)         | 30 Jun        | 14 Jul                |
+| 03  | [Number To Phrase](1%20Python/labs/03%20Number%20To%20Phrases.md)  | 01 Jul        | 15 Jul                |
+| 04  | [Black Jack Advice](1%20Python/labs/04%20Black%20Jack%20Advice.md) | 06 Jul        | 20 Jul                | 
+| 05  | [Pick 6](1%20Python/labs/05%20Pick6.md)                            | 07 Jul        | 21 Jul                |
+| 06  | [Make Change](1%20Python/labs/06%20Make%20Change.md)               | 12 Jul        | 26 Jul                |
+| 07  | [Credit Card Validation](1%20Python/labs/07%20Credit%20Card%20Validation.md)| 14 Jul  | 28 Jul             |
+| 08  | [Dad Joke API](1%20Python/labs/08%20Dad%20API.md)                       | 15 Jul        | 29 Jul           |
+| 09  | [Quotes API](1%20Python/labs/09%20Quotes%20API.md)                 | 19 Jul        | 02 Aug               |
+| 10  | [ATM](1%20Python/labs/10%20ATM.md)                                 | 21 Jul        | 04 Aug                 |
+| 11  | [Contact List](1%20Python/labs/11%20Contact%20List.md)            | 25 Jul        | 08 Aug                |
 | mini-capstone | [Python mini-capstone](https://github.com/PdxCodeGuild/class_HB2/blob/main/1%20Python/labs/MiniCapstone.md) | | | 03 Aug |
 
 ## Flask - HTML - CSS:
 
-| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
-| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
-| 01  | [Bio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)         | 01 Aug        | 08 Aug                | 15 Aug        |
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class | 
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- | 
+| 01  | [Bio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)         | 01 Aug        | 15 Aug                | 
 | -or- | | | | |
-| mob 01 | [Class Animal](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 08 Aug         | 15 Aug        |
-| 02 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        | 02 Aug        | 09 Aug                | 16 Aug        |
-| 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 10 Aug                | 17 Aug        |
-| 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 15 Aug | 22 Aug     |
-| 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 16 Aug | 23 Aug     |
-| 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) | 11 Aug    |  18 Aug               | 25 Aug |
+| mob 01 | [Class Animal](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 15 Aug         | 
+| 02 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        | 02 Aug        | 16 Aug                | 
+| 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 17 Aug                | 
+| 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 22 Aug | 
+| 05 | [Personal Portfolio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/05%20Personal%20Portfolio.md)   | 09 Aug | 23 Aug |
+| 06 | [Flask Redo](2%20Flask%20+%20HTML%20+%20CSS/labs/06%20Flask%20Redo.md) | 11 Aug    |  25 Aug               |
 
 
 ## Django:
 
-| Lab | Name                                                               | Date Assigned | Due By Start Of Class | Hard Due Date |
-| --- | ------------------------------------------------------------------ | ------------- | --------------------- | ------------- |
+| Lab | Name                                                               | Date Assigned | Due By Start Of Class | 
+| --- | ------------------------------------------------------------------ | ------------- | --------------------- | 
 | 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 24 Aug | 31 Aug |
 | 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | To Be Determined | | |
 | 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 30 Aug | 6 Sep |
