@@ -23,7 +23,7 @@ navigator.geolocation.getCurrentPosition(position => {
 Once you have the latitude and longitude, you can make the call to [OpenWeatherMap](https://openweathermap.org/api/one-call-api) to get the forecast and display the information in the page.
 
 
-`https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&
+`https://api.openweathermap.org/data/2.5/weather?lat=33.441792&lon=-94.037689&
 exclude=hourly,daily&appid={YOUR API KEY}`
 
 
