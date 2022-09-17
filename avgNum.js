@@ -22,11 +22,16 @@ let inputBool = true
 while (inputBool == true) {
     askNum = prompt("Enter a number or type 'done' when finished: ")
     if (askNum != "done") {
-        askNum.app
-
+        numList.push(parseInt(askNum))
     }
-
+    else {
+        inputBool = false
+    }
 }
+for (n in numList) {
+    runningSum += numList[n]
+}
+avgNum = Number(runningSum) / numList.length   
 
-
-
+console.log("running sum:", runningSum, "average num:", avgNum)
+console.log(numList)
