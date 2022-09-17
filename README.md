@@ -59,16 +59,16 @@ Presentation Day: November 4th, 2022
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | 
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | 
-| 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 24 Aug | 31 Aug |
+| 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 31 Aug | |
 | 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | To Be Determined | | |
-| 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 30 Aug | 6 Sep |
+| 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 06 Sep ||
 | 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | To Be Determined | | |
 
 ## JavaScript:
 
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class |
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- |
-| 01  | [JS Redo](4%20JavaScript/labs/01%20JavaScript%20Redo.md)                     | 13 Sep | 27 Sep | 31 Aug |
+| 01  | [JS Redo](4%20JavaScript/labs/01%20JavaScript%20Redo.md)                     | 13 Sep | 27 Sep ||
 | 02  | [Weather Api](4%20JavaScript/labs/Weather%20API.md) | 15 Sep | 29 Sep |
 | 03  |  [Calculator Lab](4%20JavaScript/labs/Calculator_Lab.md)                   | 16 Sep  | 30 Aug |
 |   |               |  | |
