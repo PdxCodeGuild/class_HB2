@@ -22,12 +22,22 @@ function success(position){
             console.log(response.data.name);
             console.log(response.data.main['temp']);
             console.log(response.data.weather[0]['description']);
+            let loc = document.querySelector('#location');
+            let temp = document.querySelector('#temp');
+            let weather = document.querySelector('#weather');
+            loc.innerHTML = response.data.name;
+            loc.style.fontSize = '30px';
+            temp.innerHTML = response.data.main['temp'];
+            weather.innerHTML = response.data.weather[0]['description'];
+
 
         })
     }
 }
 
 window.onload = getLocation()
+
+
 
 
 
