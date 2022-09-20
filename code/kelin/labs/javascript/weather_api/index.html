@@ -12,8 +12,16 @@
 <button onclick="getLocation()">Try It</button>
 <p id="demo"></p>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script type="application/javascript" src="app_connect.js"></script>
-<script type="text/javascript" src="secrets.js"></script>
-
+<script type="text/javascript" src="app_connect.js"></script>
+<script src="secrets.js"></script>
+<h1>Get Current Weather</h1>
+<button onclick="getWeather()">Click Here</button>
+<!-- Call function to display current weather -->
+<h2 id="location"></h2>
+<h3 id="datetime"></h3>
+<section id="weather">
+    <p id="weather_description"></p>
+<!-- Gets weather icon -->
+</section>
 </body>
 </html>
