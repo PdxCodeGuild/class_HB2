@@ -1,8 +1,5 @@
 var x = document.getElementById("demo");
 
-// let lat = position.coords.latitude
-// let lon = position.coords.longitude
-
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -34,6 +31,5 @@ function getWeather() {
 
 }
 
-getWeather()
-
-// Prints lat and long in console
+function getWeather()
+  
