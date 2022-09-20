@@ -13,18 +13,21 @@ function getLocation() {
 
 function getWeather() {
     navigator.geolocation.getCurrentPosition(position => {
-    lat = position.coords.latitude
-    long = position.coords.longitude
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${key}`)
-    
-    // &exclude=hourly,daily
-    // &units=imperial
+        let lat = position.coords.latitude
+        let long = position.coords.longitude
 
-    .then(function (response) {
-        console.log(response.data);
-
-    // .then(response => response.json())
-    // console.log(response.json)
-    });
-})
+        axios({
+            method: 'get',
+            url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=imperial`
+          })
+            .then((response) => {
+              console.log(response.data)
+              // document.getElementById("location2").innerHTML = response.data.name
+              let unix_timestamp = 1592482891
+              let datetime = new Date(unix_timestamp*1000)
+              document.getElementById("datetime").innerHTML = "Current Time: " + datetime
+              document.getElementById("weather").innerHTML = "Current Weather: " + response.data.weather['0']['main'] 
+              document.getElementById("temp").innerHTML = "Current Temperature: " + response.data.main['temp'] + " degrees Fahrenheit in " + response.data.name 
+            })
+          })
 }
