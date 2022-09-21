@@ -71,7 +71,7 @@ Presentation Day: November 4th, 2022
 | 01  | [JS Redo](4%20JavaScript/labs/01%20JavaScript%20Redo.md)                     | 13 Sep | 27 Sep ||
 | 02  | [Weather Api](4%20JavaScript/labs/Weather%20API.md) | 15 Sep | 29 Sep |
 | 03  |  [Calculator Lab](4%20JavaScript/labs/Calculator_Lab.md)                   | 16 Sep  | 30 Sep |
-|   |               |  | |
+| 04 |    [Vue Redo](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/02%20Vue%20Redo.md)|20 Sep| 4 Oct|
 
 
 ## Getting Unstuck
