@@ -28,6 +28,9 @@ function getWeather() {
               document.getElementById("datetime").innerHTML = "Current Time: " + datetime
               document.getElementById("weather").innerHTML = "Current Weather: " + response.data.weather['0']['main'] 
               document.getElementById("temp").innerHTML = "Current Temperature: " + response.data.main['temp'] + " degrees Fahrenheit in " + response.data.name 
+              let img = document.createElement('img')
+              img.src = 'http://openweathermap.org/img/wn/' + response.data.weather['0']['icon'] + '.png'
+              document.getElementById("weather").appendChild(img)
             })
           })
 }
