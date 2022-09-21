@@ -20,6 +20,21 @@ navigator.geolocation.getCurrentPosition(position => {
         dtTitle.innerHTML = "<h3>" + datetime + "</h3>"
         console.log(data)
         console.log(datetime) // Thu Jun 18 2020 05:21:31 GMT-0700 (Pacific Daylight Time)
+
+
+       
+        let weatherMain = document.querySelector("#weather_main")
+        weatherMain.innerHTML = "<h3>" + response.data["weather"][0]["main"] + "</h3>"
+        console.log(response.data["weather"][0]["main"])
+        
+        
+        
+        let weatherIconCode = document.querySelector("#weather_icon")
+        weatherIconCode.innerHTML = "<img src='http://openweathermap.org/img/wn/" + response.data["weather"][0]["icon"] + "@2x.png'>"
+
+        console.log(weatherIconCode)
+
+        
     })
     
 })
