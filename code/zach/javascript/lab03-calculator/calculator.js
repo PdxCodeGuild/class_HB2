@@ -50,8 +50,6 @@ function operator(num1, num2, operation) {
         } else {
             return num1 / num2
         }
-    } else {
-        
     }
 }
 
