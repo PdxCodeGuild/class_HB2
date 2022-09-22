@@ -1,6 +1,5 @@
 let num = 0
 let digits = []
-let numbers_for_operation = []
 let result = 0
 
 function user_input() {
@@ -10,7 +9,6 @@ function user_input() {
             if (button.className == "all-clear") {
                 document.getElementById("calculator-screen").value = 0
                 digits = []
-                numbers_for_operation = []
                 result = 0
             } else if (button.className == "number" || button.className == "decimal") {
                 digits.push(event.target.value)
@@ -18,15 +16,12 @@ function user_input() {
                 document.getElementById("calculator-screen").value = num
             } else if (button.className == "operator") {
                 let operation = button.value
-                numbers_for_operation.push(num)
                 digits = []
                 document.getElementById("calculator-screen").value = ""
-                if (numbers_for_operation.length == 2) {
-                    result = operator(numbers_for_operation[0], numbers_for_operation[1], operation)
-                    console.log(result)
-                }
-            } else {
-                numbers_for_operation.push(num)
+                result = operator(result, num, operation)
+                console.log(result)
+            } else if (button.className == "equal-sign") {
+                digits = []
                 document.getElementById("calculator-screen").value = result
             }
         })
@@ -43,7 +38,7 @@ function operator(num1, num2, operation) {
     } else if (operation == "-") {
         return num1 - num2
     } else if (operation == "*") {
-        return num1 - num2
+        return num1 * num2
     } else if (operation == "/") {
         if (num1 == 0) {
             return "Invalid"
