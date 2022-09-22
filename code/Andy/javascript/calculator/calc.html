@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./calculator.css">
+    <title>Document</title>
+    <script defer src="calc.js"> </script> 
+</head>
+<body>
+    <div class="calculator">
+        <div>
+            <input class="calculator-screen" type="text" placeholder="0" disabled>
+        </div>
+        <div class="calculator-keys">
+            <button id="+" class="operator" value="+">+</button>
+            <button id="-" class="operator" value="-">-</button>
+            <button id="*" class="operator" value="*">&times</button>
+            <button id="/" class="operator" value="/">&divide</button>
+
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+
+            <button id='0'>0</button>
+            <button id="=" class="equal-sign" value="=">=</button>
+            <button id="AC" class="all-clear" value="AC">AC</button>
+            <button id="." value=".">.</button>
+
+        </div>
+    </div>
+</body>
+</html>
+<!-- always with a script tag thats placed on top of body place defer so that when code it read that it skips the javascript and runs html before js
+or place the script tag on the bottom of all of the html and no need for defer cause it will run all the code before it gets to the script tag -->`
