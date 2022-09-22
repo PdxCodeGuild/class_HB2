@@ -10,7 +10,7 @@ let operator = document.querySelectorAll('operator')
 let calcBtn 
 choices.forEach(choice=>choice.addEventListener('click', (event)=>{
     calcBtn=event.target.id
-    if (calcBtn==choice){
+    if (calcBtn in operator){
         nums.push(calcBtn)
     }
     if (calcBtn=='+'){
