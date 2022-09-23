@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+
+        
+        
+        <p>What is the distance? <input v-model="distance" placeholder="edit me" /></p>
+        <p>What are the input units? Your choices are feet, miles, meters, km, yard, or inch.
+            <input v-model="input_units" placeholder="edit me" /></p>
+        <p>What are the output units? Your choices are feet, miles, meters, km, yard, or inch.
+            <input v-model="output_units" placeholder="edit me" /></p>
+                
+        <p><button v-on:click="unitconverter">Calculate</button></p>
+        <div id="app"> Results: 
+            {{ message }}
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: ""
+                },
+                methods: {
+                    unitconverter: function(event) {
+                        distance = []
+                        input_units = []
+                        output_units = []
+
+                        conversion = {
+                        'feet': 0.3048,
+                        'miles': 1609.34,
+                        'meters': 1,
+                        'km': 1000,
+                        'yard': 0.9144,
+                        'inch': 0.0254,
+                        }
+
+                        inputresults = conversion[input_units]
+                        message = (inputresults * int(distance)) / conversion[output_units]
+                    }
+                },
+                created: function() {
+
+                }
+            })
+        </script>
+    </body>
+</html>
