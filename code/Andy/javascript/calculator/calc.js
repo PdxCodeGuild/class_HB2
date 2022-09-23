@@ -4,7 +4,7 @@ const choices = document.querySelectorAll('button')
 console.log(eight)
 console.log(choices)
 let string = ""
-let results 
+let results 0
 let nums = []
 let operator = document.querySelectorAll('operator')
 let equal = document.querySelectorAll('equal-sign')
@@ -13,7 +13,7 @@ let calcTest = document.getElementById('calc-test')
 
 let calcBtn 
 choices.forEach(choice=>choice.addEventListener('click', (event)=>{// for each method target all method from
-//    console.log(event,'events')
+//    console.log(event,'events') forEach is like a for loop add event listener is taking a screen shot of what happening 
     calcBtn=event.target.id // targeting id from input 
     // console.log(calcBtn, 'user choice')
     calcScreen.value= calcBtn
