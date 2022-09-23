@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 style="text-align: center;">ROCK PAPER SCISSORS</h1><br/><br/>
+        <h2 style="text-align: center;">CHOSE YOU'RE WEAPON!</h2><br/><br/>
+        <!-- <input type="text" v-model="rps"> -->
+        <!-- <button v-on:click="genData">click me</button><br/> -->
+        <div class="pictures">
+            <img v-bind:src="rock_pic" v-on:click="selected" @click="selection=rock" id="rock" style="width: 400px; height: 400px;"/>
+            <img v-bind:src="paper_pic" v-on:click="selected" @click="selection=paper" id="paper" style="width: 400px; height: 400px;"/>
+            <img v-bind:src="scissors_pic" v-on:click="selected" @click="selection=scissors" id="scissors" style="width: 400px; height: 400px;"/>
+        </div><br/><br/>
+        <div>
+            <h2 style="text-align: center;">{{selection}}</h2>
+        </div><br/>
+        <div style="display:flex; justify-content: center;align-items: center;">
+            <button @click="fight">FIGHT</button>
+        </div>
+        <div>{{list[0]}}</div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data:{
+                rps:null,
+                rock_pic: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg',
+                paper_pic: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/notebook-paper-background-design-template-c114c2ed2104bd8b815cf7fbb2f34f44_screen.jpg?ts=1636989881',
+                scissors_pic: 'https://m.media-amazon.com/images/I/61HYik3yUxS._AC_SY355_.jpg',
+                rock:"ROCK",
+                paper:"PAPER",
+                scissors:"SCISSORS",
+                selection:'click an image to select',
+                seen:false,
+                list:['rock','paper','scissors'],           
+            },
+            methods:{
+                    selected: function(event){
+                        if(event){
+                        a = event.target.id                        
+                        }
+                        console.log(a)},
+                    fight: function(event){
+                        if(event){
+                            let list = ['rock','paper','scissors'];
+                            const random = Math.floor(Math.random()*list.length);
+                            console.log(random, list[random])
+                        }
+                    }
+                   
+                    },
+                
+            
+            created:{},
+        })
+    </script>
+</body>
+
+</html>
