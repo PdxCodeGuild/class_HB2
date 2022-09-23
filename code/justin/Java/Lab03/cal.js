@@ -29,7 +29,10 @@ function update(x){
 
 
 keys.addEventListener("click", e => {
-    if(e.target.className == "all-clear"){
+    if(e.target.value == undefined || e.target.value == NaN){
+        ;
+    }
+    else if(e.target.className == "all-clear"){
         a = null, b = null, c = null;
         update(0);
     }
