@@ -2,6 +2,13 @@
 Calculator Lab
 */
 
+const screen = document.querySelector(".calculator-screen");
+const keys = document.querySelector(".calculator-keys");
+const input = null;
+const nums = document.querySelector(".equals_to");
+const num = document.getElementsByClassName("num");
+const period = document.getElementById("period");
+
 // Global Variables
 var memory = "0", current = "0", operation = 0; 
 const maxChar = 10; 
@@ -31,4 +38,3 @@ function addDecimal() {
   
   display.innerHTML = current;
 }
-
