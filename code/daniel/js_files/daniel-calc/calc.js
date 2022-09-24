@@ -6,11 +6,26 @@ runningTotal = 0
 
 console.log(buttons[0])
 
-for (let button of buttons){
-button.addEventListener('click', function(){
-    alert(button.value)
-})}
+buttons.forEach((button) => {
+    button.addEventListener('click',(event) => {
+        console.log(event.target.value)
+    })
+})
 
+
+if (target.matches("button")) {
+    return;
+}
+
+buttons.forEach(b => {
+    typeof(b.value) == 'NaN';
+        numbers.push(b.value)
+        console.log(numbers)
+})
+
+
+
+// console.log(button)
 
 // buttons.forEach(b => console.log(b))
 // buttons.forEach(b => console.log(b.value))
@@ -20,7 +35,6 @@ button.addEventListener('click', function(){
 //     console.log(`${key} => ${buttons[key]}`)
 
 // }
-
 
 
 
