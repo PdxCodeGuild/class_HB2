@@ -9,28 +9,43 @@
 </head>
 <body>
     <div id="app">
-        <h1 style="text-align: center;">ROCK PAPER SCISSORS</h1><br/><br/>
-        <h2 style="text-align: center;">CHOSE YOU'RE WEAPON!</h2><br/><br/>
-        <!-- <input type="text" v-model="rps"> -->
-        <!-- <button v-on:click="genData">click me</button><br/> -->
-        <div class="pictures">
-            <img v-bind:src="rock_pic" v-on:click="selected" @click="selection=rock" id="rock" style="width: 400px; height: 400px;"/>
-            <img v-bind:src="paper_pic" v-on:click="selected" @click="selection=paper" id="paper" style="width: 400px; height: 400px;"/>
-            <img v-bind:src="scissors_pic" v-on:click="selected" @click="selection=scissors" id="scissors" style="width: 400px; height: 400px;"/>
-        </div><br/><br/>
-        <div>
-            <h2 style="text-align: center;">{{selection}}</h2>
-        </div><br/>
-        <div style="display:flex; justify-content: center;align-items: center;">
-            <button @click="fight">FIGHT</button>
+        <div v-if="seen">
+            <h1 style="text-align: center;">ROCK PAPER SCISSORS</h1><br/><br/>
+            <h2 style="text-align: center;">CHOSE YOU'RE WEAPON!</h2><br/><br/>
+            <div class="pictures">
+                <img v-bind:src="rock_pic" v-on:click="selected" @click="selection=rock" id="rock" style="width: 400px; height: 400px;"/>
+                <img v-bind:src="paper_pic" v-on:click="selected" @click="selection=paper" id="paper" style="width: 400px; height: 400px;"/>
+                <img v-bind:src="scissors_pic" v-on:click="selected" @click="selection=scissors" id="scissors" style="width: 400px; height: 400px;"/>           
+            </div><br/><br/>
+            <div>
+                
+            </div>
+            <div>
+                <h2 style="text-align: center;">{{selection}}</h2>
+            </div><br/>
+            <div style="display:flex; justify-content: center;align-items: center;">
+                <button @click="fight">FIGHT</button>
+            </div>
+            <div>{{enemy}}</div>
         </div>
-        <div>{{list[0]}}</div>
+        <div v-if="hidden">
+            <h2 style="text-align: center;">{{message}}</h2>
+            <img v-bind:src="win_pic" v-if="win" id="winning" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+            <img v-bind:src="lose_pic" v-if="lose" id="losing" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/>
+            <img v-bind:src="tie_pic" v-if="tie" id="draw" style="display: block; margin-left: auto; margin-right: auto; width: 50%;"/><br/><br/>
+            <div style="display:flex; justify-content: center;align-items: center;">
+                <button @click="reset">GO AGAIN??</button>
+            </div>
+        </div>
     </div>
+    
     <script>
         let app = new Vue({
             el: '#app',
-            data:{
-                rps:null,
+            data:{                
+                win_pic: 'https://faroutmagazine.co.uk/static/uploads/2022/03/Why-Chuck-Norris-Dodgeball-cameo-_shocked_-him.jpg',
+                lose_pic: 'https://img-9gag-fun.9cache.com/photo/a249r2Z_460s.jpg',
+                tie_pic: 'https://i.kym-cdn.com/photos/images/newsfeed/001/817/067/798.jpg',
                 rock_pic: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/Limestone-060-RD010-C-SH_by22j3.jpg',
                 paper_pic: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/notebook-paper-background-design-template-c114c2ed2104bd8b815cf7fbb2f34f44_screen.jpg?ts=1636989881',
                 scissors_pic: 'https://m.media-amazon.com/images/I/61HYik3yUxS._AC_SY355_.jpg',
@@ -38,27 +53,71 @@
                 paper:"PAPER",
                 scissors:"SCISSORS",
                 selection:'click an image to select',
-                seen:false,
-                list:['rock','paper','scissors'],           
+                seen:true,
+                hidden:false,
+                win: false,
+                lose: false,
+                tie: false,
+                enemy: null,
+                message: null,        
             },
             methods:{
                     selected: function(event){
                         if(event){
                         a = event.target.id                        
+                        }},
+
+                    rps: function(x, y){
+                        if(x == y){return 'tie'}
+                        else if(x == 'ROCK'){
+                            if(y == 'PAPER'){return 'lose'}
+                            else if(y == 'SCISSORS'){return 'win'}
                         }
-                        console.log(a)},
+                        else if(x == 'PAPER'){
+                            if(y == 'ROCK'){return 'win'}
+                            else if(y == 'SCISSORS'){return 'lose'}
+                        }
+                        else if(x == 'SCISSORS'){
+                            if(y == 'ROCK'){return 'lose'}
+                            else if(y == 'PAPER'){return 'win'}
+                        }},
+                    
                     fight: function(event){
                         if(event){
-                            let list = ['rock','paper','scissors'];
+                            let list = ['ROCK','PAPER','SCISSORS'];
                             const random = Math.floor(Math.random()*list.length);
-                            console.log(random, list[random])
+                            enemy = list[random];
+                            let outcome = this.rps(this.selection, enemy);
+                            console.log(this.selection);
+                            console.log(enemy);
+                            console.log(outcome);
+                            this.seen = false;
+                            this.hidden = true;
+                            seen = this.seen;
+                            hidden = this.hidden;
+                            if(outcome == 'win'){
+                                this.message = `YOU WIN!!!! ${this.selection} BEATS ${enemy}`;
+                                message = this.message;
+                                this.win = true;
+                            }
+                            else if(outcome == 'lose'){
+                                this.message = `YOU LOSE! ${enemy} BEATS ${this.selection}`;
+                                message = this.message;
+                                this.lose = true;
+                            }
+                            else if(outcome == 'tie'){
+                                this.message = `TIE! ${enemy} = ${this.selection}`;
+                                message = this.message;
+                                this.tie = true;
+                            }
                         }
-                    }
-                   
+                        else{}
                     },
+                    reset: function(event){
+                        window.location.reload()
+                    }                 
+                },
                 
-            
-            created:{},
         })
     </script>
 </body>
