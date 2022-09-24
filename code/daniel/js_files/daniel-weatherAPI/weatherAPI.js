@@ -4,7 +4,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
     axios({
         method: 'get',
-        url: 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&exclude=hourly,daily&appid=63773348af0d6a9d677e88c0f0170634',
+        url: `https://api.openweathermap.org/data/2.5/weather?lat= + ${lat} + &lon=' + ${long} + '&exclude=hourly,daily&appid=${weatherAPIKey}`,
             
       }).then((response) => {
         console.log(response.data["name"])
