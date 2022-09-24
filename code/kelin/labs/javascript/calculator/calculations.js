@@ -9,20 +9,20 @@ const calculator = {
   waitingForSecondOperand: false,
   operatior: null,
 };
-// Display screen
+// Displays numbers on screen
 function updateDisplay() {
   const display = document.querySelector(".calculator-screen")
   display.value = calculator.displayValue;
 };
 
 updateDisplay();
-// Updates screen with keys clicked
+// Event listener gets button click
 const keys = document.querySelector(".calculator-keys");
 keys.addEventListener("click", (event) => {
   const {
       target
   } = event;
-// Gets numbers from buttons
+// Matches button to number
   if (!target.matches("button")) { 
       return;
   }
@@ -47,20 +47,20 @@ keys.addEventListener("click", (event) => {
   inputDigit(target.value);
   updateDisplay();
 });
-// Gets second number input
+// Inputs number
 function inputDigit(digit) {
   const {
       displayValue,
       waitingForSecondOperand
   } = calculator;
-// Displays second number
+// Inputs additional numbers
   if (waitingForSecondOperand === true) {
       calculator.displayValue = digit;
       calculator.waitingForSecondOperand = false;
   } else {
       calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
   }
-// Sets the second number to 0 if no input
+// Sets the next number to 0 if no input
 
 };
 // Decimal function
@@ -120,6 +120,10 @@ function resetCalculator() {
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
 };
+
+/* 
+Completed initial testing
+*/
 
 /* To Do
 
