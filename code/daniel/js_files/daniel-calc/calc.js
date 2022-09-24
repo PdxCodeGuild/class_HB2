@@ -1,19 +1,47 @@
 // add default values
-let calcScreen = document.querySelector(".calculator-string");
-let calcKeys = document.querySelectorAll("button");
+let calcScreen = document.querySelector(".calculator-screen");
+let buttons = document.querySelectorAll("button");
 numbers = []
 runningTotal = 0
 
-console.log(calcKeys)
+console.log(buttons[0])
 
-calcKeys.forEach(b => console.log(b))
-calcKeys.forEach(b => console.log(b.value))
+for (let button of buttons){
+button.addEventListener('click', function(){
+    alert(button.value)
+})}
 
-calcKeys.forEach(b => {
-    typeof(b.value) == 'number';
-        numbers.push(b.value)
-})
-console.log(numbers)
+
+// buttons.forEach(b => console.log(b))
+// buttons.forEach(b => console.log(b.value))
+
+
+// for (const key of Object.keys(buttons)) {
+//     console.log(`${key} => ${buttons[key]}`)
+
+// }
+
+
+
+
+
+
+
+
+
+
+// buttons.forEach(b => {
+//     typeof(b.value) == 'number';
+//         numbers.push(b.value)
+// Object.keys(numbers).forEach(b => {
+//     console.log(b, ':', numbers[b].temp)
+// })
+
+
+// })
+    
+
+
 
 
 // event listener
