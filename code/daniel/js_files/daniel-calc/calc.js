@@ -1,27 +1,47 @@
 // add default values
 let calcScreen = document.querySelector(".calculator-screen");
 let buttons = document.querySelectorAll("button");
-numbers = []
+let keys = document.querySelectorAll(".calculator-keys");
+operatorPressed = []
+numberPressed = []
 runningTotal = 0
 
-console.log(buttons[0])
+// console.log(buttons[0])
 
 buttons.forEach((button) => {
     button.addEventListener('click',(event) => {
-        console.log(event.target.value)
+        let checkIfNum = parseInt(event.target.value)
+        let buttonValue = event.target.value
+        if (isNaN(checkIfNum)) {
+            let currentValue = numberPressed.join("")
+            // console.log(parseInt(currentValue) + parseInt(currentValue))
+            if (event.target.value == "+") {
+                runningTotal = parseInt(runningTotal) + parseInt(currentValue)
+                console.log(runningTotal)
+                // console.log(buttonValue)
+            }
+            // console.log(buttonValue)
+        } else {
+            numberPressed.push(buttonValue)
+            // console.log(buttonValue)
+
+            ##make !NaN
+        }
+        
+
+        // console.log(operatorPressed)
+        // console.log(numberPressed)
     })
+
 })
 
 
-if (target.matches("button")) {
-    return;
-}
 
-buttons.forEach(b => {
-    typeof(b.value) == 'NaN';
-        numbers.push(b.value)
-        console.log(numbers)
-})
+// buttons.forEach(b => {
+//     typeof(b.value) == 'NaN';
+//         numbers.push(b.value)
+//         console.log(numbers)
+// })
 
 
 
