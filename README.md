@@ -10,14 +10,13 @@ M-F 6:00 pm – 9:36 pm PT
 ### Holidays
 
 - ~~July 4th 21st (Independence Day)~~
-- September 5th (Labor Day)
+- ~~September 5th (Labor Day)~~
 
 ### Staff
 
 - Ronnie Mosley, Instructor
   - ronnie@pdxcodeguild.com
 - Grant Glover, TA
-- Bruce Stull, TA
 
 ## Capstone Dates
 
