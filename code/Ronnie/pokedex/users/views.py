@@ -1,27 +1,21 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-from .forms import NewUserForm
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+def register(request):
+	if request.method == "POST":
+		form = UserCreationForm(request.POST)
+		if form.is_valid():
+			user = form.save()
+			login(request, user)
+			messages.success(request, "Registration successful." )
+			return redirect("accounts:profile")
+		messages.error(request, "Unsuccessful registration. Invalid information.")
+	form = UserCreationForm()
+	return render (request=request, template_name="registration/register.html", context={"form":form})
 
 @login_required
 def profile(request):
     return render(request, 'registration/profile.html', {'user': request.user})
-
-def register(request):
-    if request.method == 'POST':
-        form =  NewUserForm(request.POST)
-
-        if form.is_valid():
-
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            email = form.cleaned_data.get('email')
-
-            user = authenticate(username=username, password=raw_password, email=email)
-            form.save()
-            login(request, user)
-
-            return redirect('index')
-    else:
-        form = NewUserForm()
-    return render(request, 'registration/register.html', {'form': form})

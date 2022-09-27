@@ -2,7 +2,7 @@
 
 # Weather API
 
-Let's use the [OpenWeatherMap API](https://openweathermap.org/api/one-call-api) to display a weather forecast.
+Let's use the [OpenWeatherMap API](https://openweathermap.org/current) to display a weather forecast.
 
 ## Part 1: Setup
 
@@ -23,7 +23,7 @@ navigator.geolocation.getCurrentPosition(position => {
 Once you have the latitude and longitude, you can make the call to [OpenWeatherMap](https://openweathermap.org/api/one-call-api) to get the forecast and display the information in the page.
 
 
-`https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&
+`https://api.openweathermap.org/data/2.5/weather?lat=33.441792&lon=-94.037689&
 exclude=hourly,daily&appid={YOUR API KEY}`
 
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Register Page</title>
+  </head>
+  <body>
+
+
+    {% block content %}
+
+    <h3>Register</h3>
+    <form action={% url 'blog_app:register_view' %} method="post">
+      {% csrf_token %}
+      <label>Username</label>
+      <input type="text" name="username" /><br>
+      <label>Password</label>
+      <input type="password" name="password" /><br>
+      <label>email</label>
+      <input type="text" name="email" /><br>
+      <input type="submit" value="submit" />
+    </form>
+
+    {% endblock %}
+
+    
+   
+  </body>
+</html>

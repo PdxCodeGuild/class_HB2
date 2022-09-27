@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Login Page</title>
+  </head>
+  <body>
+
+
+    {% block content %}
+
+    <h3>Login</h3>
+    <form action="{% url 'blog_app:login_view' %}" method="POST">
+      {% csrf_token %}
+      <label>Username</label>
+      <input type="text" name="username" />
+      <label>Password</label>
+      <input type="password" name="password" />
+      <input type="submit" value="submit" />
+    </form>
+    <a href="{% url 'blog_app:logout_view' %}">logout</a><br>
+    <a href="{% url 'blog_app:register_view' %}">register</a>
+
+    {% endblock %}
+
+    
+   
+  </body>
+</html>
