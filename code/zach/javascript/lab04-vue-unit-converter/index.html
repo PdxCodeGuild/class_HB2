@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-    </head>
-    <body>
-        <div id="app">
-            {{ message }}
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script>
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    message: 'Hello Vue!'
-                },
-                methods: {
 
-                },
-                created: function() {
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
 
+<body>
+    <h1>Convert to Meters</h1>
+    <div id="app">
+        <input v-model="user_input" type="text" placeholder="input a number"/>
+        <select v-model="selected_unit">
+            <option v-for="unit in units">{{ unit }}</option>
+        </select>
+        <p>{{ unit_conversion() }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                units: ['', 'feet', 'yards', 'miles', 'kilometers'],
+                selected_unit: '',
+                user_input: ''
+            },
+            methods: {
+                unit_conversion() {
+                    if (this.selected_unit == '') {
+                        return 'Select a unit of measurement to convert to meters.'
+                    } else if (this.selected_unit == 'feet') {
+                        return parseFloat(this.user_input) * 0.3048
+                    } else if (this.selected_unit == 'yards') {
+                        return parseFloat(this.user_input) * 0.9144
+                    } else if (this.selected_unit == 'miles') {
+                        return parseFloat(this.user_input) * 1609.34
+                    } else if (this.selected_unit == 'kilometers') {
+                        return parseFloat(this.user_input) * 1000
+                    }
                 }
-            })
-        </script>
-    </body>
+            },
+        })
+    </script>
+</body>
+
 </html>
