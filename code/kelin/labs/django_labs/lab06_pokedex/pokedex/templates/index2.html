@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://cdn.jsdelivr.net/npm/axios/dis/axios.min.js"></script>
+    <!-- <script src="" -->
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <ul>
+            <li v-for="poke in pokemon">
+                ${ poke.name }
+            </li>
+        </ul>
+        <!-- {{ forms.as_p }} -->
+    </div>
+        <script>
+            const app = new Vue({
+                el: '#app',
+                delimiters: ['${', '}']
+                data: {
+                    pokemon: [],
+                    types: {},
+                },
+                methods: {
+                    loadPokemon: function() {
+                        axios({
+                            methods: 'get',
+                            url: '/api/pokemon/'
+                        }).then(response => {
+                            this.pokemon = response.data
+                        })
+                    }
+                },
+                created: function(){
+                    this.loadPokemon()
+                }
+            })
+        </script>
+</body>
+</html>
