@@ -6,17 +6,16 @@
         <title>Unit Converter</title>
     </head>
     <body>
-        <div id="app" class="m-3">
+        <div id="app">
           <h1>Unit Converter</h1>
           <span
-            >Enter unit of measurement: [feet | miles | meters | kilometers]:</span
-          >
-          <input type="text" class="form-control-sm" v-model="unit" />
-          <br />
+            >Enter unit of measurement: [ft | miles | meters | kilometers]:</span>
+          <input type="text" v-model="unit"/>
+          <br>
           <span>Enter distance:</span>
-          <input type="text" class="form-control-sm" v-model="distance" />
-          <br />
-          <button v-on:click="conversion" class="btn btn-success">Submit</button>
+          <input type="text" v-model="distance"/>
+          <br>
+          <button v-on:click="conversion">Submit</button>
           <p>Conversion: <span> {{results}} meters</span></p>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
