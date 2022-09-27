@@ -61,7 +61,7 @@ Presentation Day: November 4th, 2022
 | 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 31 Aug | |
 | 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | To Be Determined | | |
 | 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 06 Sep ||
-| 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | 26 Sep | | |
+| 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | 26 Sep | 10 Oct | |
 
 ## JavaScript:
 
