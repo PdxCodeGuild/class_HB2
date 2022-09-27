@@ -45,8 +45,8 @@ Presentation Day: November 4th, 2022
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | 
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | 
 | 01  | [Bio](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/01%20Bio.md)         | 01 Aug        | 15 Aug                | 
-| -or- | | | | |
-| mob 01 | [Class Animal](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 15 Aug         | 
+|  | | | | |
+|mob| [Class Animal](2%20Flask%20%2B%20HTML%20%2B%20CSS/mob/01%20Class%20Animal.md) | 01 Aug | 15 Aug         | 
 | 02 | [Blog](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/02%20Blog.md)        | 02 Aug        | 16 Aug                | 
 | 03 | [Company Home](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/03%20Company.md) | 03 Aug    | 17 Aug                | 
 | 04 | [Burrito Order Form](2%20Flask%20%2B%20HTML%20%2B%20CSS/labs/04%20Burrito%20Order%20Form.md) | 08 Aug | 22 Aug | 
@@ -59,7 +59,7 @@ Presentation Day: November 4th, 2022
 | Lab | Name                                                               | Date Assigned | Due By Start Of Class | 
 | --- | ------------------------------------------------------------------ | ------------- | --------------------- | 
 | 01  | [Todo](3%20Django/labs/01%20Todo.md)                     | 17 Aug | 31 Aug | |
-| 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | To Be Determined | | |
+| 02  | [URL Shortener](3%20Django/labs/02%20URL%20Shortener.md) | MOB | | |
 | 05  | [Blog](3%20Django/labs/05%20Blog.md)                     | 23 Aug | 06 Sep ||
 | 06  | [Pokedex](3%20Django/labs/06%20Pokedex)               | 26 Sep | 10 Oct | |
 
