@@ -71,7 +71,7 @@ Presentation Day: November 4th, 2022
 | 02  | [Weather Api](4%20JavaScript/labs/Weather%20API.md) | 15 Sep | 29 Sep |
 | 03  |  [Calculator Lab](4%20JavaScript/labs/Calculator_Lab.md)                   | 16 Sep  | 30 Sep |
 | 04 |    [Vue Redo](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/02%20Vue%20Redo.md)|20 Sep| 4 Oct|
-| 04 |    [Pokedex](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/05%20Pokedex.md)|26 Sep| 10 Oct|
+| 05 |    [Pokedex](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/05%20Pokedex.md)|26 Sep| 10 Oct|
 
 
 
