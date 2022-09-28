@@ -18,28 +18,32 @@
         </ul>
         <!-- {{ forms.as_p }} -->
     </div>
-        <script>
-            const app = new Vue({
-                el: '#app',
-                delimiters: ['${', '}']
-                data: {
-                    pokemon: [],
-                    types: {},
-                },
-                methods: {
-                    loadPokemon: function() {
-                        axios({
-                            methods: 'get',
-                            url: '/api/pokemon/'
-                        }).then(response => {
-                            this.pokemon = response.data
-                        })
-                    }
-                },
-                created: function(){
-                    this.loadPokemon()
+    <script type="text/javascript">
+        let app = new Vue({
+            el: '#app',
+            data: {
+                inputPokemon: "",
+                id: '',
+                pokemon: '',
+            },
+            methods: {
+                findPokemonButton: function() {
+                    axios({
+                        method: 'get',
+                        url: `https://pokeapi.co/api/v2/pokemon/${this.id}/`,
+                        params: {
+
+                        }
+                    }).then((response) => {
+                        let pokemon = response.data
+                        let pokemonImage = `https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`
+                        pokemon.image = pokemonImage
+                        this.pokemon = pokemon
+                        console.log(this.pokemon)
+                    })
                 }
-            })
-        </script>
+            }
+        })
+    </script>
 </body>
 </html>
