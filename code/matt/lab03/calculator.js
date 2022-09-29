@@ -77,50 +77,73 @@
 //     }
 // })
 
-
-let num = 0
-let digits = []
-let num_list = []
-let result = 0
-let last_operator = ""
+function convertToNum(convertToNum) {
+    return parseFloat(convertToNum.join(""))
+}
 
 function calculator() {
-    // Select all button elements
+    // To grab all the button elements with the queryselectorall. keyword all
     let keyInput = document.querySelectorAll("button")
-    // For each button add an on click event
+
+    // 
+    let arrayOfStrings = []
+    let arrayOfNums = []
+    let num = 0
+    let result = 0
+    let last_operator = ""
+
+    // for '''keyinput''' add an event listener to it. That way everytime you click a key on the calculator it'll do something
     keyInput.forEach(button => {
         button.addEventListener("click", (event) => {
 
             // If user selects AC button, clear all variable values
             if (button.className == "all-clear") {
                 document.getElementById("calculator-screen").value = 0
-                num = 0
-                digits = []
-                num_list = []
-                result = 0
-                last_operator = ""
+                restart = num = 0, arrayOfStrings = [], arrayOfNums = [], result = 0, last_operator = ""
+                return restart
 
-                // If user clicks a number or decimal button push each digit to a list and then convert to a float to be displayed on screen
-            } else if (button.className == "number" || button.className == "decimal") {
-                digits.push(event.target.value)
-                num = convert_to_num(digits)
+                // If key pressed is equal to a number than do what is below
+            } else if (button.className == "number") {
+
+                //When key is pressed and the event is activated target the value of said key
+                //They'll still be in string format, hence the name '''arrayOfStrings'''
+                arrayOfStrings.push(event.target.value)
+
+                // '''nums''' will now convert our array of strings to numbers using the function above this function 
+                num = convertToNum(arrayOfStrings)
+
+                //numbers presented on calc screen
                 document.getElementById("calculator-screen").value = num
 
-                // If user clicks an operator
-            } else if (button.className == "operator") {
-                digits = []
+
+            }
+            // If key pressed is equal to a number than do what is below
+            else if (button.className == "decimal") {
+
+                //When key is pressed and the event is activated target the value of said key
+                //They'll still be in string format, hence the name '''arrayOfStrings'''
+                arrayOfStrings.push(event.target.value)
+
+                num = convertToNum(arrayOfStrings)
+
+                //decimal presented on calc screen
+                document.getElementById("calculator-screen").value = num
+            }
+            // For when a user keys an operand
+            else if (button.className == "operator") {
+                arrayOfStrings = []
                 document.getElementById("calculator-screen").value = ""
 
-                // When an operator is selected, add number to list 
-                if (last_operator == "") {
-                    num_list.push(num)
+                // When an operand is selected, add the strings that we converted to integers to the list 
+                if (document.getElementById("calculator-screen").value = "" == last_operator) {
+                    arrayOfNums.push(num)
                     result = num
 
                     // When an operator is selected and last_operator has a value run operator on list; update result
                 } else {
-                    num_list.push(num)
-                    result = operator(num_list[0], num_list[1], last_operator)
-                    num_list = [result]
+                    arrayOfNums.push(num)
+                    result = operator(arrayOfNums[0], last_operator, arrayOfNums[1],)
+                    arrayOfNums = [result]
                 }
 
                 // Display current_num
@@ -132,13 +155,13 @@ function calculator() {
                 if (last_operator == "") {
                     result = num
                 } else {
-                    num_list.push(num)
-                    result = operator(num_list[0], num_list[1], last_operator)
+                    arrayOfNums.push(num)
+                    result = calculate(arrayOfNums[0], last_operator, arrayOfNums[1],)
                 }
                 document.getElementById("calculator-screen").value = result
                 num = 0
-                digits = []
-                num_list = []
+                arrayOfStrings = []
+                arrayOfNums = []
                 result = 0
                 last_operator = ""
             }
@@ -146,27 +169,17 @@ function calculator() {
     })
 }
 
-function convert_to_num(digits_list) {
-    return parseFloat(digits_list.join(""))
-}
 
-function operator(num1, num2, operation) {
-    console.log(num1 + " " + num2 + " " + operation)
-    if (operation == "+") {
-        return num1 + num2
-    } else if (operation == "-") {
-        return num1 - num2
-    } else if (operation == "*") {
-        if (num1 == 0) {
-            return num2
-        }
-        return num1 * num2
-    } else if (operation == "/") {
-        if (num1 == 0) {
-            return "Invalid"
-        } else {
-            return num1 / num2
-        }
+
+function calculate(n1, operator, n2,) {
+    if (operator == "+") {
+        return n1 + n2
+    } else if (operator == "-") {
+        return n1 - n2
+    } else if (operator == "*") {
+        return n1 * n2
+    } else if (operator == "/") {
+        return n1 / n2
     }
 }
 
