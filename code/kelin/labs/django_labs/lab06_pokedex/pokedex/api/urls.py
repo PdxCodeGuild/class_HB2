@@ -1,12 +1,12 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from .views import PokemonViewSet, TypeViewSet, UserView, CurrentUser
+
+from .views import PokemonViewSet, TypeViewSet
 
 router = DefaultRouter()
 router.register('pokemon', PokemonViewSet, basename='pokemon')
-router.register('type', TypeViewSet, basename='type')
-router.register('users', UserView, basename='users')
+router.register('types', TypeViewSet, basename='types')
 
 urlpatterns = router.urls + [
-    path('currentuser/', CurrentUser.as_view())
+
 ]
