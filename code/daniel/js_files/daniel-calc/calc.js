@@ -2,11 +2,8 @@
 let calcScreen = document.querySelector(".calculator-screen");
 let buttons = document.querySelectorAll("button");
 let keys = document.querySelectorAll(".calculator-keys");
-let operatorPressed = ""
-let numberPressed = []
-let operator = []
+let buttonPressed = []
 let runningTotal = 0
-let currentValue = numberPressed.join("")
 
 
 buttons.forEach((button) => {
@@ -14,55 +11,58 @@ buttons.forEach((button) => {
         let checkIfNum = parseInt(event.target.value)
         let buttonValue = event.target.value
         if (isNaN(buttonValue) && buttonValue != '.'){
-            if (event.target.value == "=") {
-                runningTotal = eval(runningTotal + operatorPressed + numberPressed.join(""))
-                numberPressed = []
+
+            if (event.target.value == "AC") {
+                buttonPressed = 0
+                runningTotal = 0
+                console.log(event.target.value)
+                console.log(buttonPressed)
                 console.log(runningTotal)
+            }
+
+            if (event.target.value == "=") {
+                runningTotal = eval(buttonPressed.join(""))
+                buttonPressed = []
+                console.log("runningTotal", runningTotal)
                 runningTotal = 0
             }
             
             if (event.target.value == "+") {
-                console.log(runningTotal)
-                runningTotal = eval(runningTotal + buttonValue + numberPressed.join(""))
-                numberPressed = []
-                operatorPressed = buttonValue
-                console.log(runningTotal)
-
+                if (runningTotal == 0) {
+                    buttonPressed.push(buttonValue)
+                    console.log("runningTotal", runningTotal)
+                    console.log("buttonValue", buttonValue)
+                }
 
             } else if (event.target.value == "-") {
                 if (runningTotal == 0) {
-                    console.log(runningTotal)
-                    numberPressed.push(buttonValue)
-                    runningTotal = eval(numberPressed + buttonValue + numberPressed.join(""))
-                } else {
-                    !!!!!!!!!!!!!!!!!!!!!! needs work !!!!!!!!!!!!!!!!!!!!!!!!
+                    buttonPressed.push(buttonValue)
+                    console.log("runningTotal", runningTotal)
+                    console.log("buttonValue", buttonValue)
+                } 
+                
+
+            } else if (event.target.value == "*") {
+                if (runningTotal == 0) {
+                    buttonPressed.push(buttonValue)
+                    console.log("runningTotal", runningTotal)
+                    console.log("buttonValue", buttonValue)
+
                 }
 
-                    numberPressed.push(buttonValue)
-                    operator.push(event.target.value)
-                runningTotal = eval(runningTotal + operator + numberPressed.join(""))
-                numberPressed = []
-                operator = []
-                
-                console.log(runningTotal)
-            } else if (event.target.value == "*") {
-                runningTotal = eval(runningTotal + buttonValue + numberPressed.join(""))
-                numberPressed = []
-                operatorPressed = buttonValue
-                console.log(runningTotal) 
             } else if (event.target.value == "/") {
-                runningTotal = eval(runningTotal + buttonValue + numberPressed.join(""))
-                numberPressed = []
-                operatorPressed = buttonValue
-                console.log(runningTotal)
+                if (runningTotal == 0) {
+                    buttonPressed.push(buttonValue)
+                    console.log("runningTotal", runningTotal)
+                    console.log("buttonValue", buttonValue)
+                }
             } 
-            
         }
 
             
         if (!isNaN(checkIfNum) || buttonValue == '.') {
-            console.log(numberPressed)
-            numberPressed.push(buttonValue)
+            console.log(buttonPressed)
+            buttonPressed.push(buttonValue)
             
         }
     })
