@@ -5,9 +5,20 @@ import json
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+
+        # Delete all records for clean slate
+        Pokemon.objects.all().delete()
+        PokemonType.objects.all().delete()
+
+
         f = open('pokemon.json')
         poke_balls = json.load(f)
         for pokemon in poke_balls['pokemon']:
+
+            # Convert to get meters and kilograms
+            pokemon['height'] /= 10
+            pokemon['weight'] /= 10
+
             name_ext = pokemon.get('name')
             number_ext = int(pokemon.get('number'))
             height_ext = int(pokemon.get('height'))

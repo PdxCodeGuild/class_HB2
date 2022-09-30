@@ -1,1 +1,28 @@
-{{ user.username }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex User</title>
+</head>
+<body>
+    <div>
+        {% if user.is_authenticated %}
+        <span>Welcome {{ user.username }}</span>
+        <a href="{% url 'accounts:logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'accounts:login' %}">Sign-In</a>
+        <a href="{% url 'accounts:register' %}">Sign-Up</a>
+        {% endif %}
+      </div>
+    <ul>
+        {% for poke in pokemon %}
+        <li>
+            <a href="api/pokemon">{{ pokemon.name }}</a>
+        </li>
+        {% endfor %}
+    </ul> 
+</body>
+</html>
+
