@@ -73,7 +73,17 @@ Presentation Day: November 4th, 2022
 | 04 |    [Vue Redo](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/02%20Vue%20Redo.md)|20 Sep| 4 Oct|
 | 05 |    [Pokedex](https://github.com/PdxCodeGuild/class_HB2/blob/main/4%20JavaScript/labs/05%20Pokedex.md)|26 Sep| 10 Oct|
 
+## Capstone:
+<details open>
+<summary>Capstone</summary>
 
+   - [Capstone Proposal](https://github.com/PdxCodeGuild/class_HB2/blob/main/5%20Capstone/Capstone%20Proposal.md)
+   - [Capstone Ideas](https://github.com/PdxCodeGuild/class_HB2/blob/main/5%20Capstone/Capstone%20Ideas.md)
+   - [Just a few Api's](https://github.com/PdxCodeGuild/class_HB2/blob/main/5%20Capstone/apis_libraries.md)
+
+</details>
+  
+  
 
 ## Getting Unstuck 
 
