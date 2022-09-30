@@ -110,7 +110,7 @@ onMounted(() => {
 
 
 </script>
-
+  
 <template>
   <div class="bg-gray-700 text-white text-center min-j-screen flex flec-col">
     <header class="container mx-auto p-6">
@@ -126,19 +126,19 @@ onMounted(() => {
       <div v-if="choice === null" class="flex items-center justify-center -mx-6">
 
         <button @click="play('rock')" class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 
-        transition-colors duration-300 hover:bg-red-500">
+          transition-colors duration-300 hover:bg-red-500">
           <img src="https://www.pngitem.com/pimgs/m/45-452491_rock-paper-scissors-rock-hd-png-download.png" alt="rock"
             class="w-full h-full">
         </button>
 
         <button @click="play('paper')" class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 
-        transition-colors duration-300 hover:bg-yellow-500">
+          transition-colors duration-300 hover:bg-yellow-500">
           <img src="https://www.clipartmax.com/png/middle/428-4288895_rock-paper-scissors-sign.png" alt="paper"
             class="w-full h-full">
         </button>
 
         <button @click="play('scissors')" class="bg-white rounded-full shadow-lg w-64 p-12 mx-6 
-        transition-colors duration-300 hover:bg-blue-500">
+          transition-colors duration-300 hover:bg-blue-500">
           <img src="https://www.kindpng.com/picc/m/83-830031_transparent-scissors-clip-art-icon-rock-paper-scissors.png"
             alt="scissors" class="w-full h-full">
         </button>
@@ -165,53 +165,52 @@ onMounted(() => {
 
 
 </template>
-
-<!-- They way we get this to begin with is in the following -->
-
-<!-- 1 -->
-<!-- npm create vite@latest . -- --template vue -->
-<!-- this gives us vs.code, public, src, .gitingnore, index.html, package.json, readme.md, vite.config.js -->
-
-<!-- 2 -->
-<!-- npm i -D tailwindcss postcss autoprefixer -->
-<!-- this gives us node_modules and package-lock.json -->
-
-<!-- 3 -->
-<!-- npx tailwindcss init -p -->
-<!-- this gives us postcss.config.js and tailwind.config.js -->
-
-<!-- 4 -->
-<!-- from there go into your src folder and create a new file called main.css -->
-<!-- Paste in @tailwind base; -->
-<!-- Paste in @tailwind components; -->
-<!-- Paste in @tailwind utilities; -->
-
-<!-- 5 -->
-<!-- from there go into your tailwind.config.js file -->
-<!-- inside of that file you'll see a ''' content: [], ''' -->
-<!-- go inside your [] (the square brackets and type this inside of it) -->
-<!-- [
-  "./index.html",
-  "./src/**/*.{vue}"
-  ] -->
-
-<!-- 6 -->
-<!-- also inside of your src folder you can delete the components file and assets file-->
-
-<!-- 7 -->
-<!-- You can go inside of your App.vue file inside of your src folder and delete everything inside of your -->
-<!-- template block, your script block, and the entire style block itself(unlike in the other blocks where you) -->
-<!-- just deleted what was inside of them. -->
-
-<!-- 8 -->
-<!-- npm run dev -->
-
-<!-- 9 -->
-<!-- style will not look as intended, so go into your main.js file (located in your src folder) -->
-<!-- underneath the import App from ./App.vue, type this -->
-<!-- import './main,css' which will in return add your default -->
-
-<!-- 10 -->
-<!-- begin writing your JS code inside your App.vue -->
-
-
+  
+  <!-- They way we get this to begin with is in the following -->
+  
+  <!-- 1 -->
+  <!-- npm create vite@latest . -- --template vue -->
+  <!-- this gives us vs.code, public, src, .gitingnore, index.html, package.json, readme.md, vite.config.js -->
+  
+  <!-- 2 -->
+  <!-- npm i -D tailwindcss postcss autoprefixer -->
+  <!-- this gives us node_modules and package-lock.json -->
+  
+  <!-- 3 -->
+  <!-- npx tailwindcss init -p -->
+  <!-- this gives us postcss.config.js and tailwind.config.js -->
+  
+  <!-- 4 -->
+  <!-- from there go into your src folder and create a new file called main.css -->
+  <!-- Paste in @tailwind base; -->
+  <!-- Paste in @tailwind components; -->
+  <!-- Paste in @tailwind utilities; -->
+  
+  <!-- 5 -->
+  <!-- from there go into your tailwind.config.js file -->
+  <!-- inside of that file you'll see a ''' content: [], ''' -->
+  <!-- go inside your [] (the square brackets and type this inside of it) -->
+  <!-- [
+    "./index.html",
+    "./src/**/*.{vue}"
+    ] -->
+  
+  <!-- 6 -->
+  <!-- also inside of your src folder you can delete the components file and assets file-->
+  
+  <!-- 7 -->
+  <!-- You can go inside of your App.vue file inside of your src folder and delete everything inside of your -->
+  <!-- template block, your script block, and the entire style block itself(unlike in the other blocks where you) -->
+  <!-- just deleted what was inside of them. -->
+  
+  <!-- 8 -->
+  <!-- npm run dev -->
+  
+  <!-- 9 -->
+  <!-- style will not look as intended, so go into your main.js file (located in your src folder) -->
+  <!-- underneath the import App from ./App.vue, type this -->
+  <!-- import './main,css' which will in return add your default -->
+  
+  <!-- 10 -->
+  <!-- begin writing your JS code inside your App.vue -->
+  
