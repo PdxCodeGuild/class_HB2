@@ -8,5 +8,10 @@ def pokeview(request):
     return render(request, "pokemon/poketemp.html")
 
 def pokemon(request):
-    poke = Pokemon.objects.all()    
-    return JsonResponse(request, 'pokemon/index.html', {'poke':poke} )
+    poke = Pokemon.objects.all()
+    for p in poke:
+
+        responsedata = {
+            'p':p
+        }  
+    return JsonResponse(request, 'pokemon/index.html',responsedata)
