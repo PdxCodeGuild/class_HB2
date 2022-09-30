@@ -1,34 +1,28 @@
 from django.core.management.base import BaseCommand
-from pokeapp.models import Pokemon, PokemonType
+from pokeapp.models import Pokemon
 import json
 
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
         Pokemon.objects.all().delete()
-        PokemonType.objects.all().delete()
-        with open('pokemon.json','r') as f:
-            response = f.read()
-            pokemon_list = json.loads(response)
-            for pokemon in pokemon_list['pokemon']:
-                current_pokemon = Pokemon.objects.create(
-                    number = pokemon['number'],
-                    name = pokemon['name'],
-                    height = int(pokemon['height'])/10,
-                    weight = int(pokemon['weight'])/10,
-                    image_front = pokemon['image_front'],
-                    image_back = pokemon['image_back'],
-                    types = ', '.join(pokemon['types']),        
-                )
-
-                for type in pokemon['types']:                 
-                    try:
-                        current_type = PokemonType.objects.get(name = type)                        
-                    except PokemonType.DoesNotExist:
-                        current_type = PokemonType.objects.create(name = type)                           
-                    current_pokemon.PokemonType.add(current_type)                               
-                    current_pokemon.save()
-
+        f = open("pokemon.json")
+        contents = json.load(f)
+        for x in range(len(contents['pokemon'])):
+            poke = Pokemon()
+            poke.number = contents["pokemon"][x]["number"]
+            poke.name = contents['pokemon'][x]['name']
+            poke.height = contents["pokemon"][x]["height"] / 10
+            poke.weight = contents["pokemon"][x]["weight"] / 10
+            if contents["pokemon"][x]["image_front"] == None:
+                poke.image_front = "No front image available"
+            else:
+                poke.image_front = contents["pokemon"][x]["image_front"]
+            if contents["pokemon"][x]["image_back"] == None:
+                poke.image_back = "No back image available"
+            else:
+                poke.image_back = contents["pokemon"][x]["image_back"]
+            poke.save() 
 
 # f = open('pokemon.json')  # open the file
 # contents = json.load(f)  # read the contents
