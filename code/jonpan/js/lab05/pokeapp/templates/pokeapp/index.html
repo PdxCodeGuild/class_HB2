@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script defer src="{% static 'pokeapp/app.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{% static 'pokeapp/app2.js' %}"></script>
 </head>
 <body>
-    <h1>Testing 123</h1>
+    <h1>Pokedex JS lab 05 - Jon Pan</h1>
 
     <div id="app">
         <div id="search-div">
-            <input name="poke-search" v-on:keypress.enter="pokeSearch([[searchTerm]])" v-model="searchTerm" type="text" placeholder="Enter pokemon name">
-            <button v-on:click="pokeSearch([[searchTerm]])" id="poke-search-btn">Find poke!</button>
+            <input name="poke-search" id="searchTerm" type="text" placeholder="Enter pokemon name">
+            <button onclick="pokeSearch([[searchTerm]])">Find poke!</button>
         </div>
-        <div id="pokemon-div">
-            <div v-for="poke in pokemon" v-bind:value="poke.id" ><div v-if="poke.number"> No: [[poke.number]], Name: [[poke.name]] </div><img v-if="poke.number" v-bind:src="poke.image_front" v-bind:alt="'Picture of ' + poke.name"></div>
-        </div>
-        <div id="pagination">
-            <button id="previous-btn" v-bind:href="'?page='+this.page" v-on:click="previousPage()" v-if="">Previous</button> 
-            Page [[page]]
-            <button id="next-btn" v-bind:href="'?page='+this.page" v-on:click="nextPage()">Next</button> 
-        </div>
+        <p id="search-results"></p>
     </div>
-
 </body>
 </html>
+
+<!-- <div id="pokemon-div">
+    <div v-for="poke in pokemon" v-bind:value="poke.id" ><div v-if="poke.number"> No: [[poke.number]], Name: [[poke.name]] </div><img v-if="poke.number" v-bind:src="poke.image_front" v-bind:alt="'Picture of ' + poke.name"></div>
+</div>
+<div id="pagination">
+    <button id="previous-btn" v-bind:href="'?page='+this.page" v-on:click="previousPage()" v-if="">Previous</button> 
+    Page [[page]]
+    <button id="next-btn" v-bind:href="'?page='+this.page" v-on:click="nextPage()">Next</button> 
+</div> -->
+
+
+<!-- 
+<script src="https://unpkg.com/vue@3"></script>
+<script defer src="{% static 'pokeapp/app.js' %}"></script> -->

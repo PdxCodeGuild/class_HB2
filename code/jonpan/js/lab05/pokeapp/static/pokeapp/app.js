@@ -2,7 +2,6 @@ const app = Vue.createApp({
     delimiters: ['[[', ']]'],
     data() {
         return {
-            // variables go here
             message: "It works!",
             pokemon: [],
             searchTerm: null,
@@ -11,7 +10,6 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        // functions go here
         pokeSearch: function() {
             fetch(`/pokemon/?searchTerm=${this.searchTerm}&page=${this.page}`)
             .then(response => response.json())
@@ -20,7 +18,6 @@ const app = Vue.createApp({
             })
         },
         previousPage: function(){
-            
             if (this.searchTerm === null) {
                 if (this.page === 1) {
                     pass
@@ -72,11 +69,8 @@ const app = Vue.createApp({
         },
     },
     watch: {
-        // onchange functions go here, tied to variables in data
-        
     },
     created: function() {
-        // what happens when app is created?
         fetch(`/pokemon/?page=${this.page}`)
         .then(response => response.json())
         .then(data => {
@@ -87,7 +81,5 @@ const app = Vue.createApp({
         })
     },
     mounted: function() {
-        // what happens when app is mounted
-
     }
 }).mount("#app")
