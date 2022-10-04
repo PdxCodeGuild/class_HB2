@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Pokedex</title>
 </head>
 <body>
-    <div>
-        {% if user.is_authenticated %}
-        <span>{{ user.username }}</span>
-        <a href="{% url 'accounts:profile' %}">My Profile</a>
-        <a href="{% url 'accounts:logout' %}">Logout</a>
-        {% else %}
-        <a href="{% url 'accounts:login' %}">Sign-In</a>
-        <a href="{% url 'accounts:register' %}">Sign-Up</a>
-        {% endif %}
+
+    <div id="app">
+        <ul>
+          <li v-for="color in colors">{{ color }}</li>
+        </ul>
       </div>
-    <ul>
+      <script>
+        let app = new Vue({
+          el: '#app',
+          data: {
+            color: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+          },
+          methods: {
+            colors : function(){
+                console.log(color)
+            }
+          }
+        })
+      </script>
+    
+    {% comment %} <ul>
         {% for poke in pokemon %}
         <li>
             <a href="#">{{ poke.name }}</a>
         </li>
         {% endfor %}
-    </ul>
+    </ul> {% endcomment %}
 </body>
 </html>
