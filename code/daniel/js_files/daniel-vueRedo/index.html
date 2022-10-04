@@ -20,7 +20,8 @@
                 <option value="km">km</option>
             </select>
 
-            <button v-on:click="convert"> Convert </button>
+            <button v-on:click="convert"> Convert </button> <br>
+            
 
         <script>
             var app = new Vue({
@@ -29,32 +30,31 @@
                     seen: false,
                     message: 'Distance Converter',
                     image_url: "https://ae01.alicdn.com/kf/HTB1kkowPVXXXXXJXpXXq6xXFXXX0/1pc-12cm-Small-Ruler-Brass-Portable-Straight-Ruler-Office-School-Supplies-Accessory.jpg_640x640.jpg",
-                    enterDistance: Number('Pick a distance #'),
+                    enterDistance: 'Pick a distance #',
                     unit: 'ft',
-                    ftToMeters : parseFloat(this.enterDistance) * 0.3048,
-                    miToMeters : parseFloat(this.enterDistance) * 1609.34,
-                    mToMeters : parseFloat(this.enterDistance),
-                    kmToMeters : parseFloat(this.enterDistance) * 1000.00
+                    ftToMeters : 0,
+                    miToMeters : 0,
+                    mToMeters : 0,
+                    kmToMeters : 0,
 
 
                 },
                 methods: {
                     convert: function(){
                         if (this.unit == "ft") {
-                            console.log(typeof(this.ftToMeters))
-                            console.log(Number(this.enterDistance))
-                            console.log(Number(this.ftToMeters))
-                            console.log("anything")
+                            this.ftToMeters = parseFloat(this.enterDistance) * 0.3048
+                            console.log(this.enterDistance + " ft is " + this.ftToMeters + " meters")
                         } else if (this.unit == "mi") {
+                            this.miToMeters = parseFloat(this.enterDistance) * 1609.34,
                             console.log(this.enterDistance + " mi is " + this.miToMeters + " meters")
                         } else if (this.unit == "m") {
-                            console.log(typeof(this.mToMeters))
-                            console.log(this.mToMeters)
-                            console.log(this.enterDistance)
+                            this.mToMeters = parseFloat(this.enterDistance)
                             console.log(this.enterDistance + " m is " + this.mToMeters + " meters")
                         } else if (this.unit == "km") {
+                            this.kmToMeters = parseFloat(this.enterDistance) * 1000.00
                             console.log(this.enterDistance + " km is " + this.kmToMeters + " meters")
                         }
+
 
                     }
                 },
