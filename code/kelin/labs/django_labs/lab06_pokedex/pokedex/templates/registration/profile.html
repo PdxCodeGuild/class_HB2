@@ -7,7 +7,8 @@
     <title>Pokedex User</title>
 </head>
 <body>
-    <div>
+    <h1>Pokedex</h1>
+    {% csrf_token %}
         {% if user.is_authenticated %}
         <span>Welcome {{ user.username }}</span>
         <a href="{% url 'accounts:logout' %}">Logout</a>
@@ -15,14 +16,36 @@
         <a href="{% url 'accounts:login' %}">Sign-In</a>
         <a href="{% url 'accounts:register' %}">Sign-Up</a>
         {% endif %}
-      </div>
-    <ul>
-        {% for poke in pokemon %}
-        <li>
-            <a href="api/pokemon">{{ pokemon.name }}</a>
-        </li>
-        {% endfor %}
-    </ul> 
+
+        <div id="app">
+          
+        <h2>[[ pokemon.name ]]</h2>
+        
+            </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let app = new Vue({
+            el: "#app",
+            delimiters: ['[[', ']]'],
+            data: {
+                pokemon: [],
+                types: {},
+                
+            },
+            methods: {
+                loadPokemon: function() {
+                    
+                    axios({
+                        method: 'get',
+                        url: '/api/pokemon/'
+                    }).then(response => {
+                        this.pokemon = response.data
+                    })
+                }
+            }
+        })
+      </script>          
 </body>
 </html>
-
