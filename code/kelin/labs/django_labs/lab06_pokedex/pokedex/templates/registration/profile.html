@@ -16,11 +16,9 @@
         <a href="{% url 'accounts:login' %}">Sign-In</a>
         <a href="{% url 'accounts:register' %}">Sign-Up</a>
         {% endif %}
-
+        <hr>
         <div id="app">
-          
-        <h2>[[ pokemon.name ]]</h2>
-        
+            <button v-on:click="loadPokemon">Load Pokemon</button>
             </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -39,9 +37,11 @@
                     
                     axios({
                         method: 'get',
-                        url: '/api/pokemon/'
+                        url: '/api/pokemon'
                     }).then(response => {
                         this.pokemon = response.data
+                        
+                        console.log(this.pokemon)
                     })
                 }
             }
