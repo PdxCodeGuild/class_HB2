@@ -60,3 +60,7 @@ https://shop.hak5.org/products/c2
 https://docs.hak5.org/usb-nugget/fundamentals/live-control
 https://retia.io/
 ~~~
+---
+<sub> 
+preview markdown shortcut- ctrl+k v
+</sub> 
