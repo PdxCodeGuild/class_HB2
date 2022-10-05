@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'pokeapp'
 urlpatterns = [
-    path('', views.pokeview, name='pokeview')
+    path('', views.pokeview, name='pokeview'),
+    path('mycreate/', views.mycreate, name='mycreate')
 ]

@@ -1,9 +1,14 @@
 from django.shortcuts import render
-from .models import MyModel
+from django.http import HttpResponse
+from .models import Pokemon
 
 def pokeview(request):
-    myinstances = MyModel.objects.all()
+    myinstances = Pokemon.objects.all()
     context = {
-        'message': 'Hello World!'
+        'myinstances': myinstances
     }
     return render(request, 'pokeapp/pokemontemplate.html', context)
+
+def mycreate(request):
+    print(request.POST)
+    return HttpResponse('form received')
