@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>    
 </head>
-<body>
-    <!-- <ul>{% for p in poke %}
-        <li>
-            {{p}}
-        </li>
-    </ul>{% endfor %} -->
-    {{responsedata}}
+<body style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png');">
+    <div id="app">
+        <input type="text" v-model="search"/><button @click="searchPokemon">SEARCH</button>
+        <ul style="list-style: none;">
+            <li v-for="poke in pokemon" style="text-transform: uppercase;"><strong>${poke.fields.name}</strong><br><img v-bind:src="poke.fields.image_front" v-if="seen" @click="seen=false; hidden=true"><img v-bind:src="poke.fields.image_back" v-if="hidden" @click="seen=true; hidden=false"></li>
+            
+        </ul>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            delimiters: ['${','}'],
+            data:{
+                pokemon: [],
+                search: null,
+                seen: true,
+                hidden: false,
+            },
+            methods: {
+                loadPokemon: function() {
+                    axios({
+                        methods: 'get',
+                        url: 'http://127.0.0.1:8000/pokemon/papi/',                        
+                    }).then(response => {
+                        // console.log(response)
+                        this.pokemon = JSON.parse(response.data)
+                        console.log(this.pokemon[0]['fields']['image_front'])
+                    })
+                },
+                searchPokemon: function() {
+                    axios({
+                        methods: 'get',
+                        url: 'http://127.0.0.1:8000/pokemon/papi/',
+                        params:{
+                            name: this.search,
+                        }                        
+                    }).then(response => {
+                        // console.log(response)
+                        this.pokemon = JSON.parse(response.data)
+                        console.log(this.search)
+                    })
+                }
+            },
+            created: function() {
+                this.loadPokemon()
+            }
+        })
+    </script>
 </body>
 </html>

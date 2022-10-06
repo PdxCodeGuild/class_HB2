@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="poke in pokemon">${poke.name}</li>
+            <li v-for="poke in pokemon">${poke}</li>
         </ul>
     </div>
     <script>
@@ -25,11 +25,11 @@
                 loadPokemon: function() {
                     axios({
                         methods: 'get',
-                        url: 'https://pokeapi.co/api/v2/pokemon/',                        
+                        url: 'pokemon\templates\pokemon\papi.html',                        
                     }).then(response => {
                         console.log(response.data)
-                        // this.pokemon = response.data.results
-                        // console.log(this.pokemon)
+                        this.pokemon = response.data.results
+                        console.log(this.pokemon)
                     })
                 }
             },
