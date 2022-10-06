@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, reverse
+from django.http import HttpResponseRedirect
 from .models import Pokemon
 
 def pokeview(request):
@@ -10,5 +10,7 @@ def pokeview(request):
     return render(request, 'pokeapp/pokemontemplate.html', context)
 
 def mycreate(request):
-    print(request.POST)
-    return HttpResponse('form received')
+    myfield = request.POST['myfield']
+    mymodel = Pokemon(myfield=myfield)
+    mymodel.save()
+    return HttpResponseRedirect(reverse('pokeapp:pokeview'))
