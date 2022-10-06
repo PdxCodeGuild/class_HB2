@@ -8,11 +8,28 @@ Bountiful Mushrooms is an application that can be used as a source of informatio
 - Map of where strains are around the PNW and get informantion on the certain mushroom
 - Being able to post information and a brief discription of what they found, possibly a photo upload
 - backend shit
+---
+</br>
 
-## Data model
-- id 
-- users
-- created date
+### Data ***model***
+
+- users- created date
 - updated date
-- pictures 
+- pictures?
+
+|Variable|Field Type|Properties|
+|--------|---------|---------|
+|username| CharField|max_length=23,unique=True|
+|title | Charfield| max length = 50
+|user    |Foriegnkey|null=True|
+|picture|ImageField|    |
+|is_superuser|BooleanField|default=False|
+|date created |DateTimeField|
+|date edited| DateTimeField|
+|Coordniates| 
+
+## Schedule
+- Week 1 sea
+
+
 
