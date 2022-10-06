@@ -1,4 +1,17 @@
 
+
+axios({
+  method: 'get',
+  url: `/pokemon/`
+})
+  .then((response) => {
+    console.log(response.data)
+    document.getElementById("list").innerHTML = response.data
+
+  })
+
+
+
 function pokeSearch() {
         axios({
             method: 'get',
@@ -11,7 +24,6 @@ function pokeSearch() {
             })
         }
         
-
 
 
 
