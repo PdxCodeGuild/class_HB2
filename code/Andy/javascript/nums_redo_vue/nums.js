@@ -52,26 +52,26 @@ let app = new Vue({
             19: 'nineteen',
         },
         tens: {
-            20: "twenty",
-            30: "thirty",
-            40: "forty",
-            50: "fifty",
-            60: "sixty",
-            70: "seventy",
-            80: "eighty",
-            90: "nintey",
+            2: "twenty",
+            3: "thirty",
+            4: "forty",
+            5: "fifty",
+            6: "sixty",
+            7: "seventy",
+            8: "eighty",
+            9: "nintey",
         },
         hundreds: {
 
-            100: "one hundred",
-            200: "two hundred",
-            300: "three hundred",
-            400: 'four hundred',
-            500: 'five hundred',
-            600: 'six hundred',
-            700: 'seven hundred',
-            800: 'eight hundred',
-            900: 'nine hundred',
+            1: "one hundred",
+            2: "two hundred",
+            3: "three hundred",
+            4: 'four hundred',
+            5: 'five hundred',
+            6: 'six hundred',
+            7: 'seven hundred',
+            8: 'eight hundred',
+            9: 'nine hundred',
         },
 
 
@@ -83,18 +83,26 @@ let app = new Vue({
     methods: {
         convert: function (event) {
             let result
+            let lastOne
             let user = this.userinput
-            console.log(user, 'user')
-            const expr = user >= 20;
-            switch (expr){
-                case 'case 1 ':
-                    console.log('number greater than 20')
-                    break;
-            }
+            // userTwo = user
+            console.log(typeof(parseInt(user)), 'user')
             // let result = this.low_numbers[user]
             // this.result = this.result
             this.result = this.low_numbers[user]
+            lastOne = user.slice(-1)
+            console.log(lastOne, 'last one')
+            // 654 : 654/10 = 65.4  /10 = 6.54 how we get the 6 for hundreds digit 
+            hundredsDigit = parseInt((user/10)/10) 
+            // 654/10 = 65.4 /10 = 6.54 % 10= 
+            unitsDigit = parseInt(((user/10)%10)) 
+            console.log(unitsDigit, 'units digit') 
+            console.log(hundredsDigit, 'testing hundreds digit')
+            console.log(user,'testing users')
             console.log(this.low_numbers[user],'testing' )
+            console.log(this.low_numbers[lastOne],'testing v2' )
+            console.log(this.tens[unitsDigit],'testing v2' )
+            console.log(this.hundreds[hundredsDigit],'testing v2' )
             this.userinput = ''
             return result
         },
@@ -104,3 +112,9 @@ let app = new Vue({
     // created - a lifecycle hook
     // called when the app is created
     // useful for setting up app data
+
+    // tens_digit = number // 10 
+    // new_tens = tens_digit % 10
+    // ones_digit = number % 10
+    // tens_word = ten[new_tens]
+    // ones_word = low_numbers[ones_digit]
