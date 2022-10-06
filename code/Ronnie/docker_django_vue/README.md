@@ -1,4 +1,4 @@
-Command to sttart app
+Command to start app
 ```
 docker-compose up
 ```

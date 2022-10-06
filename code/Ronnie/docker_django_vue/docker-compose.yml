@@ -1,8 +1,9 @@
 version: '3.9'
 
 services:
+# Dockerfile
   frontend:
-    image: radbydesign/vue_frontend
+    build: .
     volumes:
       - './frontend/:/usr/src/app'
       - '/app/node_modules'
@@ -10,6 +11,7 @@ services:
       - '8081:8080'
     command: "sh -c 'yarn serve'"
   
+# Official Image
   db:
     image: postgres
     volumes:
@@ -18,6 +20,7 @@ services:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+  # Dockerfile from Docker hub
   
   web:
     image: radbydesign/django_vue_be
