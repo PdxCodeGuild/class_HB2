@@ -4,5 +4,5 @@ from . import views
 app_name = 'pokeapp'
 urlpatterns = [
     path('', views.pokeview, name='pokeview'),
-    path('mycreate/', views.mycreate, name='mycreate')
+    path('pokemon/', views.pokemon, name='pokemon')
 ]

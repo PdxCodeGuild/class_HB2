@@ -7,6 +7,6 @@ class Pokemon(models.Model):
     weight = models.FloatField()
     image_front = models.CharField(max_length=200)
     image_back = models.CharField(max_length=200)
-    types = models.CharField(max_length=200)
+    # types = models.CharField(max_length=200)
 
 

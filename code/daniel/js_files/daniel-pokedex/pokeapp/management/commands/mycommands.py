@@ -1,4 +1,6 @@
 from django.core.management.base import BaseCommand
+from pokeapp.models import Pokemon
+import json
 
 class Command(BaseCommand):
 
@@ -31,26 +33,7 @@ class Command(BaseCommand):
             
             )
             
-            for p_types in pokemon['types']:
-
-                # types = p_types
-
-                pokemon_type, created = PokemonType.objects.get_or_create(name=p_types)
-
-                pokemon_obj.types.add(pokemon_type)
-
-
-
-                print(pokemon_obj)
-                print(pokemon_obj.name)
-                print(pokemon_obj.types)
-                print(pokemon_obj.types.name)
-
-                print(pokemon_type)
-                print(pokemon_type.name)
-                print(pokemon_type.type)
-                print(pokemon_type.type.name)
-
+           
 
 
             f.close()
