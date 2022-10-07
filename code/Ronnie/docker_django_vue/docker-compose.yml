@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+# Dockerfile
+  frontend:
+    build: .
+    volumes:
+      - './frontend/:/usr/src/app'
+      - '/app/node_modules'
+    ports:
+      - '8081:8080'
+    command: "sh -c 'yarn serve'"
+  
+# Official Image
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  # Dockerfile from Docker hub
+  
+  web:
+    image: radbydesign/django_vue_be
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; python manage.py runserver 0.0.0.0:8000 && python manage.py migrate'
+    volumes:
+      - ./backend:/app
+    ports:
+      - '8000:8000'
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - db

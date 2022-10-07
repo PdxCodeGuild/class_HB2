@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Unit Converter</title>
+    </head>
+    <body>
+        <div id="app">
+          <h1>Unit Converter</h1>
+          <span
+            >Enter unit of measurement: [ft | miles | meters | kilometers]:</span>
+          <input type="text" v-model="unit"/>
+          <br>
+          <span>Enter distance:</span>
+          <input type="text" v-model="distance"/>
+          <br>
+          <button v-on:click="conversion">Submit</button>
+          <p>Conversion: <span> {{results}} meters</span></p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script>
+          let app = new Vue({
+            el: "#app",
+            data: {
+              unit: "",
+              distance: "",
+              results: "",
+              conversionChart: {
+                feet: 0.3048,
+                miles: 1609.34,
+                meters: 1,
+                kilometers: 1000,
+              },
+            },
+            methods: {
+              conversion: function () {
+                let distance1 = this.distance;
+                let unit1 = this.conversionChart[this.unit];
+                this.results = distance1 * unit1;
+              },
+            },
+          });
+        </script>
+      </body>
+    </html>
