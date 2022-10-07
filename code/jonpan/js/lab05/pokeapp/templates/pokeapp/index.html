@@ -14,10 +14,17 @@
     <h1>Pokedex JS lab 05 - Jon Pan</h1>
 
     <div id="app">
-        <span>${pokemon}</span>
-        <span>${message}</span>
-        <button v-on:click="getPokemon">click</button>
-        <!-- <ul><li v-for="poke in pokemon">${poke.name}</li></ul> -->
+        <!-- <span>${pokemon}</span>
+        <span>${message}</span> -->
+        <button v-on:click="getPokemon">list Pokémon</button>
+        <div id="search-div">
+            <input name="poke-search" id="searchTerm" type="text" placeholder="Enter pokemon name">
+            <button onclick="searchPokemon([[searchTerm]])">Find Pokémon!</button>
+        </div><br>
+        <p id="search-results"></p> 
+
+        <ul><li v-for="poke in pokemon">${poke.name} <img v-bind:src="poke.image_front"></li></ul>
+        
     </div>
 
 <script>
@@ -26,7 +33,7 @@
         delimiters: ['${','}'],
         data: {
             pokemon: [],
-            message: "this sucks",
+            message: "this works!",
         },
         methods: {
             getPokemon: function() {
@@ -35,15 +42,28 @@
                     method: 'get',
                     url: `/pokemon/`
                 }).then((response) => {
-                    // this.pokemon = response.data
-                    // console.log(response.data)
-                    this.pokemon = JSON.parse(response.data)
-                    console.log(this.pokemon[0]['fields']['image_front']
+                    this.pokemon = response.data
+                    console.log(this.pokemon)
+                    // this.pokemon = JSON.parse(response.data)
+                    // console.log(this.pokemon[0]['image_front'])
                     // console.log(response.content)
                     // console.log(response.data[1])
-
                     })
-            }
+            },
+            searchPokemon: function() {
+
+                axios({
+                    method: 'get',
+                    url: `/pokemon/`
+                }).then((response) => {
+                    this.pokemon = response.data
+                    console.log(this.pokemon)
+                    // this.pokemon = JSON.parse(response.data)
+                    // console.log(this.pokemon[0]['image_front'])
+                    // console.log(response.content)
+                    // console.log(response.data[1])
+                    })
+            },
         },
 
         created: function() {
@@ -55,17 +75,6 @@
 </body>
 </html>
 
-
-
-
-
-    <!-- <div id="app">
-        <div id="search-div">
-            <input name="poke-search" id="searchTerm" type="text" placeholder="Enter pokemon name">
-            <button onclick="pokeSearch([[searchTerm]])">Find poke!</button>
-        </div>
-        <p id="search-results"></p> 
-    </div> -->
 
 
 
