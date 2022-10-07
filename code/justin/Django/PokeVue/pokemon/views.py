@@ -1,3 +1,4 @@
+from email.policy import default
 from http.client import HTTPResponse
 from django.shortcuts import render
 from pokemon.models import Pokemon, PokemonType
@@ -13,7 +14,17 @@ def pokerend(request):
 
 
 def pokemon(request):
-    poke = Pokemon.objects.all()
-    responsedata = serializers.serialize('json', poke)
+    if request.method == 'GET':
+        qball = request.GET.get('name', default=None)
+        if qball == None:
+            poke = Pokemon.objects.all()
+            responsedata = serializers.serialize('json', poke) 
+            print('its none just doin it')
+        else:
+            qball = Pokemon.objects.filter(name = qball)
+            responsedata = serializers.serialize('json', qball)
+            print(qball)
+
 
     return JsonResponse(responsedata, safe=False)
+
