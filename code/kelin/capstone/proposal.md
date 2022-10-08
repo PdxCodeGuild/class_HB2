@@ -14,6 +14,8 @@ StreamTaco is built with the Django framework and features HTML, CSS, and Javasc
 
 1. User Section - Header
     - Sign-up
+        - Username/Streamer Name
+        - 
     - Login
     - Profile edit
 
@@ -21,6 +23,7 @@ StreamTaco is built with the Django framework and features HTML, CSS, and Javasc
     - Image
     - Name
     - Games playing
+    - Platform API's
 
 3. Links Section - Under Bio. Well structured.
     - Social links
