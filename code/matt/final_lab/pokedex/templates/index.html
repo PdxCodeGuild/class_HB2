@@ -1,39 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Pokedex</title>
-</head>
-<body>
-
-    <div id="app">
-        <ul>
-          <li v-for="color in colors">{{ color }}</li>
-        </ul>
-      </div>
-      <script>
-        let app = new Vue({
-          el: '#app',
-          data: {
-            color: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-          },
-          methods: {
-            colors : function(){
-                console.log(colors)
-            }
-          }
-        })
-      </script>
-    
-    {% comment %} <ul>
-        {% for poke in pokemon %}
-        <li>
-            <a href="#">{{ poke.name }}</a>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div id="app">
+  {{ pokemon_data }}
+    <template>
+      <ul>
+        <li v-for="item in pokemon_data" >
+          {{ item }}
         </li>
-        {% endfor %}
-    </ul> {% endcomment %}
-</body>
-</html>
+      </ul>
+    </template>
+</div>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      pokemon_data: []
+    },
+    methods: {
+    },
+    created:() => {
+      axios
+      .get('/pokemon/api/list')
+      .then(response => (app.pokemon_data = response.data))
+  },
+  })
+</script>
