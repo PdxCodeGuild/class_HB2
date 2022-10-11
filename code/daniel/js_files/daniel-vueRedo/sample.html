@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click="doSomething"> Click Me </button>
+
+            <input type="text" v-model="name" />
+            <span v-if="Daniel"></span>
+            <span v-show="gray"></span>
+
+            <select v-model="color">
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="gray">gray</option>
+            </select>
+            <span v-if="seen">some text</span>
+            <span v-show="seen">some text</span>
+            {{ message }}
+            <img v-bind:src="image_url" height="600px"/>
+            <input type="checkbox" v-model="disable_button"> disable_button </br>
+            <button v-bind:disable="disable_button"> click</button>
+
+                <ul>
+                    <li v-for="nums in numbers"> {{ nums }}</li>
+                </ul>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    seen: false,
+                    message: 'Hello Vue!',
+                    image_url: "https://ae01.alicdn.com/kf/HTB1kkowPVXXXXXJXpXXq6xXFXXX0/1pc-12cm-Small-Ruler-Brass-Portable-Straight-Ruler-Office-School-Supplies-Accessory.jpg_640x640.jpg",
+                    disable_button: true,
+                    numbers: [1, 5, 3, 6, 1, 7, 8],
+                    name: 'Daniel',
+                    color: 'gray',
+
+
+                },
+                methods: {
+                    sayHello: function(){
+                        console.log(this.message)
+                    },
+                    doSomething: function(){
+                        console.log("Button is active in console")
+                    }
+                },
+
+                created: function() {
+                    console.log(this.message)
+                    console.log(this.image_url)
+                    alert("We did it!")
+                }
+            })
+
+        </script>
+    </body>
+</html>
