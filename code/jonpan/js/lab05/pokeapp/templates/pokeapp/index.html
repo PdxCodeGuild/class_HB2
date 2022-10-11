@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="{% static 'pokeapp/app2.js' %}"></script> -->
+</head>
+<body>
+    <h1>Pokedex JS lab 05 - Jon Pan</h1>
+
+    <div id="app">
+        <!-- <span>${pokemon}</span>
+        <span>${message}</span> -->
+        <button v-on:click="getPokemon">list Pokémon</button>
+        <div id="search-div">
+            <input name="poke-search" id="searchTerm" type="text" placeholder="Enter pokemon name">
+            <button onclick="searchPokemon([[searchTerm]])">Find Pokémon!</button>
+        </div><br>
+        <p id="search-results"></p> 
+
+        <ul><li v-for="poke in pokemon">${poke.name} <img v-bind:src="poke.image_front"></li></ul>
+        
+    </div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        delimiters: ['${','}'],
+        data: {
+            pokemon: [],
+            message: "this works!",
+        },
+        methods: {
+            getPokemon: function() {
+
+                axios({
+                    method: 'get',
+                    url: `/pokemon/`
+                }).then((response) => {
+                    this.pokemon = response.data
+                    console.log(this.pokemon)
+                    // this.pokemon = JSON.parse(response.data)
+                    // console.log(this.pokemon[0]['image_front'])
+                    // console.log(response.content)
+                    // console.log(response.data[1])
+                    })
+            },
+            searchPokemon: function() {
+
+                axios({
+                    method: 'get',
+                    url: `/pokemon/`
+                }).then((response) => {
+                    this.pokemon = response.data
+                    console.log(this.pokemon)
+                    // this.pokemon = JSON.parse(response.data)
+                    // console.log(this.pokemon[0]['image_front'])
+                    // console.log(response.content)
+                    // console.log(response.data[1])
+                    })
+            },
+        },
+
+        created: function() {
+            console.log(this.message)
+        }
+  })
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- <div id="pokemon-div">
+    <div v-for="poke in pokemon" v-bind:value="poke.id" ><div v-if="poke.number"> No: [[poke.number]], Name: [[poke.name]] </div><img v-if="poke.number" v-bind:src="poke.image_front" v-bind:alt="'Picture of ' + poke.name"></div>
+</div>
+<div id="pagination">
+    <button id="previous-btn" v-bind:href="'?page='+this.page" v-on:click="previousPage()" v-if="">Previous</button> 
+    Page [[page]]
+    <button id="next-btn" v-bind:href="'?page='+this.page" v-on:click="nextPage()">Next</button> 
+</div> -->
