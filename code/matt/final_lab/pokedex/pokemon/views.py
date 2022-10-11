@@ -9,15 +9,15 @@ def pokemon(request):
     pokemon = Pokemon.objects.all()
     ret = []
     
-    for p in pokemon:
-        number = p.number
-        name = p.name
-        image_front = p.image_front
-        image_back = p.image_back
-        ret.append({'number': number, 'name': name, 'image_front': image_front, 'image_back': image_back})
+    # for p in pokemon:
+    #     number = p.number
+    #     name = p.name
+    #     image_front = p.image_front
+    #     image_back = p.image_back
+    #     ret.append({'number': number, 'name': name, 'image_front': image_front, 'image_back': image_back})
 
     # # return JsonResponse(request, 'index.html', {'pokemon':pokemon})
-    return JsonResponse(['matt', 'caleb', 'dad'], safe=False)
+    return JsonResponse(pokemon, safe=False)
     # return JsonResponse(ret, safe=False)
 
     # data = serializers.serialize('json', 

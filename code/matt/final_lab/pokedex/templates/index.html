@@ -4,8 +4,9 @@
   {{ pokemon_data }}
     <template>
       <ul>
-        <li v-for="item in pokemon_data" >
-          {{ item }}
+        <li v-for="item in pokemon_data" ><img :src="image"/>
+          {$ item.number $} {$ item.name $} {$ item.image_front $} {$ item.image_back $}
+          img
         </li>
       </ul>
     </template>
@@ -13,15 +14,33 @@
 <script>
   let app = new Vue({
     el: '#app',
+    delimiters: ['{$',  '$}'],
     data: {
       pokemon_data: []
     },
     methods: {
     },
-    created:() => {
-      axios
-      .get('/pokemon/api/list')
-      .then(response => (app.pokemon_data = response.data))
-  },
+    created: function(){
+      axios({
+        method: 'get',
+        url: '/api/pokemon'
+      }).then((response) =>{
+        console.log(response.data)
+        this.pokemon_data = response.data;
+      })
+    }
   })
 </script>
+
+
+
+{% comment %} axios({
+  method: 'get',
+  url: '/pokemon/api/list'
+}).then((response) => {
+  console.log(response.data)
+  app.pokemon_data = response.data;
+
+}, (error) => {
+  console.log(error);
+}) {% endcomment %}
