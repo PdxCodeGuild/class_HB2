@@ -19,7 +19,8 @@
         <hr>
         <div id="app">
             <button v-on:click="loadPokemon">Load Pokemon</button>
-            </div>
+            [[ this.pokemon ]]
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -29,6 +30,7 @@
             delimiters: ['[[', ']]'],
             data: {
                 pokemon: [],
+                randomPoke: null,
                 types: {},
                 
             },
@@ -40,7 +42,6 @@
                         url: '/api/pokemon'
                     }).then(response => {
                         this.pokemon = response.data
-                        
                         console.log(this.pokemon)
                     })
                 }
