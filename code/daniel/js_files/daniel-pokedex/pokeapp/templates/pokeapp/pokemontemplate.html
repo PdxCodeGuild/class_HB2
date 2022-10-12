@@ -5,15 +5,6 @@
         <title></title>
     </head>
     <body>
-        <form action="{% url 'pokeapp:mycreate' %}" method="post">
-            {% csrf_token %}
-            <input type="text" name="myfield"/>
-            <button type="submit">submit</button>
-        </form>
-        <ul>
-            {% for myinstance in context %}
-            <li>{{ myinstance.myfield }}</li>
-            {% endfor %}
-        </ul>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <script src="{% static '/app.js' %}"></script> 
     </body>
 </html>
