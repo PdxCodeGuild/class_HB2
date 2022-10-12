@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <!--<ul>
+        {% for pokemon in pokemon %}
+        <li>{{ pokemon.name }}</li>
+        <img src="{{ pokemon.image_front }}" alt="Image of {{ pokemon.name }}" />
+        {% endfor %}
+    </ul>-->
+    <div id="app">
+        <ul>
+            <li v-for="poke in pokemon">
+                ${ poke.name }
+                <img src="${ poke.image_front }" alt="Small character drawing of ${ poke.name }" />
+            </li>
+        </ul>
+        <script>
+            const app = new Vue({
+                el: "#app",
+                delimiters: ["${", "}"],
+                data: {
+                    pokemon: [],
+                },
+                methods: {
+                    loadPokemon: function () {
+                        axios({
+                            methods: "get",
+                            url: "pokeapp/pokemon"
+                        }).then(response => {
+                            this.pokemon = response.data
+                            console.log(this.pokemon)
+                        })
+                    },
+                    created: function () {
+                        this.loadPokemon()
+                    }
+                }
+            })
+        </script>
+    </div>
+</body>
+
+</html>
