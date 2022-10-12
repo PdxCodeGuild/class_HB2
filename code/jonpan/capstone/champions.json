@@ -1,5 +1,4 @@
 {
-    "champion": [
 	"Aatrox": {
 		"version": "12.19.1",
 		"id": "Aatrox",
@@ -7567,5 +7566,4 @@
 			"attackspeed": 0.625
 		}
 	}
-]
 }
