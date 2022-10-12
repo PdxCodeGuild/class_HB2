@@ -27,17 +27,21 @@
             <p v-if="pokeImage.length > 0"><img v-bind:src="pokeImage"></p>
             <!-- Shows image of loaded Pokemon -->
             <ul>
-            <li v-for="(name, index) in this.randomPoke">[[index]] [[name]]</li>
+            <li v-for="(name, index) in this.randomPoke">[[index]]: [[name]]</li>
             </ul>
             <!-- Displays Pokemon info in list -->
-            <!-- Search Pokedex -->
-
+            <input type="text" v-model="search" placeholder="Search Pokedex"/>
+            <div v-for="poke in filteredItems" >
+                <!-- Search Pokedex -->
+                <p>[[ poke.name ]]</p>
+              </div>
         </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- Loads Vue app and Axios JS call -->
     <script>
+        
         let app = new Vue({
             el: "#app",
             delimiters: ['[[', ']]'],
@@ -45,9 +49,17 @@
                 pokemon: [],
                 randomPoke: null,
                 pokeImage: '',
+                search: ''
                 // Starting values
-                
             },
+            computed: {
+            filteredItems() {
+            return this.pokemon.filter(poke => {
+            return poke.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+                    })
+                }
+            },
+            // Filtered list of Pokedex for searching
             methods: {
                 loadPokemon: function() {
                     // Function loads Pokemon API from JSON file
