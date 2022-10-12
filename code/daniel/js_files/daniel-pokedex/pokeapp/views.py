@@ -13,8 +13,8 @@ def pokeview(request):
 
 def pokemon(request):
     listPokemon = Pokemon.objects.all()
-    # listResponse = serializers.serialize('json', listPokemon)
+    listResponse = serializers.serialize('json', listPokemon)
 
-    return JsonResponse(json.loads(listResponse), safe=False)
+    return JsonResponse(listResponse, safe=False)
 
 

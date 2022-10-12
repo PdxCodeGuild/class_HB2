@@ -11,12 +11,12 @@
     <body>
         <div id="app">
             <!-- {{ message }} -->
-            <button v-on:click="displayPokemon">Click to Start</button>
-            <p v-for = "poke in pokemon">${poke}</p>
-            <!-- ${pokemon} -->
+            <!-- <button v-on:click="displayPokemon">Click to Start</button> -->
+            <ol v-for="poke in pokemon">${poke.fields.name}<br> <img :src="poke.fields.image_front"></ol>
+            
         </div>
         <script>
-            var app = new Vue({
+            const app = new Vue({
                 el: '#app',
                 delimiters: ['${' , '}'],
                 data: {
@@ -28,17 +28,18 @@
                             method: 'get',
                             url: 'http://127.0.0.1:8000/pokeapp/pokemon/'
                          }).then((response) => {
-                             this.pokemon = response.data
+                             this.pokemon = JSON.parse(response.data)
                             console.log(this.pokemon)
+                            console.log(response.data)
                             
                             
                             })
 
-                },
+                }},
                 created: function() {
                     this.displayPokemon()
-                }
-            }})
+            }
+            })
         
         </script>
     </body>
