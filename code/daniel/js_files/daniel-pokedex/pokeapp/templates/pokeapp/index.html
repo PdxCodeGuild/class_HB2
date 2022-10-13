@@ -9,10 +9,51 @@
         
     </head>
     <body>
+        
+        <form action="{% url 'pokeapp:search' %}" method="POST">
+            
+            <input type="text" placeholder="search pokemon" name="search">
+            <button type="submit">go</button>
+            {% csrf_token %}
+        </form>
+
         <div id="app">
-            <!-- {{ message }} -->
-            <!-- <button v-on:click="displayPokemon">Click to Start</button> -->
-            <ol v-for="poke in pokemon">${poke.fields.name}<br> <img :src="poke.fields.image_front"></ol>
+            {% for pokemon in myinstance %}
+            <div>
+                <ol>
+                    <li>
+
+                        number:{{ pokemon.number }}
+                    </li>
+                    <li>
+                        name:{{ pokemon.name }}
+
+                    </li>
+                    <li>
+                        weight:{{ pokemon.weight }}
+                        
+                    </li>
+                    <li>
+                        height:{{ pokemon.height }}
+
+                    </li>
+                    <li>
+                        <img src="{{ pokemon.image_front }}">
+
+                    </li>
+                    <li>
+                        <img src="{{ pokemon.image_back }}">
+
+                    </li>
+    
+
+                </ol>
+
+            </div>
+            {% endfor %}
+            <ol>
+                <li v-for="poke in pokemon">${poke.fields.name}<br> <img :src="poke.fields.image_front"><img :src="poke.fields.image_back"></li>
+            </ol>
             
         </div>
         <script>
@@ -20,7 +61,8 @@
                 el: '#app',
                 delimiters: ['${' , '}'],
                 data: {
-                    pokemon: []
+                    pokemon: [],
+                    
                 },
                 methods: {
                     displayPokemon: function() {
@@ -31,16 +73,17 @@
                              this.pokemon = JSON.parse(response.data)
                             console.log(this.pokemon)
                             console.log(response.data)
-                            
-                            
                             })
-
-                }},
+                    }
+            
+                },
                 created: function() {
                     this.displayPokemon()
             }
-            })
-        
+            
+            }
+            )
+            
         </script>
     </body>
 </html>
