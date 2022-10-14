@@ -18,36 +18,40 @@
         {% endfor %}
     </ul>-->
     <div id="app">
+        <form action="pokeapp/pokemon" method="get">
+            <input type="text" name="poke_search"/>
+            <button type="submit">Search</button>
+        </form>
         <ul>
             <li v-for="poke in pokemon">
-                ${ poke.name }
-                <img src="${ poke.image_front }" alt="Small character drawing of ${ poke.name }" />
+                ${poke.name}
+                <img :src="poke.image_front" alt=""/>
             </li>
         </ul>
-        <script>
-            const app = new Vue({
-                el: "#app",
-                delimiters: ["${", "}"],
-                data: {
-                    pokemon: [],
-                },
-                methods: {
-                    loadPokemon: function () {
-                        axios({
-                            methods: "get",
-                            url: "pokeapp/pokemon"
-                        }).then(response => {
-                            this.pokemon = response.data
-                            console.log(this.pokemon)
-                        })
-                    },
-                    created: function () {
-                        this.loadPokemon()
-                    }
-                }
-            })
-        </script>
     </div>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            delimiters: ['${', '}'],
+            data: {
+                pokemon: [],
+            },
+            methods: {
+                loadPokemon: function () {
+                    axios({
+                        methods: "get",
+                        url: "pokeapp/pokemon"
+                    }).then(response => {
+                        this.pokemon = response.data
+                        console.log(this.pokemon)
+                    })
+                }
+            },
+            created: function () {
+                this.loadPokemon()
+            }
+        })
+    </script>
 </body>
 
 </html>
