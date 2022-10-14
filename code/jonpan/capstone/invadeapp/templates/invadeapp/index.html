@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invade App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <button v-on:click="getChampion">list Champions</button>
+        <ul><li v-for="champ in champion">${champ.name}</li></ul>
+        
+    </div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        delimiters: ['${','}'],
+        data: {
+            champion: [],
+            message: "this works!",
+        },
+        methods: {
+            getChampion: function() {
+
+                axios({
+                    method: 'get',
+                    url: `/champions/`
+                }).then((response) => {
+                    this.champion = response.data
+                    console.log(this.champion)
+                    // this.pokemon = JSON.parse(response.data)
+                    // console.log(this.pokemon[0]['image_front'])
+                    // console.log(response.content)
+                    // console.log(response.data[1])
+                    })
+            },
+        },
+
+        created: function() {
+            console.log(this.message)
+        }
+  })
+</script>
+
+
+
+</body>
+</html>
