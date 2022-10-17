@@ -12,6 +12,11 @@ M-F 6:00 pm – 9:36 pm PT
 - ~~July 4th 21st (Independence Day)~~
 - ~~September 5th (Labor Day)~~
 
+### Misc. Days Off
+
+- 21 October 2022(Continue to work on capstone)
+- 28 October 2022(Continue to work on capstone)
+
 ### Staff
 
 - Ronnie Mosley, Instructor
