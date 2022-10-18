@@ -5,7 +5,7 @@
     <template>
       <input type="text" v-model="search"/><button @click="filterpoke">Search</button>
       <ul>
-        <li v-for="item in pokemon_data" >{$ item.number $} {$ item.name $} <img :src="item.image_front"/>
+        <li v-for="item in display_data" >{$ item.number $} {$ item.name $} <img :src="item.image_front"/>
         </li>
       </ul>
     </template>
@@ -19,10 +19,9 @@
       display_data: [],
     },
     methods: {
-      filterpoke(){
-        console.log(this.search)
-        var re = new RegExp(this.search, "g");
-        this.pokemon_data = this.pokemon_data.filter(p => re.test(p.name))
+      filterpoke() {
+        var re = new RegExp(this.search, 'g');
+        this.display_data = this.pokemon_data.filter(p => re.test(p.name))
       }
     },
     created: function(){
