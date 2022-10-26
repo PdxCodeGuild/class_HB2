@@ -13,7 +13,7 @@ def register(request):
 			return redirect("accounts:profile")
 		messages.error(request, "Unsuccessful registration. Invalid information.")
 	form = NewUserForm()
-	return render (request=request, template_name="registration/register.html", context={"form":form})
+	return render(request=request, template_name="registration/register.html", context={"form":form})
 
 @login_required
 def profile(request):
