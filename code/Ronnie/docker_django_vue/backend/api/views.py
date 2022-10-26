@@ -6,4 +6,4 @@ class ToDoViewSet(viewsets.ModelViewSet):
     queryset = ToDo.objects.all()
     serializer_class = ToDoSerializer
     # Api methods
-    http_method_names = ["get", "post", "head", "delete", "update"]
+    http_method_names = ["get", "post", "head", "delete", "put"]
