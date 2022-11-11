@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex User</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <!-- User must sign up and login to use Pokedex -->
+    {% csrf_token %}
+        {% if user.is_authenticated %}
+        <span>Welcome {{ user.username }}</span>
+        <a href="{% url 'accounts:logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'accounts:login' %}">Sign-In</a>
+        <a href="{% url 'accounts:register' %}">Sign-Up</a>
+        {% endif %}
+        <hr>
+        <div id="app">
+            <button v-on:click="loadPokemon">Load Pokedex</button>
+            <!-- Loads Pokedex -->
+            <button v-on:click="random">Load Pokemon</button>
+            <!-- Selects random Pokemon -->
+	        <button @click="getImage()">Show Image</button>
+            <p v-if="pokeImage.length > 0"><img v-bind:src="pokeImage"></p>
+            <!-- Shows image of loaded Pokemon -->
+            <ul>
+            <li v-for="(name, index) in this.randomPoke">[[index]]: [[name]]</li>
+            </ul>
+            <!-- Displays Pokemon info in list -->
+            <input type="text" v-model="search" placeholder="Search Pokedex"/>
+            <div v-for="poke in filteredItems" >
+                <!-- Search Pokedex -->
+                <p>[[ poke.name ]]</p>
+              </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Loads Vue app and Axios JS call -->
+    <script>
+        
+        let app = new Vue({
+            el: "#app",
+            delimiters: ['[[', ']]'],
+            data: {
+                pokemon: [],
+                randomPoke: null,
+                pokeImage: '',
+                search: ''
+                // Starting values
+            },
+            computed: {
+            filteredItems() {
+            return this.pokemon.filter(poke => {
+            return poke.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+                    })
+                }
+            },
+            // Filtered list of Pokedex for searching
+            methods: {
+                loadPokemon: function() {
+                    // Function loads Pokemon API from JSON file
+                    axios({
+                        method: 'get',
+                        url: '/api/pokemon'
+                    }).then(response => {
+                        this.pokemon = response.data
+                        console.log(this.pokemon)
+                    })
+                },
+                randomPokemon (items) {
+                return items[Math.floor(Math.random()*items.length)];
+                // Method to get random item from an array
+                },
+                random() {
+                this.randomPoke = this.randomPokemon(this.pokemon)
+                console.log(this.randomPoke)
+                // Method to select random Pokemon from Pokedex
+                },
+                
+                getImage: function () {	
+		        this.pokeImage = this.randomPoke["image_front"];
+                // Function gets image of selected Pokemon
+                }
+            }
+        })
+      </script>          
+</body>
+</html>
