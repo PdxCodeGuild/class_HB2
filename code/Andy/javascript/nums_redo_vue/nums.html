@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script defer src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="./nums.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- display 'message' from the 'data' part of the app in the page -->
+        <!-- allow the user to set the value of the input -->
+        <!-- handle a click event of a button - calls the method sayHello -->
+        <div>
+            <!-- v- model watch user input and renders the varible  -->
+           <input type="text" placeholder="Enter a number" v-model="userinput"  >
+           <button v-on:click='convert'  >submit</button>
+       </div>
+       {{ userinput }}
+     <span>
+
+         {{ result }}
+     </span> 
+         <div>
+            <ul>
+                <li v-for="num in low_numbers">{{ num }}</li>
+            </ul>
+            <ul>
+                <li v-for="(num, index) in low_numbers">{{ index }}) {{ num }}</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li v-for="ten in tens">{{ ten }}</li>
+            </ul>
+            <ul>
+                <li v-for="(ten, index) in tens">{{ index }}) {{ ten }}</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li v-for="hundred in hundreds">{{ hundred }}</li>
+            </ul>
+            <ul>
+                <li v-for="(hundred, index) in hundreds">{{ index }}) {{ hundred }}</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- <div id="app">
+            <div>
+                 v- model watch user input and renders the varible 
+                <input type="text" placeholder="Enter a number" v-model="userinput" >
+                <button>submit</button>
+            </div>
+            {{ userinput  }}
+            {{ number }}
+            <div>
+                    <span v-if ='number < 5' >less than 5</span>
+                    <span v-else-if = 'number = 5'>equal to 5</span>
+                    <span v-else >greater than 5</span>
+            </div>            
+        </div> -->
+
+    <!-- <script>
+            var app = new Vue({
+                el: '#app',
+                data: { // data object
+                    userinput: '', //user key
+                    number : 5,
+                    low_numbers :  [
+
+                         "zero",
+                         "one",
+                         "two",
+                         "three",
+                         "four",
+                         "five",
+                         "six",
+                         "seven",
+                         "eight",
+                         'nine',
+                         'ten',
+                         'eleven',
+                         'tweleve',
+                         'thirteen',
+                         'fourteen',
+                         'fifteen',
+                         'sixteen',
+                         'seventeen',
+                         'eighteen',
+                         'nineteen',
+                    
+                    
+                    ],
+
+
+
+                },
+                methods: {
+                    convertNum: function(){
+                       this.number > userinput
+                    }
+                },
+                created: function() {
+
+                }
+            })
+        </script> -->
+
+</body>
+
+</html>
