@@ -2,14 +2,14 @@ version: '3.9'
 
 services:
 # Dockerfile
-  frontend:
-    build: .
-    volumes:
-      - './frontend/:/usr/src/app'
-      - '/app/node_modules'
-    ports:
-      - '8081:8080'
-    command: "sh -c 'yarn serve'"
+  # frontend:
+  #   build: .
+  #   volumes:
+  #     - './frontend/:/usr/src/app'
+  #     - '/app/node_modules'
+  #   ports:
+  #     - '8081:8080'
+  #   command: "sh -c 'yarn serve'"
   
 # Official Image
   db:

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>ToDo Items</title>
+</head>
+<body>
+<div id="app">
+    <form>
+
+    </form>
+    <ul>
+        <li v-for="task in tasks">
+            ${ task.title }
+        </li>
+    </ul>
+</div>
+<script>
+    let form = document.getElementById('form'); // selecting the form
+    
+    form.addEventListener('submit', function(event) { // 1
+        event.preventDefault()
+        
+        let data = new FormData(); // 2
+        
+        data.append("title", document.getElementById('title').value)  
+        data.append("status", document.getElementById('status').value)
+        data.append("csrfmiddlewaretoken", '{{csrf_token}}') // 3
+        
+        axios.post('create_item/', data) // 4
+         .then(res => alert("Form Submitted")) // 5
+         .catch(errors => console.log(errors)) // 6
+    
+    })
+    
+    </script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            delimiters: ['${', '}'],
+            data: {
+                tasks: [],
+            },
+            methods: {
+                loadTask: function() {
+                    axios({
+                        methods: 'get',
+                        url: 'api/todo',
+                    }).then(response => {
+                    this.tasks = response.data
+                    console.log(this.tasks)
+                    })
+                },
+                newTask: function() {
+
+                }
+            },
+            mounted: function(){
+                console.log('mounting')
+                this.loadTask()
+            }
+        })
+
+    </script>
+</body>
+</html>
